@@ -36,10 +36,16 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               <Link href="/" className="site-brand">
                 {siteConfig.name}
               </Link>
-              <label className="site-search">
-                <span>검색</span>
-                <input type="search" placeholder="자격증 검색" />
-              </label>
+              <form className="site-search" action="/search" method="get" role="search">
+                <label htmlFor="site-search-input">자격증 검색</label>
+                <input
+                  id="site-search-input"
+                  name="q"
+                  type="search"
+                  placeholder="자격증 검색"
+                  autoComplete="off"
+                />
+              </form>
               <nav className="site-nav" aria-label="주요 메뉴">
                 <Link href="/articles">최신글</Link>
                 <Link href="/#popular">인기글</Link>

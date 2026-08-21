@@ -768,6 +768,47 @@ export function getArticles(): Article[] {
   return [...articles].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
 }
 
+export function searchArticles(query: string): Article[] {
+  const keywords = query
+    .normalize("NFKC")
+    .trim()
+    .toLocaleLowerCase("ko-KR")
+    .split(/\s+/)
+    .filter(Boolean);
+
+  if (keywords.length === 0) {
+    return [];
+  }
+
+  return getArticles()
+    .map((article) => {
+      const title = article.title.normalize("NFKC").toLocaleLowerCase("ko-KR");
+      const tags = article.tags.join(" ").normalize("NFKC").toLocaleLowerCase("ko-KR");
+      const categoryName = article.category.name.normalize("NFKC").toLocaleLowerCase("ko-KR");
+      const description = [article.summary, ...article.body].join(" ").normalize("NFKC").toLocaleLowerCase("ko-KR");
+      const searchableText = `${title} ${tags} ${categoryName} ${description}`;
+
+      if (!keywords.every((keyword) => searchableText.includes(keyword))) {
+        return null;
+      }
+
+      const score = keywords.reduce(
+        (total, keyword) =>
+          total +
+          (title.includes(keyword) ? 8 : 0) +
+          (tags.includes(keyword) ? 4 : 0) +
+          (categoryName.includes(keyword) ? 2 : 0) +
+          (description.includes(keyword) ? 1 : 0),
+        0,
+      );
+
+      return { article, score };
+    })
+    .filter((result): result is { article: Article; score: number } => result !== null)
+    .sort((a, b) => b.score - a.score || b.article.publishedAt.localeCompare(a.article.publishedAt))
+    .map(({ article }) => article);
+}
+
 export function getArticleBySlug(slug: string): Article | undefined {
   return articles.find((article) => article.slug === slug);
 }

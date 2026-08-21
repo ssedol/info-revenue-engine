@@ -114,7 +114,7 @@ button:focus-visible {
   max-width: 360px;
 }
 
-.site-search span {
+.site-search label {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -135,6 +135,36 @@ button:focus-visible {
 }
 
 .site-search input::placeholder {
+  color: var(--color-muted);
+}
+
+.site-search input:focus-visible {
+  border-color: var(--color-primary);
+  outline: 3px solid color-mix(in srgb, var(--color-primary) 20%, transparent);
+}
+
+.search-summary {
+  margin: 0 0 18px;
+  color: var(--color-muted);
+}
+
+.search-summary strong {
+  color: var(--color-text);
+}
+
+.search-empty {
+  padding: 28px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-paper);
+}
+
+.search-empty h2 {
+  margin-top: 0;
+}
+
+.search-empty p {
+  margin-bottom: 0;
   color: var(--color-muted);
 }
 
