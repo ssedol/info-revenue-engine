@@ -1201,9 +1201,22 @@ button:focus-visible {
 
 @media (max-width: 640px) {
   .site-header__inner {
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 16px 0;
+    min-height: auto;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 8px 12px;
+    padding: 8px 0;
+  }
+
+  .site-brand {
+    gap: 8px;
+    font-size: 1.02rem;
+  }
+
+  .site-brand::before {
+    width: 9px;
+    height: 24px;
   }
 
   .site-search {
@@ -1211,8 +1224,31 @@ button:focus-visible {
     max-width: none;
   }
 
-  .site-topics {
-    width: min(100% - 24px, 1120px);
+  .site-search input {
+    min-height: 34px;
+    padding: 0 12px;
+    font-size: 0.92rem;
+  }
+
+  .site-nav {
+    grid-column: 1 / -1;
+    width: 100%;
+    flex-wrap: nowrap;
+    gap: 4px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .site-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .site-nav a {
+    flex: 0 0 auto;
+    min-height: 30px;
+    padding: 0 8px;
+    font-size: 0.88rem;
+    white-space: nowrap;
   }
 
   .meta-list div,
@@ -1224,7 +1260,7 @@ button:focus-visible {
 
   .content {
     width: min(100% - 24px, 1120px);
-    padding-top: 20px;
+    padding-top: 12px;
   }
 
   .article-page {
@@ -1233,12 +1269,12 @@ button:focus-visible {
   }
 
   .hero {
-    padding: 24px 0;
+    padding: 18px 0;
   }
 
   .hero h1,
   .article-header h1 {
-    font-size: 2.05rem;
+    font-size: 1.85rem;
     line-height: 1.18;
   }
 
