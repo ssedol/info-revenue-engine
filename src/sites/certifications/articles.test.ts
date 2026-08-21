@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { articles, getArticleBySlug, getRelatedArticles } from "./articles";
+import { articles, getArticleBySlug, getRelatedArticles, searchArticles } from "./articles";
 import { getArticleSeoIndexItems } from "./articleSeo";
 
 describe("certification blog articles", () => {
@@ -35,5 +35,12 @@ describe("certification blog articles", () => {
 
     expect(article).toBeDefined();
     expect(getRelatedArticles(article!).length).toBeGreaterThan(0);
+  });
+
+  it("searches titles, tags, categories, summaries, and article bodies", () => {
+    expect(searchArticles("정보처리기사")[0]?.slug).toBe("what-to-know-before-information-processing-engineer");
+    expect(searchArticles("비전공자 기사").length).toBeGreaterThan(0);
+    expect(searchArticles("존재하지않는검색어")).toEqual([]);
+    expect(searchArticles("   ")).toEqual([]);
   });
 });
