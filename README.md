@@ -1,6 +1,8 @@
 # Info Revenue Engine
 
-DB, Auth, ORM 없이 정적 콘텐츠로 동작하는 광고수익형 자격증 블로그 MVP입니다.
+광고수익형 정보사이트를 반복 제작하기 위한 Core Engine과, 그 첫 구현체인 `자격증 인사이트` 사이트입니다.
+
+프로젝트 구조와 작업 기준은 [PROJECT_OVERVIEW.md](./PROJECT_OVERVIEW.md)를 먼저 확인하세요.
 
 ## MVP Boundary
 
