@@ -1,0 +1,8 @@
+{
+  "provider": "Q-Net",
+  "mode": "fixture",
+  "fetchedAt": "2026-08-21T03:36:38.462Z",
+  "endpoint": "http://openapi.q-net.or.kr/api/service/rest/InquiryListNationalQualifcationSVC/getList",
+  "officialPage": "https://www.data.go.kr/data/15003024/openapi.do",
+  "format": "XML"
+}

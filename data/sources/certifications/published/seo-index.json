@@ -1,0 +1,460 @@
+{
+  "items": [
+    {
+      "path": "/",
+      "title": "자격증 정보 길잡이",
+      "description": "공식 데이터 기반 자격증 일정, 응시료, 접수 정보를 확인합니다.",
+      "canonicalPath": "/",
+      "priority": 1,
+      "changeFrequency": "weekly"
+    },
+    {
+      "path": "/certifications",
+      "title": "자격증 목록",
+      "description": "공식 데이터로 검증된 자격증 목록을 확인합니다.",
+      "canonicalPath": "/certifications",
+      "priority": 0.9,
+      "changeFrequency": "weekly"
+    },
+    {
+      "path": "/compare",
+      "title": "자격증 비교",
+      "description": "분야와 수준 기준으로 자격증을 비교합니다.",
+      "canonicalPath": "/compare",
+      "priority": 0.7,
+      "changeFrequency": "monthly"
+    },
+    {
+      "path": "/certifications/cert-1320",
+      "title": "정보처리기사 정보",
+      "description": "정보처리기사의 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1320",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-1320/schedule",
+      "title": "정보처리기사 시험일정",
+      "description": "정보처리기사 시험일정의 공식 데이터 확인 상태를 제공합니다.",
+      "canonicalPath": "/certifications/cert-1320/schedule",
+      "priority": 0.75,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-1320/fee",
+      "title": "정보처리기사 응시료",
+      "description": "정보처리기사 응시료의 공식 데이터 확인 상태를 제공합니다.",
+      "canonicalPath": "/certifications/cert-1320/fee",
+      "priority": 0.7,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-1320/eligibility",
+      "title": "정보처리기사 응시자격",
+      "description": "정보처리기사 응시자격의 공식 데이터 확인 상태를 제공합니다.",
+      "canonicalPath": "/certifications/cert-1320/eligibility",
+      "priority": 0.65,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-1320/apply",
+      "title": "정보처리기사 접수처",
+      "description": "정보처리기사 원서접수 정보와 공식 링크 확인 상태를 제공합니다.",
+      "canonicalPath": "/certifications/cert-1320/apply",
+      "priority": 0.65,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-1320/source",
+      "title": "정보처리기사 공식 출처",
+      "description": "정보처리기사 데이터 출처와 갱신 상태를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1320/source",
+      "priority": 0.65,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-1150",
+      "title": "전기기사 정보",
+      "description": "전기기사의 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1150",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-1150/schedule",
+      "title": "전기기사 시험일정",
+      "description": "전기기사 시험일정의 공식 데이터 확인 상태를 제공합니다.",
+      "canonicalPath": "/certifications/cert-1150/schedule",
+      "priority": 0.75,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-1150/fee",
+      "title": "전기기사 응시료",
+      "description": "전기기사 응시료의 공식 데이터 확인 상태를 제공합니다.",
+      "canonicalPath": "/certifications/cert-1150/fee",
+      "priority": 0.7,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-1150/eligibility",
+      "title": "전기기사 응시자격",
+      "description": "전기기사 응시자격의 공식 데이터 확인 상태를 제공합니다.",
+      "canonicalPath": "/certifications/cert-1150/eligibility",
+      "priority": 0.65,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-1150/apply",
+      "title": "전기기사 접수처",
+      "description": "전기기사 원서접수 정보와 공식 링크 확인 상태를 제공합니다.",
+      "canonicalPath": "/certifications/cert-1150/apply",
+      "priority": 0.65,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-1150/source",
+      "title": "전기기사 공식 출처",
+      "description": "전기기사 데이터 출처와 갱신 상태를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1150/source",
+      "priority": 0.65,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-1220",
+      "title": "산업안전기사 정보",
+      "description": "산업안전기사의 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1220",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-1220/schedule",
+      "title": "산업안전기사 시험일정",
+      "description": "산업안전기사 시험일정의 공식 데이터 확인 상태를 제공합니다.",
+      "canonicalPath": "/certifications/cert-1220/schedule",
+      "priority": 0.75,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-1220/fee",
+      "title": "산업안전기사 응시료",
+      "description": "산업안전기사 응시료의 공식 데이터 확인 상태를 제공합니다.",
+      "canonicalPath": "/certifications/cert-1220/fee",
+      "priority": 0.7,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-1220/eligibility",
+      "title": "산업안전기사 응시자격",
+      "description": "산업안전기사 응시자격의 공식 데이터 확인 상태를 제공합니다.",
+      "canonicalPath": "/certifications/cert-1220/eligibility",
+      "priority": 0.65,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-1220/apply",
+      "title": "산업안전기사 접수처",
+      "description": "산업안전기사 원서접수 정보와 공식 링크 확인 상태를 제공합니다.",
+      "canonicalPath": "/certifications/cert-1220/apply",
+      "priority": 0.65,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-1220/source",
+      "title": "산업안전기사 공식 출처",
+      "description": "산업안전기사 데이터 출처와 갱신 상태를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1220/source",
+      "priority": 0.65,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-1250",
+      "title": "건설안전기사 정보",
+      "description": "건설안전기사의 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1250",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-1250/schedule",
+      "title": "건설안전기사 시험일정",
+      "description": "건설안전기사 시험일정의 공식 데이터 확인 상태를 제공합니다.",
+      "canonicalPath": "/certifications/cert-1250/schedule",
+      "priority": 0.75,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-1250/fee",
+      "title": "건설안전기사 응시료",
+      "description": "건설안전기사 응시료의 공식 데이터 확인 상태를 제공합니다.",
+      "canonicalPath": "/certifications/cert-1250/fee",
+      "priority": 0.7,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-1250/eligibility",
+      "title": "건설안전기사 응시자격",
+      "description": "건설안전기사 응시자격의 공식 데이터 확인 상태를 제공합니다.",
+      "canonicalPath": "/certifications/cert-1250/eligibility",
+      "priority": 0.65,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-1250/apply",
+      "title": "건설안전기사 접수처",
+      "description": "건설안전기사 원서접수 정보와 공식 링크 확인 상태를 제공합니다.",
+      "canonicalPath": "/certifications/cert-1250/apply",
+      "priority": 0.65,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-1250/source",
+      "title": "건설안전기사 공식 출처",
+      "description": "건설안전기사 데이터 출처와 갱신 상태를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1250/source",
+      "priority": 0.65,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-752",
+      "title": "가스기술사 정보",
+      "description": "가스기술사의 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-752",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-752/schedule",
+      "title": "가스기술사 시험일정",
+      "description": "가스기술사 시험일정의 공식 데이터 확인 상태를 제공합니다.",
+      "canonicalPath": "/certifications/cert-752/schedule",
+      "priority": 0.75,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-752/fee",
+      "title": "가스기술사 응시료",
+      "description": "가스기술사 응시료의 공식 데이터 확인 상태를 제공합니다.",
+      "canonicalPath": "/certifications/cert-752/fee",
+      "priority": 0.7,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-752/eligibility",
+      "title": "가스기술사 응시자격",
+      "description": "가스기술사 응시자격의 공식 데이터 확인 상태를 제공합니다.",
+      "canonicalPath": "/certifications/cert-752/eligibility",
+      "priority": 0.65,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-752/apply",
+      "title": "가스기술사 접수처",
+      "description": "가스기술사 원서접수 정보와 공식 링크 확인 상태를 제공합니다.",
+      "canonicalPath": "/certifications/cert-752/apply",
+      "priority": 0.65,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-752/source",
+      "title": "가스기술사 공식 출처",
+      "description": "가스기술사 데이터 출처와 갱신 상태를 확인합니다.",
+      "canonicalPath": "/certifications/cert-752/source",
+      "priority": 0.65,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-740",
+      "title": "건설안전기술사 정보",
+      "description": "건설안전기술사의 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-740",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-740/schedule",
+      "title": "건설안전기술사 시험일정",
+      "description": "건설안전기술사 시험일정의 공식 데이터 확인 상태를 제공합니다.",
+      "canonicalPath": "/certifications/cert-740/schedule",
+      "priority": 0.75,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-740/fee",
+      "title": "건설안전기술사 응시료",
+      "description": "건설안전기술사 응시료의 공식 데이터 확인 상태를 제공합니다.",
+      "canonicalPath": "/certifications/cert-740/fee",
+      "priority": 0.7,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-740/eligibility",
+      "title": "건설안전기술사 응시자격",
+      "description": "건설안전기술사 응시자격의 공식 데이터 확인 상태를 제공합니다.",
+      "canonicalPath": "/certifications/cert-740/eligibility",
+      "priority": 0.65,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-740/apply",
+      "title": "건설안전기술사 접수처",
+      "description": "건설안전기술사 원서접수 정보와 공식 링크 확인 상태를 제공합니다.",
+      "canonicalPath": "/certifications/cert-740/apply",
+      "priority": 0.65,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-740/source",
+      "title": "건설안전기술사 공식 출처",
+      "description": "건설안전기술사 데이터 출처와 갱신 상태를 확인합니다.",
+      "canonicalPath": "/certifications/cert-740/source",
+      "priority": 0.65,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-450",
+      "title": "전기기능장 정보",
+      "description": "전기기능장의 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-450",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-450/schedule",
+      "title": "전기기능장 시험일정",
+      "description": "전기기능장 시험일정의 공식 데이터 확인 상태를 제공합니다.",
+      "canonicalPath": "/certifications/cert-450/schedule",
+      "priority": 0.75,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-450/fee",
+      "title": "전기기능장 응시료",
+      "description": "전기기능장 응시료의 공식 데이터 확인 상태를 제공합니다.",
+      "canonicalPath": "/certifications/cert-450/fee",
+      "priority": 0.7,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-450/eligibility",
+      "title": "전기기능장 응시자격",
+      "description": "전기기능장 응시자격의 공식 데이터 확인 상태를 제공합니다.",
+      "canonicalPath": "/certifications/cert-450/eligibility",
+      "priority": 0.65,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-450/apply",
+      "title": "전기기능장 접수처",
+      "description": "전기기능장 원서접수 정보와 공식 링크 확인 상태를 제공합니다.",
+      "canonicalPath": "/certifications/cert-450/apply",
+      "priority": 0.65,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/certifications/cert-450/source",
+      "title": "전기기능장 공식 출처",
+      "description": "전기기능장 데이터 출처와 갱신 상태를 확인합니다.",
+      "canonicalPath": "/certifications/cert-450/source",
+      "priority": 0.65,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/categories/information-communication",
+      "title": "정보통신 자격증",
+      "description": "정보통신 분야의 자격증 목록을 확인합니다.",
+      "canonicalPath": "/categories/information-communication",
+      "priority": 0.7,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/categories/electrical-electronics",
+      "title": "전기·전자 자격증",
+      "description": "전기·전자 분야의 자격증 목록을 확인합니다.",
+      "canonicalPath": "/categories/electrical-electronics",
+      "priority": 0.7,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/categories/safety-management",
+      "title": "안전관리 자격증",
+      "description": "안전관리 분야의 자격증 목록을 확인합니다.",
+      "canonicalPath": "/categories/safety-management",
+      "priority": 0.7,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/levels/engineer",
+      "title": "기사 자격증",
+      "description": "기사 수준의 자격증 목록을 확인합니다.",
+      "canonicalPath": "/levels/engineer",
+      "priority": 0.7,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/levels/professional-engineer",
+      "title": "기술사 자격증",
+      "description": "기술사 수준의 자격증 목록을 확인합니다.",
+      "canonicalPath": "/levels/professional-engineer",
+      "priority": 0.7,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    },
+    {
+      "path": "/levels/master-craftsman",
+      "title": "기능장 자격증",
+      "description": "기능장 수준의 자격증 목록을 확인합니다.",
+      "canonicalPath": "/levels/master-craftsman",
+      "priority": 0.7,
+      "changeFrequency": "monthly",
+      "lastModified": "2026-08-21T03:36:38.462Z"
+    }
+  ]
+}
