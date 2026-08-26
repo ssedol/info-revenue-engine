@@ -1,5 +1,7 @@
 import Script from "next/script";
 
+const GOOGLE_SITE_VERIFICATION = "l9XUsqBACTgrpUwkQktZdRxd77IsXPD9KglwHACa3UY";
+
 export function Analytics() {
   const ga4Id = process.env.NEXT_PUBLIC_GA4_ID;
 
@@ -22,6 +24,6 @@ export function Analytics() {
   );
 }
 
-export function getGoogleSiteVerification(): string | undefined {
-  return process.env.NEXT_PUBLIC_SITE_VERIFICATION_GOOGLE || undefined;
+export function getGoogleSiteVerification(): string {
+  return process.env.NEXT_PUBLIC_SITE_VERIFICATION_GOOGLE || GOOGLE_SITE_VERIFICATION;
 }
