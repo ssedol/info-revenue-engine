@@ -67,7 +67,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <main className="content">{children}</main>
           <footer className="site-footer">
             <div className="site-footer__inner">
+              <nav className="site-nav" aria-label="사이트 안내">
+                <Link href="/about">사이트 소개</Link>
+                <Link href="/privacy-policy">개인정보처리방침</Link>
+                <Link href="/contact">문의</Link>
+              </nav>
               <p>시험일정, 응시료, 접수 기간처럼 바뀔 수 있는 정보는 공식 사이트의 최신 안내를 확인하세요.</p>
+              <p>© 2026 자격증 인사이트</p>
             </div>
           </footer>
           <Analytics />
