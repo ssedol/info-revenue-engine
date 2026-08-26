@@ -5,6 +5,7 @@ export function getArticleSeoIndexItems(): SeoIndexItem[] {
   const articles = getArticles();
   const latest = articles[0]?.publishedAt;
   const latestDateTime = latest ? `${latest}T00:00:00.000Z` : undefined;
+  const trustPageLastModified = "2026-08-26T00:00:00.000Z";
 
   return [
     {
@@ -42,6 +43,33 @@ export function getArticleSeoIndexItems(): SeoIndexItem[] {
       priority: 0.65,
       changeFrequency: "monthly",
       lastModified: latestDateTime,
+    },
+    {
+      path: "/about",
+      title: "사이트 소개",
+      description: "자격증 인사이트의 운영 목적과 정보 작성 기준을 안내합니다.",
+      canonicalPath: "/about",
+      priority: 0.35,
+      changeFrequency: "monthly",
+      lastModified: trustPageLastModified,
+    },
+    {
+      path: "/privacy-policy",
+      title: "개인정보처리방침",
+      description: "개인정보 처리와 쿠키, 광고 서비스 이용 방침을 안내합니다.",
+      canonicalPath: "/privacy-policy",
+      priority: 0.3,
+      changeFrequency: "monthly",
+      lastModified: trustPageLastModified,
+    },
+    {
+      path: "/contact",
+      title: "문의",
+      description: "정보 오류 제보와 사이트 운영 문의 방법을 안내합니다.",
+      canonicalPath: "/contact",
+      priority: 0.3,
+      changeFrequency: "monthly",
+      lastModified: trustPageLastModified,
     },
     ...articles.map((article) => ({
       path: articlePath(article),
