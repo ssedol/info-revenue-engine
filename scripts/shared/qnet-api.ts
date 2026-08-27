@@ -25,3 +25,11 @@ export const qnetTestInformationEndpoint: OfficialApiEndpoint = {
   dataGoKrPage: "https://www.data.go.kr/data/15003029/openapi.do",
   format: "XML",
 };
+
+export const qnetScheduleOperations = {
+  "기술사": "getPEList",
+  "기능장": "getMCList",
+  "기사": "getEList",
+  "산업기사": "getEList",
+  "기능사": "getCList",
+} as const;
