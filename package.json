@@ -8,12 +8,12 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "data:collect": "tsx scripts/collect/collect-certifications.ts",
-    "data:normalize": "tsx scripts/normalize/normalize-certifications.ts",
-    "data:validate": "tsx scripts/validate/validate-certifications.ts",
-    "data:publish": "tsx scripts/publish/publish-certifications.ts",
+    "data:collect": "node --import tsx scripts/collect/collect-certifications.ts",
+    "data:normalize": "node --import tsx scripts/normalize/normalize-certifications.ts",
+    "data:validate": "node --import tsx scripts/validate/validate-certifications.ts",
+    "data:publish": "node --import tsx scripts/publish/publish-certifications.ts",
     "data:build": "npm run data:collect && npm run data:normalize && npm run data:validate && npm run data:publish",
-    "build": "next build"
+    "build": "npm run data:build && next build"
   },
   "dependencies": {
     "fast-xml-parser": "^5.11.0",
