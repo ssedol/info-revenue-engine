@@ -10,7 +10,7 @@ const source = {
 };
 
 describe("buildSeoIndex", () => {
-  it("creates canonical paths for certification intent pages", () => {
+  it("creates canonical paths only for implemented certification pages", () => {
     const certification: Certification = {
       id: "1320",
       slug: "cert-1320",
@@ -28,7 +28,8 @@ describe("buildSeoIndex", () => {
 
     const index = buildSeoIndex([certification]);
 
-    expect(index.map((item) => item.path)).toContain("/certifications/cert-1320/schedule");
+    expect(index.map((item) => item.path)).toContain("/certifications/cert-1320");
+    expect(index.map((item) => item.path)).not.toContain("/certifications/cert-1320/schedule");
     expect(index.every((item) => item.canonicalPath.startsWith("/"))).toBe(true);
   });
 });
