@@ -7,10 +7,11 @@
 ## MVP Boundary
 
 - Next.js + TypeScript strict + Vercel 기준
-- 콘텐츠는 `src/sites/certifications/articles.ts`의 정적 TypeScript 배열로 관리
+- 자격증 목록과 2026 시험일정은 빌드 시 Q-Net 공식 API에서 갱신
+- `USE_CERTIFICATION_FIXTURE=1`일 때만 개발용 샘플 7개 사용
 - PostgreSQL, Supabase, Prisma, ORM, DB migration, Auth, 회원가입, 로그인 없음
-- API collector/normalize/validate/publish는 후순위 수동 스크립트로만 유지하며 dev/build 필수 흐름이 아님
-- 외부 키와 광고 ID가 없어도 placeholder로 lint, typecheck, test, build 가능
+- API collector/normalize/validate/publish는 빌드 전에 실행되어 공식 데이터를 검증하고 게시
+- Q-Net API 키와 광고 ID가 없어도 lint, typecheck, test, build 가능
 
 ## Commands
 
