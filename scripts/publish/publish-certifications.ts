@@ -1,7 +1,7 @@
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { atomicWriteJson } from "../../src/core/data/atomic-json";
-import { categoryPath, certificationIntentPath, certificationPath, levelPath } from "../../src/sites/certifications/routes";
+import { certificationPath } from "../../src/sites/certifications/routes";
 import type { Certification, SeoIndexItem } from "../../src/sites/certifications/types";
 import { certificationSchema } from "../../src/sites/certifications/types";
 import { isCliEntry } from "../shared/cli";
@@ -43,86 +43,17 @@ export function buildSeoIndex(certifications: Certification[]): SeoIndexItem[] {
     },
   ];
 
-  const certificationItems = certifications.flatMap((certification) => [
-    {
+  const certificationItems = certifications.map((certification) => ({
       path: certificationPath(certification),
       title: `${certification.name} 정보`,
-      description: `${certification.name}의 공식 데이터 기반 기본 정보를 확인합니다.`,
+      description: `${certification.name}의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.`,
       canonicalPath: certificationPath(certification),
       priority: 0.85,
       changeFrequency: "weekly" as const,
       lastModified: certification.updatedAt,
-    },
-    {
-      path: certificationIntentPath(certification, "schedule"),
-      title: `${certification.name} 시험일정`,
-      description: `${certification.name} 시험일정의 공식 데이터 확인 상태를 제공합니다.`,
-      canonicalPath: certificationIntentPath(certification, "schedule"),
-      priority: 0.75,
-      changeFrequency: "weekly" as const,
-      lastModified: certification.updatedAt,
-    },
-    {
-      path: certificationIntentPath(certification, "fee"),
-      title: `${certification.name} 응시료`,
-      description: `${certification.name} 응시료의 공식 데이터 확인 상태를 제공합니다.`,
-      canonicalPath: certificationIntentPath(certification, "fee"),
-      priority: 0.7,
-      changeFrequency: "monthly" as const,
-      lastModified: certification.updatedAt,
-    },
-    {
-      path: certificationIntentPath(certification, "eligibility"),
-      title: `${certification.name} 응시자격`,
-      description: `${certification.name} 응시자격의 공식 데이터 확인 상태를 제공합니다.`,
-      canonicalPath: certificationIntentPath(certification, "eligibility"),
-      priority: 0.65,
-      changeFrequency: "monthly" as const,
-      lastModified: certification.updatedAt,
-    },
-    {
-      path: certificationIntentPath(certification, "apply"),
-      title: `${certification.name} 접수처`,
-      description: `${certification.name} 원서접수 정보와 공식 링크 확인 상태를 제공합니다.`,
-      canonicalPath: certificationIntentPath(certification, "apply"),
-      priority: 0.65,
-      changeFrequency: "monthly" as const,
-      lastModified: certification.updatedAt,
-    },
-    {
-      path: certificationIntentPath(certification, "source"),
-      title: `${certification.name} 공식 출처`,
-      description: `${certification.name} 데이터 출처와 갱신 상태를 확인합니다.`,
-      canonicalPath: certificationIntentPath(certification, "source"),
-      priority: 0.65,
-      changeFrequency: "monthly" as const,
-      lastModified: certification.updatedAt,
-    },
-  ]);
+    }));
 
-  const categories = Array.from(new Set(certifications.map((certification) => certification.category))).map((category) => ({
-    path: categoryPath(category),
-    title: `${category} 자격증`,
-    description: `${category} 분야의 자격증 목록을 확인합니다.`,
-    canonicalPath: categoryPath(category),
-    priority: 0.7,
-    changeFrequency: "monthly" as const,
-    lastModified: certifications[0]?.updatedAt,
-  }));
-
-  const levels = Array.from(
-    new Set(certifications.map((certification) => certification.level).filter((level): level is string => Boolean(level))),
-  ).map((level) => ({
-    path: levelPath(level),
-    title: `${level} 자격증`,
-    description: `${level} 수준의 자격증 목록을 확인합니다.`,
-    canonicalPath: levelPath(level),
-    priority: 0.7,
-    changeFrequency: "monthly" as const,
-    lastModified: certifications[0]?.updatedAt,
-  }));
-
-  return [...baseItems, ...certificationItems, ...categories, ...levels];
+  return [...baseItems, ...certificationItems];
 }
 
 async function publish(): Promise<void> {
