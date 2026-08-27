@@ -2,18 +2,33 @@ import { copyFile, mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { isCliEntry } from "../shared/cli";
 import { fixtureRoot, rawRoot, todayPathSegment } from "../shared/paths";
-import { qnetQualificationListEndpoint } from "../shared/qnet-api";
+import { qnetQualificationListEndpoint, qnetScheduleOperations, qnetTestInformationEndpoint } from "../shared/qnet-api";
 
-async function fetchOfficialList(serviceKey: string): Promise<string> {
-  const url = new URL(qnetQualificationListEndpoint.serviceUrl);
-  url.searchParams.set("serviceKey", serviceKey);
-  const response = await fetch(url);
+async function fetchOfficialXml(url: URL, serviceKey?: string): Promise<string> {
+  if (serviceKey) url.searchParams.set("serviceKey", serviceKey);
+  const response = await fetch(url, { signal: AbortSignal.timeout(30_000) });
 
   if (!response.ok) {
-    throw new Error(`Q-Net list API failed with HTTP ${response.status}`);
+    throw new Error(`Q-Net API failed with HTTP ${response.status}: ${url.pathname}`);
   }
 
-  return response.text();
+  const xml = await response.text();
+  if (!xml.includes("<resultCode>00</resultCode>")) {
+    throw new Error(`Q-Net API returned an unsuccessful response: ${url.pathname}`);
+  }
+  return xml;
+}
+
+async function fetchWithRetry(url: URL, serviceKey?: string): Promise<string> {
+  let lastError: unknown;
+  for (let attempt = 1; attempt <= 3; attempt += 1) {
+    try {
+      return await fetchOfficialXml(new URL(url), serviceKey);
+    } catch (error) {
+      lastError = error;
+    }
+  }
+  throw lastError;
 }
 
 async function collect(): Promise<void> {
@@ -23,14 +38,30 @@ async function collect(): Promise<void> {
   const rawPath = join(outputDir, "qnet-certifications.raw.xml");
   const metadataPath = join(outputDir, "qnet-certifications.raw.metadata.json");
   const serviceKey = process.env.OFFICIAL_API_KEY;
+  const useFixture = process.env.USE_CERTIFICATION_FIXTURE === "1";
 
   await mkdir(outputDir, { recursive: true });
 
-  const mode = serviceKey ? "official-api" : "fixture";
-  if (serviceKey) {
-    await writeFile(rawPath, await fetchOfficialList(serviceKey), "utf8");
-  } else {
+  const mode = useFixture ? "fixture" : "official-api";
+  if (useFixture) {
     await copyFile(join(fixtureRoot, "qnet-list.fixture.xml"), rawPath);
+  } else {
+    const listUrl = new URL(qnetQualificationListEndpoint.serviceUrl);
+    listUrl.searchParams.set("numOfRows", "1000");
+    listUrl.searchParams.set("pageNo", "1");
+    await writeFile(rawPath, await fetchWithRetry(listUrl, serviceKey), "utf8");
+
+    const uniqueOperations = [...new Set(Object.values(qnetScheduleOperations))];
+    await Promise.all(
+      uniqueOperations.map(async (operation) => {
+        const baseUrl = qnetTestInformationEndpoint.serviceUrl.replace("/getPEList", "");
+        const scheduleUrl = new URL(`${baseUrl}/${operation}`);
+        scheduleUrl.searchParams.set("numOfRows", "100");
+        scheduleUrl.searchParams.set("pageNo", "1");
+        const xml = await fetchWithRetry(scheduleUrl, serviceKey);
+        await writeFile(join(outputDir, `qnet-schedules-${operation}.raw.xml`), xml, "utf8");
+      }),
+    );
   }
 
   await writeFile(

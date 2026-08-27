@@ -17,6 +17,11 @@ export const examScheduleSchema = z.object({
   examStart: z.string().date().optional(),
   examEnd: z.string().date().optional(),
   resultDate: z.string().date().optional(),
+  practicalApplicationStart: z.string().date().optional(),
+  practicalApplicationEnd: z.string().date().optional(),
+  practicalExamStart: z.string().date().optional(),
+  practicalExamEnd: z.string().date().optional(),
+  practicalResultDate: z.string().date().optional(),
   source: dataSourceRefSchema,
 });
 
