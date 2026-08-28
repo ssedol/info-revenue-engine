@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import "./globals.css";
-import { Analytics, getGoogleSiteVerification } from "@/core/analytics/Analytics";
+import { Analytics as GoogleAnalytics, getGoogleSiteVerification } from "@/core/analytics/Analytics";
 import { siteConfig } from "@/core/config/site";
 import { JsonLd, websiteJsonLd } from "@/core/seo/structured-data";
 
@@ -76,7 +77,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               <p>© 2026 자격증 인사이트</p>
             </div>
           </footer>
-          <Analytics />
+          <GoogleAnalytics />
+          <VercelAnalytics />
         </div>
       </body>
     </html>
