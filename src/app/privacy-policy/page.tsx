@@ -35,7 +35,7 @@ export default function PrivacyPolicyPage() {
 
           <section className="article-section">
             <h2><span>03</span>외부 서비스</h2>
-            <p>사이트 제공과 운영을 위해 Vercel의 호스팅 서비스를 사용합니다. 광고 제공을 위해 Google AdSense를 사용하며, Google이 쿠키와 광고 식별자 등을 이용할 수 있습니다. 향후 방문 통계 기능을 활성화하면 Google Analytics가 사용될 수 있습니다.</p>
+            <p>사이트 제공과 운영을 위해 Vercel의 호스팅 및 Web Analytics 서비스를 사용합니다. Vercel Web Analytics는 쿠키 없이 익명화된 방문 통계를 처리합니다. 광고 제공을 위해 Google AdSense를 사용하며, Google이 쿠키와 광고 식별자 등을 이용할 수 있습니다. 향후 Google Analytics가 추가로 사용될 수 있습니다.</p>
             <p>외부 서비스 사업자는 서비스 제공 과정에서 정보를 국외 서버에서 처리할 수 있으며, 구체적인 처리 방식과 기간은 각 사업자의 개인정보처리방침을 따릅니다.</p>
             <ul className="official-link-list">
               <li><a className="official-link official-link--stacked" href="https://policies.google.com/privacy" target="_blank" rel="noreferrer"><span>Google 개인정보처리방침</span><small>policies.google.com/privacy</small></a></li>
