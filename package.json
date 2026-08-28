@@ -16,6 +16,7 @@
     "build": "npm run data:build && next build"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "fast-xml-parser": "^5.11.0",
     "next": "latest",
     "react": "latest",
