@@ -8,7 +8,7 @@
       ],
       "url": "https://license.korcham.net/co/examguide03.do?cd=0103&mm=21",
       "ok": false,
-      "fetchedAt": "2026-08-31T04:55:51.821Z",
+      "fetchedAt": "2026-08-31T05:01:07.874Z",
       "error": "required text missing: 컴퓨터활용능력, 시험일정"
     },
     {
@@ -18,8 +18,9 @@
         "한국사능력검정시험"
       ],
       "url": "https://www.historyexam.go.kr/",
-      "ok": true,
-      "fetchedAt": "2026-08-31T04:55:51.821Z"
+      "ok": false,
+      "fetchedAt": "2026-08-31T05:01:07.874Z",
+      "error": "fetch failed"
     },
     {
       "id": "dataq",
@@ -30,7 +31,7 @@
       ],
       "url": "https://www.dataq.or.kr/www/accept/schedule.do",
       "ok": true,
-      "fetchedAt": "2026-08-31T04:55:51.821Z"
+      "fetchedAt": "2026-08-31T05:01:07.874Z"
     },
     {
       "id": "realtor",
@@ -40,7 +41,7 @@
       ],
       "url": "https://www.q-net.or.kr/man001.do?gSite=L&gId=08",
       "ok": true,
-      "fetchedAt": "2026-08-31T04:55:51.821Z"
+      "fetchedAt": "2026-08-31T05:01:07.874Z"
     },
     {
       "id": "financial-manager",
@@ -50,7 +51,7 @@
       ],
       "url": "https://www.samile.com/",
       "ok": false,
-      "fetchedAt": "2026-08-31T04:55:51.821Z",
+      "fetchedAt": "2026-08-31T05:01:07.874Z",
       "error": "required text missing: 재경관리사"
     }
   ]
