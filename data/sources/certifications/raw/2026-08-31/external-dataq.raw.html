@@ -1,0 +1,2119 @@
+<!DOCTYPE HTML>
+
+
+
+
+
+<html lang="ko">
+<head>
+	<title>메인화면 : 데이터자격시험</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="naver-site-verification" content="5d2320dabb2c9aee8a0dcf4973226c76a9391515"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="데이터자격검정 - 데이터자격시험, DAP, DAsP, SQLP, SQLD, ADP, ADsP.">
+	<meta property="og:url" content="https://www.dataq.or.kr/www/main.do">
+	<meta name="description" content="데이터자격시험, DAP, DAsP, SQLP, SQLD, ADP, ADsP.">
+	<meta property="og:description" content="데이터자격시험, DAP, DAsP, SQLP, SQLD, ADP, ADsP.">
+	<!-- 캐시 방지 -->
+	<meta http-equiv="Pragma" content="No-Cache"/>
+	<meta http-equiv="Cache-Control" content="no-cache; must-revalidate; no-store"/>
+	<meta http-equiv="Expires" content="now"/>
+	<link rel="shortcut icon" href="/www/images/favicon.png">
+
+	<link rel="stylesheet" type="text/css"
+		  href="/www/css/fonts/NanumSquare/nanumsquare.css?v=491309"/>
+	<link rel="stylesheet" type="text/css"
+		  href="/www/css/fonts/NotoSansKR/NotoSansKR.css?v=491309"/>
+	<link rel="stylesheet" type="text/css"
+		  href="/www/css/fonts/XEIcon/xeicon.min.css?v=491309"/>
+	<link rel="stylesheet" type="text/css"
+		  href="/www/css/fonts/simple-line-icons/css/simple-line-icons.css?v=491309"/>
+
+	<link rel="stylesheet" type="text/css"
+		  href="/www/css/plugins/animate.css?v=491309"/>
+	<link rel="stylesheet" type="text/css"
+		  href="/www/css/plugins/bootstrap.min.css?v=491309"/>
+	<link rel="stylesheet" type="text/css"
+		  href="/www/css/plugins/bootstrap-grid.min.css?v=491309"/>
+	<link rel="stylesheet" type="text/css"
+		  href="/www/css/plugins/bootstrap-reboot.min.css?v=491309"/>
+	<link rel="stylesheet" type="text/css"
+		  href="/www/css/common.css?v=491309"/>
+	<link rel="stylesheet" type="text/css"
+		  href="/www/css/layout-front.css?v=491309"/>
+	<!--
+	<link rel="stylesheet" type="text/css" href="/www/css/iosys-front.css?v=491309" />
+	<link rel="stylesheet" type="text/css" href="/www/css/iosys-fix.css?v=491309" />
+	<link rel="stylesheet" type="text/css" href="/www/css/style.css?v=491309" />
+-->
+	<script>
+		window.IS_LOGIN = false;
+		window.SUPERVISORGB2YN = "N";
+		window.lastConndateTime = "";
+	</script>
+	<script type="text/javascript"
+			src="/www/js/iosys/menu.js?v=491309"></script>
+
+	<script type="text/javascript"
+			src="/www/js/plugins/jquery.js?v=491309"></script>
+	<script type="text/javascript"
+			src="/www/js/plugins/jquery-ui.js?v=491309"></script>
+	<script type="text/javascript"
+			src="/www/js/plugins/lodash.js?v=491309"></script>
+	<script type="text/javascript"
+			src="/www/js/plugins/handlebars.js?v=491309"></script>
+	<script type="text/javascript"
+			src="/www/js/plugins/bootstrap.min.js?v=491309"></script>
+	<script type="text/javascript"
+			src="/www/js/plugins/bootstrap.bundle.min.js?v=491309"></script>
+	<script type="text/javascript"
+			src="/www/js/plugins/jsonrpc.js?v=491309"></script>
+	<script type="text/javascript"
+			src="/www/js/plugins/jquery.form.js?v=491309"></script>
+
+	<script type="text/javascript"
+			src="/www/js/iosys/jquery-plugins.js?v=491309"></script>
+	<script type="text/javascript"
+			src="/www/js/iosys/common.js?v=491309"></script>
+	<script type="text/javascript"
+			src="/www/js/iosys/handlebars-extensions.js?v=491309"></script>
+	<script type="text/javascript"
+			src="/www/js/iosys/sitefunction.js?v=491309"></script>
+	<!-- swiper -->
+	<link rel="stylesheet" type="text/css"
+		  href="/www/js/plugins/swiper/css/swiper.min.css?v=491309"/>
+	<script type="text/javascript"
+			src="/www/js/plugins/swiper/js/swiper.min.js?v=491309"></script>
+
+	<!-- TUI Calendar JS -->
+	<link rel="stylesheet" href="https://uicdn.toast.com/calendar/latest/toastui-calendar.min.css"/>
+	<script src="https://uicdn.toast.com/calendar/latest/toastui-calendar.min.js"></script>
+
+	<style>
+
+		.toastui-calendar-template-monthGridHeaderExceed {
+			position: relative;
+			top: -3px; /* 날짜 숫자(top: -8px)와 비슷하게 맞춰주기 */
+			font-size: 10px;
+			font-weight: 500;
+		}
+
+		/* 달력 날짜 숫자 커스텀 */
+		.calendar-day-number {
+			font-size: 13px;
+			font-weight: 600;
+			display: inline-block;
+			position: relative;
+			top: -8px;
+		}
+
+		.calendar-day-number.today {
+			background-color: #da2614;
+			border-radius: 4px;
+			padding: 0 4px;
+		}
+
+		.toastui-calendar-daygrid-cell {
+			padding-left: 0px !important;
+			padding-right: 0px !important;
+		}
+
+		.toastui-calendar-weekday-event {
+			margin-left: 2px !important;
+			margin-right: 2px !important;
+		}
+
+
+		/* TUI Calendar 이벤트 내용 템플릿 영역 커스터마이징 */
+		.toastui-calendar-template-allday {
+			display: flex;
+			align-items: center; /* 수직 중앙 정렬 */
+			justify-content: center; /* 수평 중앙 정렬 */
+			gap: 3px; /* 제목과 태그 간 간격 약간 줄임 */
+			height: 100%;
+			width: 100%;
+			box-sizing: border-box;
+			padding: 0 2px;
+			white-space: nowrap;
+		}
+
+		/* 제목 텍스트 */
+		.toastui-custom-title {
+			font-size: 10px;
+			font-weight: bold;
+			color: #fff;
+		}
+
+		.toastui-custom-title.dark-title {
+			color: #000 !important;
+		}
+
+		/* 태그 스타일 (공백 줄이기) */
+		.toastui-custom-tag {
+			background-color: #fff;
+			color: #333;
+			font-size: 10px;
+			font-weight: 600;
+			padding: 1px 3px; /* 상하 1px, 좌우 3px */
+			border-radius: 3px;
+			line-height: 1;
+		}
+
+		/* 요일 텍스트 스타일 */
+		.toastui-calendar-template-monthDayName {
+			font-size: 13px; /* 글자 크기 */
+			text-align: center; /* 중앙 정렬 */
+			font-weight: 500; /* 선택사항: 약간 두껍게 */
+		}
+
+		/* 요일명 각 셀에 중앙 정렬 */
+		.toastui-calendar-day-name-container,
+		.toastui-calendar-day-names {
+			position: static !important;
+		}
+
+
+		#calendar-controls {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			padding: 0 30px;
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+			"Helvetica Neue", Arial, "Noto Sans", sans-serif,
+			"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+		}
+
+		/* 좌측 오늘 버튼 */
+		.calendar-left {
+			flex: 1;
+		}
+
+		.custom-btns-today {
+			background-color: #6c757d;
+			color: #fff;
+			border: none;
+			padding: 4px 10px;
+			font-size: 14px;
+			border-radius: 4px;
+			cursor: pointer;
+			line-height: 1.3;
+		}
+
+		.custom-btns-today:focus,
+		.custom-btns-today:active {
+			outline: 3px solid #222 !important;
+			outline-offset: 2px;
+			box-shadow: 0 0 0 2px #fff !important;
+			background-color: #6c757d !important;
+		}
+
+		/* 중앙 년월 + 이동버튼 */
+		.calendar-center {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex: 2;
+			gap: 15px;
+		}
+
+		/* 우측 비워도 됨 */
+		.calendar-right {
+			flex: 1;
+		}
+
+		/* 화살표 버튼 스타일 */
+		.custom-btns-prev,
+		.custom-btns-next {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 28px;
+			height: 28px;
+			background: transparent;
+			border: none;
+			font-size: 18px;
+			font-weight: bold;
+			color: #333;
+			cursor: pointer;
+			padding: 0;
+			margin: 0;
+			line-height: 1;
+			border-radius: 4px;
+			transition: background-color 0.2s ease;
+			vertical-align: middle;
+		}
+
+		.custom-btns-prev:hover,
+		.custom-btns-next:hover,
+		.custom-btns-prev:focus,
+		.custom-btns-next:focus,
+		.custom-btns-prev:active,
+		.custom-btns-next:active {
+			outline: 3px solid #222 !important;
+			outline-offset: 2px;
+			box-shadow: 0 0 0 2px #fff !important;
+			background: transparent !important;
+			color: #555 !important;
+		}
+
+		#renderRange {
+			font-weight: bold;
+			font-size: 21px;
+			color: #222;
+			min-width: 110px;
+			text-align: center;
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+			"Helvetica Neue", Arial, "Noto Sans", sans-serif,
+			"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+		}
+
+		.toastui-calendar-grid-cell-more-events,
+		.toastui-calendar-grid-cell-more-events:active,
+		.toastui-calendar-grid-cell-more-events:focus {
+			background-color: transparent !important;
+			color: inherit !important;
+			border: none !important;
+			padding: 0 !important;
+			margin: 0 !important;
+		}
+
+		.schedule_section .toastui-calendar-grid-cell-more-events:focus {
+			outline: 3px solid #222 !important;
+			outline-offset: 2px;
+			box-shadow: 0 0 0 2px #fff !important;
+			border-radius: 4px;
+		}
+
+	</style>
+	<link rel="stylesheet" type="text/css" href="/www/pages/home/main-calendar-a11y.css?v=491309"/>
+
+	<!--[if lt IE 9]>
+		<script src="/www/js/home/es5-shim.min.js?v=491309"></script>
+	<![endif]-->
+	<script type="text/javascript">
+		var contextRoot = "/www";
+		var dataRoot = "https://www.dataq.or.kr/certdata";
+		var siteGb = "home";
+	</script>
+	<script>
+		document.oncontextmenu = function () {
+			return false;
+		}
+	</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async
+			src="https://www.googletagmanager.com/gtag/js?id=G-L0H13KV0WL"></script>
+	<script>
+
+		function viewCalForTui(id) {
+
+			$(".schedule_head .btns span.blind").html("");
+			$(".schedule_head .btns").removeClass("active").removeAttr("aria-pressed").removeAttr("title");
+
+			let typeName = "";
+			let eventsToRender = [];
+			let $selectedFilter;
+
+			switch (id) {
+				case '1':
+					typeName = "빅데이터 분석기사 일정";
+					eventsToRender = window.events.calendar.type_1;
+					$selectedFilter = $(".schedule_head .btns:nth-child(2)").addClass("active");
+					$(".schedule_head .btns:nth-child(2) span.blind").html("선택됨");
+					break;
+				case '2':
+					typeName = "데이터 분석 일정";
+					eventsToRender = window.events.calendar.type_2;
+					$selectedFilter = $(".schedule_head .btns:nth-child(3)").addClass("active");
+					$(".schedule_head .btns:nth-child(3) span.blind").html("선택됨");
+					break;
+				case '3':
+					typeName = "SQL 일정";
+					eventsToRender = window.events.calendar.type_3;
+					$selectedFilter = $(".schedule_head .btns:nth-child(4)").addClass("active");
+					$(".schedule_head .btns:nth-child(4) span.blind").html("선택됨");
+					break;
+				case '4':
+					typeName = "데이터 아키텍처 일정";
+					eventsToRender = window.events.calendar.type_4;
+					$selectedFilter = $(".schedule_head .btns:nth-child(5)").addClass("active");
+					$(".schedule_head .btns:nth-child(5) span.blind").html("선택됨");
+					break;
+				case 'all':
+				default:
+					typeName = "전체 일정";
+					eventsToRender = window.events.calendar.all;
+					$selectedFilter = $(".schedule_head .btns:nth-child(1)").addClass("active");
+					$(".schedule_head .btns:nth-child(1) span.blind").html("선택됨");
+					break;
+			}
+			// 달력 헤더 텍스트 업데이트
+			$(".schedule_calendar h3.blind").html(typeName);
+
+			// 달력 일정 교체
+			closeMorePopupIfExists();
+			calendar.clear();
+			calendar.createEvents(eventsToRender);
+			if (window.kdataMainCalendar) {
+				window.kdataMainCalendar.refreshA11y();
+			}
+		}
+
+		function closeMorePopupIfExists(options) {
+			setTimeout(() => {
+				const opts = options || {};
+				const moreLayerEls = document.querySelectorAll('.toastui-calendar-see-more-container');
+				for (var i = 0; i < moreLayerEls.length; i++) {
+					var moreLayerEl = moreLayerEls[i];
+					moreLayerEl.remove();
+				}
+				if (opts.restoreFocus && window.kdataCalendarLastMoreTrigger) {
+					window.kdataCalendarLastMoreTrigger.focus();
+				}
+			}, 0); // <- "렌더 직후" 제거
+		}
+
+		document.addEventListener('DOMContentLoaded', function () {
+
+			const container = document.getElementById('calendar');
+
+			const calendar = new tui.Calendar(container, {
+				defaultView: 'month',
+				useFormPopup: false,
+				useDetailPopup: false,
+				isReadOnly: true,
+				gridSelection: false,
+				usageStatistics: false,
+				month: {
+					dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'],
+					backgroundColor: '#f4f4f5',
+					enableDblClick: false,
+					enableClick: false,
+				},
+				theme: {
+					common: {
+						border: '1px solid #b5b5b5',
+						saturday: {
+							color: '#024585',
+						},
+						holiday: {
+							color: '#b22222',
+						},
+					},
+					month: {
+						dayName: {
+							backgroundColor: 'rgba(181, 181, 181, 0.4)',
+						},
+						gridCell: {
+							headerHeight: 25,
+						},
+					},
+				},
+				template: {
+					monthGridHeader(model) {
+						const date = parseInt(model.date.split('-')[2], 10);
+						const isToday = model.isToday;
+
+						const todayClass = isToday ? ' today' : '';
+
+						return '<span class="calendar-day-number' + todayClass + '">' + date + '</span>';
+					},
+					allday(event) {
+						const title2 = event.raw?.title2 + event.raw?.pgsggb || '';
+						const groupId = event.raw?.groupId || '';
+						const groupNameMap = {
+							apply: '접수',
+							test: '시험',
+							score: '사전점수',
+							result: '결과발표'
+						};
+
+						// 타이틀 클래스 분기
+						const lowerTitle = title2.toLowerCase();
+						const titleClass =
+								lowerTitle.includes('sqld') || lowerTitle.includes('sqlp')
+										? 'toastui-custom-title dark-title'
+										: 'toastui-custom-title';
+						const tagClass = 'toastui-custom-tag';
+
+						const groupName = groupNameMap[groupId] || groupId;
+
+						return '<span class="' + titleClass + '">' + title2 + '</span>' +
+								'<span class="' + tagClass + '">' + groupName + '</span>' +
+								'<span class="hidden-meta" hidden ' +
+								'data-start="' + event.raw?.start + '" ' +
+								'data-end="' + event.raw?.end + '" ' +
+								'data-group="' + groupId + '"></span>';
+					},
+				}
+			});
+
+			// 1. 달력 컨테이너 접근성 설정
+			container.setAttribute('role', 'region');
+			container.setAttribute('aria-label', '시험 일정 달력');
+			// container.setAttribute('tabindex', '0');
+
+			// 2. 상단 버튼 접근성 설정
+			var todayBtn = document.getElementById('todayBtn');
+			var prevBtn = document.getElementById('prevBtn');
+			var nextBtn = document.getElementById('nextBtn');
+
+			if (todayBtn) todayBtn.setAttribute('aria-label', '오늘 날짜로 이동');
+			if (prevBtn) prevBtn.setAttribute('aria-label', '이전 달로 이동');
+			if (nextBtn) nextBtn.setAttribute('aria-label', '다음 달로 이동');
+
+			// 3. 현재 월 텍스트 aria-live 적용
+			var rangeEl = document.getElementById('renderRange');
+			if (rangeEl) {
+				rangeEl.setAttribute('aria-live', 'polite');
+				rangeEl.setAttribute('role', 'status');
+			}
+
+			$(".schedule_head .btns").each(function () {
+				$(this).attr("role", "button");
+			}).on("keydown", function (e) {
+				var key = e.key || "";
+				var keyCode = e.keyCode || e.which;
+				if (key === " " || key === "Spacebar" || keyCode === 32) {
+					e.preventDefault();
+					this.click();
+				}
+			});
+
+			window.applyMainCalendarAccessibility = function () {
+				if (window.kdataMainCalendar) {
+					window.kdataMainCalendar.refreshA11y();
+				}
+			};
+			// 4. loadEvents + 접근성 갱신
+			function loadEventsWithAria() {
+				loadEvents();
+			}
+
+			// 5. 월 이동 버튼 클릭 시 접근성도 반영
+			if (prevBtn) {
+				prevBtn.addEventListener('click', function () {
+					if (typeof closeMorePopupIfExists === 'function') closeMorePopupIfExists();
+					calendar.prev();
+					loadEventsWithAria();
+					test('apply', {focus: false});     // ‘접수’ 탭 활성, 포커스는 이동 버튼에 유지
+				});
+			}
+
+			if (todayBtn) {
+				todayBtn.addEventListener('click', function () {
+					if (typeof closeMorePopupIfExists === 'function') closeMorePopupIfExists();
+					calendar.today();
+					loadEventsWithAria();
+					test('apply', {focus: false});     // ‘접수’ 탭 활성, 포커스는 이동 버튼에 유지
+				});
+			}
+
+			if (nextBtn) {
+				nextBtn.addEventListener('click', function () {
+					if (typeof closeMorePopupIfExists === 'function') closeMorePopupIfExists();
+					calendar.next();
+					loadEventsWithAria();
+					test('apply', {focus: false});     // ‘접수’ 탭 활성, 포커스는 이동 버튼에 유지
+				});
+			}
+
+			// 툴팁 관련 -------- 마우스 이동시 툴팁 닫기
+			let startX = 0;
+			let startY = 0;
+			let tooltip = null;
+			let isTooltipActive = false;
+			let tooltipDismissHandler = null;
+
+			function removeTooltipDismissHandlers() {
+				if (!tooltipDismissHandler) return;
+				document.removeEventListener('keydown', tooltipDismissHandler);
+				document.removeEventListener('mousedown', tooltipDismissHandler);
+				tooltipDismissHandler = null;
+			}
+
+			function closeCalendarTooltip() {
+				if (tooltip) {
+					tooltip.remove();
+					tooltip = null;
+				}
+				isTooltipActive = false;
+				document.removeEventListener('mousemove', handleMouseMove);
+				removeTooltipDismissHandlers();
+			}
+
+			function bindKeyboardTooltipDismiss() {
+				removeTooltipDismissHandlers();
+				setTimeout(function () {
+					tooltipDismissHandler = function () {
+						closeCalendarTooltip();
+					};
+					document.addEventListener('keydown', tooltipDismissHandler);
+					document.addEventListener('mousedown', tooltipDismissHandler);
+				}, 0);
+			}
+
+			function handleMouseMove(e) {
+				if (!isTooltipActive || !tooltip) return;
+
+				const deltaX = Math.abs(e.pageX - startX);
+				const deltaY = Math.abs(e.pageY - startY);
+
+				if (deltaX > 30 || deltaY > 20) {
+					closeCalendarTooltip();
+				}
+			}
+
+			function showCalendarTooltip(event, nativeEvent) {
+				if (nativeEvent && nativeEvent.preventDefault) nativeEvent.preventDefault();
+				if (nativeEvent && nativeEvent.stopPropagation) nativeEvent.stopPropagation();
+
+				// 기존 툴팁이 있다면 제거
+				if (tooltip) {
+					closeCalendarTooltip();
+				}
+
+				// 새 툴팁 생성
+				tooltip = document.createElement('div');
+
+				let groupId;
+				switch (event.raw.groupId) {
+					case 'apply' :
+						groupId = '접수';
+						break;
+					case 'test' :
+						groupId = '시험';
+						break;
+					case 'score' :
+						groupId = '사전점수';
+						break;
+					case 'result' :
+						groupId = '결과발표';
+						break;
+					default :
+						groupId = '';
+				}
+
+				tooltip.textContent = "[" + groupId + "] " + event.raw.url || '이벤트 정보 없음';
+				tooltip.style.position = 'absolute';
+				tooltip.style.zIndex = '9999';
+				tooltip.style.background = '#ffffff';
+				tooltip.style.color = '#111';
+				tooltip.style.border = '1px solid #666';
+				tooltip.style.borderRadius = '4px';
+				tooltip.style.padding = '1px 10px';
+				tooltip.style.fontSize = '13px';
+				tooltip.style.boxShadow = '2px 2px 6px rgba(0,0,0,0.2)';
+				tooltip.style.whiteSpace = 'nowrap';
+				tooltip.style.pointerEvents = 'none';
+				tooltip.style.lineHeight = '1.2';
+
+				// 위치 설정
+				tooltip.style.left = ((nativeEvent && nativeEvent.pageX) ? nativeEvent.pageX : 0) + 10 + 'px';
+				tooltip.style.top = ((nativeEvent && nativeEvent.pageY) ? nativeEvent.pageY : 0) + 10 + 'px';
+
+				document.body.appendChild(tooltip);
+
+				// 상태 저장
+				startX = (nativeEvent && nativeEvent.pageX) ? nativeEvent.pageX : 0;
+				startY = (nativeEvent && nativeEvent.pageY) ? nativeEvent.pageY : 0;
+				isTooltipActive = true;
+
+				// 마우스 이동 감지 등록 (툴팁이 활성화된 동안만)
+				document.addEventListener('mousemove', handleMouseMove);
+				if (nativeEvent && nativeEvent.keyboardTriggered) {
+					bindKeyboardTooltipDismiss();
+				}
+			}
+
+			calendar.on('clickEvent', ({event, nativeEvent}) => {
+				showCalendarTooltip(event, nativeEvent);
+			});
+
+
+			// 날짜 텍스트 갱신
+			function updateHeader() {
+				const current = calendar.getDate();
+				const month = (current.getMonth() + 1).toString().padStart(2, '0');
+				const year = current.getFullYear();
+				document.getElementById('renderRange').textContent = year + '년 ' + month + '월';
+			}
+
+			// 색상 분리
+			function getEventColor(title) {
+				switch (title) {
+					case "빅데이터분석기사":
+						return '#900020';
+					case "ADP":
+					case "ADsP":
+						return '#008FA1';
+					case "SQLD":
+					case "SQLP":
+						return '#F9A51B';
+					case "DAP":
+					case "DAsP":
+						return '#005495';
+					default:
+						return '#AAAAAA';
+				}
+			}
+
+			let storedEvents = [];
+
+			window.kdataMainCalendar = {
+				calendar: calendar,
+				getEvents: function () {
+					return storedEvents;
+				},
+				showTooltip: showCalendarTooltip,
+				closeMorePopup: closeMorePopupIfExists,
+				refreshA11y: function () {
+					if (window.kdataMainCalendarA11y && typeof window.kdataMainCalendarA11y.refresh === 'function') {
+						setTimeout(window.kdataMainCalendarA11y.refresh, 100);
+					}
+				}
+			};
+
+			// 이벤트 데이터 로딩 함수
+			function loadEvents() {
+				const start = new Date(calendar.getDateRangeStart()).getTime();
+				const end = new Date(calendar.getDateRangeEnd()).getTime();
+				const params = {start, end};
+
+				$.get('/www/events.dox?' + $.param(params)).then(data => {
+					storedEvents = data.map(item => {
+						let className;
+						switch (item.title) {
+							case "빅데이터분석기사":
+								className = 'type_1';
+								break;
+							case "ADP":
+								className = 'type_2';
+								break;
+							case "ADsP":
+								className = 'type_2';
+								break;
+							case "SQLD":
+								className = 'type_3';
+								break;
+							case "SQLP":
+								className = 'type_3';
+								break;
+							case "DAP":
+								className = 'type_4';
+								break;
+							case "DAsP":
+								className = 'type_4';
+								break;
+						}
+
+						function toKst(dateLike) {
+							const d = dateLike instanceof Date ? dateLike : new Date(dateLike);
+							return new Date(d.getTime() + 9 * 60 * 60 * 1000);
+						}
+
+						// UTC 문자열/epoch → KST 시각으로 보정 → 그 ‘날’의 로컬 자정 Date로 고정
+						function toKSTLocalMidnight(dateLike) {
+							const d = dateLike instanceof Date ? dateLike : new Date(dateLike); // UTC 기준 입력
+							const kst = new Date(d.getTime() + 9 * 60 * 60 * 1000);              // +9시간
+							return new Date(kst.getFullYear(), kst.getMonth(), kst.getDate());   // 로컬 자정
+						}
+
+						const startDate = toKSTLocalMidnight(item.start);
+						const endDate   = toKSTLocalMidnight(item.end);
+
+						if (isNaN(startDate.getTime()) || isNaN(endDate.getTime())) {
+							console.warn('Invalid start/end from server:', item.start, item.end, item);
+							// 필요 시 이 항목 스킵하거나 fallback 처리
+						}
+
+						return {
+							id: item.id || String(Math.random()),
+							calendarId: item.groupId,
+							groupId: item.groupId,
+							title: item.title + " ||" + item.groupId,
+							start: startDate,
+							end: endDate,
+							range: {
+								start: toKst(item.start),
+								end: toKst(item.end),
+							},
+							category: 'allday',
+							backgroundColor: getEventColor(item.title),
+							raw: item,
+							classId: item.title,
+							className: className,
+							// classNames: className + item.groupId,
+						}
+					});
+
+					closeMorePopupIfExists();
+					calendar.clear();
+					calendar.createEvents(storedEvents);
+					if (window.kdataMainCalendar) {
+						window.kdataMainCalendar.refreshA11y();
+					}
+
+					const tabId = data.length > 0 ? data[0].groupId : "";
+					renderSchedule(params, tabId);
+				});
+
+				$(".schedule_head a").removeClass("active");
+				$(".schedule_head a:first").addClass("active");
+
+				updateHeader();
+			}
+
+			// 전역 변수 등록
+			window.calendar = calendar;
+			window.events = {
+				calendar: {
+					all: [],      // 전체 (월 이동, 오늘 시 전체 렌더용)
+					type_1: [],   // 빅데이터분석기사
+					type_2: [],   // ADP, ADsP
+					type_3: [],   // SQLD, SQLP
+					type_4: []    // DAP, DAsP
+				},
+				apply: {},
+				test: {},
+				score: {},
+				result: {}
+			};
+
+			// 최초 로딩
+			loadEventsWithAria();
+
+			function makeSubItem(item) {
+				var $title = $("<div>").addClass("sub_title").html(item.raw.url);
+
+				//접수 이외의 탭에서는 버튼 표시하지 않음
+				var $btnApply = "";
+				var $btnGo = "";
+				if (item.groupId == "apply") {
+					$btnApply = $("<a tabindex='0'>").addClass("btns btns_xs").html("<i aria-hidden='true' class='xi-document'/> 접수");
+					$btnGo = $("<a tabindex='0' title='고사장 새 창 열기' class='map_pin'>").addClass("btns btns_xs").html("고사장")
+							.data("examoprSeq", item.raw.examoprSeq);
+				}
+
+				var range;
+
+				if (item.groupId == "apply") {
+					range = Date2Format(item.range.start, "MM.dd(D) HH:mm")
+							+ " ~ " +
+							Date2Format(item.range.end, "MM.dd(D) HH:mm");
+				} else if (item.groupId == "score") {
+					range = Date2Format(item.range.start, "MM.dd(D) 16:00")
+				} else {
+					range = Date2Format(item.range.start, "MM.dd(D) 10:00")
+				}
+				var $body = $("<div>").addClass("sub_info")
+						.append(
+								$("<div>").addClass("date").text(range)
+						)
+						.append(
+								$("<div>").addClass("btns_box")
+										.append($btnApply)
+										.append($btnGo)
+						);
+
+				//접수 이외의 탭에서는 버튼 표시하지 않음
+				if (item.groupId == "apply") {
+					$btnApply.click(function (e) {
+						var today = new Date();
+
+						if (today < item.range.start || item.range.end < today) {
+							alert("접수기간이 아닙니다.");
+							return;
+						}
+
+						window.location.href = "/www/accept/list.do";
+					});
+					$btnApply.keydown(function (e) {
+						if (e.keyCode == 13) {
+							var today = new Date();
+
+							if (today < item.range.start || item.range.end < today) {
+								alert("접수기간이 아닙니다.");
+								return;
+							}
+							window.location.href = "/www/accept/list.do";
+						}
+					});
+					$btnGo.click(function (e) {
+						var data = $(e.target).data();
+						siteFn.apiMap({examoprSeq: data.examoprSeq});
+					});
+					$btnGo.keydown(function (e) {
+						if (e.keyCode == 13) {
+							var data = $(e.target).data();
+							siteFn.apiMap({examoprSeq: data.examoprSeq});
+						}
+					});
+				}
+
+				return $("<div>").addClass("sub_item").append($title).append($body);
+			}
+
+			function makeListItem(title, events) {
+				var $title = $("<div>").addClass("title").append($("<span>").html(title));
+				var $item = $("<div>").addClass("item").append($title);
+
+				for (var i in events) {
+					if (typeof events[i] == "object") {
+						$item.append(makeSubItem(events[i]));
+					}
+				}
+
+				return $item;
+			}
+
+			function renderList(tabId, groupList) {
+
+				$(".tab_contents").removeClass("selected");
+				$("#schedule_content_" + tabId).addClass("selected");
+
+				const $pclist = $("#schedule_content_" + tabId + "  .tab_content").empty();
+
+				$(".schedule_list .tab_contents").attr("tabid", tabId);
+
+				const $mobilelist = $(".only_mobile").empty();
+
+				for (var classId in groupList) {
+					$pclist.append(makeListItem(classId, groupList[classId]));
+					$mobilelist.append(makeMobileCard(classId, groupList[classId]));
+				}
+
+				if ($pclist.children().length == 0) {
+					$pclist.append("일정이 존재하지 않습니다!");
+				}
+				if ($mobilelist.children().length == 0) {
+					$mobilelist.append(makeMobileCard(tabId));
+				}
+
+			};
+
+			function makeMobileCard(tabId, body) {
+				if (body) {
+					var $container = $("<div>");
+					for (var i in body) {
+						if (typeof body[i] == "object") {
+							$container.append(makeMobileSubItem(body[i]));
+						}
+					}
+					return $container.children();
+				} else {
+					var title = "";
+					switch (tabId) {
+						case "apply":
+							title = "[접수] 일정 없음";
+							break;
+						case "test":
+							title = "[시험] 일정 없음";
+							break;
+						case "score":
+							title = "[성적] 일정 없음";
+							break;
+						case "result":
+							title = "[발표] 일정 없음";
+							break;
+					}
+				}
+			}
+
+			function makeMobileSubItem(item) {
+				let styleId = "";
+				switch (item.groupId) {
+					case "apply":
+						styleId = "type_4";
+						break;
+					case "test":
+						styleId = "type_1";
+						break;
+					case "score":
+						styleId = "type_3";
+						break;
+					case "result":
+						styleId = "type_2";
+						break;
+				}
+
+				const $card = $("<div>").addClass("card_box");
+				const $title = $("<div>").addClass("card_title " + styleId).html(item.raw.url);
+				$card.append($title);
+
+				const $body = $("<div>").addClass("card_body")
+						/* 					.append(
+                                                $("<div>").addClass("title").text( item.title )
+                                            ) */
+						.append(
+								$("<div>").addClass("date_box")
+										.append(
+												$("<div>").addClass("date").attr("style", "display: flex;")
+														.append(
+																$("<b>").append($("<i>").addClass("icon-calendar")).append(" 시작일")
+														)
+														.append(
+																$("<span>").text(Date2Format(item.range.start, "MM.dd(D) HH:mm"))
+																		.attr("style", "margin-left: 90px;")
+														)
+										)
+										.append(
+												$("<div>").addClass("date").attr("style", "display: flex;")
+														.append(
+																$("<b>").append($("<i>").addClass("icon-calendar")).append(" 종료일")
+														)
+														.append(
+																$("<span>").text(Date2Format(item.range.end, "MM.dd(D) HH:mm"))
+																		.attr("style", "margin-left: 90px;")
+														)
+										)
+						);
+				$card.append($body);
+
+				if (item.groupId == "apply") {
+					var $btnApply = $("<a tabindex='0'>").addClass("btn btn-primary").html("<i  aria-hidden='true' class='xi-document'/>접수");
+					var $btnGo = $("<a tabindex='0' title='고사장 새 창 열기'>").addClass("btn btn-default").html("<i  aria-hidden='true' class='xi-maker-drop'/>고사장")
+							.data("examoprSeq", item.raw.examoprSeq);
+
+					var $foot = $("<div>").addClass("card_foot")
+							.append($btnApply)
+							.append($btnGo);
+
+					$btnApply.click(function (e) {
+						var today = new Date();
+
+						if (today < item.range.start || item.range.end < today) {
+							alert("접수기간이 아닙니다.");
+							return;
+						}
+
+						window.location.href = "/www/accept/list.do";
+					});
+					$btnGo.click(function (e) {
+						var data = $(e.target).data();
+						siteFn.apiMap({examoprSeq: data.examoprSeq});
+					});
+
+					$card.append($foot);
+				} else {
+					$card.append($("<div>").addClass("card_foot"));
+				}
+
+				return $card;
+			}
+
+			function renderSchedule(range, tabId) {
+				window.events = {
+					calendar: {
+						all: [],
+						type_1: [],
+						type_2: [],
+						type_3: [],
+						type_4: [],
+					},
+					apply: {},
+					test: {},
+					score: {},
+					result: {}
+				};
+				storedEvents
+						.slice() // 원본 배열 보존용
+						.sort((a, b) => new Date(a.start) - new Date(b.start))
+						.forEach(event => {  // 이벤트 시작일 날짜 순으로 조정(달력 우측 탭 데이터 순서 정렬)
+
+							const classType = event.className;
+
+							if (!window.events.calendar[classType]) {
+								window.events.calendar[classType] = [];
+							}
+							window.events.calendar[classType].push(event);
+							window.events.calendar.all.push(event);
+
+							const groupId = event.groupId;
+							const classId = event.classId;
+
+							// 범위 체크 (선택사항)
+							if (range && (new Date(event.end).getTime() < range.start || new Date(event.start).getTime() > range.end)) {
+								return;
+							}
+
+							if (!window.events[groupId]) {
+								window.events[groupId] = {};
+							}
+
+							if (!window.events[groupId][classId]) {
+								window.events[groupId][classId] = [];
+							}
+
+							window.events[groupId][classId].push(event);
+						});
+
+				renderList(tabId, window.events[tabId]);
+			}
+
+			//
+			// calendar.on('datesSet', function (e) {
+			//     //renderSchedule(e);
+			// });
+			// calendar.on('dateClick', function (e) {
+			//     console.log('dateClick : ', e);
+			// });
+
+			function initScheduleTabA11y() {
+				$(".schedule_list .tab_item").each(function () {
+					var tabId = $(this).attr("tab");
+					$(this)
+							.attr("aria-controls", "schedule_content_" + tabId)
+							.attr("aria-selected", $(this).hasClass("seleted") ? "true" : "false");
+				});
+
+				$(".schedule_list .tab_contents").each(function () {
+					var panelId = $(this).attr("id");
+					var tabId = panelId ? panelId.replace("schedule_content_", "") : "";
+					$(this)
+							.attr("aria-labelledby", "tab_" + tabId)
+							.attr("aria-hidden", $(this).hasClass("seleted") ? "false" : "true");
+				});
+			}
+
+			initScheduleTabA11y();
+
+			$(".schedule_list .tab_ui a").click(function (e) {
+				var tabId = $(e.currentTarget).attr("tab");
+
+				renderList(tabId, events[tabId]);
+			});
+
+
+			$(".schedule_list .tab_item").on("click", function () {
+				var tabId = $(this).attr("tab");
+				test(tabId)
+				// $(this).focus()
+			});
+
+			/*
+            $(".schedule_list .tab_item").on("focus", function(){
+                 var tabId = $(this).attr("tab");
+                 test(tabId)
+                // $(this).focus()
+            })
+            ;*/
+
+			function test(a, options) {
+				var shouldFocus = !options || options.focus !== false;
+
+				// 모든 탭 초기화
+				$(".schedule_list .tab_item").removeClass("seleted")
+						.attr("aria-selected", "false");
+
+				// 모든 패널(컨텐츠) 초기화
+				$(".schedule_list .tab_contents").removeClass("seleted")
+						.attr("aria-hidden", "true");
+
+				// 선택된 탭 활성화
+				var $selectedTab = $("#tab_" + a)
+						.addClass("seleted")
+						.attr("aria-selected", "true");
+				if (shouldFocus) {
+					$selectedTab.focus();
+				}
+
+				// 선택된 컨텐츠 활성화
+				$("#schedule_content_" + a).addClass("seleted")
+						.attr("aria-hidden", "false");
+			}
+
+			$(".schedule_list .tab_item").on("keydown", function (event) {
+				var tabId = $(this).attr("tab");
+
+				event = event || window.event;
+				// event.preventDefault ? event.preventDefault() : event.returnValue = false;
+				var keycode = event.keyCode || event.which;
+
+
+				switch (keycode) {
+					case 9:  // left arrow
+						//	test(tabId)
+						break;
+					case 37:  // left arrow
+						switch (tabId) {
+							case "apply":  // left arrow
+								$("#tab_result").focus()
+								break;
+							case "test":  // left arrow
+								$("#tab_apply").focus()
+								break;
+							case "score":  // left arrow
+								$("#tab_test").focus()
+								break;
+							case "result":  // left arrow
+								$("#tab_score").focus()
+								break;
+						}
+						break;
+					case 39:  // right arrow
+
+
+						switch (tabId) {
+							case "apply":  // left arrow
+								$("#tab_test").focus()
+								break;
+							case "test":  // left arrow
+								$("#tab_score").focus()
+								break;
+							case "score":  // left arrow
+								$("#tab_result").focus()
+								break;
+							case "result":  // left arrow
+								$("#tab_apply").focus()
+								break;
+						}
+
+
+						break;
+					case 13:    // Enter
+						// 선택된 탭 활성화
+						break;
+				}
+
+			});
+			// 탭 포커스 시 blind "선택됨" 재기입 핸들러 제거 — 선택 상태는 aria-selected 로 제공
+
+
+			$(".notice_list .tab_item").on("click", function () {
+				var tabId = $(this).attr("tab");
+				test2(tabId)
+				// $(this).focus()
+			});
+
+			/*
+            $(".schedule_list .tab_item").on("focus", function(){
+                 var tabId = $(this).attr("tab");
+                 test(tabId)
+                // $(this).focus()
+            })
+            ;*/
+			function test2(a) {
+				// 모든 탭 초기화
+				$(".notice_list .tab_item").removeClass("seleted")
+						.attr("aria-expanded", "false");
+
+				// 모든 패널(컨텐츠) 초기화
+				$(".notice_list .tab_content").removeClass("seleted");
+				$(".notice_list .tab_contents").removeClass("seleted")
+						.attr("aria-hidden", "true");
+
+				// 선택된 탭 활성화
+				$("#tab_" + a)
+						.addClass("seleted")
+						.focus()
+						.attr("aria-expanded", "true");
+
+				// 선택된 컨텐츠 활성화
+				$("#list_content_" + a).addClass("seleted");
+				$("#tab_contents_" + a)
+						.addClass("seleted")
+						.attr("aria-hidden", "false");
+			}
+
+
+			$(".notice_list .tab_item").on("keydown", function (event) {
+				var tabId = $(this).attr("tab");
+				event = event || window.event;
+				//	 event.preventDefault ? event.preventDefault() : event.returnValue = false;
+				var keycode = event.keyCode || event.which;
+
+				if (!event.shiftKey && keycode === 9) {
+					//	   event.preventDefault ? event.preventDefault() : event.returnValue = false;
+					//	   $(".notice_list .list_head a").focus()
+				} else if (event.shiftKey && keycode === 9) {
+					//	  $(".schedule_list a.tab_item.seleted").focus()
+
+				} else {
+					switch (keycode) {
+						case 37:  // left arrow
+							switch (tabId) {
+								case "notice":  // left arrow
+									$("#tab_pds").focus()
+									break;
+								case "pad":  // left arrow
+									$("#tab_notice").focus()
+									break;
+							}
+							break;
+						case 39:  // right arrow
+							switch (tabId) {
+								case "notice":  // left arrow
+									$("#tab_pds").focus()
+									break;
+								case "pad":  // left arrow
+									$("#tab_notice").focus()
+									break;
+							}
+							break;
+						case 13:
+							break;
+					}
+				}
+			});
+			$(document).ready(function () {
+				renderList("test", events["test"]);
+				renderList("score", events["score"]);
+				renderList("result", events["result"]);
+				renderList("apply", events["apply"]);
+			});
+		});
+
+	</script>
+	<script type="text/javascript" src="/www/pages/home/main-calendar-a11y.js?v=491309"></script>
+
+</head>
+<body class="main home">
+<div class="skip" tabindex="-1">
+	<dl>
+		<dt class="hidden">바로가기 메뉴</dt>
+		<dd>
+			<a href="#content" tabindex="0">본문 바로가기</a>
+		</dd>
+	</dl>
+</div>
+<div id="wrap">
+	<div id="header">
+		<div class="header_banner">
+			<div class="container">
+				<div class="main_swiper swiper">
+					<div class="button-prev swiper-button">
+						<i aria-hidden="true" class="xi-angle-left-min"></i>
+					</div>
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper">
+
+					</div>
+					<div class="button-next swiper-button">
+						<i aria-hidden="true" class="xi-angle-right-min"></i>
+					</div>
+					<div class="swiper-pagination main_page"></div>
+
+				</div>
+				<a class="btns btns-sm today" href="javascript:headbanner(2)">오늘 하루 안보기</a>
+				<a class="btns btns-sm close_2" href="javascript:headbanner(1)">닫기</a>
+			</div>
+		</div>
+		
+
+
+
+<!-- skip-navigation -->	
+
+<div class="loading_box">
+	<div class="loader6"></div>
+</div>
+
+<div class="global_menu">
+<div class="function">
+		
+			
+				<a class="gnb-text join" href="javascript:siteFn.fnJoin();">회원가입</a>
+				<a class="gnb-text login"
+					href="/www/accounts/login.do"><i
+					class="fa fa-sign-in" aria-hidden="true"></i> 로그인</a>
+			
+			
+		
+		</div>
+	<div class="global_menu_in">
+		<a class="btn_close" tabindex="0" href="javascript:modal_hide('.global_menu');$('body').css('overflow','auto')">
+			<i  aria-hidden="true" class="xi-close-thin"></i>
+			<span class="blind">전체 메뉴 닫기</span>
+		</a>
+	</div>
+	
+	
+</div>
+<div id="gnb" class="gnb">
+	<div class="gnb-header">
+		<div class="container">
+			<!-- h1 tabindex ="0" class="logo go_main" title="KDATA 데이터 자격시험">
+				<a href="/www/main.do" title="메인화면으로 이동"><div class="blind">KDATA : 데이터 자격시험</div></a>
+			</h1-->
+			<h1 class="go_main" title="KDATA 데이터 자격시험">
+			  <a href="/www/main.do" title="메인화면으로 이동">KDATA : 데이터 자격시험</a>
+			</h1>
+			<div class="function">
+				
+					
+						<a class="gnb-text join" href="javascript:siteFn.fnJoin();">회원가입</a>
+						<a class="gnb-text login"
+							href="/www/accounts/login.do"><i
+							class="fa fa-sign-in" aria-hidden="true"></i> 로그인</a>
+					
+					
+				
+			</div>			
+			
+				
+				
+					<div id="navbar"></div>
+					<a title="메뉴보기" class="site_map" href="javascript:modal_show('.global_menu','flex');$('body').css('overflow','hidden');">
+						<span class="blind">메뉴보기</span>
+						<div class="bar bar_1"></div>
+						<div class="bar bar_2"></div>
+						<div class="bar bar_3"></div>
+					</a>
+				
+			
+			
+		</div>
+	</div>
+</div>
+
+	</div>
+	<!-- container -->
+	<div id="content">
+		
+
+
+
+<div class="contents">
+	<div class="main_quick">
+		<h2 class="blind">주요 메뉴 바로가기</h2>
+		<div class="container">
+			<a title="시험일정 바로가기" class="item_quick" href="/www/accept/schedule.do">
+				<div class="item_thumb"></div>
+				<div class="item_title">시험일정</div>
+			</a> <a title="시험접수 바로가기" class="item_quick" href="/www/accept/list.do">
+			<div class="item_thumb"></div>
+			<div class="item_title">시험접수</div>
+		</a> <a title="수험표발급 바로가기" class="item_quick" href="/www/mypage/accept/list.do">
+			<div class="item_thumb"></div>
+			<div class="item_title">수험표발급</div>
+		</a> <a title="결과확인 바로가기" class="item_quick" href="/www/mypage/accept/result.do">
+			<div class="item_thumb"></div>
+			<div class="item_title">결과확인</div>
+		</a>
+			
+				
+
+					<a title="자격증발급 바로가기" class="item_quick"
+					   href="/www/mypage/license/list.do">
+						<div class="item_thumb"></div>
+						<div class="item_title">자격증발급</div>
+					</a>
+
+				
+				
+			
+
+
+			<a title="응시자 유의사항 바로가기" class="item_quick" href="/www/accept/warning.do">
+				<div class="item_thumb"></div>
+				<div class="item_title">응시자 유의사항</div>
+			</a>
+		</div>
+	</div>
+	<div class="main_section schedule_section">
+		<h2 class="blind">시험일정 안내</h2>
+		<div class="container only_mobile"></div>
+		<div class="container only_pc">
+			<div class="schedule_head">
+				<a href="javascript:viewCalForTui('all')" class="btns active">
+					<span class="badge type_all"></span>전체
+					<span class="blind">선택됨</span></a>
+				<a href="javascript:viewCalForTui('1')" class="btns">
+					<span class="badge type_1"></span>빅데이터 분석기사
+					<span class="blind"></span></a>
+				<a href="javascript:viewCalForTui('2')" class="btns">
+					<span class="badge type_2"></span>데이터 분석
+					<span class="blind"></span></a>
+				<a href="javascript:viewCalForTui('3')" class="btns">
+					<span class="badge type_3"></span>SQL
+					<span class="blind"></span></a>
+				<a href="javascript:viewCalForTui('4')" class="btns">
+					<span class="badge type_4"></span>데이터 아키텍처
+					<span class="blind"></span>
+				</a>
+			</div>
+			<div class="schedule_box">
+				<div class="schedule_calendar">
+
+					<div id="calendar-controls">
+						<div class="calendar-left">
+							<button id="todayBtn" class="custom-btns-today">오늘</button>
+						</div>
+
+						<div class="calendar-center">
+							<button id="prevBtn" class="custom-btns-prev">&lt;</button>
+							<span id="renderRange"></span>
+							<button id="nextBtn" class="custom-btns-next">&gt;</button>
+						</div>
+
+						<div class="calendar-right">
+							<!-- 필요 시 우측 공간 확보용 -->
+						</div>
+					</div>
+
+					<h3 class="blind">전체 일정</h3>
+					<div id='loading'></div>
+					<div id='calendar'></div>
+				</div>
+				<div class="schedule_list">
+					<div class="tab_title">
+						<div class="tab_ui" role="tablist">
+							<a id="tab_apply" href="#none" tab="apply" tabid="apply"
+							   class="tab_item seleted" role="tab">접수 <span class="blind"></span></a>
+							<a id="tab_test" href="#none" tab="test" tabid="apply" class="tab_item"
+							   role="tab">시험 <span class="blind"></span></a>
+							<a id="tab_score" href="#none" tab="score" tabid="apply"
+							   class="tab_item" role="tab">사전점수발표 <span class="blind"></span></a>
+							<a id="tab_result" href="#none" tab="result" tabid="apply"
+							   class="tab_item" role="tab">결과발표 <span class="blind"></span></a>
+						</div>
+					</div>
+							<div class="tab_contents scroll_y seleted" id="schedule_content_apply" role="tabpanel">
+								<h3 class="schedule_h3 blind">접수</h3>
+								<div class="tab_content"></div>
+							</div>
+							<div class="tab_contents scroll_y" id="schedule_content_test" role="tabpanel">
+								<h3 class="schedule_h3 blind">시험</h3>
+								<div class="tab_content"></div>
+							</div>
+							<div class="tab_contents scroll_y" id="schedule_content_score" role="tabpanel">
+								<h3 class="schedule_h3 blind">사전점수발표</h3>
+								<div class="tab_content"></div>
+							</div>
+							<div class="tab_contents scroll_y" id="schedule_content_result" role="tabpanel">
+								<h3 class="schedule_h3 blind">결과발표</h3>
+								<div class="tab_content"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+<div class="main_section notice_section">
+	<div class="container">
+		<div class="notice_list">
+			<div class="tab_title">
+				<div class="tab_ui" role="tablist">
+					<a id="tab_notice" href="#none" tab="notice" tabid="notice"
+					   class="tab_item seleted" role="tab" aria-expanded="true">공지사항<span class="blind"></span></a>
+					<div class="tab_contents seleted" id="tab_contents_notice">
+						<div class="seleted tab_content tabpanel" id="list_content_notice" tab="notice" role="tabpanel">
+							<!-- <h3 class="blind">공지사항</h3> -->
+							<div class="list_head"></div>
+							<div class="list" id="noti-list"></div>
+							<a class="more_btn notice_more"
+							   href="/www/board/notice/list.do" title="공지사항 더보기"> <i
+									aria-hidden="true" class="xi-plus"></i>
+							</a>
+						</div>
+					</div>
+					<a id="tab_pds" href="#none" tab="pds" tabid="notice" class="tab_item" role="tab" aria-expanded="false">자료실<span
+							class="blind"></span></a>
+					<div class="tab_contents" id="tab_contents_pds" role="tabpanel">
+						<div class="tab_content tabpanel" id="list_content_pds">
+							<!-- <h3 class="blind">자료실</h3> -->
+							<div class="list_head"></div>
+							<div class="list" id="files-list"></div>
+							<a class="more_btn pds_more" href="/www/board/files/list.do"
+							   title="자료실 더보기"> <i aria-hidden="true" class="xi-plus"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cs_box">
+			<div class="banner">
+				<a title="자격증 진위여부 확인하기" class="banner_item lisence" href="#none"
+				   onClick="location.href='/www/anno/cert/check.do'"> <span> <b>자격증 진위여부</b> <small>발급된 자격증의 진위여부 확인이 가능합니다.</small>
+				</span> <i class="xi-angle-right" aria-hidden="true"></i>
+				</a> <a title="환불안내" class="banner_item refund" href="#none"
+						onClick="location.href='/www/accept/guide.do#tab2'"> <span> <b>환불안내</b> <small>결제시 사용하신 수단으로 요청시 즉시환불 됩니다.</small>
+				</span> <i class="xi-angle-right" aria-hidden="true"></i>
+			</a> <a title="보수교육 안내" class="banner_item education" href="#none"
+					onClick="location.href='/www/mypage/reedu/list.do'"> <span> <b>보수교육</b> <small>자격종목에 따라 추가적인 보수교육을 진행합니다.</small>
+				</span> <i class="xi-angle-right" aria-hidden="true"></i>
+			</a>
+				<div class="banner_item member">
+					<span><b>위원신청</b></span>
+					<div class="btn_box">
+						
+							
+								<a title="감독위원 신청 새 창 열기" class="btns btns_xs" onClick="alert('로그인 후 신청해 주세요')"
+								   href="/www/accounts/login.do"><i aria-hidden="true" class="xi-user-o" style="top:2px;"></i> 감독위원
+									신청</a>
+								<a title="전문위원 신청 새 창 열기" class="btns btns_xs" onClick="alert('로그인 후 신청해 주세요')"
+								   href="/www/accounts/login.do"><i aria-hidden="true" class="xi-library-books-o" style="top:2px;"></i>
+									전문위원 신청</a>
+							
+							
+						
+					</div>
+				</div>
+			</div>
+			<div class="cs_center">
+				<div class="cs">
+					<div class="title">고객센터</div>
+					<div class="call">T.1877-9817</div>
+					<div class="time">평일 09:30 ~ 17:30</div>
+				</div>
+				<div class="online">
+					<h2 class="blind">온라인 상담 안내</h2>
+					<div class="title">온라인 상담</div>
+					<a title="재검토 요청 바로가기" href="/www/board/review/list.do"><i
+							aria-hidden="true" class="icon-magnifier"></i> 재검토 요청</a> <a title="Q&A 바로가기"
+																						 href="/www/board/qna/list.do"><i
+						aria-hidden="true" class="icon-earphones-alt"></i> Q&A</a> <a title="자주하는 질문 바로가기"
+																					  href="/www/board/faq/list.do"><i
+						aria-hidden="true" class="icon-question"></i> 자주하는 질문</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script id="slidepopup-template" type="text/x-handlebars-template"> {{#if bbsNoticePop.list}} {{#foreach bbsNoticePop.list}}
+<div class="swiper-slide">
+	<div class="banner_box">
+		<div class="title">{{titl}}</div>
+		<div class="body">{{contbrief}}</div>
+		<div class="btn_box">
+			<a title="상세보기" class="btns"
+			   href="/www/board/view.do?bbsKey={{bbsKey}}&boardKind=notice">상세보기</a>
+		</div>
+	</div>
+</div>
+{{/foreach}} {{else}}
+<div class="swiper-slide">
+	<div class="banner_box">검색된 결과가 없습니다.</div>
+</div>
+{{/if}} </script>
+
+<script id="head-template" type="text/x-handlebars-template"> {{#ifCond bbsAttrSeq '==' '1'}} <a
+		href="/www/board/view.do?bbsKey={{bbsKey}}&boardKind=notice">
+	<div class="title">
+		<span> {{#ifCond titleBoldYn '==' 'Y'}} <font color="{{titleColor}}"> <b>{{titl}}</b>
+		</font> {{else}} <font color="{{titleColor}}"> {{titl}} </font> {{/ifCond}}
+		</span>
+	</div>
+	<div class="content">{{contbrief}}</div>
+	<div class="date">{{cdate}}</div>
+</a> {{else}} <a title="" href="/www/board/view.do?bbsKey={{bbsKey}}&boardKind=files">
+	<div class="title">
+		<span> {{#ifCond titleBoldYn '==' 'Y'}} <font color="{{titleColor}}"> <b>{{titl}}</b>
+		</font> {{else}} <font color="{{titleColor}}"> {{titl}} </font> {{/ifCond}}
+		</span>
+	</div>
+	<div class="content">{{contbrief}}</div>
+	<div class="date">{{cdate}}</div>
+</a> {{/ifCond}} </script>
+
+<script id="noti-template" type="text/x-handlebars-template">
+<ol>
+	{{#if bbsNotice.list}} {{#foreach bbsNotice.list}}
+	<li class="text-truncate"><a
+			href="/www/board/view.do?bbsKey={{bbsKey}}&boardKind=notice"> {{#ifCond
+		titleBoldYn '==' 'Y'}} <font color="{{titleColor}}"> <b>{{titl}}</b>
+		</font> {{else}} <font color="{{titleColor}}"> {{titl}} </font> {{/ifCond}}
+	</a><span class="list_date">{{cdate}}</span></li>
+	{{/foreach}} {{else}}
+	<li>검색된 결과가 없습니다.</li>
+	{{/if}}
+</ol>
+</script>
+
+<script id="files-template" type="text/x-handlebars-template">
+<ol>
+	{{#if bbsFiles.list}} {{#foreach bbsFiles.list}}
+	<li class="text-truncate"><a
+			href="/www/board/view.do?bbsKey={{bbsKey}}&boardKind=files"> {{titl}}</a><span
+			class="list_date">{{cdate}}</span></li>
+	{{/foreach}} {{else}}
+	<li>검색된 결과가 없습니다.</li>
+	{{/if}}
+</ol>
+</script>
+
+<script src="/www/pages/home/main.js?v=491309"></script>
+
+		<!-- 다운로드 전용 -->
+		<iframe aria-hidden="true" id="_fileDownFrm" name="_fileDownFrm" class="blind" title="다운로드 컨텐츠"
+				tabindex="-1"></iframe>
+	</div>
+	<!-- //container -->
+	<div id="footer">
+		
+
+
+
+
+<style>
+.hidden-until-selected {
+  color: transparent;
+  user-select: text; /* 선택 가능하게 설정 */
+}
+
+.hidden-until-selected::selection {
+  color: black;         /* 선택 시 표시할 색 */
+  background: yellow;   /* 선택 시 배경색 (선택 사항) */
+}
+</style>
+<script>
+	(function () {
+		const ip = "20.169.74.96";
+		const uKey = "";
+
+		window.getInfo = function () {
+			return {ip, uKey};
+		};
+	})();
+</script>
+
+<!--script src="/www/tracer/jquery.min.js"></script-->
+<script src="/www/tracer/tracerapi.js"></script>
+
+<style>
+	#waitPage{
+		position:fixed;
+		width:100%;
+		height:100%;
+		z-index:9999;
+		top:0;
+		left:0;
+	}
+</style>
+
+<script>
+	function showRealPage() {
+		$("#waitPage").css("display","none");
+	}
+
+	function showWaitPage(type) {
+		$("#waitPage").css("display","block");
+		$("#isWaitPage").css("display","none");
+		$("#isRejectPage").css("display","none");
+		$("#isNotUse").css("display", "none");
+
+		if ( type == 'W' ) {
+			$("#isWaitPage").css("display","block");
+		} else if ( type == 'NE' ) {
+			$("#isNotUse").css("display","block");
+		} else if ( type == 'R' ) {
+			$("#isRejectPage").css("display","block");
+		}
+	}
+
+	function checkInAPIAll() {
+		const host = "www.dataq.or.kr";
+		const port = "80";
+		const pageUrl = window.location.pathname;
+
+		const {ip, uKey} = getInfo();
+		callTracerApiInput(host, ip || '', uKey || '', port, pageUrl, this);
+	}
+
+	function checkInAccept() {
+		const host = "ACCEPT";
+		const port = "80";
+		const pageUrl = window.location.pathname;
+
+		const {ip, uKey} = getInfo();
+		callTracerApiInput(host, ip || '', uKey || '', port, pageUrl, this);
+	}
+
+	function checkInResult() {
+		const host = "RESULT";
+		const port = "80";
+		const pageUrl = window.location.pathname;
+
+		const {ip, uKey} = getInfo();
+		callTracerApiInput(host, ip || '', uKey || '', port, pageUrl, this);
+	}
+
+	function callBackTracer() {
+
+	}
+
+	$( document ).ready(function() {
+
+		//메인페이지 임시 주석
+		//checkInAPIAll();
+
+		const pageUrl = window.location.pathname;
+		if ( pageUrl == '/www/accept/list.do') {
+			//보통시험은 월요일이므로
+			//다른요일일때는 변경 필요
+			//월요일 : Monday
+			//화요일 : Tuesday
+			//금요일 : Friday
+			
+				
+					checkInAccept();
+				
+			
+		}
+
+		if ( pageUrl == '/www/mypage/accept/result.do') {
+			checkInResult();
+		}
+	});
+</script>
+
+
+<div class="footer text-center">
+    <div id="waitPage" style="display:none">
+        
+
+
+<style>
+
+	body{font-family:"Open Sans", sans-serif;background-size:cover;}
+		#waitBackground{position:absolute;background-color:rgba(0,0,0,0.4);width:100%;height:100%;}
+		@media (max-width :420px) {
+			body{
+				background-position:50%;
+				
+			}
+			.login-containerT{width:100%!important;
+			
+			}
+			.mobile-size {
+				width:90%!important;
+				margin: 0 auto;
+				
+			}
+			.text-center h3 {
+				margin-top: 52px!important;
+				font-size: 20px!important;
+			}
+			.hpanel {
+				margin-top: 20px!important;
+				padding: 16px 0 16px 0!important;	
+
+			}
+			.sub_text {
+				font-size:0.8em!important;			
+			}
+			#loading3 {
+				width:70%!important;
+			}
+			.main_logo {
+				right:50%!important;
+				transform: translate(50%)!important;	
+			}
+			.main_logo img {
+				width: 110px!important;
+				height: auto!important;
+			}
+			
+
+
+
+		}
+		.login-containerT{max-width:none;width:560px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:99;}
+
+		.login-containerT, .row, .col-md-12, .hpanel{margin:0;padding:0;}
+		.panel-bodyT{text-align:center;padding:0px 2it_default.jsp0px 10px!important;border-radius:0;}
+		
+		#boxHeadLine{background:#4486d4;width:100%;height:4px;}
+		#wait_value{
+			color:#1e1e1e;
+			font-weight:bold;
+			font-size:1.2em;
+			margin: 0 0 20px 0;
+			
+		}
+		
+		#loading3{display:flex;width:50%;justify-content:space-between;margin:30px auto 49px;}
+	    #loading3>div{width:8px;height:40px;margin-right:7px;background-color:#033074;border-radius: 3px;
+	        -webkit-animation:strechdelay 1.5s ease-in-out infinite;
+	        animation:strechdelay 1.5s ease-in-out infinite;
+	    }
+	    #loading3 .line2{
+	        -webkit-animation-delay:-1.4s;
+	        animation-delay:-1.4s;
+	    } #loading3 .line3{
+	        -webkit-animation-delay:-1.3s;
+	        animation-delay:-1.3s;
+	    }#loading3 .line4{
+	        -webkit-animation-delay:-1.2s;
+	        animation-delay:-1.2s;
+	    }#loading3 .line5{
+	        -webkit-animation-delay:-1.1s;
+	        animation-delay:-1.1s;
+	    }#loading3 .line6{
+	        -webkit-animation-delay:-1.0s;
+	        animation-delay:-1.0s;
+	    }#loading3 .line7{
+	        -webkit-animation-delay:-0.9s;
+	        animation-delay:-0.9s;
+	    }#loading3 .line8{
+	        -webkit-animation-delay:-0.8s;
+	        animation-delay:-0.8s;
+	    }#loading3 .line9{
+	        -webkit-animation-delay:-0.7s;
+	        animation-delay:-0.7s;
+	    }#loading3 .line10{
+	        -webkit-animation-delay:-0.6s;
+	        animation-delay:-0.6s;
+	    }#loading3 .line11{
+	        -webkit-animation-delay:-0.5s;
+	        animation-delay:-0.5s;
+	    }#loading3 .line12{
+	        -webkit-animation-delay:-0.4s;
+	        animation-delay:-0.4s;
+	    }#loading3 .line13{
+	        -webkit-animation-delay:-0.3s;
+	        animation-delay:-0.3s;
+	    }#loading3 .line14{
+	        -webkit-animation-delay:-0.2s;
+	        animation-delay:-0.2s;
+	    }#loading3 .line15{
+	        -webkit-animation-delay:-0.1s;
+	        animation-delay:-0.1s;
+	    }#loading3 .line16{
+	        -webkit-animation-delay:-0.0s;
+	        animation-delay:-0.0s;
+	    }
+	    
+	    @keyframes strechdelay{
+	        0%,50%,100%{
+	            transform:scaleY(.7);
+	        }
+	        20%{
+	            transform:scaleY(1);
+	            background-color:#2d69c2;
+	        }
+	    }
+	
+	    @-webkit-keyframes strechdelay{
+	        0%,50%,100%{
+	            -webkit-transform:scaleY(.7);
+	        }
+	        20%{
+	            -webkit-transform:scaleY(1);
+	            background-color:#72a5f5;
+	        }
+	    }
+	</style>
+
+<script type="text/javascript">
+
+function checkCntData() {
+    var host = this_host;
+    var ip =  this_ip;
+    var loginId = this_loginId;
+    var port = this_port;
+    var pageUrl = this_pageUrl;
+    var sendThis = this_sendThis
+
+    callTracerApiInputData(host, ip, loginId, port, pageUrl, sendThis);
+
+    var waitCnt = this_waitCnt;
+	
+    if ( waitCnt == "0" || waitCnt == "E") {
+      showRealPage();
+      callBackTracer();
+    } else {
+         var $el = $("#wait_value");
+         var waitCnt = this_waitCnt;
+	 if ( $.isNumeric(waitCnt) ) {
+	     $el.html("고객님의 대기열은 <span style=\"font-size:22px;color:red;font-weight:bold;\">"+comma(Math.floor(waitCnt))+"</span> 명입니다.");
+	} else {
+	  // alert("AAA"+opener.this_waitCnt+"AAA");
+
+	}
+    }
+
+}
+
+playAlert = setInterval(function() {
+    if ( this_isWait == "T" ) {
+	 checkCntData();
+    } 
+}, 5000);
+
+$(document).ready(function() {
+    var $el = $("#wait_value");
+    $el.html("고객님의 대기열을 확인중입니다.");
+    //checkCntData();
+});
+
+
+function createCookie() {
+	var now = new Date();
+	  var time = now.getTime();
+	  var expireTime = time + 1000*36000;
+	  now.setTime(expireTime);
+	  var tempExp = 'Wed, 31 Oct 2020 08:50:17 GMT';
+	  document.cookie = 'SESSIONID=hjpark123;expires='+now.toGMTString()+';path=/';
+	  //console.log(document.cookie);
+}
+
+
+/* setInterval(function() {
+	window.location.href='login.do';
+		}, 20000); */
+
+function comma(num){
+    var len, point, str; 
+       
+    num = num + ""; 
+    point = num.length % 3 ;
+    len = num.length; 
+   
+    str = num.substring(0, point); 
+    while (point < len) { 
+        if (str != "") str += ","; 
+        str += num.substring(point, point + 3); 
+        point += 3; 
+    } 
+     
+    return str;
+}
+</script>
+
+</head>
+<body class="blank">
+
+<form id="listForm" method="POST" class="mt-repeater form-horizontal" action="">
+</form>
+<div class="login-containerT" style="">
+    <div class="row" id="isWaitPage" style="display:none">
+	<div class="mobile-size" style="border: 4px solid #033074;width:100%;height:auto;overflow:hidden;">
+        <div class="col-md-12" style="width:100%;height:auto;background:#fff;border: 8px solid #d0dcea;">
+		<div class="main_logo"style="position:absolute;right:2%;top:12px;"> <img src="/www/tracer/logo1.png" style="width:100px;height:auto;margin-top:10px;" alt="KDATA"> </div>
+        	<div class="text-center" style="padding-top:20px;"></div>
+            <div class="text-center m-b-md">
+                <h3 style="font-weight:bold;font-size:22px;color:#033074;margin-top:5px;letter-spacing: -0.04em;text-align: center;">서비스 접근 대기 중입니다. </h3>
+            </div>
+		<div id="loading3" style="margin-bottom:30px;">
+                                                <div class="line1"></div><div class="line2"></div><div class="line3"></div><div class="line4"></div>
+                                                <div class="line5"></div><div class="line6"></div><div class="line7"></div><div class="line8"></div>
+                                                <div class="line9"></div><div class="line10"></div><div class="line11"></div><div class="line12"></div>
+                                                <div class="line13"></div><div class="line14"></div><div class="line15"></div><div class="line16"></div>
+                                        </div>
+
+            <div class="hpanel" style="width:88%;margin: 0 auto;background:#d0dcea;padding: 14px 0 14px 0;margin-top:20px;">
+                <div class="panel-bodyT" style="border:none;">
+			<div id="wait_value"></div>
+                    
+                   <div class="sub_text"style="letter-spacing: -0.04em;font-weight:600;font-size:0.8em;color:#1e1e1e;padding: 0 20px 0 20px;">현재 접속 사용자가 많아 대기중이며, <br> 잠시만 기다리시면 자동 접속됩니다.</div>	
+                </div>
+            </div>
+		<div style="text-align:right;padding:10px 10px 6px;font-size:10px;opacity:0.8;">TRACER - Copyright 2018-2023 WELLCONN Corp.</div>
+        </div>
+	</div>
+    </div>
+
+
+	<div class="row" id="isRejectPage" style="display:none">
+	<div class="mobile-size" style="border: 4px solid #033074;width:100%;height:auto;overflow:hidden;">
+        <div class="col-md-12" style="width:100%;background:#fff;border: 8px solid #d0dcea;">
+		<div class="main_logo" style="position:absolute;right:2%;top:12px;"> <img src="/www/tracer/logo1.png" style="width:90px;height:auto;margin-top: 10px;"  alt="KDATA"> </div>
+        	<div class="text-center" style="padding-top:20px;"></div>
+            <div class="text-center m-b-md">
+                <h3 style="font-weight:bold;font-size:22px;color:#033074;margin-top:5px;letter-spacing: -0.04em;text-align: center;">서비스 접속이 차단 되었습니다. </h3>
+            </div>
+            <div class="hpanel" style="width:88%;margin: 0 auto;background:#d0dcea;padding: 16px 0 16px 0;margin-top:0px;">
+                <div class="panel-bodyT" style="border:none;">
+			<div id="wait_value2"></div>
+                   <div class="sub_text"style="letter-spacing: -0.04em;font-weight:600;font-size:1.0em;color:#1e1e1e;">현재 접속하신 아이피에서는<br> 접속이 불가능합니다.</div>
+                </div>
+            </div>
+		<div style="text-align:right;padding:16px 10px 6px;font-size:10px;opacity:0.8;">TRACER - Copyright 2018-2023  WELLCONN Corp.</div>
+        </div>
+	</div>
+    </div>
+
+	<div class="row" id="isNotUse" style="display:none">
+	<div class="mobile-size" style="border: 4px solid #033074;width:100%;height:auto;overflow:hidden;">
+        <div class="col-md-12" style="width:100%;background:#fff;border: 8px solid #d0dcea;">
+		<div class="main_logo" style="position:absolute;right:2%;top:12px;"> <img src="/www/tracer/logo1.png" style="width:90px;height:auto;margin-top: 10px;"  alt="KDATA"> </div>
+        	<div class="text-center" style="padding-top:20px;"></div>
+            <div class="text-center m-b-md">
+                <h3 style="font-weight:bold;font-size:22px;color:#033074;margin-top:5px;letter-spacing: -0.04em;text-align: center;">서비스 접속이 불가합니다. </h3>
+            </div>
+            <div class="hpanel" style="width:88%;margin: 0 auto;background:#d0dcea;padding: 16px 0 16px 0;margin-top:0px;">
+                <div class="panel-bodyT" style="border:none;">
+			<div id="wait_value2"></div>
+                   <div class="sub_text"style="letter-spacing: -0.04em;font-weight:600;font-size:1.0em;color:#1e1e1e;">접속량이 많아 접속이 불가능합니다.<br> 잠시 후 다시 접속해주세요</div>
+                </div>
+            </div>
+		<div style="text-align:right;padding:16px 10px 6px;font-size:10px;opacity:0.8;">TRACER - Copyright 2018-2023  WELLCONN Corp.</div>
+        </div>
+	</div>
+    </div>
+
+
+</div>
+<div id="waitBackground"></div>
+
+    </div>
+	<div class="link">
+		<div class="container">
+			<ul class="nav ">
+                <li class="nav-item"><a href="/www/sub/readme/privacy.do" title="개인정보처리방침"><font
+                        color="yellow">개인정보처리방침</font></a></li>
+				<li class="nav-item">|</li>
+				<li class="nav-item"><a href="/www/sub/readme/use.do" title="이용약관">이용약관</a></li>
+				<li class="nav-item">|</li>
+                <li class="nav-item"><a href="/www/sub/readme/email.do" title="이메일무단수집거부">이메일무단수집거부</a>
+                </li>
+					
+			</ul>
+		</div>
+	</div>
+	<div class="addr">   
+		<div class="container">
+            <span class="d-none d-xl-block pull-left"><img
+                src="/www/css/layout/comm/footer_logo.png" alt="kdata 한국데이터산업진흥원"
+                title="데이터자격시험"/></span>
+			<div class="addr_txt">
+				<ul class="nav ">
+					<li class="nav-item">서울시 중구 세종대로9길 42 부영빌딩 8층 한국데이터산업진흥원</li>
+					<li class="nav-item">사업자등록번호 : 102-82-08963</li>
+					<li class="nav-item">통신판매번호 : 2013-서울종로-0591</li>
+				</ul>
+				<ul class="nav">
+					<li class="nav-item">대표자명 : 양재수</li>
+					<li class="nav-item">Tel : 1877-9817</li>
+					
+				</ul>
+				<div class="copyright">Copyright ⓒ <label>KOREA Data Agency</label> All rights reserved</div>
+			</div>
+			<div class="webmark">
+                <a title="새창" href="https://www.wa.or.kr/board/list.asp?BoardID=0006" target="_blank">
+				<img class="wa" alt="(사)한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성
+				우수사이트 인증마크(WA인증마크)" src="/www/css/image/webMark.png" />
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+	
+	
+	</div>
+	<script>
+		//20251219 메뉴 닫기 버튼 위치 조정을 위해 추가
+		const menu = document.querySelector('.global_menu_in');
+		const btnClose = menu.querySelector('a.btn_close');
+
+		// console.log("aaaaaaaa");
+		// console.log(btnClose);
+		// console.log("bbbbbbbbbbb");
+		if(window.IS_LOGIN){
+			btnClose.classList.add('btn_cloase_active');
+		}else{
+			btnClose.classList.remove('btn_cloase_active');
+		}
+	</script>
+</div>
+</body>
+</html>
