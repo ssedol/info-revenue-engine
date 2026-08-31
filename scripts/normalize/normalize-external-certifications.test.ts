@@ -1,5 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { normalizeDataqHtml, normalizeKoreanHistoryHtml, normalizeRealtorHtml } from "./normalize-external-certifications";
+import {
+  normalizeComputerLiteracyLevel1Html,
+  normalizeDataqHtml,
+  normalizeKoreanHistoryHtml,
+  normalizeRealtorHtml,
+} from "./normalize-external-certifications";
 
 describe("normalize external certifications", () => {
   it("normalizes the Q-Net realtor schedule", () => {
@@ -50,6 +55,27 @@ describe("normalize external certifications", () => {
       applicationStart: "2026-09-15",
       applicationEnd: "2026-09-22",
       examStart: "2026-10-17",
+    });
+  });
+
+  it("normalizes Computer Literacy Level 1 official information", () => {
+    const certification = normalizeComputerLiteracyLevel1Html(
+      `<main><h1>컴퓨터활용능력</h1><h2>응시자격</h2><p>제한없음</p>
+      <h2>시험과목</h2><p>컴퓨터 일반, 스프레드시트 일반, 데이터베이스 일반</p>
+      <h2>수험료</h2><p>필기 : 20,500원</p><p>실기 : 25,000원</p></main>`,
+      "2026-08-31T00:00:00.000Z",
+      "https://license.korcham.net/example",
+    );
+
+    expect(certification).toMatchObject({
+      name: "컴퓨터활용능력 1급",
+      issuer: "대한상공회의소",
+      eligibility: "제한 없음(실기시험은 필기 합격 후 2년 이내 응시 가능)",
+      schedules: [{ round: "상시검정" }],
+      fees: [
+        { label: "필기", amount: 20500 },
+        { label: "실기", amount: 25000 },
+      ],
     });
   });
 });

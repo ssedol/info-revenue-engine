@@ -2,12 +2,13 @@ import { describe, expect, it } from "vitest";
 import { externalSources, validateExternalSourceHtml } from "./external-sources";
 
 describe("external certification sources", () => {
-  it("covers the four additional managed certifications", () => {
+  it("covers the five additional managed certifications", () => {
     expect(externalSources.flatMap(({ certificationNames }) => certificationNames)).toEqual([
       "한국사능력검정시험",
       "SQLD",
       "ADsP",
       "공인중개사",
+      "컴퓨터활용능력 1급",
     ]);
   });
 

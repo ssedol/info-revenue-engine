@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: CertificationPageProps): Prom
   if (!certification) return {};
   return buildMetadata({
     title: `${certification.name} 2026 시험일정`,
-    description: `${certification.name}의 2026년 필기·실기 원서접수, 시험일정과 공식 Q-Net 정보를 확인합니다.`,
+    description: `${certification.name}의 2026년 필기·실기 원서접수, 시험일정과 공식 정보를 확인합니다.`,
     path: certificationPath(certification),
   });
 }
@@ -34,6 +34,7 @@ export default async function CertificationDetailPage({ params }: CertificationP
   const { slug } = await params;
   const certification = getCertificationBySlug(slug);
   if (!certification) notFound();
+  const providerName = certification.source.provider;
 
   return (
     <>
@@ -44,16 +45,16 @@ export default async function CertificationDetailPage({ params }: CertificationP
           <span>{certification.category}</span>
         </div>
         <h1>{certification.name}</h1>
-        <p>시행기관 {certification.issuer} · Q-Net 종목코드 {certification.id}</p>
+        <p>시행기관 {certification.issuer} · 공식 데이터 {providerName}</p>
         <div className="official-actions">
-          {certification.officialUrl && <a href={certification.officialUrl} target="_blank" rel="noreferrer">Q-Net 상세정보</a>}
+          {certification.officialUrl && <a href={certification.officialUrl} target="_blank" rel="noreferrer">공식 상세정보</a>}
           {certification.applicationUrl && <a href={certification.applicationUrl} target="_blank" rel="noreferrer">원서접수</a>}
         </div>
       </section>
 
       <section className="section" aria-labelledby="schedule-title">
         <h2 id="schedule-title">2026 시험일정</h2>
-        <p className="schedule-notice">아래 일정은 Q-Net 공식 시험정보 기준입니다. 종목과 지역에 따라 시행 회차가 다를 수 있으므로 접수 전 공식 상세정보를 다시 확인하세요.</p>
+        <p className="schedule-notice">아래 일정은 {providerName} 공식 시험정보 기준입니다. 종목과 지역에 따라 시행 회차가 다를 수 있으므로 접수 전 공식 상세정보를 다시 확인하세요.</p>
         {certification.schedules.length > 0 ? (
           <div className="schedule-table-wrap">
             <table className="schedule-table">
@@ -70,7 +71,7 @@ export default async function CertificationDetailPage({ params }: CertificationP
               <tbody>
                 {certification.schedules.map((schedule) => (
                   <tr key={schedule.round ?? schedule.examName}>
-                    <th scope="row">{schedule.round ?? schedule.examName}</th>
+                    <th scope="row">{schedule.examName ?? schedule.round}</th>
                     <td>{formatDate(schedule.applicationStart)} ~ {formatDate(schedule.applicationEnd)}</td>
                     <td>{formatDate(schedule.examStart)}</td>
                     <td>{formatDate(schedule.practicalApplicationStart)} ~ {formatDate(schedule.practicalApplicationEnd)}</td>
@@ -97,7 +98,12 @@ export default async function CertificationDetailPage({ params }: CertificationP
           <div><dt>분야</dt><dd>{certification.category}</dd></div>
           <div><dt>시행기관</dt><dd>{certification.issuer}</dd></div>
           <div><dt>데이터 기준일</dt><dd>{certification.updatedAt.slice(0, 10)}</dd></div>
+          {certification.eligibility && <div><dt>응시자격</dt><dd>{certification.eligibility}</dd></div>}
+          {certification.fees.map((fee) => (
+            <div key={fee.label}><dt>{fee.label} 수험료</dt><dd>{fee.amount.toLocaleString("ko-KR")}원</dd></div>
+          ))}
         </dl>
+        {certification.description && <p>{certification.description}</p>}
         <p><Link href="/certifications">자격증 목록으로 돌아가기</Link></p>
       </section>
     </>

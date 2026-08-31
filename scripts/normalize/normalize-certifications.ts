@@ -5,7 +5,12 @@ import { isCliEntry } from "../shared/cli";
 import { findLatestRawDirectory, normalizedRoot } from "../shared/paths";
 import { qnetQualificationListEndpoint, qnetScheduleOperations, qnetTestInformationEndpoint } from "../shared/qnet-api";
 import { asArray, asRecord, parseXml, readText } from "../shared/xml";
-import { normalizeDataqHtml, normalizeKoreanHistoryHtml, normalizeRealtorHtml } from "./normalize-external-certifications";
+import {
+  normalizeComputerLiteracyLevel1Html,
+  normalizeDataqHtml,
+  normalizeKoreanHistoryHtml,
+  normalizeRealtorHtml,
+} from "./normalize-external-certifications";
 
 type RawMetadata = {
   provider: string;
@@ -190,6 +195,21 @@ async function normalize(): Promise<void> {
         realtorHtml,
         metadata.fetchedAt,
         "https://www.q-net.or.kr/man001.do?gSite=L&gId=08",
+      ),
+    );
+  } catch (error) {
+    if (metadata.mode !== "fixture") throw error;
+  }
+  try {
+    const korchamHtml = await readFile(
+      join(rawDirectory, "external-korcham-computer-level-1.raw.html"),
+      "utf8",
+    );
+    certifications.push(
+      normalizeComputerLiteracyLevel1Html(
+        korchamHtml,
+        metadata.fetchedAt,
+        "https://license.korcham.net/co/examguide.do?cd=0103&mm=21",
       ),
     );
   } catch (error) {

@@ -45,7 +45,10 @@ async function collectExternalSources(outputDir: string, fetchedAt: string): Pro
           throw new Error(`HTTP ${response.status}`);
         }
 
-        const html = await response.text();
+        const contentType = response.headers.get("content-type")?.toLowerCase() ?? "";
+        const bytes = await response.arrayBuffer();
+        const html = new TextDecoder(contentType.includes("euc-kr") ? "euc-kr" : "utf-8").decode(bytes);
+        await writeFile(join(outputDir, `external-${source.id}.response.html`), html, "utf8");
         const missingText = validateExternalSourceHtml(source, html);
         if (missingText.length > 0) {
           throw new Error(`required text missing: ${missingText.join(", ")}`);

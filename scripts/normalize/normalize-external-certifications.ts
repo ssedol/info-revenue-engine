@@ -212,3 +212,52 @@ export function normalizeKoreanHistoryHtml(
     updatedAt: fetchedAt,
   };
 }
+
+export function normalizeComputerLiteracyLevel1Html(
+  html: string,
+  fetchedAt: string,
+  sourceUrl: string,
+): Certification {
+  const text = pageText(html);
+  if (!["컴퓨터활용능력", "응시자격", "시험과목", "수험료"].every((value) => text.includes(value))) {
+    throw new Error("컴퓨터활용능력 공식 안내의 필수 정보를 찾지 못했습니다.");
+  }
+
+  const writtenFee = Number(text.match(/필기\s*:\s*([\d,]+)원/)?.[1].replaceAll(",", ""));
+  const practicalFee = Number(text.match(/실기\s*:\s*([\d,]+)원/)?.[1].replaceAll(",", ""));
+  if (!writtenFee || !practicalFee) throw new Error("컴퓨터활용능력 수험료를 찾지 못했습니다.");
+
+  const source = {
+    provider: "대한상공회의소",
+    endpoint: sourceUrl,
+    officialPage: sourceUrl,
+    fetchedAt,
+  };
+
+  return {
+    id: "korcham-computer-literacy-level-1",
+    slug: "computer-literacy-level-1",
+    name: "컴퓨터활용능력 1급",
+    officialName: "컴퓨터활용능력 1급",
+    category: "사무정보",
+    level: "1급",
+    issuer: "대한상공회의소",
+    officialUrl: sourceUrl,
+    applicationUrl: "https://license.korcham.net/ex/dailyExam_join.do",
+    description:
+      "스프레드시트와 데이터베이스 활용 능력을 평가하는 국가기술자격입니다. 필기시험 합격 후 2년 이내에 실기시험에 응시할 수 있으며 시험은 지역 시험장별 상시검정으로 운영됩니다.",
+    schedules: [{
+      round: "상시검정",
+      examName: "시험장별 상시 시행 · 개설일로부터 시험일 4일 전까지 접수",
+      source,
+    }],
+    fees: [
+      { label: "필기", amount: writtenFee, currency: "KRW", source },
+      { label: "실기", amount: practicalFee, currency: "KRW", source },
+    ],
+    eligibility: "제한 없음(실기시험은 필기 합격 후 2년 이내 응시 가능)",
+    passRate: [],
+    source,
+    updatedAt: fetchedAt,
+  };
+}

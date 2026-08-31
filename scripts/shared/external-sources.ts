@@ -1,5 +1,5 @@
 export type ExternalSource = {
-  id: "korean-history" | "dataq" | "realtor";
+  id: "korean-history" | "dataq" | "realtor" | "korcham-computer-level-1";
   provider: string;
   certificationNames: string[];
   url: string;
@@ -27,6 +27,13 @@ export const externalSources: ExternalSource[] = [
     certificationNames: ["공인중개사"],
     url: "https://www.q-net.or.kr/man001.do?gSite=L&gId=08",
     requiredText: ["공인중개사"],
+  },
+  {
+    id: "korcham-computer-level-1",
+    provider: "대한상공회의소",
+    certificationNames: ["컴퓨터활용능력 1급"],
+    url: "https://license.korcham.net/co/examguide.do?cd=0103&mm=21",
+    requiredText: ["컴퓨터활용능력", "응시자격", "시험과목", "수험료"],
   },
 ];
 
