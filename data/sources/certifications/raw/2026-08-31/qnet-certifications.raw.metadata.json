@@ -1,7 +1,7 @@
 {
   "provider": "Q-Net",
   "mode": "official-api",
-  "fetchedAt": "2026-08-31T04:49:04.864Z",
+  "fetchedAt": "2026-08-31T04:55:51.821Z",
   "endpoint": "http://openapi.q-net.or.kr/api/service/rest/InquiryListNationalQualifcationSVC/getList",
   "scheduleEndpoint": "http://openapi.q-net.or.kr/api/service/rest/InquiryTestInformationNTQSVC/getPEList",
   "officialPage": "https://www.data.go.kr/data/15003024/openapi.do",
