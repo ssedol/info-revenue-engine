@@ -1,5 +1,5 @@
 export type ExternalSource = {
-  id: "computer-literacy" | "korean-history" | "dataq" | "realtor" | "financial-manager";
+  id: "korean-history" | "dataq" | "realtor";
   provider: string;
   certificationNames: string[];
   url: string;
@@ -7,13 +7,6 @@ export type ExternalSource = {
 };
 
 export const externalSources: ExternalSource[] = [
-  {
-    id: "computer-literacy",
-    provider: "대한상공회의소",
-    certificationNames: ["컴퓨터활용능력 1급"],
-    url: "https://license.korcham.net/co/examguide03.do?cd=0103&mm=21",
-    requiredText: ["컴퓨터활용능력", "시험일정"],
-  },
   {
     id: "korean-history",
     provider: "국사편찬위원회",
@@ -34,13 +27,6 @@ export const externalSources: ExternalSource[] = [
     certificationNames: ["공인중개사"],
     url: "https://www.q-net.or.kr/man001.do?gSite=L&gId=08",
     requiredText: ["공인중개사"],
-  },
-  {
-    id: "financial-manager",
-    provider: "삼일아카데미",
-    certificationNames: ["재경관리사"],
-    url: "https://www.samile.com/",
-    requiredText: ["재경관리사"],
   },
 ];
 

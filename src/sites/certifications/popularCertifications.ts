@@ -1,9 +1,4 @@
-export type CertificationProvider =
-  | "qnet"
-  | "korcham"
-  | "history"
-  | "dataq"
-  | "samil";
+export type CertificationProvider = "qnet" | "history" | "dataq";
 
 export type PopularCertification = {
   name: string;
@@ -38,11 +33,6 @@ export const popularCertifications: PopularCertification[] = [
   { name: "컴퓨터그래픽스운용기능사", provider: "qnet" },
   { name: "웹디자인개발기능사", provider: "qnet" },
   {
-    name: "컴퓨터활용능력 1급",
-    provider: "korcham",
-    officialUrl: "https://license.korcham.net/co/examguide.do?cd=0103&mm=21",
-  },
-  {
     name: "한국사능력검정시험",
     provider: "history",
     officialUrl: "https://www.historyexam.go.kr/",
@@ -61,11 +51,6 @@ export const popularCertifications: PopularCertification[] = [
     name: "공인중개사",
     provider: "qnet",
     officialUrl: "https://www.q-net.or.kr/man001.do?gSite=L&gId=08",
-  },
-  {
-    name: "재경관리사",
-    provider: "samil",
-    officialUrl: "https://www.samile.com/",
   },
 ];
 
