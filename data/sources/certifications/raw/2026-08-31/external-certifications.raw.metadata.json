@@ -8,7 +8,7 @@
       ],
       "url": "https://www.historyexam.go.kr/",
       "ok": true,
-      "fetchedAt": "2026-08-31T05:19:10.290Z"
+      "fetchedAt": "2026-08-31T23:46:25.958Z"
     },
     {
       "id": "dataq",
@@ -19,7 +19,7 @@
       ],
       "url": "https://www.dataq.or.kr/www/accept/schedule.do",
       "ok": true,
-      "fetchedAt": "2026-08-31T05:19:10.290Z"
+      "fetchedAt": "2026-08-31T23:46:25.958Z"
     },
     {
       "id": "realtor",
@@ -29,7 +29,17 @@
       ],
       "url": "https://www.q-net.or.kr/man001.do?gSite=L&gId=08",
       "ok": true,
-      "fetchedAt": "2026-08-31T05:19:10.290Z"
+      "fetchedAt": "2026-08-31T23:46:25.958Z"
+    },
+    {
+      "id": "korcham-computer-level-1",
+      "provider": "대한상공회의소",
+      "certificationNames": [
+        "컴퓨터활용능력 1급"
+      ],
+      "url": "https://license.korcham.net/co/examguide.do?cd=0103&mm=21",
+      "ok": true,
+      "fetchedAt": "2026-08-31T23:46:25.958Z"
     }
   ]
 }
