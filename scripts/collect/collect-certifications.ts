@@ -3,6 +3,7 @@ import { join } from "node:path";
 import { isCliEntry } from "../shared/cli";
 import { fixtureRoot, rawRoot, todayPathSegment } from "../shared/paths";
 import { qnetQualificationListEndpoint, qnetScheduleOperations, qnetTestInformationEndpoint } from "../shared/qnet-api";
+import { externalSources, validateExternalSourceHtml } from "../shared/external-sources";
 
 async function fetchOfficialXml(url: URL, serviceKey?: string): Promise<string> {
   if (serviceKey) url.searchParams.set("serviceKey", serviceKey);
@@ -29,6 +30,55 @@ async function fetchWithRetry(url: URL, serviceKey?: string): Promise<string> {
     }
   }
   throw lastError;
+}
+
+async function collectExternalSources(outputDir: string, fetchedAt: string): Promise<void> {
+  const results = await Promise.all(
+    externalSources.map(async (source) => {
+      try {
+        const response = await fetch(source.url, {
+          headers: { "user-agent": "cert-insight-schedule-bot/1.0" },
+          redirect: "follow",
+          signal: AbortSignal.timeout(30_000),
+        });
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+
+        const html = await response.text();
+        const missingText = validateExternalSourceHtml(source, html);
+        if (missingText.length > 0) {
+          throw new Error(`required text missing: ${missingText.join(", ")}`);
+        }
+
+        await writeFile(join(outputDir, `external-${source.id}.raw.html`), html, "utf8");
+        return {
+          id: source.id,
+          provider: source.provider,
+          certificationNames: source.certificationNames,
+          url: source.url,
+          ok: true,
+          fetchedAt,
+        };
+      } catch (error) {
+        return {
+          id: source.id,
+          provider: source.provider,
+          certificationNames: source.certificationNames,
+          url: source.url,
+          ok: false,
+          fetchedAt,
+          error: error instanceof Error ? error.message : String(error),
+        };
+      }
+    }),
+  );
+
+  await writeFile(
+    join(outputDir, "external-certifications.raw.metadata.json"),
+    `${JSON.stringify({ sources: results }, null, 2)}\n`,
+    "utf8",
+  );
 }
 
 async function collect(): Promise<void> {
@@ -71,6 +121,10 @@ async function collect(): Promise<void> {
         await writeFile(join(outputDir, `qnet-schedules-${operation}.raw.xml`), xml, "utf8");
       }),
     );
+  }
+
+  if (!useFixture) {
+    await collectExternalSources(outputDir, fetchedAt);
   }
 
   await writeFile(

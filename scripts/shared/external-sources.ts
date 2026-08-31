@@ -1,0 +1,50 @@
+export type ExternalSource = {
+  id: "computer-literacy" | "korean-history" | "dataq" | "realtor" | "financial-manager";
+  provider: string;
+  certificationNames: string[];
+  url: string;
+  requiredText: string[];
+};
+
+export const externalSources: ExternalSource[] = [
+  {
+    id: "computer-literacy",
+    provider: "대한상공회의소",
+    certificationNames: ["컴퓨터활용능력 1급"],
+    url: "https://license.korcham.net/co/examguide03.do?cd=0103&mm=21",
+    requiredText: ["컴퓨터활용능력", "시험일정"],
+  },
+  {
+    id: "korean-history",
+    provider: "국사편찬위원회",
+    certificationNames: ["한국사능력검정시험"],
+    url: "https://www.historyexam.go.kr/",
+    requiredText: ["한국사능력검정시험"],
+  },
+  {
+    id: "dataq",
+    provider: "한국데이터산업진흥원",
+    certificationNames: ["SQLD", "ADsP"],
+    url: "https://www.dataq.or.kr/www/main.do",
+    requiredText: ["SQLD", "ADsP"],
+  },
+  {
+    id: "realtor",
+    provider: "Q-Net",
+    certificationNames: ["공인중개사"],
+    url: "https://www.q-net.or.kr/man001.do?gSite=L&gId=08",
+    requiredText: ["공인중개사"],
+  },
+  {
+    id: "financial-manager",
+    provider: "삼일아카데미",
+    certificationNames: ["재경관리사"],
+    url: "https://www.samile.com/",
+    requiredText: ["재경관리사"],
+  },
+];
+
+export function validateExternalSourceHtml(source: ExternalSource, html: string): string[] {
+  const compact = html.replace(/\s+/g, " ");
+  return source.requiredText.filter((text) => !compact.includes(text));
+}

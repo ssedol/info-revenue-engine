@@ -11,6 +11,7 @@ on:
       - "scripts/normalize/**"
       - "scripts/validate/**"
       - "scripts/shared/qnet-api.ts"
+      - "scripts/shared/external-sources.ts"
   schedule:
     - cron: "15 20 * * 0"
 
