@@ -25,436 +25,4621 @@
       "changeFrequency": "monthly"
     },
     {
-      "path": "/certifications/cert-1320",
-      "title": "정보처리기사 정보",
-      "description": "정보처리기사의 공식 데이터 기반 기본 정보를 확인합니다.",
-      "canonicalPath": "/certifications/cert-1320",
-      "priority": 0.85,
-      "changeFrequency": "weekly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
-      "path": "/certifications/cert-1320/schedule",
-      "title": "정보처리기사 시험일정",
-      "description": "정보처리기사 시험일정의 공식 데이터 확인 상태를 제공합니다.",
-      "canonicalPath": "/certifications/cert-1320/schedule",
-      "priority": 0.75,
-      "changeFrequency": "weekly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
-      "path": "/certifications/cert-1320/fee",
-      "title": "정보처리기사 응시료",
-      "description": "정보처리기사 응시료의 공식 데이터 확인 상태를 제공합니다.",
-      "canonicalPath": "/certifications/cert-1320/fee",
-      "priority": 0.7,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
-      "path": "/certifications/cert-1320/eligibility",
-      "title": "정보처리기사 응시자격",
-      "description": "정보처리기사 응시자격의 공식 데이터 확인 상태를 제공합니다.",
-      "canonicalPath": "/certifications/cert-1320/eligibility",
-      "priority": 0.65,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
-      "path": "/certifications/cert-1320/apply",
-      "title": "정보처리기사 접수처",
-      "description": "정보처리기사 원서접수 정보와 공식 링크 확인 상태를 제공합니다.",
-      "canonicalPath": "/certifications/cert-1320/apply",
-      "priority": 0.65,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
-      "path": "/certifications/cert-1320/source",
-      "title": "정보처리기사 공식 출처",
-      "description": "정보처리기사 데이터 출처와 갱신 상태를 확인합니다.",
-      "canonicalPath": "/certifications/cert-1320/source",
-      "priority": 0.65,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
-      "path": "/certifications/cert-1150",
-      "title": "전기기사 정보",
-      "description": "전기기사의 공식 데이터 기반 기본 정보를 확인합니다.",
-      "canonicalPath": "/certifications/cert-1150",
-      "priority": 0.85,
-      "changeFrequency": "weekly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
-      "path": "/certifications/cert-1150/schedule",
-      "title": "전기기사 시험일정",
-      "description": "전기기사 시험일정의 공식 데이터 확인 상태를 제공합니다.",
-      "canonicalPath": "/certifications/cert-1150/schedule",
-      "priority": 0.75,
-      "changeFrequency": "weekly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
-      "path": "/certifications/cert-1150/fee",
-      "title": "전기기사 응시료",
-      "description": "전기기사 응시료의 공식 데이터 확인 상태를 제공합니다.",
-      "canonicalPath": "/certifications/cert-1150/fee",
-      "priority": 0.7,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
-      "path": "/certifications/cert-1150/eligibility",
-      "title": "전기기사 응시자격",
-      "description": "전기기사 응시자격의 공식 데이터 확인 상태를 제공합니다.",
-      "canonicalPath": "/certifications/cert-1150/eligibility",
-      "priority": 0.65,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
-      "path": "/certifications/cert-1150/apply",
-      "title": "전기기사 접수처",
-      "description": "전기기사 원서접수 정보와 공식 링크 확인 상태를 제공합니다.",
-      "canonicalPath": "/certifications/cert-1150/apply",
-      "priority": 0.65,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
-      "path": "/certifications/cert-1150/source",
-      "title": "전기기사 공식 출처",
-      "description": "전기기사 데이터 출처와 갱신 상태를 확인합니다.",
-      "canonicalPath": "/certifications/cert-1150/source",
-      "priority": 0.65,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
-      "path": "/certifications/cert-1220",
-      "title": "산업안전기사 정보",
-      "description": "산업안전기사의 공식 데이터 기반 기본 정보를 확인합니다.",
-      "canonicalPath": "/certifications/cert-1220",
-      "priority": 0.85,
-      "changeFrequency": "weekly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
-      "path": "/certifications/cert-1220/schedule",
-      "title": "산업안전기사 시험일정",
-      "description": "산업안전기사 시험일정의 공식 데이터 확인 상태를 제공합니다.",
-      "canonicalPath": "/certifications/cert-1220/schedule",
-      "priority": 0.75,
-      "changeFrequency": "weekly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
-      "path": "/certifications/cert-1220/fee",
-      "title": "산업안전기사 응시료",
-      "description": "산업안전기사 응시료의 공식 데이터 확인 상태를 제공합니다.",
-      "canonicalPath": "/certifications/cert-1220/fee",
-      "priority": 0.7,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
-      "path": "/certifications/cert-1220/eligibility",
-      "title": "산업안전기사 응시자격",
-      "description": "산업안전기사 응시자격의 공식 데이터 확인 상태를 제공합니다.",
-      "canonicalPath": "/certifications/cert-1220/eligibility",
-      "priority": 0.65,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
-      "path": "/certifications/cert-1220/apply",
-      "title": "산업안전기사 접수처",
-      "description": "산업안전기사 원서접수 정보와 공식 링크 확인 상태를 제공합니다.",
-      "canonicalPath": "/certifications/cert-1220/apply",
-      "priority": 0.65,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
-      "path": "/certifications/cert-1220/source",
-      "title": "산업안전기사 공식 출처",
-      "description": "산업안전기사 데이터 출처와 갱신 상태를 확인합니다.",
-      "canonicalPath": "/certifications/cert-1220/source",
-      "priority": 0.65,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
-      "path": "/certifications/cert-1250",
-      "title": "건설안전기사 정보",
-      "description": "건설안전기사의 공식 데이터 기반 기본 정보를 확인합니다.",
-      "canonicalPath": "/certifications/cert-1250",
-      "priority": 0.85,
-      "changeFrequency": "weekly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
-      "path": "/certifications/cert-1250/schedule",
-      "title": "건설안전기사 시험일정",
-      "description": "건설안전기사 시험일정의 공식 데이터 확인 상태를 제공합니다.",
-      "canonicalPath": "/certifications/cert-1250/schedule",
-      "priority": 0.75,
-      "changeFrequency": "weekly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
-      "path": "/certifications/cert-1250/fee",
-      "title": "건설안전기사 응시료",
-      "description": "건설안전기사 응시료의 공식 데이터 확인 상태를 제공합니다.",
-      "canonicalPath": "/certifications/cert-1250/fee",
-      "priority": 0.7,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
-      "path": "/certifications/cert-1250/eligibility",
-      "title": "건설안전기사 응시자격",
-      "description": "건설안전기사 응시자격의 공식 데이터 확인 상태를 제공합니다.",
-      "canonicalPath": "/certifications/cert-1250/eligibility",
-      "priority": 0.65,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
-      "path": "/certifications/cert-1250/apply",
-      "title": "건설안전기사 접수처",
-      "description": "건설안전기사 원서접수 정보와 공식 링크 확인 상태를 제공합니다.",
-      "canonicalPath": "/certifications/cert-1250/apply",
-      "priority": 0.65,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
-      "path": "/certifications/cert-1250/source",
-      "title": "건설안전기사 공식 출처",
-      "description": "건설안전기사 데이터 출처와 갱신 상태를 확인합니다.",
-      "canonicalPath": "/certifications/cert-1250/source",
-      "priority": 0.65,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
       "path": "/certifications/cert-752",
       "title": "가스기술사 정보",
-      "description": "가스기술사의 공식 데이터 기반 기본 정보를 확인합니다.",
+      "description": "가스기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
       "canonicalPath": "/certifications/cert-752",
       "priority": 0.85,
       "changeFrequency": "weekly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
+      "lastModified": "2026-08-31T03:49:14.222Z"
     },
     {
-      "path": "/certifications/cert-752/schedule",
-      "title": "가스기술사 시험일정",
-      "description": "가스기술사 시험일정의 공식 데이터 확인 상태를 제공합니다.",
-      "canonicalPath": "/certifications/cert-752/schedule",
-      "priority": 0.75,
+      "path": "/certifications/cert-80",
+      "title": "건설기계기술사 정보",
+      "description": "건설기계기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-80",
+      "priority": 0.85,
       "changeFrequency": "weekly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
-      "path": "/certifications/cert-752/fee",
-      "title": "가스기술사 응시료",
-      "description": "가스기술사 응시료의 공식 데이터 확인 상태를 제공합니다.",
-      "canonicalPath": "/certifications/cert-752/fee",
-      "priority": 0.7,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
-      "path": "/certifications/cert-752/eligibility",
-      "title": "가스기술사 응시자격",
-      "description": "가스기술사 응시자격의 공식 데이터 확인 상태를 제공합니다.",
-      "canonicalPath": "/certifications/cert-752/eligibility",
-      "priority": 0.65,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
-      "path": "/certifications/cert-752/apply",
-      "title": "가스기술사 접수처",
-      "description": "가스기술사 원서접수 정보와 공식 링크 확인 상태를 제공합니다.",
-      "canonicalPath": "/certifications/cert-752/apply",
-      "priority": 0.65,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
-      "path": "/certifications/cert-752/source",
-      "title": "가스기술사 공식 출처",
-      "description": "가스기술사 데이터 출처와 갱신 상태를 확인합니다.",
-      "canonicalPath": "/certifications/cert-752/source",
-      "priority": 0.65,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
+      "lastModified": "2026-08-31T03:49:14.222Z"
     },
     {
       "path": "/certifications/cert-740",
       "title": "건설안전기술사 정보",
-      "description": "건설안전기술사의 공식 데이터 기반 기본 정보를 확인합니다.",
+      "description": "건설안전기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
       "canonicalPath": "/certifications/cert-740",
       "priority": 0.85,
       "changeFrequency": "weekly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
+      "lastModified": "2026-08-31T03:49:14.222Z"
     },
     {
-      "path": "/certifications/cert-740/schedule",
-      "title": "건설안전기술사 시험일정",
-      "description": "건설안전기술사 시험일정의 공식 데이터 확인 상태를 제공합니다.",
-      "canonicalPath": "/certifications/cert-740/schedule",
-      "priority": 0.75,
-      "changeFrequency": "weekly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
-      "path": "/certifications/cert-740/fee",
-      "title": "건설안전기술사 응시료",
-      "description": "건설안전기술사 응시료의 공식 데이터 확인 상태를 제공합니다.",
-      "canonicalPath": "/certifications/cert-740/fee",
-      "priority": 0.7,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
-      "path": "/certifications/cert-740/eligibility",
-      "title": "건설안전기술사 응시자격",
-      "description": "건설안전기술사 응시자격의 공식 데이터 확인 상태를 제공합니다.",
-      "canonicalPath": "/certifications/cert-740/eligibility",
-      "priority": 0.65,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
-      "path": "/certifications/cert-740/apply",
-      "title": "건설안전기술사 접수처",
-      "description": "건설안전기술사 원서접수 정보와 공식 링크 확인 상태를 제공합니다.",
-      "canonicalPath": "/certifications/cert-740/apply",
-      "priority": 0.65,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
-      "path": "/certifications/cert-740/source",
-      "title": "건설안전기술사 공식 출처",
-      "description": "건설안전기술사 데이터 출처와 갱신 상태를 확인합니다.",
-      "canonicalPath": "/certifications/cert-740/source",
-      "priority": 0.65,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
-    },
-    {
-      "path": "/certifications/cert-450",
-      "title": "전기기능장 정보",
-      "description": "전기기능장의 공식 데이터 기반 기본 정보를 확인합니다.",
-      "canonicalPath": "/certifications/cert-450",
+      "path": "/certifications/cert-490",
+      "title": "건축구조기술사 정보",
+      "description": "건축구조기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-490",
       "priority": 0.85,
       "changeFrequency": "weekly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
+      "lastModified": "2026-08-31T03:49:14.222Z"
     },
     {
-      "path": "/certifications/cert-450/schedule",
-      "title": "전기기능장 시험일정",
-      "description": "전기기능장 시험일정의 공식 데이터 확인 상태를 제공합니다.",
-      "canonicalPath": "/certifications/cert-450/schedule",
-      "priority": 0.75,
+      "path": "/certifications/cert-501",
+      "title": "건축기계설비기술사 정보",
+      "description": "건축기계설비기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-501",
+      "priority": 0.85,
       "changeFrequency": "weekly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
+      "lastModified": "2026-08-31T03:49:14.222Z"
     },
     {
-      "path": "/certifications/cert-450/fee",
-      "title": "전기기능장 응시료",
-      "description": "전기기능장 응시료의 공식 데이터 확인 상태를 제공합니다.",
-      "canonicalPath": "/certifications/cert-450/fee",
-      "priority": 0.7,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
+      "path": "/certifications/cert-510",
+      "title": "건축시공기술사 정보",
+      "description": "건축시공기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-510",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
     },
     {
-      "path": "/certifications/cert-450/eligibility",
-      "title": "전기기능장 응시자격",
-      "description": "전기기능장 응시자격의 공식 데이터 확인 상태를 제공합니다.",
-      "canonicalPath": "/certifications/cert-450/eligibility",
-      "priority": 0.65,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
+      "path": "/certifications/cert-502",
+      "title": "건축전기설비기술사 정보",
+      "description": "건축전기설비기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-502",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
     },
     {
-      "path": "/certifications/cert-450/apply",
-      "title": "전기기능장 접수처",
-      "description": "전기기능장 원서접수 정보와 공식 링크 확인 상태를 제공합니다.",
-      "canonicalPath": "/certifications/cert-450/apply",
-      "priority": 0.65,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
+      "path": "/certifications/cert-511",
+      "title": "건축품질시험기술사 정보",
+      "description": "건축품질시험기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-511",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
     },
     {
-      "path": "/certifications/cert-450/source",
-      "title": "전기기능장 공식 출처",
-      "description": "전기기능장 데이터 출처와 갱신 상태를 확인합니다.",
-      "canonicalPath": "/certifications/cert-450/source",
-      "priority": 0.65,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
+      "path": "/certifications/cert-760",
+      "title": "공장관리기술사 정보",
+      "description": "공장관리기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-760",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
     },
     {
-      "path": "/categories/information-communication",
-      "title": "정보통신 자격증",
-      "description": "정보통신 분야의 자격증 목록을 확인합니다.",
-      "canonicalPath": "/categories/information-communication",
-      "priority": 0.7,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
+      "path": "/certifications/cert-71",
+      "title": "공조냉동기계기술사 정보",
+      "description": "공조냉동기계기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-71",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
     },
     {
-      "path": "/categories/electrical-electronics",
-      "title": "전기·전자 자격증",
-      "description": "전기·전자 분야의 자격증 목록을 확인합니다.",
-      "canonicalPath": "/categories/electrical-electronics",
-      "priority": 0.7,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
+      "path": "/certifications/cert-951",
+      "title": "교통기술사 정보",
+      "description": "교통기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-951",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
     },
     {
-      "path": "/categories/safety-management",
-      "title": "안전관리 자격증",
-      "description": "안전관리 분야의 자격증 목록을 확인합니다.",
-      "canonicalPath": "/categories/safety-management",
-      "priority": 0.7,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
+      "path": "/certifications/cert-130",
+      "title": "금속가공기술사 정보",
+      "description": "금속가공기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-130",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
     },
     {
-      "path": "/levels/engineer",
-      "title": "기사 자격증",
-      "description": "기사 수준의 자격증 목록을 확인합니다.",
-      "canonicalPath": "/levels/engineer",
-      "priority": 0.7,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
+      "path": "/certifications/cert-110",
+      "title": "금속재료기술사 정보",
+      "description": "금속재료기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-110",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
     },
     {
-      "path": "/levels/professional-engineer",
-      "title": "기술사 자격증",
-      "description": "기술사 수준의 자격증 목록을 확인합니다.",
-      "canonicalPath": "/levels/professional-engineer",
-      "priority": 0.7,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
+      "path": "/certifications/cert-94",
+      "title": "금속제련기술사 정보",
+      "description": "금속제련기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-94",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
     },
     {
-      "path": "/levels/master-craftsman",
-      "title": "기능장 자격증",
-      "description": "기능장 수준의 자격증 목록을 확인합니다.",
-      "canonicalPath": "/levels/master-craftsman",
-      "priority": 0.7,
-      "changeFrequency": "monthly",
-      "lastModified": "2026-08-21T03:36:38.462Z"
+      "path": "/certifications/cert-12",
+      "title": "금형기술사 정보",
+      "description": "금형기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-12",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-872",
+      "title": "기계기술사 정보",
+      "description": "기계기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-872",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-710",
+      "title": "기계안전기술사 정보",
+      "description": "기계안전기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-710",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-891",
+      "title": "기상예보기술사 정보",
+      "description": "기상예보기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-891",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-470",
+      "title": "농어업토목기술사 정보",
+      "description": "농어업토목기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-470",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-950",
+      "title": "농화학기술사 정보",
+      "description": "농화학기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-950",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-920",
+      "title": "대기관리기술사 정보",
+      "description": "대기관리기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-920",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-420",
+      "title": "도로및공항기술사 정보",
+      "description": "도로및공항기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-420",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-650",
+      "title": "도시계획기술사 정보",
+      "description": "도시계획기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-650",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-230",
+      "title": "발송배전기술사 정보",
+      "description": "발송배전기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-230",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-802",
+      "title": "비파괴검사기술사 정보",
+      "description": "비파괴검사기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-802",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-801",
+      "title": "산림기술사 정보",
+      "description": "산림기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-801",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-270",
+      "title": "산업계측제어기술사 정보",
+      "description": "산업계측제어기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-270",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-60",
+      "title": "산업기계설비기술사 정보",
+      "description": "산업기계설비기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-60",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-751",
+      "title": "산업위생관리기술사 정보",
+      "description": "산업위생관리기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-751",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-460",
+      "title": "상하수도기술사 정보",
+      "description": "상하수도기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-460",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-551",
+      "title": "섬유기술사 정보",
+      "description": "섬유기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-551",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-790",
+      "title": "세라믹기술사 정보",
+      "description": "세라믹기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-790",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-750",
+      "title": "소방기술사 정보",
+      "description": "소방기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-750",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-940",
+      "title": "소음진동기술사 정보",
+      "description": "소음진동기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-940",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-701",
+      "title": "수산양식기술사 정보",
+      "description": "수산양식기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-701",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-810",
+      "title": "수산제조기술사 정보",
+      "description": "수산제조기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-810",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-451",
+      "title": "수자원개발기술사 정보",
+      "description": "수자원개발기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-451",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-930",
+      "title": "수질관리기술사 정보",
+      "description": "수질관리기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-930",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-841",
+      "title": "시설원예기술사 정보",
+      "description": "시설원예기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-841",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-800",
+      "title": "식품기술사 정보",
+      "description": "식품기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-800",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-702",
+      "title": "어업기술사 정보",
+      "description": "어업기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-702",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-11",
+      "title": "용접기술사 정보",
+      "description": "용접기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-11",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-561",
+      "title": "의류기술사 정보",
+      "description": "의류기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-561",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-875",
+      "title": "인간공학기술사 정보",
+      "description": "인간공학기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-875",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-938",
+      "title": "자연환경관리기술사 정보",
+      "description": "자연환경관리기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-938",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-730",
+      "title": "전기안전기술사 정보",
+      "description": "전기안전기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-730",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-250",
+      "title": "전기응용기술사 정보",
+      "description": "전기응용기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-250",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-432",
+      "title": "전기철도기술사 정보",
+      "description": "전기철도기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-432",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-301",
+      "title": "전자응용기술사 정보",
+      "description": "전자응용기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-301",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-601",
+      "title": "정보관리기술사 정보",
+      "description": "정보관리기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-601",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-960",
+      "title": "제품디자인기술사 정보",
+      "description": "제품디자인기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-960",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-670",
+      "title": "조경기술사 정보",
+      "description": "조경기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-670",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-320",
+      "title": "조선기술사 정보",
+      "description": "조선기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-320",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-840",
+      "title": "종자기술사 정보",
+      "description": "종자기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-840",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-690",
+      "title": "지적기술사 정보",
+      "description": "지적기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-690",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-825",
+      "title": "지질및지반기술사 정보",
+      "description": "지질및지반기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-825",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-50",
+      "title": "차량기술사 정보",
+      "description": "차량기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-50",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-430",
+      "title": "철도기술사 정보",
+      "description": "철도기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-430",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-261",
+      "title": "철도신호기술사 정보",
+      "description": "철도신호기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-261",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-431",
+      "title": "철도차량기술사 정보",
+      "description": "철도차량기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-431",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-851",
+      "title": "축산기술사 정보",
+      "description": "축산기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-851",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-680",
+      "title": "측량및지형공간정보기술사 정보",
+      "description": "측량및지형공간정보기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-680",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-622",
+      "title": "컴퓨터시스템응용기술사 정보",
+      "description": "컴퓨터시스템응용기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-622",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-400",
+      "title": "토목구조기술사 정보",
+      "description": "토목구조기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-400",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-480",
+      "title": "토목시공기술사 정보",
+      "description": "토목시공기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-480",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-481",
+      "title": "토목품질시험기술사 정보",
+      "description": "토목품질시험기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-481",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-948",
+      "title": "토양환경기술사 정보",
+      "description": "토양환경기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-948",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-390",
+      "title": "토질및기초기술사 정보",
+      "description": "토질및기초기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-390",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-970",
+      "title": "폐기물처리기술사 정보",
+      "description": "폐기물처리기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-970",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-780",
+      "title": "포장기술사 정보",
+      "description": "포장기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-780",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-120",
+      "title": "표면처리기술사 정보",
+      "description": "표면처리기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-120",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-770",
+      "title": "품질관리기술사 정보",
+      "description": "품질관리기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-770",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-370",
+      "title": "항공기관기술사 정보",
+      "description": "항공기관기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-370",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-360",
+      "title": "항공기체기술사 정보",
+      "description": "항공기체기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-360",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-410",
+      "title": "항만및해안기술사 정보",
+      "description": "항만및해안기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-410",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-700",
+      "title": "해양기술사 정보",
+      "description": "해양기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-700",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-210",
+      "title": "화공기술사 정보",
+      "description": "화공기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-210",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-720",
+      "title": "화공안전기술사 정보",
+      "description": "화공안전기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-720",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-591",
+      "title": "화약류관리기술사 정보",
+      "description": "화약류관리기술사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-591",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-3375",
+      "title": "가스기능장 정보",
+      "description": "가스기능장의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-3375",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-3120",
+      "title": "건설기계정비기능장 정보",
+      "description": "건설기계정비기능장의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-3120",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-3611",
+      "title": "건축목재시공기능장 정보",
+      "description": "건축목재시공기능장의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-3611",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-3621",
+      "title": "건축일반시공기능장 정보",
+      "description": "건축일반시공기능장의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-3621",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-3770",
+      "title": "귀금속가공기능장 정보",
+      "description": "귀금속가공기능장의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-3770",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-3221",
+      "title": "금속재료기능장 정보",
+      "description": "금속재료기능장의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-3221",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-3061",
+      "title": "금형기능장 정보",
+      "description": "금형기능장의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-3061",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-3021",
+      "title": "기계가공기능장 정보",
+      "description": "기계가공기능장의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-3021",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-3924",
+      "title": "미용장 정보",
+      "description": "미용장의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-3924",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-3081",
+      "title": "배관기능장 정보",
+      "description": "배관기능장의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-3081",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-9773",
+      "title": "산림기능장 정보",
+      "description": "산림기능장의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-9773",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-3270",
+      "title": "압연기능장 정보",
+      "description": "압연기능장의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-3270",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-3170",
+      "title": "에너지관리기능장 정보",
+      "description": "에너지관리기능장의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-3170",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-3100",
+      "title": "용접기능장 정보",
+      "description": "용접기능장의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-3100",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-3360",
+      "title": "위험물기능장 정보",
+      "description": "위험물기능장의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-3360",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-3925",
+      "title": "이용장 정보",
+      "description": "이용장의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-3925",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-3110",
+      "title": "자동차정비기능장 정보",
+      "description": "자동차정비기능장의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-3110",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-3911",
+      "title": "잠수기능장 정보",
+      "description": "잠수기능장의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-3911",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-3380",
+      "title": "전기기능장 정보",
+      "description": "전기기능장의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-3380",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-3410",
+      "title": "전자기능장 정보",
+      "description": "전자기능장의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-3410",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-3240",
+      "title": "제강기능장 정보",
+      "description": "제강기능장의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-3240",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-3923",
+      "title": "제과기능장 정보",
+      "description": "제과기능장의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-3923",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-3230",
+      "title": "제선기능장 정보",
+      "description": "제선기능장의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-3230",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-3922",
+      "title": "조리기능장 정보",
+      "description": "조리기능장의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-3922",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-3200",
+      "title": "주조기능장 정보",
+      "description": "주조기능장의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-3200",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-3150",
+      "title": "철도차량정비기능장 정보",
+      "description": "철도차량정비기능장의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-3150",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-3095",
+      "title": "판금제관기능장 정보",
+      "description": "판금제관기능장의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-3095",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-3210",
+      "title": "표면처리기능장 정보",
+      "description": "표면처리기능장의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-3210",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-3643",
+      "title": "한복기능장 정보",
+      "description": "한복기능장의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-3643",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2177",
+      "title": "3D프린터개발산업기사 정보",
+      "description": "3D프린터개발산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2177",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2142",
+      "title": "가구제작산업기사 정보",
+      "description": "가구제작산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2142",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1471",
+      "title": "가스기사 정보",
+      "description": "가스기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1471",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2471",
+      "title": "가스산업기사 정보",
+      "description": "가스산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2471",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2044",
+      "title": "객화차정비산업기사 정보",
+      "description": "객화차정비산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2044",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1040",
+      "title": "건설기계설비기사 정보",
+      "description": "건설기계설비기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1040",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2040",
+      "title": "건설기계설비산업기사 정보",
+      "description": "건설기계설비산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2040",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1050",
+      "title": "건설기계정비기사 정보",
+      "description": "건설기계정비기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1050",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2050",
+      "title": "건설기계정비산업기사 정보",
+      "description": "건설기계정비산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2050",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1440",
+      "title": "건설안전기사 정보",
+      "description": "건설안전기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1440",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2390",
+      "title": "건설안전산업기사 정보",
+      "description": "건설안전산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2390",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1750",
+      "title": "건설재료시험기사 정보",
+      "description": "건설재료시험기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1750",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2600",
+      "title": "건설재료시험산업기사 정보",
+      "description": "건설재료시험산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2600",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1630",
+      "title": "건축기사 정보",
+      "description": "건축기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1630",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2253",
+      "title": "건축목공산업기사 정보",
+      "description": "건축목공산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2253",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2530",
+      "title": "건축산업기사 정보",
+      "description": "건축산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2530",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1632",
+      "title": "건축설비기사 정보",
+      "description": "건축설비기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1632",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2531",
+      "title": "건축설비산업기사 정보",
+      "description": "건축설비산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2531",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2251",
+      "title": "건축일반시공산업기사 정보",
+      "description": "건축일반시공산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2251",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2331",
+      "title": "공간정보융합산업기사 정보",
+      "description": "공간정보융합산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2331",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-9777",
+      "title": "공공조달관리사 정보",
+      "description": "공공조달관리사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-9777",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1730",
+      "title": "공조냉동기계기사 정보",
+      "description": "공조냉동기계기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1730",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2590",
+      "title": "공조냉동기계산업기사 정보",
+      "description": "공조냉동기계산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2590",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2108",
+      "title": "광학기기산업기사 정보",
+      "description": "광학기기산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2108",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1513",
+      "title": "광학기사 정보",
+      "description": "광학기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1513",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1751",
+      "title": "교통기사 정보",
+      "description": "교통기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1751",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2751",
+      "title": "교통산업기사 정보",
+      "description": "교통산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2751",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-9105",
+      "title": "국제의료관광코디네이터 정보",
+      "description": "국제의료관광코디네이터의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-9105",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1051",
+      "title": "궤도장비정비기사 정보",
+      "description": "궤도장비정비기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1051",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2051",
+      "title": "궤도장비정비산업기사 정보",
+      "description": "궤도장비정비산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2051",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2760",
+      "title": "귀금속가공산업기사 정보",
+      "description": "귀금속가공산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2760",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1027",
+      "title": "그린전동자동차기사 정보",
+      "description": "그린전동자동차기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1027",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1104",
+      "title": "금속재료기사 정보",
+      "description": "금속재료기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1104",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2101",
+      "title": "금속재료산업기사 정보",
+      "description": "금속재료산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2101",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2031",
+      "title": "기계설계산업기사 정보",
+      "description": "기계설계산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2031",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2011",
+      "title": "기계조립산업기사 정보",
+      "description": "기계조립산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2011",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1601",
+      "title": "기상감정기사 정보",
+      "description": "기상감정기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1601",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1600",
+      "title": "기상기사 정보",
+      "description": "기상기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1600",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1582",
+      "title": "농림토양평가관리기사 정보",
+      "description": "농림토양평가관리기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1582",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2582",
+      "title": "농림토양평가관리산업기사 정보",
+      "description": "농림토양평가관리산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2582",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1023",
+      "title": "농업기계기사 정보",
+      "description": "농업기계기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1023",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2027",
+      "title": "농업기계산업기사 정보",
+      "description": "농업기계산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2027",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1442",
+      "title": "농작업안전보건기사 정보",
+      "description": "농작업안전보건기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1442",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1617",
+      "title": "누설비파괴검사기사 정보",
+      "description": "누설비파괴검사기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1617",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1661",
+      "title": "대기환경기사 정보",
+      "description": "대기환경기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1661",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2571",
+      "title": "대기환경산업기사 정보",
+      "description": "대기환경산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2571",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1350",
+      "title": "도시계획기사 정보",
+      "description": "도시계획기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1350",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2391",
+      "title": "디지털인쇄산업기사 정보",
+      "description": "디지털인쇄산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2391",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1177",
+      "title": "로봇기구개발기사 정보",
+      "description": "로봇기구개발기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1177",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1178",
+      "title": "로봇소프트웨어개발기사 정보",
+      "description": "로봇소프트웨어개발기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1178",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1179",
+      "title": "로봇하드웨어개발기사 정보",
+      "description": "로봇하드웨어개발기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1179",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-9545",
+      "title": "멀티미디어콘텐츠제작전문가 정보",
+      "description": "멀티미디어콘텐츠제작전문가의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-9545",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2060",
+      "title": "메카트로닉스산업기사 정보",
+      "description": "메카트로닉스산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2060",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1800",
+      "title": "바이오화학제품제조기사 정보",
+      "description": "바이오화학제품제조기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1800",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2570",
+      "title": "바이오화학제품제조산업기사 정보",
+      "description": "바이오화학제품제조산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2570",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2175",
+      "title": "반도체커스텀레이아웃산업기사 정보",
+      "description": "반도체커스텀레이아웃산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2175",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1611",
+      "title": "방사선비파괴검사기사 정보",
+      "description": "방사선비파괴검사기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1611",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2611",
+      "title": "방사선비파괴검사산업기사 정보",
+      "description": "방사선비파괴검사산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2611",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2630",
+      "title": "방수산업기사 정보",
+      "description": "방수산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2630",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1443",
+      "title": "방재기사 정보",
+      "description": "방재기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1443",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2041",
+      "title": "배관산업기사 정보",
+      "description": "배관산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2041",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1641",
+      "title": "버섯산업기사 정보",
+      "description": "버섯산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1641",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2980",
+      "title": "보석감정산업기사 정보",
+      "description": "보석감정산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2980",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2880",
+      "title": "보석디자인산업기사 정보",
+      "description": "보석디자인산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2880",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2975",
+      "title": "복어조리산업기사 정보",
+      "description": "복어조리산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2975",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2193",
+      "title": "사무자동화산업기사 정보",
+      "description": "사무자동화산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2193",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1024",
+      "title": "사출금형기사 정보",
+      "description": "사출금형기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1024",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2028",
+      "title": "사출금형산업기사 정보",
+      "description": "사출금형산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2028",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-9520",
+      "title": "사회조사분석사1급 정보",
+      "description": "사회조사분석사1급의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-9520",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-9521",
+      "title": "사회조사분석사2급 정보",
+      "description": "사회조사분석사2급의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-9521",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1564",
+      "title": "산림기사 정보",
+      "description": "산림기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1564",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2481",
+      "title": "산림산업기사 정보",
+      "description": "산림산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2481",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1431",
+      "title": "산업안전기사 정보",
+      "description": "산업안전기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1431",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2381",
+      "title": "산업안전산업기사 정보",
+      "description": "산업안전산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2381",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1472",
+      "title": "산업위생관리기사 정보",
+      "description": "산업위생관리기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1472",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2472",
+      "title": "산업위생관리산업기사 정보",
+      "description": "산업위생관리산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2472",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1989",
+      "title": "생물분류기사(동물) 정보",
+      "description": "생물분류기사(동물)의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1989",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1988",
+      "title": "생물분류기사(식물) 정보",
+      "description": "생물분류기사(식물)의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1988",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1837",
+      "title": "설비보전기사 정보",
+      "description": "설비보전기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1837",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2035",
+      "title": "설비보전산업기사 정보",
+      "description": "설비보전산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2035",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1297",
+      "title": "섬유기사 정보",
+      "description": "섬유기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1297",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2264",
+      "title": "섬유디자인산업기사 정보",
+      "description": "섬유디자인산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2264",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2277",
+      "title": "섬유산업기사 정보",
+      "description": "섬유산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2277",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1900",
+      "title": "소방설비기사(기계분야) 정보",
+      "description": "소방설비기사(기계분야)의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1900",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1910",
+      "title": "소방설비기사(전기분야) 정보",
+      "description": "소방설비기사(전기분야)의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1910",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2900",
+      "title": "소방설비산업기사(기계분야) 정보",
+      "description": "소방설비산업기사(기계분야)의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2900",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2910",
+      "title": "소방설비산업기사(전기분야) 정보",
+      "description": "소방설비산업기사(전기분야)의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2910",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-9537",
+      "title": "소비자전문상담사1급 정보",
+      "description": "소비자전문상담사1급의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-9537",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-9538",
+      "title": "소비자전문상담사2급 정보",
+      "description": "소비자전문상담사2급의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-9538",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1663",
+      "title": "소음진동기사 정보",
+      "description": "소음진동기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1663",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2573",
+      "title": "소음진동산업기사 정보",
+      "description": "소음진동산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2573",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1625",
+      "title": "수산양식기사 정보",
+      "description": "수산양식기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1625",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2520",
+      "title": "수산양식산업기사 정보",
+      "description": "수산양식산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2520",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1540",
+      "title": "수산제조기사 정보",
+      "description": "수산제조기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1540",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1662",
+      "title": "수질환경기사 정보",
+      "description": "수질환경기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1662",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2572",
+      "title": "수질환경산업기사 정보",
+      "description": "수질환경산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2572",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-9772",
+      "title": "스마트공장산업기사 정보",
+      "description": "스마트공장산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-9772",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-9546",
+      "title": "스포츠경영관리사 정보",
+      "description": "스포츠경영관리사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-9546",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1555",
+      "title": "승강기기사 정보",
+      "description": "승강기기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1555",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2395",
+      "title": "승강기산업기사 정보",
+      "description": "승강기산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2395",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1790",
+      "title": "시각디자인기사 정보",
+      "description": "시각디자인기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1790",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2434",
+      "title": "시각디자인산업기사 정보",
+      "description": "시각디자인산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2434",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1780",
+      "title": "시설원예기사 정보",
+      "description": "시설원예기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1780",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1562",
+      "title": "식물보호기사 정보",
+      "description": "식물보호기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1562",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2562",
+      "title": "식물보호산업기사 정보",
+      "description": "식물보호산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2562",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1541",
+      "title": "식육가공기사 정보",
+      "description": "식육가공기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1541",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2450",
+      "title": "식품산업기사 정보",
+      "description": "식품산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2450",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1530",
+      "title": "식품안전기사 정보",
+      "description": "식품안전기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1530",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2302",
+      "title": "신발산업기사 정보",
+      "description": "신발산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2302",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1114",
+      "title": "신재생에너지발전설비기사(태양광) 정보",
+      "description": "신재생에너지발전설비기사(태양광)의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1114",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2114",
+      "title": "신재생에너지발전설비산업기사(태양광) 정보",
+      "description": "신재생에너지발전설비산업기사(태양광)의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2114",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1282",
+      "title": "실내건축기사 정보",
+      "description": "실내건축기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1282",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2282",
+      "title": "실내건축산업기사 정보",
+      "description": "실내건축산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2282",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2972",
+      "title": "양식조리산업기사 정보",
+      "description": "양식조리산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2972",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2631",
+      "title": "어로산업기사 정보",
+      "description": "어로산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2631",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1626",
+      "title": "어병기사 정보",
+      "description": "어병기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1626",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1633",
+      "title": "어업생산관리기사 정보",
+      "description": "어업생산관리기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1633",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1340",
+      "title": "에너지관리기사 정보",
+      "description": "에너지관리기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1340",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2960",
+      "title": "에너지관리산업기사 정보",
+      "description": "에너지관리산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2960",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1028",
+      "title": "온실가스관리기사 정보",
+      "description": "온실가스관리기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1028",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1615",
+      "title": "와전류비파괴검사기사 정보",
+      "description": "와전류비파괴검사기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1615",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1022",
+      "title": "용접기사 정보",
+      "description": "용접기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1022",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2026",
+      "title": "용접산업기사 정보",
+      "description": "용접산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2026",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2121",
+      "title": "위험물산업기사 정보",
+      "description": "위험물산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2121",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1592",
+      "title": "유기농업기사 정보",
+      "description": "유기농업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1592",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2592",
+      "title": "유기농업산업기사 정보",
+      "description": "유기농업산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2592",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1550",
+      "title": "응용지질기사 정보",
+      "description": "응용지질기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1550",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1176",
+      "title": "의공기사 정보",
+      "description": "의공기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1176",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2176",
+      "title": "의공산업기사 정보",
+      "description": "의공산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2176",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1301",
+      "title": "의류기사 정보",
+      "description": "의류기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1301",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-9547",
+      "title": "이러닝운영관리사 정보",
+      "description": "이러닝운영관리사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-9547",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1875",
+      "title": "인간공학기사 정보",
+      "description": "인간공학기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1875",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1391",
+      "title": "인쇄설계기사 정보",
+      "description": "인쇄설계기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1391",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1021",
+      "title": "일반기계기사 정보",
+      "description": "일반기계기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1021",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2973",
+      "title": "일식조리산업기사 정보",
+      "description": "일식조리산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2973",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1121",
+      "title": "임베디드기사 정보",
+      "description": "임베디드기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1121",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1590",
+      "title": "임산가공기사 정보",
+      "description": "임산가공기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1590",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-9539",
+      "title": "임상심리사1급 정보",
+      "description": "임상심리사1급의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-9539",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-9540",
+      "title": "임상심리사2급 정보",
+      "description": "임상심리사2급의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-9540",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1570",
+      "title": "임업종묘기사 정보",
+      "description": "임업종묘기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1570",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1613",
+      "title": "자기비파괴검사기사 정보",
+      "description": "자기비파괴검사기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1613",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2613",
+      "title": "자기비파괴검사산업기사 정보",
+      "description": "자기비파괴검사산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2613",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1070",
+      "title": "자동차정비기사 정보",
+      "description": "자동차정비기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1070",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2070",
+      "title": "자동차정비산업기사 정보",
+      "description": "자동차정비산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2070",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2034",
+      "title": "자동화설비산업기사 정보",
+      "description": "자동화설비산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2034",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1938",
+      "title": "자연생태복원기사 정보",
+      "description": "자연생태복원기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1938",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2938",
+      "title": "자연생태복원산업기사 정보",
+      "description": "자연생태복원산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2938",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2521",
+      "title": "잠수산업기사 정보",
+      "description": "잠수산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2521",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1160",
+      "title": "전기공사기사 정보",
+      "description": "전기공사기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1160",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2150",
+      "title": "전기공사산업기사 정보",
+      "description": "전기공사산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2150",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2151",
+      "title": "전기기기산업기사 정보",
+      "description": "전기기기산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2151",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1150",
+      "title": "전기기사 정보",
+      "description": "전기기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1150",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2140",
+      "title": "전기산업기사 정보",
+      "description": "전기산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2140",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1741",
+      "title": "전기철도기사 정보",
+      "description": "전기철도기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1741",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2036",
+      "title": "전기철도산업기사 정보",
+      "description": "전기철도산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2036",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1170",
+      "title": "전자기사 정보",
+      "description": "전자기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1170",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2170",
+      "title": "전자산업기사 정보",
+      "description": "전자산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2170",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2172",
+      "title": "전자회로설계산업기사 정보",
+      "description": "전자회로설계산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2172",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2104",
+      "title": "정밀측정산업기사 정보",
+      "description": "정밀측정산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2104",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1125",
+      "title": "정밀화학기사 정보",
+      "description": "정밀화학기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1125",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1320",
+      "title": "정보처리기사 정보",
+      "description": "정보처리기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1320",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2290",
+      "title": "정보처리산업기사 정보",
+      "description": "정보처리산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2290",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-4223",
+      "title": "제과산업기사 정보",
+      "description": "제과산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-4223",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-4224",
+      "title": "제빵산업기사 정보",
+      "description": "제빵산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-4224",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1810",
+      "title": "제판기사 정보",
+      "description": "제판기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1810",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1512",
+      "title": "제품디자인기사 정보",
+      "description": "제품디자인기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1512",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2432",
+      "title": "제품디자인산업기사 정보",
+      "description": "제품디자인산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2432",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1370",
+      "title": "조경기사 정보",
+      "description": "조경기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1370",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2320",
+      "title": "조경산업기사 정보",
+      "description": "조경산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2320",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2220",
+      "title": "조선산업기사 정보",
+      "description": "조선산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2220",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1221",
+      "title": "조선선체기사 정보",
+      "description": "조선선체기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1221",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1222",
+      "title": "조선의장기사 정보",
+      "description": "조선의장기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1222",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1560",
+      "title": "종자기사 정보",
+      "description": "종자기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1560",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2470",
+      "title": "종자산업기사 정보",
+      "description": "종자산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2470",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2105",
+      "title": "주조산업기사 정보",
+      "description": "주조산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2105",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2974",
+      "title": "중식조리산업기사 정보",
+      "description": "중식조리산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2974",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1390",
+      "title": "지적기사 정보",
+      "description": "지적기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1390",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2340",
+      "title": "지적산업기사 정보",
+      "description": "지적산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2340",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-9510",
+      "title": "직업상담사1급 정보",
+      "description": "직업상담사1급의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-9510",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-9511",
+      "title": "직업상담사2급 정보",
+      "description": "직업상담사2급의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-9511",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2042",
+      "title": "철도동력차기관정비산업기사 정보",
+      "description": "철도동력차기관정비산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2042",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2043",
+      "title": "철도동력차전기정비산업기사 정보",
+      "description": "철도동력차전기정비산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2043",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1740",
+      "title": "철도신호기사 정보",
+      "description": "철도신호기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1740",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2160",
+      "title": "철도신호산업기사 정보",
+      "description": "철도신호산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2160",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2045",
+      "title": "철도운송산업기사 정보",
+      "description": "철도운송산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2045",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1030",
+      "title": "철도차량기사 정보",
+      "description": "철도차량기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1030",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2030",
+      "title": "철도차량산업기사 정보",
+      "description": "철도차량산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2030",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1760",
+      "title": "철도토목기사 정보",
+      "description": "철도토목기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1760",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1612",
+      "title": "초음파비파괴검사기사 정보",
+      "description": "초음파비파괴검사기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1612",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2612",
+      "title": "초음파비파괴검사산업기사 정보",
+      "description": "초음파비파괴검사산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2612",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1581",
+      "title": "축산기사 정보",
+      "description": "축산기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1581",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2491",
+      "title": "축산산업기사 정보",
+      "description": "축산산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2491",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1380",
+      "title": "측량및지형공간정보기사 정보",
+      "description": "측량및지형공간정보기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1380",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2330",
+      "title": "측량및지형공간정보산업기사 정보",
+      "description": "측량및지형공간정보산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2330",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1614",
+      "title": "침투비파괴검사기사 정보",
+      "description": "침투비파괴검사기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1614",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2614",
+      "title": "침투비파괴검사산업기사 정보",
+      "description": "침투비파괴검사산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2614",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-9535",
+      "title": "컨벤션기획사1급 정보",
+      "description": "컨벤션기획사1급의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-9535",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-9536",
+      "title": "컨벤션기획사2급 정보",
+      "description": "컨벤션기획사2급의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-9536",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1982",
+      "title": "컬러리스트기사 정보",
+      "description": "컬러리스트기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1982",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2982",
+      "title": "컬러리스트산업기사 정보",
+      "description": "컬러리스트산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2982",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1998",
+      "title": "컴퓨터시스템기사 정보",
+      "description": "컴퓨터시스템기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1998",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2025",
+      "title": "컴퓨터응용가공산업기사 정보",
+      "description": "컴퓨터응용가공산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2025",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1048",
+      "title": "콘크리트기사 정보",
+      "description": "콘크리트기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1048",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2048",
+      "title": "콘크리트산업기사 정보",
+      "description": "콘크리트산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2048",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-9541",
+      "title": "텔레마케팅관리사 정보",
+      "description": "텔레마케팅관리사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-9541",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1250",
+      "title": "토목기사 정보",
+      "description": "토목기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1250",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2240",
+      "title": "토목산업기사 정보",
+      "description": "토목산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2240",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1948",
+      "title": "토양환경기사 정보",
+      "description": "토양환경기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1948",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2012",
+      "title": "판금제관산업기사 정보",
+      "description": "판금제관산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2012",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2301",
+      "title": "패션디자인산업기사 정보",
+      "description": "패션디자인산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2301",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2085",
+      "title": "패션머천다이징산업기사 정보",
+      "description": "패션머천다이징산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2085",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1950",
+      "title": "폐기물처리기사 정보",
+      "description": "폐기물처리기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1950",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2950",
+      "title": "폐기물처리산업기사 정보",
+      "description": "폐기물처리산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2950",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1511",
+      "title": "포장기사 정보",
+      "description": "포장기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1511",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2431",
+      "title": "포장산업기사 정보",
+      "description": "포장산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2431",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2106",
+      "title": "표면처리산업기사 정보",
+      "description": "표면처리산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2106",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1500",
+      "title": "품질경영기사 정보",
+      "description": "품질경영기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1500",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2420",
+      "title": "품질경영산업기사 정보",
+      "description": "품질경영산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2420",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1025",
+      "title": "프레스금형기사 정보",
+      "description": "프레스금형기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1025",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2029",
+      "title": "프레스금형산업기사 정보",
+      "description": "프레스금형산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2029",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2551",
+      "title": "피아노조율산업기사 정보",
+      "description": "피아노조율산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2551",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2268",
+      "title": "한복산업기사 정보",
+      "description": "한복산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2268",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2971",
+      "title": "한식조리산업기사 정보",
+      "description": "한식조리산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2971",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1240",
+      "title": "항공기사 정보",
+      "description": "항공기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1240",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2230",
+      "title": "항공산업기사 정보",
+      "description": "항공산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2230",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1351",
+      "title": "항로표지기사 정보",
+      "description": "항로표지기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1351",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2351",
+      "title": "항로표지산업기사 정보",
+      "description": "항로표지산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2351",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1403",
+      "title": "해양공학기사 정보",
+      "description": "해양공학기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1403",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1402",
+      "title": "해양자원개발기사 정보",
+      "description": "해양자원개발기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1402",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2350",
+      "title": "해양조사산업기사 정보",
+      "description": "해양조사산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2350",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1401",
+      "title": "해양환경기사 정보",
+      "description": "해양환경기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1401",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1110",
+      "title": "화공기사 정보",
+      "description": "화공기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1110",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1140",
+      "title": "화약류관리기사 정보",
+      "description": "화약류관리기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1140",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2130",
+      "title": "화약류관리산업기사 정보",
+      "description": "화약류관리산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2130",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1130",
+      "title": "화약류제조기사 정보",
+      "description": "화약류제조기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1130",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2120",
+      "title": "화약류제조산업기사 정보",
+      "description": "화약류제조산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2120",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1441",
+      "title": "화재감식평가기사 정보",
+      "description": "화재감식평가기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1441",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2441",
+      "title": "화재감식평가산업기사 정보",
+      "description": "화재감식평가산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2441",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1563",
+      "title": "화학분석기사 정보",
+      "description": "화학분석기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1563",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1576",
+      "title": "화훼장식기사 정보",
+      "description": "화훼장식기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1576",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-2625",
+      "title": "화훼장식산업기사 정보",
+      "description": "화훼장식산업기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-2625",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-1029",
+      "title": "환경위해관리기사 정보",
+      "description": "환경위해관리기사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-1029",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7785",
+      "title": "3D프린터운용기능사 정보",
+      "description": "3D프린터운용기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7785",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7140",
+      "title": "가구제작기능사 정보",
+      "description": "가구제작기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7140",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6335",
+      "title": "가스기능사 정보",
+      "description": "가스기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6335",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6224",
+      "title": "가스텅스텐아크용접기능사 정보",
+      "description": "가스텅스텐아크용접기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6224",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7170",
+      "title": "거푸집기능사 정보",
+      "description": "거푸집기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7170",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6298",
+      "title": "건설기계정비기능사 정보",
+      "description": "건설기계정비기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6298",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7132",
+      "title": "건설재료시험기능사 정보",
+      "description": "건설재료시험기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7132",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7150",
+      "title": "건축도장기능사 정보",
+      "description": "건축도장기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7150",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7130",
+      "title": "건축목공기능사 정보",
+      "description": "건축목공기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7130",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6981",
+      "title": "공간정보융합기능사 정보",
+      "description": "공간정보융합기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6981",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-8070",
+      "title": "공구제작기능사보 정보",
+      "description": "공구제작기능사보의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-8070",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6320",
+      "title": "공조냉동기계기능사 정보",
+      "description": "공조냉동기계기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6320",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7385",
+      "title": "광산보안기능사(화약분야) 정보",
+      "description": "광산보안기능사(화약분야)의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7385",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7371",
+      "title": "광산차량기계운전기능사 정보",
+      "description": "광산차량기계운전기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7371",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7372",
+      "title": "광산환경기능사 정보",
+      "description": "광산환경기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7372",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7862",
+      "title": "굴착기운전기능사 정보",
+      "description": "굴착기운전기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7862",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6051",
+      "title": "궤도장비정비기능사 정보",
+      "description": "궤도장비정비기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6051",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7460",
+      "title": "귀금속가공기능사 정보",
+      "description": "귀금속가공기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7460",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7450",
+      "title": "금속도장기능사 정보",
+      "description": "금속도장기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7450",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6490",
+      "title": "금속재료시험기능사 정보",
+      "description": "금속재료시험기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6490",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7102",
+      "title": "금속재창호기능사 정보",
+      "description": "금속재창호기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7102",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6105",
+      "title": "금형기능사 정보",
+      "description": "금형기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6105",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6042",
+      "title": "기계가공조립기능사 정보",
+      "description": "기계가공조립기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6042",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7861",
+      "title": "기중기운전기능사 정보",
+      "description": "기중기운전기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7861",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7931",
+      "title": "남성복기능사 정보",
+      "description": "남성복기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7931",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6301",
+      "title": "농기계운전기능사 정보",
+      "description": "농기계운전기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6301",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6300",
+      "title": "농업기계정비기능사 정보",
+      "description": "농업기계정비기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6300",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7180",
+      "title": "도배기능사 정보",
+      "description": "도배기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7180",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7890",
+      "title": "도자공예기능사 정보",
+      "description": "도자공예기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7890",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7660",
+      "title": "도화기능사 정보",
+      "description": "도화기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7660",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7992",
+      "title": "떡제조기능사 정보",
+      "description": "떡제조기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7992",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7866",
+      "title": "로더운전기능사 정보",
+      "description": "로더운전기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7866",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7871",
+      "title": "롤러운전기능사 정보",
+      "description": "롤러운전기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7871",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6903",
+      "title": "메카트로닉스기능사 정보",
+      "description": "메카트로닉스기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6903",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7872",
+      "title": "모터그레이더운전기능사 정보",
+      "description": "모터그레이더운전기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7872",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7480",
+      "title": "목공예기능사 정보",
+      "description": "목공예기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7480",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7645",
+      "title": "목재가공기능사 정보",
+      "description": "목재가공기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7645",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7101",
+      "title": "목재창호기능사 정보",
+      "description": "목재창호기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7101",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7643",
+      "title": "목질재료기능사 정보",
+      "description": "목질재료기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7643",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7957",
+      "title": "미용사(네일) 정보",
+      "description": "미용사(네일)의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7957",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7967",
+      "title": "미용사(메이크업) 정보",
+      "description": "미용사(메이크업)의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7967",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7937",
+      "title": "미용사(일반) 정보",
+      "description": "미용사(일반)의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7937",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7947",
+      "title": "미용사(피부) 정보",
+      "description": "미용사(피부)의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7947",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7110",
+      "title": "미장기능사 정보",
+      "description": "미장기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7110",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-9775",
+      "title": "바이오공정기능사 정보",
+      "description": "바이오공정기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-9775",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6033",
+      "title": "반도체설비보전기능사 정보",
+      "description": "반도체설비보전기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6033",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7471",
+      "title": "방사선비파괴검사기능사 정보",
+      "description": "방사선비파괴검사기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7471",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7030",
+      "title": "방수기능사 정보",
+      "description": "방수기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7030",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6213",
+      "title": "배관기능사 정보",
+      "description": "배관기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6213",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7631",
+      "title": "버섯종균기능사 정보",
+      "description": "버섯종균기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7631",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7889",
+      "title": "보석가공기능사 정보",
+      "description": "보석가공기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7889",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7980",
+      "title": "보석감정사 정보",
+      "description": "보석감정사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7980",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7914",
+      "title": "복어조리기능사 정보",
+      "description": "복어조리기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7914",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-9776",
+      "title": "봉제기능사 정보",
+      "description": "봉제기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-9776",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7863",
+      "title": "불도저운전기능사 정보",
+      "description": "불도저운전기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7863",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7120",
+      "title": "비계기능사 정보",
+      "description": "비계기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7120",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7795",
+      "title": "사진기능사 정보",
+      "description": "사진기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7795",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-8090",
+      "title": "사출금형기능사보 정보",
+      "description": "사출금형기능사보의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-8090",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7632",
+      "title": "산림기능사 정보",
+      "description": "산림기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7632",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6990",
+      "title": "석공기능사 정보",
+      "description": "석공기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6990",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6792",
+      "title": "석공예기능사 정보",
+      "description": "석공예기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6792",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6960",
+      "title": "선박기관정비기능사 정보",
+      "description": "선박기관정비기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6960",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6920",
+      "title": "선체건조기능사 정보",
+      "description": "선체건조기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6920",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6910",
+      "title": "선체설계기능사 정보",
+      "description": "선체설계기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6910",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6837",
+      "title": "설비보전기능사 정보",
+      "description": "설비보전기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6837",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7960",
+      "title": "세탁기능사 정보",
+      "description": "세탁기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7960",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7700",
+      "title": "수산양식기능사 정보",
+      "description": "수산양식기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7700",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-9771",
+      "title": "스마트공장기능사 정보",
+      "description": "스마트공장기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-9771",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7940",
+      "title": "승강기기능사 정보",
+      "description": "승강기기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7940",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7482",
+      "title": "식육처리기능사 정보",
+      "description": "식육처리기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7482",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7591",
+      "title": "식품가공기능사 정보",
+      "description": "식품가공기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7591",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7904",
+      "title": "신발제조기능사 정보",
+      "description": "신발제조기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7904",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7114",
+      "title": "신재생에너지발전설비기능사(태양광) 정보",
+      "description": "신재생에너지발전설비기능사(태양광)의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7114",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7152",
+      "title": "실내건축기능사 정보",
+      "description": "실내건축기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7152",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7873",
+      "title": "아스팔트피니셔운전기능사 정보",
+      "description": "아스팔트피니셔운전기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7873",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6543",
+      "title": "압연기능사 정보",
+      "description": "압연기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6543",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7911",
+      "title": "양식조리기능사 정보",
+      "description": "양식조리기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7911",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7930",
+      "title": "양화장치운전기능사 정보",
+      "description": "양화장치운전기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7930",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7761",
+      "title": "에너지관리기능사 정보",
+      "description": "에너지관리기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7761",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7932",
+      "title": "여성복기능사 정보",
+      "description": "여성복기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7932",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6420",
+      "title": "열처리기능사 정보",
+      "description": "열처리기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6420",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7302",
+      "title": "염색기능사(날염) 정보",
+      "description": "염색기능사(날염)의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7302",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7301",
+      "title": "염색기능사(침염) 정보",
+      "description": "염색기능사(침염)의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7301",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7161",
+      "title": "온수온돌기능사 정보",
+      "description": "온수온돌기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7161",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7901",
+      "title": "원예기능사 정보",
+      "description": "원예기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7901",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7798",
+      "title": "웹디자인개발기능사 정보",
+      "description": "웹디자인개발기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7798",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6697",
+      "title": "위험물기능사 정보",
+      "description": "위험물기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6697",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6592",
+      "title": "유기농업기능사 정보",
+      "description": "유기농업기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6592",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7151",
+      "title": "유리시공기능사 정보",
+      "description": "유리시공기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7151",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6176",
+      "title": "의료전자기능사 정보",
+      "description": "의료전자기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6176",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-9774",
+      "title": "이륜자동차정비기능사 정보",
+      "description": "이륜자동차정비기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-9774",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6225",
+      "title": "이산화탄소가스아크용접기능사 정보",
+      "description": "이산화탄소가스아크용접기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6225",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7908",
+      "title": "이용사 정보",
+      "description": "이용사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7908",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7524",
+      "title": "인쇄기능사 정보",
+      "description": "인쇄기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7524",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7912",
+      "title": "일식조리기능사 정보",
+      "description": "일식조리기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7912",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6801",
+      "title": "임베디드기능사 정보",
+      "description": "임베디드기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6801",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7630",
+      "title": "임업종묘기능사 정보",
+      "description": "임업종묘기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7630",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7473",
+      "title": "자기비파괴검사기능사 정보",
+      "description": "자기비파괴검사기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7473",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6836",
+      "title": "자동차보수도장기능사 정보",
+      "description": "자동차보수도장기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6836",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6281",
+      "title": "자동차정비기능사 정보",
+      "description": "자동차정비기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6281",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6285",
+      "title": "자동차차체수리기능사 정보",
+      "description": "자동차차체수리기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6285",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6415",
+      "title": "자동화설비기능사 정보",
+      "description": "자동화설비기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6415",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7612",
+      "title": "잠수기능사 정보",
+      "description": "잠수기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7612",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7780",
+      "title": "전기기능사 정보",
+      "description": "전기기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7780",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7061",
+      "title": "전산응용건축제도기능사 정보",
+      "description": "전산응용건축제도기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7061",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6151",
+      "title": "전산응용기계제도기능사 정보",
+      "description": "전산응용기계제도기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6151",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7072",
+      "title": "전산응용토목제도기능사 정보",
+      "description": "전산응용토목제도기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7072",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6790",
+      "title": "전자기능사 정보",
+      "description": "전자기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6790",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6791",
+      "title": "전자출판기능사 정보",
+      "description": "전자출판기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6791",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6785",
+      "title": "전자캐드기능사 정보",
+      "description": "전자캐드기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6785",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6120",
+      "title": "정밀측정기능사 정보",
+      "description": "정밀측정기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6120",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6892",
+      "title": "정보기기운용기능사 정보",
+      "description": "정보기기운용기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6892",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6515",
+      "title": "제강기능사 정보",
+      "description": "제강기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6515",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7892",
+      "title": "제과기능사 정보",
+      "description": "제과기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7892",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7893",
+      "title": "제빵기능사 정보",
+      "description": "제빵기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7893",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6500",
+      "title": "제선기능사 정보",
+      "description": "제선기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6500",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6793",
+      "title": "제품응용모델링기능사 정보",
+      "description": "제품응용모델링기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6793",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7900",
+      "title": "조경기능사 정보",
+      "description": "조경기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7900",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7070",
+      "title": "조적기능사 정보",
+      "description": "조적기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7070",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7916",
+      "title": "조주기능사 정보",
+      "description": "조주기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7916",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7620",
+      "title": "종자기능사 정보",
+      "description": "종자기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7620",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6461",
+      "title": "주조기능사 정보",
+      "description": "주조기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6461",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7913",
+      "title": "중식조리기능사 정보",
+      "description": "중식조리기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7913",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7875",
+      "title": "지게차운전기능사 정보",
+      "description": "지게차운전기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7875",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7680",
+      "title": "지도제작기능사 정보",
+      "description": "지도제작기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7680",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7650",
+      "title": "지적기능사 정보",
+      "description": "지적기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7650",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7483",
+      "title": "천공기운전기능사 정보",
+      "description": "천공기운전기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7483",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7864",
+      "title": "천장크레인운전기능사 정보",
+      "description": "천장크레인운전기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7864",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7080",
+      "title": "철근기능사 정보",
+      "description": "철근기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7080",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6772",
+      "title": "철도전기신호기능사 정보",
+      "description": "철도전기신호기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6772",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6352",
+      "title": "철도차량정비기능사 정보",
+      "description": "철도차량정비기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6352",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7010",
+      "title": "철도토목기능사 정보",
+      "description": "철도토목기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7010",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7472",
+      "title": "초음파비파괴검사기능사 정보",
+      "description": "초음파비파괴검사기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7472",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6381",
+      "title": "축로기능사 정보",
+      "description": "축로기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6381",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7481",
+      "title": "축산기능사 정보",
+      "description": "축산기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7481",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6980",
+      "title": "측량기능사 정보",
+      "description": "측량기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6980",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7474",
+      "title": "침투비파괴검사기능사 정보",
+      "description": "침투비파괴검사기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7474",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7835",
+      "title": "컨테이너크레인운전기능사 정보",
+      "description": "컨테이너크레인운전기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7835",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7796",
+      "title": "컴퓨터그래픽기능사 정보",
+      "description": "컴퓨터그래픽기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7796",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6032",
+      "title": "컴퓨터응용밀링기능사 정보",
+      "description": "컴퓨터응용밀링기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6032",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6012",
+      "title": "컴퓨터응용선반기능사 정보",
+      "description": "컴퓨터응용선반기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6012",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7020",
+      "title": "콘크리트기능사 정보",
+      "description": "콘크리트기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7020",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7834",
+      "title": "타워크레인운전기능사 정보",
+      "description": "타워크레인운전기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7834",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7210",
+      "title": "타일기능사 정보",
+      "description": "타일기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7210",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6175",
+      "title": "판금제관기능사 정보",
+      "description": "판금제관기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6175",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7646",
+      "title": "펄프종이제조기능사 정보",
+      "description": "펄프종이제조기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7646",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6835",
+      "title": "표면실장장비기능사 정보",
+      "description": "표면실장장비기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6835",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6480",
+      "title": "표면처리기능사 정보",
+      "description": "표면처리기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6480",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-8080",
+      "title": "프레스금형기능사보 정보",
+      "description": "프레스금형기능사보의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-8080",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6921",
+      "title": "프로그래밍기능사 정보",
+      "description": "프로그래밍기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6921",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7103",
+      "title": "플라스틱창호기능사 정보",
+      "description": "플라스틱창호기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7103",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6223",
+      "title": "피복아크용접기능사 정보",
+      "description": "피복아크용접기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6223",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7917",
+      "title": "피아노조율기능사 정보",
+      "description": "피아노조율기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7917",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7723",
+      "title": "한복기능사 정보",
+      "description": "한복기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7723",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7910",
+      "title": "한식조리기능사 정보",
+      "description": "한식조리기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7910",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6288",
+      "title": "항공기정비기능사 정보",
+      "description": "항공기정비기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6288",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7670",
+      "title": "항공사진기능사 정보",
+      "description": "항공사진기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7670",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6289",
+      "title": "항공전기·전자정비기능사 정보",
+      "description": "항공전기·전자정비기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6289",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6351",
+      "title": "항로표지기능사 정보",
+      "description": "항로표지기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6351",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7970",
+      "title": "화약취급기능사 정보",
+      "description": "화약취급기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7970",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-6560",
+      "title": "화학분석기능사 정보",
+      "description": "화학분석기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-6560",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7625",
+      "title": "화훼장식기능사 정보",
+      "description": "화훼장식기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7625",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
+    },
+    {
+      "path": "/certifications/cert-7918",
+      "title": "환경기능사 정보",
+      "description": "환경기능사의 2026 시험일정과 공식 데이터 기반 기본 정보를 확인합니다.",
+      "canonicalPath": "/certifications/cert-7918",
+      "priority": 0.85,
+      "changeFrequency": "weekly",
+      "lastModified": "2026-08-31T03:49:14.222Z"
     }
   ]
 }
