@@ -60,6 +60,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               <nav className="site-nav" aria-label="주요 메뉴">
                 <Link href="/articles">최신글</Link>
                 <Link href="/#popular">인기글</Link>
+                <Link href="/schedules">시험일정</Link>
                 <Link href="/certifications">자격증 탐색</Link>
                 <Link href="/compare">비교</Link>
               </nav>
