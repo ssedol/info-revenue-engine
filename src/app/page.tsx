@@ -34,19 +34,6 @@ export default function HomePage() {
         <h1>자격증 선택부터 공부 전략까지 읽기 쉽게 정리합니다</h1>
         <p>자격증 준비 전에 읽어볼 만한 최신 기사, 인기 기사, 실전 가이드를 한곳에 모았습니다.</p>
       </section>
-      <section className="section news-board" aria-labelledby="latest-title">
-        <div className="home-section-header">
-          <h2 id="latest-title">최신 기사</h2>
-          <Link href="/articles">전체 보기</Link>
-        </div>
-        <ArticleHeadlineList articles={latestList} columns />
-      </section>
-      <section id="popular" className="section news-board" aria-labelledby="popular-title">
-        <div className="home-section-header">
-          <h2 id="popular-title">많이 읽는 기사</h2>
-        </div>
-        <ArticleHeadlineList articles={popularList} columns />
-      </section>
       <section className="section schedule-board" aria-labelledby="upcoming-schedules-title">
         <div className="home-section-header">
           <h2 id="upcoming-schedules-title">다가오는 시험일정</h2>
@@ -80,6 +67,19 @@ export default function HomePage() {
             <p>새로운 공식 시험일정이 게시되면 이 영역에 자동으로 표시됩니다.</p>
           </div>
         )}
+      </section>
+      <section className="section news-board" aria-labelledby="latest-title">
+        <div className="home-section-header">
+          <h2 id="latest-title">최신 기사</h2>
+          <Link href="/articles">전체 보기</Link>
+        </div>
+        <ArticleHeadlineList articles={latestList} columns />
+      </section>
+      <section id="popular" className="section news-board" aria-labelledby="popular-title">
+        <div className="home-section-header">
+          <h2 id="popular-title">많이 읽는 기사</h2>
+        </div>
+        <ArticleHeadlineList articles={popularList} columns />
       </section>
     </>
   );
