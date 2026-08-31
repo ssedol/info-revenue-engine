@@ -4,6 +4,7 @@ import { buildMetadata } from "@/core/seo/metadata";
 import { JsonLd, itemListJsonLd } from "@/core/seo/structured-data";
 import { formatArticleDate } from "@/sites/certifications/components/ArticleCard";
 import { getCertifications } from "@/sites/certifications/data";
+import { certificationPath } from "@/sites/certifications/routes";
 import type { Certification, ExamSchedule } from "@/sites/certifications/types";
 import {
   articleCategoryPath,
@@ -55,20 +56,20 @@ export default function HomePage() {
           <ol className="upcoming-schedule-list">
             {upcomingSchedules.map((item) => (
               <li key={item.key}>
-                <div className="schedule-date">
-                  <strong>{formatScheduleDate(item.date)}</strong>
-                  <span>{formatDday(item.date)}</span>
-                </div>
-                <div className="schedule-summary">
-                  <div className="certification-card-meta">
-                    <span>{item.level}</span>
-                    <span>{item.label}</span>
+                <Link className="upcoming-schedule-link" href={item.href}>
+                  <div className="schedule-date">
+                    <strong>{formatScheduleDate(item.date)}</strong>
+                    <span>{formatDday(item.date)}</span>
                   </div>
-                  <h3>{item.round}</h3>
-                  <p>{item.certificationCount.toLocaleString("ko-KR")}개 관련 자격증 공통 일정</p>
-                </div>
-                <Link className="schedule-detail-link" href="/certifications">
-                  자격증 찾기
+                  <div className="schedule-summary">
+                    <div className="certification-card-meta">
+                      <span>{item.level}</span>
+                      <span>{item.label}</span>
+                    </div>
+                    <h3>{item.certificationName}</h3>
+                    <p>{item.round}</p>
+                  </div>
+                  <span className="schedule-detail-link">일정 자세히</span>
                 </Link>
               </li>
             ))}
@@ -90,8 +91,20 @@ type UpcomingSchedule = {
   round: string;
   label: string;
   date: string;
-  certificationCount: number;
+  certificationName: string;
+  href: string;
 };
+
+const featuredCertificationNames = [
+  "정보처리기사",
+  "전기기사",
+  "산업안전기사",
+  "건설안전기사",
+  "컴퓨터활용능력1급",
+  "한식조리기능사",
+  "전기기능사",
+  "지게차운전기능사",
+];
 
 const scheduleMilestones: Array<{ field: keyof ExamSchedule; label: string }> = [
   { field: "applicationStart", label: "필기 접수" },
@@ -106,35 +119,45 @@ export function getUpcomingSchedules(
   certifications: Certification[],
   today = new Intl.DateTimeFormat("sv-SE", { timeZone: "Asia/Seoul" }).format(new Date()),
 ): UpcomingSchedule[] {
-  const groups = new Map<string, UpcomingSchedule>();
+  const featuredOrder = new Map(featuredCertificationNames.map((name, index) => [name, index]));
+  const candidates = certifications
+    .filter((certification) => featuredOrder.has(certification.name))
+    .sort(
+      (a, b) =>
+        (featuredOrder.get(a.name) ?? Number.MAX_SAFE_INTEGER) -
+        (featuredOrder.get(b.name) ?? Number.MAX_SAFE_INTEGER),
+    );
+  const upcoming: UpcomingSchedule[] = [];
 
-  for (const certification of certifications) {
+  for (const certification of candidates) {
     const level = certification.level ?? "기타";
+    let next: UpcomingSchedule | undefined;
+
     for (const schedule of certification.schedules) {
       const round = schedule.round ?? schedule.examName ?? "정기 시험";
       for (const milestone of scheduleMilestones) {
         const date = schedule[milestone.field];
         if (typeof date !== "string" || date < today) continue;
 
-        const key = `${level}:${round}:${milestone.field}:${date}`;
-        const existing = groups.get(key);
-        if (existing) {
-          existing.certificationCount += 1;
-        } else {
-          groups.set(key, {
-            key,
-            level,
-            round,
-            label: milestone.label,
-            date,
-            certificationCount: 1,
-          });
+        const item = {
+          key: `${certification.id}:${milestone.field}:${date}`,
+          level,
+          round,
+          label: milestone.label,
+          date,
+          certificationName: certification.name,
+          href: certificationPath(certification),
+        };
+        if (!next || item.date < next.date) {
+          next = item;
         }
       }
     }
+
+    if (next) upcoming.push(next);
   }
 
-  return [...groups.values()].sort((a, b) => a.date.localeCompare(b.date) || a.level.localeCompare(b.level, "ko"));
+  return upcoming.sort((a, b) => a.date.localeCompare(b.date));
 }
 
 function formatScheduleDate(value: string): string {

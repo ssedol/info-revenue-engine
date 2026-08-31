@@ -31,16 +31,17 @@ function certification(id: string, name: string): Certification {
 }
 
 describe("getUpcomingSchedules", () => {
-  it("removes past milestones and groups shared schedules", () => {
+  it("shows one next milestone for each featured certification", () => {
     const result = getUpcomingSchedules(
       [certification("1320", "정보처리기사"), certification("1150", "전기기사")],
       "2026-08-31",
     );
 
-    expect(result.map((item) => item.label)).toEqual(["실기 접수", "실기시험", "최종 발표"]);
+    expect(result.map((item) => item.certificationName)).toEqual(["정보처리기사", "전기기사"]);
     expect(result[0]).toMatchObject({
       date: "2026-09-21",
-      certificationCount: 2,
+      label: "실기 접수",
+      href: "/certifications/cert-1320",
     });
   });
 });
