@@ -25,7 +25,7 @@ export const externalSources: ExternalSource[] = [
     id: "dataq",
     provider: "한국데이터산업진흥원",
     certificationNames: ["SQLD", "ADsP"],
-    url: "https://www.dataq.or.kr/www/main.do",
+    url: "https://www.dataq.or.kr/www/accept/schedule.do",
     requiredText: ["SQLD", "ADsP"],
   },
   {

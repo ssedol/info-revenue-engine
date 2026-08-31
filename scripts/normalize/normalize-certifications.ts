@@ -5,6 +5,7 @@ import { isCliEntry } from "../shared/cli";
 import { findLatestRawDirectory, normalizedRoot } from "../shared/paths";
 import { qnetQualificationListEndpoint, qnetScheduleOperations, qnetTestInformationEndpoint } from "../shared/qnet-api";
 import { asArray, asRecord, parseXml, readText } from "../shared/xml";
+import { normalizeRealtorHtml } from "./normalize-external-certifications";
 
 type RawMetadata = {
   provider: string;
@@ -182,6 +183,18 @@ async function normalize(): Promise<void> {
     schedulesByLevel.set(level, normalizeScheduleXml(scheduleXml, metadata.fetchedAt, endpoint));
   }
   const certifications = normalizeQnetListXml(xml, metadata, schedulesByLevel);
+  try {
+    const realtorHtml = await readFile(join(rawDirectory, "external-realtor.raw.html"), "utf8");
+    certifications.push(
+      normalizeRealtorHtml(
+        realtorHtml,
+        metadata.fetchedAt,
+        "https://www.q-net.or.kr/man001.do?gSite=L&gId=08",
+      ),
+    );
+  } catch (error) {
+    if (metadata.mode !== "fixture") throw error;
+  }
 
   await mkdir(normalizedRoot, { recursive: true });
   await writeFile(
