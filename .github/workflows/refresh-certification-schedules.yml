@@ -2,6 +2,15 @@ name: Refresh certification schedules
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/refresh-certification-schedules.yml"
+      - "scripts/collect/**"
+      - "scripts/normalize/**"
+      - "scripts/validate/**"
+      - "scripts/shared/qnet-api.ts"
   schedule:
     - cron: "15 20 * * 0"
 
