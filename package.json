@@ -12,8 +12,9 @@
     "data:normalize": "node --import tsx scripts/normalize/normalize-certifications.ts",
     "data:validate": "node --import tsx scripts/validate/validate-certifications.ts",
     "data:publish": "node --import tsx scripts/publish/publish-certifications.ts",
-    "data:build": "npm run data:collect && npm run data:normalize && npm run data:validate && npm run data:publish",
-    "build": "npm run data:build && next build"
+    "data:refresh": "npm run data:collect && npm run data:normalize && npm run data:validate && npm run data:publish",
+    "data:build": "npm run data:refresh",
+    "build": "next build"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

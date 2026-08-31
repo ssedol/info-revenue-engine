@@ -45,6 +45,15 @@ async function collect(): Promise<void> {
   const mode = useFixture ? "fixture" : "official-api";
   if (useFixture) {
     await copyFile(join(fixtureRoot, "qnet-list.fixture.xml"), rawPath);
+    const uniqueOperations = [...new Set(Object.values(qnetScheduleOperations))];
+    await Promise.all(
+      uniqueOperations.map((operation) =>
+        copyFile(
+          join(fixtureRoot, `qnet-schedules-${operation}.fixture.xml`),
+          join(outputDir, `qnet-schedules-${operation}.raw.xml`),
+        ),
+      ),
+    );
   } else {
     const listUrl = new URL(qnetQualificationListEndpoint.serviceUrl);
     listUrl.searchParams.set("numOfRows", "1000");
@@ -72,6 +81,7 @@ async function collect(): Promise<void> {
         mode,
         fetchedAt,
         endpoint: qnetQualificationListEndpoint.serviceUrl,
+        scheduleEndpoint: qnetTestInformationEndpoint.serviceUrl,
         officialPage: qnetQualificationListEndpoint.dataGoKrPage,
         format: qnetQualificationListEndpoint.format,
       },

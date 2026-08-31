@@ -1,0 +1,44 @@
+name: Refresh certification schedules
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 20 * * 0"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-certification-schedules
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      OFFICIAL_API_KEY: ${{ secrets.OFFICIAL_API_KEY }}
+      USE_CERTIFICATION_FIXTURE: "0"
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run data:refresh
+      - run: npm test
+      - run: npm run typecheck
+      - run: npm run build
+      - name: Commit refreshed official data
+        run: |
+          if git diff --quiet -- data/sources/certifications; then
+            echo "No certification data changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/sources/certifications
+          git commit -m "data: refresh Q-Net certification schedules"
+          git push

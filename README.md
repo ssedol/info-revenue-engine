@@ -19,8 +19,17 @@
 npm run lint
 npm run typecheck
 npm test
+npm run data:refresh
 npm run build
 ```
+
+## Exam Schedule Automation
+
+- `npm run data:refresh` collects the Q-Net qualification list and shared schedules, validates them, and atomically publishes JSON.
+- Set `OFFICIAL_API_KEY` when the Q-Net API requires a data.go.kr service key.
+- Set `USE_CERTIFICATION_FIXTURE=1` only for local and CI fixture verification.
+- GitHub Actions runs the refresh every Monday and can also be started manually.
+- Production builds use the last validated published JSON, so a temporary Q-Net outage does not break deployment.
 
 ## Environment
 

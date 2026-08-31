@@ -9,6 +9,8 @@ const normalizedSchema = z.object({
   certifications: z.array(certificationSchema).min(7),
 });
 
+const levelsWithSharedQnetSchedule = new Set(["기술사", "기능장", "기사", "산업기사", "기능사"]);
+
 export type ValidationReport = {
   ok: boolean;
   checkedAt: string;
@@ -20,6 +22,20 @@ export function validateNormalizedCertifications(value: unknown, checkedAt = new
   const result = normalizedSchema.safeParse(value);
 
   if (result.success) {
+    const missingSchedules = result.data.certifications
+      .filter((certification) => levelsWithSharedQnetSchedule.has(certification.level ?? ""))
+      .filter((certification) => certification.schedules.length === 0)
+      .map((certification) => certification.name);
+
+    if (missingSchedules.length > 0) {
+      return {
+        ok: false,
+        checkedAt,
+        certificationCount: result.data.certifications.length,
+        errors: [`시험일정 누락: ${missingSchedules.join(", ")}`],
+      };
+    }
+
     return {
       ok: true,
       checkedAt,

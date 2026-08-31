@@ -85,8 +85,8 @@ export function normalizeScheduleXml(
       resultDate: qnetDate(readText(primary.docpassdt)),
       practicalApplicationStart: qnetDate(readText(practical.pracregstartdt)),
       practicalApplicationEnd: qnetDate(readText(practical.pracregenddt)),
-      practicalExamStart: qnetDate(readText(primary.pracexamstartdt)),
-      practicalExamEnd: qnetDate(readText(primary.pracexamenddt)),
+      practicalExamStart: qnetDate(readText(practical.pracexamstartdt)),
+      practicalExamEnd: qnetDate(readText(practical.pracexamenddt)),
       practicalResultDate: qnetDate(practicalResults.at(-1)),
       source: {
         provider: "Q-Net",
@@ -176,12 +176,10 @@ async function normalize(): Promise<void> {
     await readFile(join(rawDirectory, "qnet-certifications.raw.metadata.json"), "utf8"),
   ) as RawMetadata;
   const schedulesByLevel = new Map<string, ExamSchedule[]>();
-  if (metadata.mode !== "fixture") {
-    for (const [level, operation] of Object.entries(qnetScheduleOperations)) {
-      const scheduleXml = await readFile(join(rawDirectory, `qnet-schedules-${operation}.raw.xml`), "utf8");
-      const endpoint = qnetTestInformationEndpoint.serviceUrl.replace("/getPEList", `/${operation}`);
-      schedulesByLevel.set(level, normalizeScheduleXml(scheduleXml, metadata.fetchedAt, endpoint));
-    }
+  for (const [level, operation] of Object.entries(qnetScheduleOperations)) {
+    const scheduleXml = await readFile(join(rawDirectory, `qnet-schedules-${operation}.raw.xml`), "utf8");
+    const endpoint = qnetTestInformationEndpoint.serviceUrl.replace("/getPEList", `/${operation}`);
+    schedulesByLevel.set(level, normalizeScheduleXml(scheduleXml, metadata.fetchedAt, endpoint));
   }
   const certifications = normalizeQnetListXml(xml, metadata, schedulesByLevel);
 

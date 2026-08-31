@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<response>
+  <header><resultCode>00</resultCode><resultMsg>NORMAL SERVICE.</resultMsg></header>
+  <body>
+    <items>
+      <item>
+        <description>2026년 정기 시험 1회</description>
+        <docregstartdt>20260112</docregstartdt><docregenddt>20260115</docregenddt>
+        <docexamdt>20260207</docexamdt><docpassdt>20260311</docpassdt>
+        <pracregstartdt>20260323</pracregstartdt><pracregenddt>20260326</pracregenddt>
+        <pracexamstartdt>20260418</pracexamstartdt><pracexamenddt>20260506</pracexamenddt>
+        <pracpassdt>20260612</pracpassdt>
+      </item>
+      <item>
+        <description>2026년 정기 시험 2회</description>
+        <docregstartdt>20260420</docregstartdt><docregenddt>20260423</docregenddt>
+        <docexamdt>20260509</docexamdt><docpassdt>20260610</docpassdt>
+        <pracregstartdt>20260622</pracregstartdt><pracregenddt>20260625</pracregenddt>
+        <pracexamstartdt>20260718</pracexamstartdt><pracexamenddt>20260805</pracexamenddt>
+        <pracpassdt>20260911</pracpassdt>
+      </item>
+      <item>
+        <description>2026년 정기 시험 3회</description>
+        <docregstartdt>20260720</docregstartdt><docregenddt>20260723</docregenddt>
+        <docexamdt>20260808</docexamdt><docpassdt>20260909</docpassdt>
+        <pracregstartdt>20260921</pracregstartdt><pracregenddt>20260924</pracregenddt>
+        <pracexamstartdt>20261017</pracexamstartdt><pracexamenddt>20261104</pracexamenddt>
+        <pracpassdt>20261211</pracpassdt>
+      </item>
+    </items>
+  </body>
+</response>
+

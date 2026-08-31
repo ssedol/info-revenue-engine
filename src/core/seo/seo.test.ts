@@ -4,8 +4,8 @@ import { itemListJsonLd } from "./structured-data";
 
 describe("seo helpers", () => {
   it("builds canonical absolute URLs", () => {
-    expect(absoluteUrl("/articles")).toMatch(/^http:\/\/localhost:3000\/articles/);
-    expect(buildMetadata({ title: "A", description: "B", path: "/a" }).alternates?.canonical).toBe("http://localhost:3000/a");
+    expect(absoluteUrl("/articles")).toBe("https://cert-insight.online/articles");
+    expect(buildMetadata({ title: "A", description: "B", path: "/a" }).alternates?.canonical).toBe("https://cert-insight.online/a");
   });
 
   it("builds ItemList structured data", () => {

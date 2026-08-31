@@ -19,7 +19,11 @@ describe("buildSeoIndex", () => {
       category: "정보통신",
       level: "기사",
       issuer: "한국산업인력공단",
-      schedules: [],
+      schedules: [{
+        round: "2026년 정기 기사 1회",
+        applicationStart: "2026-01-12",
+        source,
+      }],
       fees: [],
       passRate: [],
       source,
