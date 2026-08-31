@@ -5,7 +5,7 @@ import { isCliEntry } from "../shared/cli";
 import { findLatestRawDirectory, normalizedRoot } from "../shared/paths";
 import { qnetQualificationListEndpoint, qnetScheduleOperations, qnetTestInformationEndpoint } from "../shared/qnet-api";
 import { asArray, asRecord, parseXml, readText } from "../shared/xml";
-import { normalizeRealtorHtml } from "./normalize-external-certifications";
+import { normalizeDataqHtml, normalizeKoreanHistoryHtml, normalizeRealtorHtml } from "./normalize-external-certifications";
 
 type RawMetadata = {
   provider: string;
@@ -190,6 +190,26 @@ async function normalize(): Promise<void> {
         realtorHtml,
         metadata.fetchedAt,
         "https://www.q-net.or.kr/man001.do?gSite=L&gId=08",
+      ),
+    );
+  } catch (error) {
+    if (metadata.mode !== "fixture") throw error;
+  }
+  try {
+    const dataqHtml = await readFile(join(rawDirectory, "external-dataq.raw.html"), "utf8");
+    certifications.push(
+      ...normalizeDataqHtml(
+        dataqHtml,
+        metadata.fetchedAt,
+        "https://www.dataq.or.kr/www/accept/schedule.do",
+      ),
+    );
+    const historyHtml = await readFile(join(rawDirectory, "external-korean-history.raw.html"), "utf8");
+    certifications.push(
+      normalizeKoreanHistoryHtml(
+        historyHtml,
+        metadata.fetchedAt,
+        "https://www.historyexam.go.kr/",
       ),
     );
   } catch (error) {
