@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumb } from "@/core/ui/Breadcrumb";
 import { buildMetadata } from "@/core/seo/metadata";
+import { getCertificationGuide } from "@/sites/certifications/certificationGuides";
 import { getCertificationBySlug, getCertifications } from "@/sites/certifications/data";
 import { certificationPath } from "@/sites/certifications/routes";
 
@@ -34,6 +35,7 @@ export default async function CertificationDetailPage({ params }: CertificationP
   const { slug } = await params;
   const certification = getCertificationBySlug(slug);
   if (!certification) notFound();
+  const guide = getCertificationGuide(certification.name);
   const providerName = certification.source.provider;
   const hasPracticalSchedule = certification.schedules.some((schedule) =>
     Boolean(schedule.practicalApplicationStart || schedule.practicalExamStart),
@@ -136,6 +138,41 @@ export default async function CertificationDetailPage({ params }: CertificationP
           </details>
 
           <p><a href="https://license.korcham.net/ex/dailyExamPlaceConf.do" target="_blank" rel="noreferrer">공식 시험장별 날짜·시간·잔여석 확인</a></p>
+        </section>
+      )}
+
+      {guide && (
+        <section className="section" aria-labelledby="guide-title">
+          <h2 id="guide-title">{certification.name} 준비 가이드</h2>
+          <p className="schedule-notice">{guide.overview}</p>
+
+          <div className="article-body article-body--sectioned">
+            <section className="article-section">
+              <h3>어디에 활용할 수 있나요?</h3>
+              <ul className="article-checklist">
+                {guide.useCases.map((item) => <li key={item}>{item}</li>)}
+              </ul>
+            </section>
+
+            <section className="article-section">
+              <h3>준비할 때 확인할 점</h3>
+              <ul className="article-checklist">
+                {guide.preparation.map((item) => <li key={item}>{item}</li>)}
+              </ul>
+            </section>
+
+            <section className="article-section">
+              <h3>함께 비교할 자격증</h3>
+              <ul className="official-link-list">
+                {guide.comparisons.map((name) => {
+                  const comparison = getCertifications().find((item) => item.name === name);
+                  return comparison ? (
+                    <li key={name}><Link className="official-link" href={certificationPath(comparison)}>{name}</Link></li>
+                  ) : null;
+                })}
+              </ul>
+            </section>
+          </div>
         </section>
       )}
 
