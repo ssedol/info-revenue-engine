@@ -44,3 +44,18 @@ export function articleJsonLd(input: { headline: string; description: string; pa
     },
   };
 }
+
+export function faqJsonLd(items: Array<{ question: string; answer: string }>): JsonLdValue {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+}
