@@ -102,7 +102,10 @@ function readPreviousPublished(baseRef: string): PublishedCertifications {
   if (!/^[A-Za-z0-9_./^~-]+$/.test(baseRef)) {
     throw new Error(`Invalid base ref: ${baseRef}`);
   }
-  const content = execFileSync("git", ["show", `${baseRef}:${publishedPath}`], { encoding: "utf8" });
+  const content = execFileSync("git", ["show", `${baseRef}:${publishedPath}`], {
+    encoding: "utf8",
+    maxBuffer: 20 * 1024 * 1024,
+  });
   return JSON.parse(content) as PublishedCertifications;
 }
 
