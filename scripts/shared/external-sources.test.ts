@@ -24,4 +24,13 @@ describe("external certification sources", () => {
       ),
     ).toEqual([]);
   });
+
+  it("collects the public Korcham regional notice page", () => {
+    expect(externalSources).toContainEqual(
+      expect.objectContaining({
+        id: "korcham-regional-schedule-notices",
+        provider: "대한상공회의소",
+      }),
+    );
+  });
 });

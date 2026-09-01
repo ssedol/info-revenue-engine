@@ -4,6 +4,7 @@ export type ExternalSource = {
     | "dataq"
     | "realtor"
     | "korcham-computer-level-1"
+    | "korcham-regional-schedule-notices"
     | "samil-financial-manager-schedule"
     | "samil-financial-manager-guide";
   provider: string;
@@ -40,6 +41,13 @@ export const externalSources: ExternalSource[] = [
     certificationNames: ["컴퓨터활용능력 1급"],
     url: "https://license.korcham.net/co/examguide.do?cd=0103&mm=21",
     requiredText: ["컴퓨터활용능력", "응시자격", "시험과목", "수험료"],
+  },
+  {
+    id: "korcham-regional-schedule-notices",
+    provider: "대한상공회의소",
+    certificationNames: [],
+    url: "https://license.korcham.net/customer/sangwiGuide.do",
+    requiredText: ["전국상의별 공지안내", "지역", "상의", "공지사항"],
   },
   {
     id: "samil-financial-manager-schedule",

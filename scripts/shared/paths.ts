@@ -7,6 +7,7 @@ export const rawRoot = join(certificationDataRoot, "raw");
 export const normalizedRoot = join(certificationDataRoot, "normalized");
 export const validationRoot = join(certificationDataRoot, "validation");
 export const publishedRoot = join(certificationDataRoot, "published");
+export const manualRoot = join(certificationDataRoot, "manual");
 export const fixtureRoot = join("scripts", "fixtures", "certifications");
 
 export function todayPathSegment(date = new Date()): string {

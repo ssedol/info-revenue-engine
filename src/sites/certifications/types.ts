@@ -27,6 +27,29 @@ export const examScheduleSchema = z.object({
 
 export type ExamSchedule = z.infer<typeof examScheduleSchema>;
 
+export const regionalScheduleNoticeSchema = z.object({
+  region: z.string().min(1),
+  chamber: z.string().min(1),
+  notice: z.string().min(1),
+  source: dataSourceRefSchema,
+});
+
+export type RegionalScheduleNotice = z.infer<typeof regionalScheduleNoticeSchema>;
+
+export const manualVenueScheduleSchema = z.object({
+  region: z.string().min(1),
+  chamber: z.string().min(1),
+  venue: z.string().min(1),
+  examType: z.enum(["필기", "실기"]),
+  examDate: z.string().date(),
+  startTime: z.string().regex(/^([01]\d|2[0-3]):[0-5]\d$/).optional(),
+  note: z.string().min(1).optional(),
+  officialUrl: z.string().url(),
+  verifiedAt: z.string().date(),
+});
+
+export type ManualVenueSchedule = z.infer<typeof manualVenueScheduleSchema>;
+
 export const examFeeSchema = z.object({
   label: z.string().min(1),
   amount: z.number().nonnegative(),
@@ -58,6 +81,8 @@ export const certificationSchema = z.object({
   applicationUrl: z.string().url().optional(),
   description: z.string().optional(),
   schedules: z.array(examScheduleSchema),
+  regionalScheduleNotices: z.array(regionalScheduleNoticeSchema).optional(),
+  manualVenueSchedules: z.array(manualVenueScheduleSchema).optional(),
   fees: z.array(examFeeSchema),
   eligibility: z.string().optional(),
   passRate: z.array(passRateSchema).optional(),
