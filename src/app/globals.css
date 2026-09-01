@@ -658,7 +658,359 @@ button:focus-visible {
 }
 
 .certification-detail-hero .certification-card-meta {
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.certification-detail-hero {
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+  align-items: stretch;
+  justify-items: stretch;
+  gap: 2rem;
+  padding: 28px 0 34px;
+  text-align: left;
+}
+
+.certification-hero-copy {
+  align-self: center;
+}
+
+.certification-detail-hero h1 {
+  max-width: none;
+  font-size: clamp(2.25rem, 5vw, 4rem);
+}
+
+.certification-detail-hero p {
+  max-width: 720px;
+  margin-top: 0.85rem;
+}
+
+.certification-quick-facts {
+  display: grid;
+  align-content: center;
+  gap: 0;
+  margin: 0;
+  padding: 0.5rem 1.35rem;
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  background: var(--color-surface);
+}
+
+.certification-quick-facts div {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  gap: 1rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.certification-quick-facts div:last-child {
+  border-bottom: 0;
+}
+
+.certification-quick-facts dt {
+  color: var(--color-muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.certification-quick-facts dd {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.certification-page-nav {
+  position: sticky;
+  top: 66px;
+  z-index: 8;
+  display: flex;
+  gap: 0.3rem;
+  margin: 0 -0.5rem;
+  padding: 0.75rem 0.5rem;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  scrollbar-width: none;
+}
+
+.certification-page-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.certification-page-nav a {
+  flex: 0 0 auto;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  color: var(--color-muted);
+  font-size: 0.86rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.certification-page-nav a:hover {
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.certification-content-section {
+  scroll-margin-top: 126px;
+  border-bottom: 1px solid rgba(23, 32, 42, 0.1);
+}
+
+.certification-section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.certification-section-heading > div {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.certification-section-heading span {
+  color: var(--color-accent);
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+}
+
+.certification-section-heading h2 {
+  margin: 0;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+}
+
+.certification-section-heading h2::before {
+  display: none;
+}
+
+.certification-section-heading > p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+.certification-section-heading.compact {
+  align-items: center;
+}
+
+.exam-guide-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.exam-info-card {
+  min-width: 0;
+  padding: 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  background: var(--color-paper);
+}
+
+.exam-info-card--wide {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.exam-info-card--accent {
+  border-color: color-mix(in srgb, var(--color-accent) 42%, var(--color-border));
+  background: color-mix(in srgb, var(--color-accent) 7%, white);
+}
+
+.exam-info-card p {
+  margin: 0;
+}
+
+.exam-info-card .card-eyebrow {
+  margin-bottom: 0.9rem;
+  color: var(--color-accent);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.subject-group {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.subject-group:first-of-type {
+  border-top: 0;
+}
+
+.subject-group strong {
+  color: var(--color-primary-dark);
+}
+
+.subject-group ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.subject-group li {
+  padding: 0.28rem 0.55rem;
+  border-radius: 6px;
+  background: var(--color-surface);
+  font-size: 0.9rem;
+}
+
+.official-source-line {
+  margin: 1rem 0 0;
+  color: var(--color-muted);
+  font-size: 0.84rem;
+  text-align: right;
+}
+
+.study-plan-note,
+.guide-overview {
+  margin: 0 0 1.1rem;
+  padding: 1rem 1.1rem;
+  border-radius: 12px;
+  background: var(--color-surface);
+  color: var(--color-muted);
+}
+
+.study-plan-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.study-plan-list li {
+  padding: 1.2rem;
+  border-top: 3px solid var(--color-primary);
+  border-radius: 0 0 12px 12px;
+  background: var(--color-surface);
+}
+
+.study-plan-list strong {
+  display: block;
+  margin-bottom: 0.55rem;
+  font-size: 1rem;
+}
+
+.study-plan-list p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.92rem;
+}
+
+.use-guide-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.use-guide-grid > article,
+.use-guide-grid > section {
+  padding: 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+}
+
+.use-guide-grid h3 {
+  margin: 0 0 0.85rem;
+  font-size: 1.05rem;
+}
+
+.clean-check-list,
+.related-certification-list {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.clean-check-list li {
+  position: relative;
+  padding-left: 1.4rem;
+}
+
+.clean-check-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-green);
+  font-weight: 900;
+}
+
+.related-certification-list a {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.related-certification-list li:last-child a {
+  border-bottom: 0;
+}
+
+.related-certification-list span {
+  color: var(--color-primary);
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.certification-faq-list {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.certification-faq-list details,
+.certification-basic-section details {
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-paper);
+}
+
+.certification-faq-list summary,
+.certification-basic-section summary {
+  padding: 1rem 1.1rem;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.certification-faq-list p {
+  margin: 0;
+  padding: 0 1.1rem 1.1rem;
+  color: var(--color-muted);
+}
+
+.certification-basic-section {
+  border-bottom: 0;
+}
+
+.certification-basic-section .meta-list {
+  padding: 0 1.1rem 1.1rem;
+}
+
+.back-to-list {
+  margin: 1.25rem 0 0;
+}
+
+.back-to-list a {
+  font-weight: 800;
+  text-decoration: none;
 }
 
 .official-actions {
@@ -1600,6 +1952,52 @@ button:focus-visible {
 
   .hero {
     padding: 18px 0;
+  }
+
+  .certification-detail-hero {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+    padding-bottom: 24px;
+  }
+
+  .certification-detail-hero h1 {
+    font-size: 2rem;
+  }
+
+  .certification-quick-facts {
+    padding: 0.35rem 1rem;
+  }
+
+  .certification-page-nav {
+    top: 96px;
+  }
+
+  .certification-section-heading {
+    display: block;
+  }
+
+  .certification-section-heading > p {
+    margin-top: 0.35rem;
+  }
+
+  .exam-guide-grid,
+  .study-plan-list,
+  .use-guide-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .exam-info-card--wide {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .subject-group {
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
+  }
+
+  .official-source-line {
+    text-align: left;
   }
 
   .hero h1,
