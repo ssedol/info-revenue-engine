@@ -10,6 +10,10 @@ describe("certification deep dives", () => {
       const content = getCertificationDeepDive(name);
       expect(getCertifications().some((certification) => certification.name === name)).toBe(true);
       expect(content?.examSubjects.length).toBeGreaterThan(0);
+      expect(content?.seoTitle).toContain("2026");
+      expect(content?.seoTitle.length).toBeLessThanOrEqual(38);
+      expect(content?.seoDescription.length).toBeGreaterThanOrEqual(55);
+      expect(content?.seoDescription.length).toBeLessThanOrEqual(160);
       expect(content?.passRule.length).toBeGreaterThan(30);
       expect(content?.eligibility.length).toBeGreaterThan(20);
       expect(content?.studyPlan).toHaveLength(3);
