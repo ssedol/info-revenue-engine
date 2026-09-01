@@ -2,6 +2,12 @@ name: Refresh certification schedules
 
 on:
   workflow_dispatch:
+    inputs:
+      notify_all:
+        description: "Notify search engines about every published certification URL"
+        required: false
+        default: false
+        type: boolean
   push:
     branches:
       - main
@@ -9,6 +15,7 @@ on:
       - ".github/workflows/refresh-certification-schedules.yml"
       - "scripts/collect/**"
       - "scripts/normalize/**"
+      - "scripts/notify/**"
       - "scripts/validate/**"
       - "scripts/shared/qnet-api.ts"
       - "scripts/shared/external-sources.ts"
@@ -25,7 +32,7 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     env:
       OFFICIAL_API_KEY: ${{ secrets.OFFICIAL_API_KEY }}
       USE_CERTIFICATION_FIXTURE: "0"
@@ -42,9 +49,11 @@ jobs:
       - run: npm run typecheck
       - run: npm run build
       - name: Commit refreshed official data
+        id: data_commit
         run: |
           if git diff --quiet -- data/sources/certifications; then
             echo "No certification data changes."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git config user.name "github-actions[bot]"
@@ -52,3 +61,12 @@ jobs:
           git add data/sources/certifications
           git commit -m "data: refresh Q-Net certification schedules"
           git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+      - name: Notify Google discovery and Naver IndexNow
+        if: steps.data_commit.outputs.changed == 'true' || inputs.notify_all == true
+        run: |
+          if [[ "${{ inputs.notify_all }}" == "true" ]]; then
+            npm run search:notify -- --all
+          else
+            npm run search:notify -- --base-ref HEAD^
+          fi
