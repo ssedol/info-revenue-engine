@@ -1,0 +1,1224 @@
+
+<!--
+
+
+
+
+
+
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<title>삼일회계법인</title>
+	
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<!-- taglib -->
+
+
+
+
+
+  
+  
+ <!-- 공용 클래스 -->
+
+
+
+
+ 
+<!-- js -->
+<script type="text/javascript" src="/common/js/jquery/jquery-1.9.1.min.js"></script>  
+<script type="text/javascript" src="/common/js/jquery/jquery-ui-1.10.3.custom.min.js"></script>  
+<script type="text/javascript" src="/common/js/jquery/jquery.pager.js"></script>
+<script type="text/javascript" src="/common/js/jquery/jquery.validate.js"></script>
+<script type="text/javascript" src="/common/js/jquery/common.js"></script> 
+<script type="text/javascript" src="/common/js/jquery/jquery.autocomplete.js"></script>
+<script type="text/javascript" src="/common/js/jquery/jquery.form.js"></script>
+<script type="text/javascript" src="/common/examHome/js/bxslider.js"></script> 
+<script type="text/javascript" src="/common/examHome/js/familly.js"></script>
+<script type="text/javascript" src="/common/examHome/js/main.js"></script>
+<script type="text/javascript" src="/common/examHome/js/listtab.js"></script> 
+<script type="text/javascript" src="/common/js/jquery/jquery.cookie.js"></script>
+<script type="text/javascript" src="/common/js/jquery/jquery.jqtransform.js"></script>
+
+
+<!-- 달력 --> 
+<script type="text/javascript" src="/common/js/jquery/jquery.ui.datepicker-ko.js"></script> 
+<link type="text/css" rel="stylesheet" href="/common/css/jquery-ui-1.10.3.custom.css" />
+<link type="text/css" rel="stylesheet" href="/common/css/common.css" charset="utf-8" />
+
+	<link rel="stylesheet" type="text/css" href="/common/examHome/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="/common/examHome/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="/common/examHome/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="/common/css/Pager.css" />
+	<link rel="stylesheet" type="text/css" href="/common/examHome/css/new2.css" />
+	<script type="text/javascript" src="/common/js/jquery/security.js"></script>
+	<script>
+
+			$(document).ready(function(){
+
+				$('#menu>li').on({
+							'mouseenter':function(){
+							 var changeUrl= $(this).find('img').attr('src')
+							 var changeSrc=changeUrl.replace(/_off/g,"_on");
+							 $(this).find('.m1_img').attr('src',changeSrc);
+							 $(this).children('ul').show();
+							 $(this).addClass('on');
+
+
+					 },
+							'mouseleave':function(){
+							var changeUrl= $(this).find('img').attr('src')
+							var changeSrc=changeUrl.replace(/_on/g,"_off");
+							$(this).find('.m1_img').attr('src',changeSrc);
+							$(this).children('ul').hide();
+							$(this).removeClass('on');
+					 }
+				 })
+
+				  $('.sub>ul>li').on({
+					 		'mouseenter':function(){
+								var changeUrl=$(this).find('img').attr('src')
+								var changeSrc=changeUrl.replace(/_off/g,"_on");
+								$(this).find('.subm_img').attr('src',changeSrc);
+							},
+							'mouseleave':function(){
+								var changeUrl=$(this).find('img').attr('src')
+								var changeSrc=changeUrl.replace(/_on/g,"_off");
+								$(this).find('.subm_img').attr('src',changeSrc);
+							}
+				 })
+
+			 })
+	</script>
+
+	<style>
+	.sub{display:none;}
+	#menu>li.on{border:1px solid #dc8f9a;
+				width:124px;}
+
+	</style>
+	 <script type="text/javascript">
+		 $(document).ready(function() {
+			/* $("#menu").hover(function(){
+		           $("#sub_menu_wrap").css("display", "block");
+		    })
+		    $("#sub_menu").mouseleave(function() {
+		    	$("#sub_menu_wrap").css("display", "none");
+		    })
+		    $(".title").hover(function() {
+		    	$("#sub_menu_wrap").css("display", "none");
+		    }) */
+		});
+		
+	</script>
+
+
+
+
+</head>
+
+
+<body>
+	<!--전체div-->
+	<div id="wrap">
+		<!--헤더전체div-->
+	    <div id="headerWrap">
+	    	<div id="loadingWrap" style="display:none;">
+				<div class="loading">
+
+				</div>
+			</div>
+			<div class="gnb_wrap">
+				<div class="gnb_zone">
+       			<ul id="gnbmenu">
+		                <li><a href="/usr/main.do"><img src="/common/examHome/image/top/usermenu_01.gif" alt="홈으로"
+		                onmouseover="this.src='/common/examHome/image/top/usermenu_01_on.gif'"
+						onmouseout="this.src='/common/examHome/image/top/usermenu_01.gif'"/></a></li>
+
+	                    
+		                	<li><a href="/usr/login.do"><img src="/common/examHome/image/top/usermenu_02.gif" alt="로그인"
+		                onmouseover="this.src='/common/examHome/image/top/usermenu_02_on.gif'"
+						onmouseout="this.src='/common/examHome/image/top/usermenu_02.gif'"/></a></li>
+		                
+
+		                
+		                <li><a href="/usr/loginfindidpwd.do"><img src="/common/examHome/image/top/usermenu_03.gif" alt="아이디/비밀번호 찾기"
+		                onmouseover="this.src='/common/examHome/image/top/usermenu_03_on.gif'"
+						onmouseout="this.src='/common/examHome/image/top/usermenu_03.gif'"/></a></li>
+		                
+
+		                
+		                  <li><a href="/usr/join.do"><img src="/common/examHome/image/top/usermenu_04.gif" alt="회원가입"
+		                  onmouseover="this.src='/common/examHome/image/top/usermenu_04_on.gif'"
+						  onmouseout="this.src='/common/examHome/image/top/usermenu_04.gif'"/></a></li>
+		                
+
+		                
+
+
+		                 <li><a href="/usr/my_usrexameditmyinfopwd.do"><img src="/common/examHome/image/top/usermenu_06.gif" alt="마이페이지"
+		                 onmouseover="this.src='/common/examHome/image/top/usermenu_06_on.gif'"
+						 onmouseout="this.src='/common/examHome/image/top/usermenu_06.gif'"/></a></li>
+
+						 						
+		                  <li><a href="/usr/sitemap.do"><img src="/common/examHome/image/top/usermenu_05.gif" alt="사이트맵"
+		                  onmouseover="this.src='/common/examHome/image/top/usermenu_05_on.gif'"
+						  onmouseout="this.src='/common/examHome/image/top/usermenu_05.gif'"/></a></li>
+		                
+
+		                
+
+		         </ul><!-- gnbmenu닫힘 -->
+
+
+				</div>
+		        </div>
+	        <!--헤더-->
+       		<div id="header">
+
+	       		<!--로고-->
+	       		<div class="title">
+	            <h1><a href="/usr/main.do"><img src="/common/examHome/image/top/main_logo.gif" alt="삼일회계법인" width="160px"/></a></h1>
+	      	 	
+
+		            </div>
+		            <!--//로고-->
+		            <!--메뉴-->
+		            <ul id="menu" class="menu clear">
+		                <li class="m1" id="menuLicense">
+		                    <a href="/usr/greeting.do" class="menu_navigation"><img class="m1_img" src="/common/examHome/image/top/m1_off.gif" alt="시험안내"/></a>
+		                    <!-- 시험안내 -->
+							<ul class="sub"><!--css position:absolute 삭제-->
+								<ul class="DB_sub s1">
+									<li class="first_01" style="text-indent:25px;"><a href="/usr/greeting.do"><img class="subm_img" src="/common/examHome/image/top/s01_1_off.png" alt="종목소개"/></a></li>
+									<li style="text-indent:25px;"><a href="/usr/groupguide.do"><img class="subm_img" src="/common/examHome/image/top/s01_2_off.png" alt="시험일정"/></a></li>
+									<li style="text-indent:25px;"><a href="/usr/direction.do"><img class="subm_img" src="/common/examHome/image/top/s01_3_off.png" alt="수험자 가이드"/></a></li>
+									<li style="text-indent:25px;"><a href="/usr/special.do"><img class="subm_img" src="/common/examHome/image/top/s01_4_off.png" alt="우대사항"/></a></li>
+									<li style="text-indent:25px;"><a href="/usr/regulation.do"><img class="subm_img" src="/common/examHome/image/top/s01_5_off.png" alt="응시규정"/></a></li>
+									<li style="text-indent:25px;"><a href="/usr/education.do"><img class="subm_img" src="/common/examHome/image/top/s01_6_off.png" alt="교육기관"/></a></li>
+									<li style="text-indent:25px;"><a href="/usr/textbook.do"><img class="subm_img" src="/common/examHome/image/top/s01_7_off.png" alt="교재안내"/></a></li>
+								</ul>
+							</ul>
+		                </li>
+		                <li class="m4 m1" id="menuApplication">
+		                    <a href="/usr/usraccept1.do" class="menu_navigation"><img class="m1_img" src="/common/examHome/image/top/m2_off.gif" alt="시험접수"/></a>
+		                    <ul class="sub">
+			                   <ul class="DB_sub s2">
+					                <li class="first_01" style="text-indent:30px;"><a href="/usr/usraccept1.do"><img class="subm_img" src="/common/examHome/image/top/s02_1_off.png" alt="접수하기"/></a></li>
+					                <li style="text-indent:30px;"><a href="/usr/usrconfirm.do"><img class="subm_img" src="/common/examHome/image/top/s02_3_off.png" alt="접수확인"/></a></li>
+					                <li style="text-indent:30px;"><a href="/usr/usracceptlist.do"><img class="subm_img" src="/common/examHome/image/top/s02_4_off.png" alt="취소/환불"/></a></li>
+					                <li style="text-indent:30px;"><a href="/usr/usrprint.do"><img class="subm_img" src="/common/examHome/image/top/s02_5_off.png" alt="수험표발급"/></a></li>
+					                <li style="text-indent:30px;"><a href="/usr/usrphoto.do"><img class="subm_img" src="/common/examHome/image/top/s02_6_off.png" alt="사진관리"/></a></li>
+				               </ul>
+			                </ul>
+		                </li>
+
+		                <li class="m3 m1" id="menuExamination">
+		                    <a href="/usr/usrsuccesscandidate.do" class="menu_navigation"><img class="m1_img" src="/common/examHome/image/top/m3_off.gif" alt="합격확인"/></a>
+		                    <ul class="sub">
+			                    <ul class="DB_sub s3">
+				                   <li class="first_01"><a href="/usr/usrsuccesscandidate.do"><img class="subm_img" src="/common/examHome/image/top/s03_1_off.png" alt="합격여부/점수확인"/></a></li>
+				                   <li><a href="/usr/usrapplylicense.do"><img class="subm_img" src="/common/examHome/image/top/s03_2_off.png" alt="자격증신청"/></a></li>
+				                   
+				                    
+				                     	   <li><a href="/usr/usrdepositlicenseperson.do"><img class="subm_img" src="/common/examHome/image/top/s03_2-1_off.png" alt="자격증 결제하기"/></a></li>
+				                    
+				                   <li><a href="/usr/usrapplylicenselist.do"><img class="subm_img" src="/common/examHome/image/top/s03_3_off.png" alt="자격증배송확인"/></a></li>
+				                   <li><a href="/usr/usrconfirmation.do"><img class="subm_img" src="/common/examHome/image/top/s03_4_off.png" alt="자격번호 확인"/></a></li>
+ 
+			                       <!--<li><a href="/usr/bosuedu.do"><img class="subm_img" src="/common/examHome/image/top/s03_6_off.png" alt="보수교육/자격갱신"/></a></li>-->
+			                    </ul>
+		                    </ul>
+		                </li>
+
+
+		                <li class="m7 m1" id="menuMypage">
+		                    <a href="/usr/noticelist.do" class="menu_navigation"><img class="m1_img" src="/common/examHome/image/top/m4_off.gif" alt="정보마당"/></a>
+		                   	<ul class="sub">
+			                    <ul>
+				                   <li class="first_01" style="text-indent:36px;"><a href="/usr/noticelist.do"><img class="subm_img" src="/common/examHome/image/top/s04_1_off.png" alt="공지사항"/></a></li>
+				                   <li style="text-indent:36px;"><a href="/usr/eventlist.do"><img class="subm_img" src="/common/examHome/image/top/s04_8_off.png" alt="이벤트"/></a></li>
+				                   <li style="text-indent:36px;"><a href="/usr/questionlist.do"><img class="subm_img" src="/common/examHome/image/top/s04_2_off.png" alt="FAQ"/></a></li>
+				                   <li style="text-indent:36px;"><a href="/usr/usrcounselingcenterlist.do"><img class="subm_img" src="/common/examHome/image/top/s04_3_off.png" alt="Q&A"/></a></li>
+				                   <li style="text-indent:36px;"><a href="/usr/guideform.do"><img class="subm_img" src="/common/examHome/image/top/s04_4_off.png" alt="자료실"/></a></li>
+				                   
+			                    </ul>
+		                    </ul>
+		                </li>
+		            </ul> 
+		        </div> 
+		    </div>
+		    </div>
+		    <div id="container">
+	        <div id="content">
+
+
+                <div id="subWrap" class="clear">
+                	
+<script type="text/javascript" src="/common/js/jquery/security.js"></script>
+<script type="text/javascript">
+/* $(document).ready(function(){
+	alert("U0110");
+}); */
+function mouseoverFunction(obj){
+	var src = obj.src.slice(0, -4);
+	src = src+"_on.gif";
+	obj.src = src;
+}
+function mouseoutFunction(obj){
+	var src = obj.src.slice(0, -7);
+	src = src+".gif";
+	obj.src = src;
+}
+
+
+</script>
+
+
+<!-- menuWrap -->
+<div id="menuWrap">
+	<div id="left">
+			
+				
+					<h2 class="side_title"><img src="/common/examHome/image/sub/sub1_1_name.gif" alt="시험안내" class="mt20" /></h2>
+					<ul>
+						
+							
+								<li group="U01" id="U0110"><a href="/usr/greeting.do" class="sub01_m1"><span><img src="/common/examHome/image/leftmenu/leftmenu_01_on.gif" alt="종목소개"/></span></a></li>
+							
+							
+						
+
+
+	                    
+	                    	
+	                    	
+	                    		<li group="U01" id="U0120"><a href="/usr/groupguide.do" class="sub01_m2"><span><img src="/common/examHome/image/leftmenu/leftmenu_02.gif" alt="시험일정" onmouseover="mouseoverFunction(this)" onmouseout="mouseoutFunction(this)"/></span></a></li>
+	                    	
+	                    
+
+	                    
+	                    	
+	                    	
+	                    		<li group="U01" id="U0130"><a href="/usr/direction.do" class="sub01_m3"><span><img src="/common/examHome/image/leftmenu/leftmenu_03.gif" alt="수험자 가이드" onmouseover="mouseoverFunction(this)" onmouseout="mouseoutFunction(this)"/></span></a></li>
+	                    	
+	                    
+	                    
+	                    	
+	                    	
+	                    		<li group="U01" id="U0140"><a href="/usr/special.do" class="sub01_m4"><span><img src="/common/examHome/image/leftmenu/leftmenu_04.gif" alt="우대사항" onmouseover="mouseoverFunction(this)" onmouseout="mouseoutFunction(this)"/></span></a></li>
+	                    	
+	                    
+	                    
+	                    	
+	                    	
+	                    		<li group="U01" id="U0150"><a href="/usr/regulation.do" class="sub01_m5"><span><img src="/common/examHome/image/leftmenu/leftmenu_05.gif" alt="응시규정" onmouseover="mouseoverFunction(this)" onmouseout="mouseoutFunction(this)"/></span></a></li>
+	                    	
+	                    
+	                    
+	                    	
+	                    	
+	                    		<li group="U01" id="U0160"><a href="/usr/education.do" class="sub01_m6"><span><img src="/common/examHome/image/leftmenu/leftmenu_06.gif" alt="교육기관" onmouseover="mouseoverFunction(this)" onmouseout="mouseoutFunction(this)"/></span></a></li>
+	                    	
+	                    
+	                    
+	                    	
+	                    	
+	                    		<li group="U01" id="U0170"><a href="/usr/textbook.do" class="sub01_m7"><span><img src="/common/examHome/image/leftmenu/leftmenu_07.gif" alt="교재안내" onmouseover="mouseoverFunction(this)" onmouseout="mouseoutFunction(this)"/></span></a></li>
+	                    	
+	                    
+						<!-- li group="U01" id="U0180"><a href="/usr/direction.do" class="sub01_m2"><span>우대사항</span></a></li -->
+
+                   </ul>
+                   <span class="qna_all"><img src="/common/examHome/image/leftmenu/qna.gif" alt="문의 070-4412-3131 업무시간 평일 09:00~18:00 점심시간 평일 12:00~13:00 주말, 공휴일 휴무"/></span>
+                
+
+
+
+
+				
+
+				
+
+				
+				
+
+				
+
+				
+
+
+				
+
+				
+
+				
+
+
+				
+
+
+
+
+
+				
+			
+
+
+
+
+       </div>
+</div>
+
+
+
+	
+                	<link rel="stylesheet" type="text/css" href="/common/examHome/css/sub_contents01.css" />
+                    <div id="subContent">
+                        <h3 class="sub-title text_name"><img src="/common/examHome/image/sub/text_name_01.gif" alt="국가공인회계관리자격시험"/></h3> 
+                        <div id="sub_tab">
+                        
+                        	<div class="tab_bg">
+                        		<ul>
+                        			<!--li><a href="#" style="cursor:hand" onclick="bartab('0');"><img id="menu0" src="/common/examHome/image/sub/tab_menu1_on.gif" alt="국가공인회계관리자격시험" /></a></li -->
+                        			<li><a href="#" style="cursor:hand" onclick="bartab('0');"><img id="menu0" src="/common/examHome/image/sub/tab_menu2_on.gif" alt="재경관리사" /></a></li>
+                        			<li><a href="#" style="cursor:hand" onclick="bartab('1');"><img id="menu1" src="/common/examHome/image/sub/tab_menu3_off.gif" alt="회계관리1급" /></a></li>
+                        			<li><a href="#" style="cursor:hand" onclick="bartab('2');"><img id="menu2" src="/common/examHome/image/sub/tab_menu4_off.gif" alt="회계관리2급" /></a></li>
+                        			<li><a href="#" style="cursor:hand" onclick="bartab('3');"><img id="menu3" src="/common/examHome/image/sub/tab_menu5_off.gif" alt="기타회계전문가시험" /></a></li>
+									<li><a href="#" style="cursor:hand" onclick="bartab('4');"><img id="menu4" src="/common/examHome/image/sub/tab_menu0_off.gif" alt="자격관리기관 정보" /></a></li>
+                        		</ul>
+							</div>
+                        	
+                        	<div id="tabSubMenu">
+	                        	<!--div id="t0" name="t0" style="display:show">
+								<p>삼일회계법인이 주관하는 회계관리자격시험은 2001년부터 시작되어 매년 35,000여명 이상이 응시하고 있습니다.<br/>
+								국가공인 회계관리자격시험은 재경분야 실무 전문가임을 인증하는 자격시험으로 수준에 따라 
+								<span style="font-weight:bold;">재경관리사, 회계관리1급, 회계관리2급</span>으로 구분됩니다.
+							</p>
+								<p class="photooo"><img src="/common/examHome/image/top/con_list.gif" alt="재경관리사, 회계관리1급, 회계관리2급" /></p>
+							
+								</div-->
+								
+								<div id="t0" name="t0" style="display:show">
+									<!--div class="first1_list"-->
+										<p>국가공인 재경관리사는 재무회계, 세무회계, 원가관리회계 지식과 실무능력을 갖춘 재경전문가로의 역할을 수행할 수 있는지 평가하는 자격시험입니다.</p>		
+									<!--/div-->
+									<div class="left1_all">
+										<div class="left1_list">
+											<ul>
+												<li><span class="red_bold">시행일정 및 시간</span><br/>1월, 3월, 5월, 6월, 7월, 9월, 11월, 12월 <a href="/usr/groupguide.do
+												" target="_self"><span class="blue_color">(상세일정)</span></a><br/>14:00~16:30 (150분, 3과목 동시 시행)</li>
+												<li><span class="red_bold">응시자격</span><br/>연령, 학력, 경력 제한 없음</li>
+												<li><span class="red_bold">총비용 : 75,000원(세부내역별 비용 총 합계)</span><br/><세부내역별 비용><br/>- 응시료 70,000원 <br/>- 자격증 발급 시 5,000원</li>
+												<li style="padding-top:0px;width:400px;"><span class="red_bold">환불규정</span><br/>접수기간 내 100% 환불, 접수취소기간 내 50% 환불,</br>접수취소기간 종료 이후 환불 불가</br><a href="javascript:regulation();" style="cursor:hand"><span class="blue_color">응시료 취소/환불 규정 확인하기</span></a></li>
+												
+												<li style="padding-top:0px;"><span class="red_bold">자격의 종류</span><br/>공인 민간자격</li>
+												
+												<li style="padding-top:30px;"><span class="red_bold">자격관리기관 정보</span><br/>기관명 : 삼일회계법인<br/>대표자 : 윤훈수<br/>연락처 : 070-4412-3131 (이메일 : <a href="mailto:kr_samilexam@pwc.com">kr_samilexam@pwc.com</a>)<br/>소재지 : 서울시 용산구 한강대로 100<br/> 홈페이지 : <a href="http://www.samilexam.com">www.samilexam.com</a></li>
+												
+												<li style="padding-top:30px;"><span class="red_bold">합격기준 및 평가범위</span><br/>세부과목 : 재무회계, 세무회계, 원가관리회계<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;과목별 40문항 (객관식 4지선다형)<br/>
+												합격기준 : 전 과목 과목별 70점 (100점 만점) 이상<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;합격 시 영구 자격 취득</li></li>
+											</ul>
+										</div><!-- left1_list닫힘 -->
+										<div class="right2_list">
+											<ul>
+												<li><span class="red_bold">시험장소</span><br/>서울, 부산, 대구, 광주, 인천, 대전, 수원, 청주, 천안 등</li>
+												<li style="padding-top:-25px;"><span class="red_bold">등록번호</span><br/>제2008-0106호</li>										
+												<li style="padding-top:5px;"><span class="red_bold">공인번호</span><br/>금융위원회 제2025-2호</li>
+												<li style="padding-top:40px;"><span class="red_bold">자격발급기관</span><br/>삼일회계법인</li>												
+												<li style="padding-top:44px;"><span class="red_bold">소비자 알림사항</span><br/>민간자격 등록 및 공인 제도에 대한 상세내용은 <br/>민간자격정보서비스(<a href="http://www.pqi.or.kr" target="_pqi">www.pqi.or.kr</a>)의<br/>'민간자격 소개'란을 참고하여 주십시오.</li>
+											</ul>
+										</div><!-- right2_list닫힘 -->
+									</div><!-- left1_all닫힘 -->
+									
+									<table summary="재경관리사">
+										<caption>재경관리사</caption>
+										<colgroup>
+											<col width="11%"/>
+											<col width=""/>
+											<col width="11%"/>
+											<col width=""/>
+											<col width="11%"/>
+											<col width=""/>		
+										</colgroup>
+										<thead>
+											<tr>
+												<th colspan="2">재무회계</th>
+												<th colspan="2">세무회계</th>
+												<th colspan="2">원가관리회계</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td rowspan="4">재무회계<br/>일반</td>
+												<td>재무보고와<br/>국제회계기준</td>
+												<td>세법의 이해</td>
+												<td>세법에 대한 <br/>일반적 이해</td>
+												<td rowspan="3">원가회계의 <br/>기초</td>
+												<td>원가회계의 기본개념</td>
+											</tr>
+											<tr>
+												<td>재무회계 개념체계</td>
+												<td>국세기본법</td>
+												<td>국세기본법에<br/>대한 이해</td>
+												<td>원가회계의 흐름</td>
+											</tr>
+											<tr>
+												<td>재무제표표시</td>
+												<td rowspan="3">법인세</td>
+												<td>총설</td>
+												<td>원가배분</td>
+											</tr>
+											<tr>
+												<td>기타공시</td>
+												<td>각사업연도소득에<br/>대한 법인세</td>
+												<td rowspan="2">생산형태에<br/>따른 원가<br/>계산방법</td>
+												<td>개별원가계산</td>
+											</tr>
+											<tr>
+												<td rowspan="3">재무상태표</td>
+												<td>자산</td>
+												<td>과세표준과<br/>세액의 계산</td>
+												<td>종합원가계산</td>
+											</tr>
+											
+											<tr>
+												<td>부채</td>
+												<td rowspan="4">소득세</td>
+												<td>종합소득세의 계산</td>
+												<td rowspan="2">원가측정<br/>방법</td>
+												<td>표준원가계산의 기초</td>
+											</tr>
+											
+											<tr>
+												<td>자본</td>
+												<td>퇴직소득세</td>
+												<td>표준원가계산과 차이분석</td>
+											</tr>
+											
+											<tr>
+												<td rowspan="3">포괄손익<br/>계산서</td>
+												<td>수익</td>
+												<td>원천징수</td>
+												<td>원가계산의<br/>범위</td>
+												<td>변동원가계산과<br/>전부원가계산</td>
+											</tr>
+											
+											<tr>
+												<td>비용</td>
+												<td>양도소득세</td>
+												<td rowspan="2">계획과 통제</td>
+												<td>원가·조업도·이익분석</td>
+											</tr>
+											
+											<tr>
+												<td>기타사항</td>
+												<td rowspan="2">부가가치세</td>
+												<td>부가가치세 개념</td>
+												<td>기업환경의 변화와<br/>새로운 원가관리시스템</td>
+											</tr>
+											
+											<tr>
+												<td rowspan="5">특수회계</td>
+												<td>관계기업</td>
+												<td>부가가치세의 계산</td>
+												<td rowspan="2">의사결정을<br/>위한 원가정<br/>보의 활용</td>
+												<td>단기의사결정을 위한 <br/>원가정보의 활용</td>
+											</tr>
+											
+											<tr>
+												<td>환율변동효과</td>
+												<td colspan="2" rowspan="4"></td>
+												<td>장기의사결정을 위한<br/>원가정보의 활용</td>
+											</tr>
+											
+											<tr>
+												<td>파생상품회계</td>
+												<td rowspan="3">성과평가</td>
+												<td>책임회계제도와<br/>성과평가</td>
+											</tr>
+											
+											<tr>
+												<td>리스회계</td>
+												<td>분권화와 성과평가</td>
+											</tr>
+											
+											<tr>
+												<td>현금흐름표</td>
+												<td>경제적부가가치(EVA)<br/>분석과 성과평가</td>
+											</tr>
+										</tbody>
+									</table>
+							
+								</div>
+								
+								
+								<div id="t1" name="t1" style="display:none">
+								<p>국가공인 회계관리1급은 재무회계, 세무회계에 관한 지식을 갖추고 기업의 회계실무자 및 중간관리자로서 업무를 수행할 수 있는지 평가하는 자격시험입니다. </p>
+							
+								
+								<div class="left1_all">
+										<div class="left1_list">
+											<ul>
+												<li class=""><span class="red_bold">시행일정 및 시간</span><br/>1월, 3월, 5월, 6월, 7월, 9월, 11월, 12월 <a href="/usr/groupguide.do
+												" target="_self"><span class="blue_color">(상세일정)</span></a><br/>14:00~15:40 (100분, 2과목 동시 시행)</li>
+												<li><span class="red_bold">응시자격</span><br/>연령, 학력, 경력 제한 없음</li>
+												<li><span class="red_bold">총비용 : 55,000원(세부내역별 비용 총 합계)</span><br/><세부내역별 비용><br/>- 응시료 50,000원 <br/>- 자격증 발급 시 5,000원</li>
+												<li style="padding-top:0px;width:400px;"><span class="red_bold">환불규정</span><br/>접수기간 내 100% 환불, 접수취소기간 내 50% 환불,</br>접수취소기간 종료 이후 환불 불가</br><a href="javascript:regulation();" style="cursor:hand"><span class="blue_color">응시료 취소/환불 규정 확인하기</span></a></li>
+												
+												<li style="padding-top:0px;"><span class="red_bold">자격의 종류</span><br/>공인 민간자격</li>
+												
+												<li style="padding-top:30px;"><span class="red_bold">자격관리기관 정보</span><br/>기관명 : 삼일회계법인<br/>대표자 : 윤훈수<br/>연락처 : 070-4412-3131 (이메일 : <a href="mailto:kr_samilexam@pwc.com">kr_samilexam@pwc.com</a>)<br/>소재지 : 서울시 용산구 한강대로 100<br/> 홈페이지 : <a href="http://www.samilexam.com">www.samilexam.com</a></li>
+												
+												<li style="padding-top:30px;"><span class="red_bold">합격기준 및 평가범위</span><br/>세부과목 : 재무회계, 세무회계<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;과목별 40문항 (객관식 4지선다형)<br/>
+												합격기준 : 전과목 과목별 70점 (100점 만점) 이상<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;합격 시 영구 자격 취득</li></li>
+											</ul>
+										</div><!-- left1_list닫힘 -->
+										<div class="right2_list">
+											<ul>
+												<li><span class="red_bold">시험장소</span><br/>서울, 부산, 대구, 광주, 인천, 대전, 수원, 청주, 천안 등</li>
+												<li><span class="red_bold">등록번호</span><br/>제2008-0105호</li>										
+												<li style="padding-top:5px;"><span class="red_bold">공인번호</span><br/>금융위원회 제2025-3호</li>
+												<li style="padding-top:40px;"><span class="red_bold">자격발급기관</span><br/>삼일회계법인</li>
+												<li style="padding-top:44px;"><span class="red_bold">소비자 알림사항</span><br/>민간자격 등록 및 공인 제도에 대한 상세내용은 <br/>민간자격정보서비스(<a href="http://www.pqi.or.kr" target="_pqi">www.pqi.or.kr</a>)의<br/>'민간자격 소개'란을 참고하여 주십시오.</li>
+											</ul>
+										</div><!-- right2_list닫힘 -->
+									</div><!-- left1_all닫힘 -->
+									<table summary="회계관리1급">
+										<caption>회계관리1급</caption>
+										<colgroup>
+											<col width=""/>
+											<col width=""/>
+											<col width=""/>
+											<col width=""/>
+										</colgroup>
+										<thead>
+											<tr>
+												<th colspan="2">재무회계</th>
+												<th colspan="2">세무회계</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td width="50">회계의 기본 개념</td>
+												<td>회계의 기본 개념 이해</td>
+												<td width="50">조세총론</td>
+												<td>조세의 개요</td>
+											</tr>
+											
+											<tr>
+												<td>재무상태표</td>
+												<td>재무상태표의 일반사항</td>
+												<td>법인세</td>
+												<td>각사업연도소득에 대한 법인세</td>
+											</tr>
+											
+											<tr>
+												<td rowspan="2">이익잉여금<br/>처분계산서</td>
+												<td rowspan="2">이익잉여금처분계산서에<br/>대한 이해</td>
+												<td rowspan="2">소득세</td>
+												<td>종합소득세의 계산</td>
+											</tr>
+											
+											<tr>
+												<td>연말정산</td>
+											</tr>
+											
+											
+											<tr>
+												<td>자본변동표</td>
+												<td>자본변동표에 대한 이해</td>
+												<td>원천징수 실무</td>
+												<td>원천징수의 개념 및 <br/>각 소득별 원천징수실무</td>
+											</tr>
+											
+											<tr>
+												<td rowspan="3">손익계산서</td>
+												<td>손익계산서의 기초 이론</td>
+												<td>부가가치세</td>
+												<td>부가가치세의 개요</td>
+											</tr>
+											
+											<tr>
+												<td>수익의 인식</td>
+												<td>세금계산서 실무</td>
+												<td>세금계산서의 작성·교부</td>
+											</tr>
+											
+											<tr>
+												<td>손익계산서의 계정과목</td>
+												<td colspan="2"></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								
+								
+								<div id="t2" name="t2" style="display:none">
+								<p>국가공인 회계관리2급은 회계 입문자에게 필요한 기본적 회계지식과 재무제표의 기본개념을 이해하였는지 평가하는 자격시험입니다. </p>
+							
+								
+								<div class="left1_all">
+										<div class="left1_list">
+											<ul>
+												<li class=""><span class="red_bold">시행일정 및 시간</span><br/>1월, 3월, 5월, 6월, 7월, 9월, 11월, 12월 <a href="/usr/groupguide.do
+												" target="_self"><span class="blue_color">(상세일정)</span></a><br/>11:00~11:50 (50분)</li>
+												<li><span class="red_bold">응시자격</span><br/>연령, 학력, 경력 제한 없음</li>
+												<li><span class="red_bold">총비용 : 35,000원(세부내역별 비용 총 합계)</span><br/><세부내역별 비용><br/>- 응시료 30,000원 <br/>- 자격증 발급 시 5,000원</li>
+												<li style="padding-top:0px;width:400px;"><span class="red_bold">환불규정</span><br/>접수기간 내 100% 환불, 접수취소기간 내 50% 환불,</br>접수취소기간 종료 이후 환불 불가</br><a href="javascript:regulation();" style="cursor:hand"><span class="blue_color">응시료 취소/환불 규정 확인하기</span></a></li>
+												
+												<li style="padding-top:0px;"><span class="red_bold">자격의 종류</span><br/>공인 민간자격</li>
+												
+												<li style="padding-top:30px;"><span class="red_bold">자격관리기관 정보</span><br/>기관명 : 삼일회계법인<br/>대표자 : 윤훈수<br/>연락처 : 070-4412-3131 (이메일 : <a href="mailto:kr_samilexam@pwc.com">kr_samilexam@pwc.com</a>)<br/>소재지 : 서울시 용산구 한강대로 100<br/> 홈페이지 : <a href="http://www.samilexam.com">www.samilexam.com</a></li>
+												
+												<li style="padding-top:30px;"><span class="red_bold">합격기준 및 평가범위</span><br/>세부과목 : 회계원리<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;40문항 (객관식 4지선다형)<br/>
+												합격기준 : 70점 (100점 만점) 이상<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;합격 시 영구 자격 취득</li></li>
+											</ul>
+										</div><!-- left1_list닫힘 -->
+										<div class="right2_list">
+											<ul>
+												<li><span class="red_bold">시험장소</span><br/>서울, 부산, 대구, 광주, 인천, 대전, 수원, 청주, 천안 등</li>
+												<li><span class="red_bold">등록번호</span><br/>제2008-0105호</li>										
+												<li style="padding-top:5px;"><span class="red_bold">공인번호</span><br/>금융위원회 제2025-3호</li>
+												<li style="padding-top:40px;"><span class="red_bold">자격발급기관</span><br/>삼일회계법인</li>
+												<li style="padding-top:44px;"><span class="red_bold">소비자 알림사항</span><br/>민간자격 등록 및 공인 제도에 대한 상세내용은 <br/>민간자격정보서비스(<a href="http://www.pqi.or.kr" target="_pqi">www.pqi.or.kr</a>)의<br/>'민간자격 소개'란을 참고하여 주십시오.</li>
+											</ul>
+										</div><!-- right2_list닫힘 -->
+									</div><!-- left1_all닫힘 -->
+									<table summary="회계관리2급">
+										<caption>회계관리2급</caption>
+										<colgroup>
+											<col width=""/>
+											<col width=""/>
+											<col width=""/>
+											<col width=""/>
+										</colgroup>
+										<thead>
+											<tr>
+												<th colspan="4">회계원리</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td rowspan="2">회계의 첫걸음</td>
+												<td>회계의 개념</td>
+												<td rowspan="4">결산마무리</td>
+												<td>정리, 그리고 완성-결산</td>
+											</tr>
+											
+											<tr>
+												<td>회계의 흐름</td>
+												<td rowspan="2">시산표로 다시보기</td>
+											</tr>
+											
+											<tr>
+												<td rowspan="7">계정과목 이해하기</td>
+												<td>결산정리사항 살펴보기</td>
+											</tr>											
+											<tr>
+												<td rowspan="2">자산계정 살펴보기</td>
+												<td>회계장부 끝맺음</td>
+											</tr>
+											
+											<tr>
+												<td>부채계정 살펴보기</td>
+												<td>사례로 보는 재무제표 작성</td>
+											</tr>
+											
+											<tr>
+												<td>자본계정 살펴보기</td>
+												<td rowspan="5">재무제표 쉽게 읽는 법</td>
+												<td rowspan="2">재무제표 둘러보기</td>
+											</tr>
+											
+											<tr>
+												<td>감사의견 확인하기</td>
+											</tr>
+											
+											<tr>
+												<td rowspan="2">수익계정 살펴보기</td>
+												<td>재무상태표 바로보기</td>
+											</tr>
+											
+											<tr>
+												<td rowspan="2">손익계산서 바로보기</td>
+											</tr>
+											
+											
+											<tr>
+												<td>비용계정 살펴보기</td>
+												<td>주석 확인하기</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								
+								
+								
+								<div id="t3" name="t3" style="display:none">
+								<p>국제회계전문가는 한국채택국제회계기준(K-IFRS)에 대한 이론과 실무능력을 겸비한 K-IFRS 전문가임을 인증하는 자격시험입니다.<br/>
+									공공회계전문가는 정부 분야의 결산업무 수행에 필요한 정부회계와 재무회계의 회계전문가임을 인증하는 자격시험입니다. 
+									</p>
+							
+								
+								<div class="left1_all">
+										<div class="left1_list">
+											<ul>
+												<li class=""><span class="red_bold">시행일정 및 시간</span><br/>5월, 11월 <a href="/usr/groupguide.do
+												" target="_self"><span class="blue_color">(상세일정)</span></a><br/>국제회계전문가 14:00~15:40 (100분)<br/>공공회계전문가 14:00~15:40 (100분)</li>
+												<li><span class="red_bold">응시자격</span><br/>연령, 학력, 경력 제한 없음</li>
+												<li style="padding-top:20px;"><span class="red_bold">총비용 : 55,000원(세부내역별 비용 총 합계)</span><br/><세부내역별 비용><br/>- 응시료 50,000원 <br/>- 자격증 발급 시 5,000원</li>
+												<li style="padding-top:10px;width:400px;"><span class="red_bold">환불규정</span><br/>접수기간 내 100% 환불, 접수취소기간 내 50% 환불,</br>접수취소기간 종료 이후 환불 불가</br><a href="javascript:regulation();" style="cursor:hand"><span class="blue_color">응시료 취소/환불 규정 확인하기</span></a></li>
+												
+												<li style="padding-top:30px;"><span class="red_bold">자격관리기관 정보</span><br/>기관명 : 삼일회계법인<br/>대표자 : 윤훈수<br/>연락처 : 070-4412-3131 (이메일 : <a href="mailto:kr_samilexam@pwc.com">kr_samilexam@pwc.com</a>)<br/>소재지 : 서울시 용산구 한강대로 100<br/> 홈페이지 : <a href="http://www.samilexam.com">www.samilexam.com</a></li>
+												
+												<li style="padding-top:30px;"><span class="red_bold">합격기준 및 평가범위</span><br/>국제회계전문가 : 한국채택 국제회계기준서 (1과목)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+												60문항 (객관식 4지선다형)<br/>
+												공공회계전문가 : 정부회계, 재무회계 (2과목)<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+												80문항 (과목당 40문항, 객관식 4지선다형)<br/>
+												
+												합격기준 : 전 과목 과목별 70점 (100점 만점) 이상<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;합격 시 영구 자격 취득</li></li>
+											</ul>
+										</div><!-- left1_list닫힘 -->
+										<div class="right2_list">
+											<ul>
+												<li><span class="red_bold">시험장소</span><br/>서울, 부산, 대전</li><br/>
+												<li class="price2"  style="padding-top:20px;"><span class="red_bold">등록번호</span><br/>국제회계전문가 : 한국직업능력개발원 제2011-0955호<br/>공공회계전문가 : 한국직업능력개발원 제2011-0954호</li>											
+												
+												<li style="padding-top:5px;"><span class="red_bold">자격발급기관</span><br/>삼일회계법인</li>
+												<li style="padding-top:50px;"><span class="red_bold">자격의 종류</span><br/>등록(비공인) 민간자격</li>
+												<li style="padding-top:75px;"><span class="red_bold">소비자 알림사항</span><br/>
+                                                                                                1. 상기 '국제/공공회계전문가' 자격은 자격기본법 <br/>규정에 따라 등록한 민간자격으로 국가로부터<br/>인정받은 공인자격이 아닙니다.<br/>
+                                                                                                2. 민간자격 등록 및 공인 제도에 대한 상세내용은 <br/>민간자격정보서비스(<a href="http://www.pqi.or.kr" target="_pqi">www.pqi.or.kr</a>)의<br/>'민간자격 소개'란을 참고하여 주십시오.</li>
+											</ul>
+											
+										</div><!-- right2_list닫힘 -->
+										
+										
+									</div><!-- left1_all닫힘 -->
+									
+									
+									
+									<table summary="국제회계전문가" id="last_tablee1">
+										<caption>국제회계전문가</caption>
+										<p style="clear:both; font-weight:bold;">국제회계전문가</p>
+										<colgroup>
+											<col width="13%"/>
+											<col width=""/>
+											<col width="13%"/>
+											<col width=""/>
+										</colgroup>
+										<thead>
+											<tr>
+												<th colspan="4">한국채택국제회계기준(K-IFRS)</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>제1001호</td>
+												<td style="text-align:center;">재무제표 표시</td>
+												<td style="text-align:center;">제1028호</td>
+												<td style="text-align:center;">관계기업투자과 공동기업에 대한 투자</td>
+											</tr>
+											
+											<tr>
+												<td>제1002호</td>
+												<td style="text-align:center;">재고자산</td>
+												<td style="text-align:center;">제1032호</td>
+												<td style="text-align:center;">금융상품 : 표시</td>
+											</tr>
+											
+											<tr>
+												<td>제1007호</td>
+												<td style="text-align:center;">현금흐름표</td>
+												<td style="text-align:center;">제1033호</td>
+												<td style="text-align:center;">주당이익</td>
+											</tr>
+											
+											<tr>
+												<td>제1008호</td>
+												<td style="text-align:center;">회계정책, 회계추정의  변경 및 오류</td>
+												<td style="text-align:center;">제1034호</td>
+												<td style="text-align:center;">중간재무보고</td>
+											</tr>
+											
+											<tr>
+												<td>제1010호</td>
+												<td style="text-align:center;">보고기간후사건</td>
+												<td style="text-align:center;">제1036호</td>
+												<td style="text-align:center;">자산손상</td>
+											</tr>
+											
+											<tr>
+												<td>제1011호</td>
+												<td style="text-align:center;">건설계약</td>
+												<td style="text-align:center;">제1037호</td>
+												<td style="text-align:center;">충당부채, 우발부채 및 우발자산</td>
+											</tr>
+											
+											<tr>
+												<td>제1012호</td>
+												<td style="text-align:center;">법인세</td>
+												<td style="text-align:center;">제1038호</td>
+												<td style="text-align:center;">무형자산</td>
+											</tr>
+											
+											<tr>
+												<td>제1016호</td>
+												<td style="text-align:center;">유형자산</td>
+												<td style="text-align:center;">제1039호</td>
+												<td style="text-align:center;">금융상품 : 인식과측정</td>
+											</tr>
+											
+											<tr>
+												<td>제1018호</td>
+												<td style="text-align:center;">수익</td>
+												<td style="text-align:center;">제1040호</td>
+												<td style="text-align:center;">투자부동산</td>
+											</tr>
+											
+											<tr>
+												<td>제1019호</td>
+												<td style="text-align:center;">종업원급여</td>
+												<td style="text-align:center;">제1102호</td>
+												<td style="text-align:center;">주식기준보상</td>
+											</tr>
+											
+											<tr>
+												<td>제1020호</td>
+												<td style="text-align:center;">정부보조금의 회계처리와 정부지원의 공시</td>
+												<td style="text-align:center;">제1103호</td>
+												<td style="text-align:center;">사업결합</td>
+											</tr>
+											
+											<tr>
+												<td>제1021호</td>
+												<td style="text-align:center;">환율변동효과</td>
+												<td style="text-align:center;">제1105호</td>
+												<td style="text-align:center;">매각예정비유동자산과 중단영업</td>
+											</tr>
+											
+											<tr>
+												<td>제1023호</td>
+												<td style="text-align:center;">차입원가</td>
+												<td style="text-align:center;">제1107호</td>
+												<td style="text-align:center;">금융상품: 공시</td>
+											</tr>
+											
+											<tr>
+												<td rowspan="2">제1027호</td>
+												<td rowspan="2" style="text-align:center;">별도재무제표</td>
+												<td style="text-align:center;">제1110호</td>
+												<td style="text-align:center;">연결재무제표</td>
+											</tr>
+											
+											<tr>
+												<td>제1113호</td>
+												<td style="text-align:center;">공정가치 측정</td>
+											</tr>
+											
+											
+										</tbody>
+									</table>
+									<br/>
+									<table summary="공공회계전문가" id="last_tablee2">
+										<caption>공공회계전문가</caption>
+										<p style="font-weight:bold;">공공회계전문가</p>
+										<colgroup>
+											<col width="13%"/>
+											<col width=""/>
+											<col width="13%"/>
+											<col width=""/>
+										</colgroup>
+										<thead>
+											<tr>
+												<th colspan="2">정부회계</th>
+												<th colspan="2">재무회계</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>정부회계의 개요</td>
+												<td style="text-align:center;">우리나라 정부회계의 의의</td>
+												<td style="text-align:center;">회계의 기본 개념</td>
+												<td style="text-align:center;">회계의 기본 개념 이해</td>
+											</tr>
+											
+											<tr>
+												<td rowspan="3">정부예산</td>
+												<td style="text-align:center;">예산의 의의</td>
+												<td rowspan="11" style="text-align:center;">재무상태표</td>
+												<td style="text-align:center;">재무상태표의 일반사항</td>
+											</tr>
+											
+											<tr>
+												<td style="text-align:center;">예산제도</td>
+												<td style="text-align:center;">당좌자산</td>
+											</tr>
+											
+											<tr>
+												<td style="text-align:center;">예산의 과정</td>
+												<td style="text-align:center;">재고자산</td>
+											</tr>
+											
+											<tr>
+												<td rowspan="8">국가회계</td>
+												<td style="text-align:center;">국가회계의 이해</td>
+												<td style="text-align:center;">투자자산</td>
+											</tr>
+											
+											<tr>
+												<td style="text-align:center;">재정상태표</td>
+												<td style="text-align:center;">유형자산</td>
+											</tr>
+											
+											<tr>
+												<td style="text-align:center;">재정운영표</td>
+												<td style="text-align:center;">무형자산</td>
+											</tr>
+											
+											
+											<tr>
+												<td style="text-align:center;">순자산변동표</td>
+												<td style="text-align:center;">기타비유동자산</td>
+											</tr>
+											
+											<tr>
+												<td style="text-align:center;">국세징수활동표</td>
+												<td style="text-align:center;">유동부채</td>
+											</tr>
+											
+											<tr>
+												<td style="text-align:center;">기금회계처리</td>
+												<td style="text-align:center;">비유동부채</td>
+											</tr>
+											
+											<tr>
+												<td style="text-align:center;">지방자치단체회계 의의</td>
+												<td style="text-align:center;">충당부채,우발부채 및 우발자산</td>
+											</tr>
+											
+											<tr>
+												<td style="text-align:center;">재정상태보고서</td>
+												<td style="text-align:center;">자본</td>
+											</tr>
+											
+											<tr>
+												<td rowspan="2">지방자치단체 <br/>회계</td>
+												<td style="text-align:center;">재정운영보고서</td>
+												<td style="text-align:center;">자본변동표</td>
+												<td style="text-align:center;">자본변동표에대한 이해</td>	
+											</tr>
+											
+											<tr>
+												<td style="text-align:center;">결산과 재무제표 작성</td>
+												<td rowspan="3" style="text-align:center;">손익계산서</td>
+												<td style="text-align:center;">손익계산서의 기초이론</td>		
+											</tr>
+											
+											<tr>
+												<td rowspan="2" style="text-align:center;">정부회계 정보의 <br/>활용</td>
+												<td rowspan="2" style="text-align:center;">재무비율분석을 이용한 정부회계정보 활용</td>
+												<td style="text-align:center;">수익의 인식</td>		
+											</tr>
+											
+											<tr>
+												<td style="text-align:center;">손익계산서의 계정과목</td>
+											</tr>
+											
+											
+											
+										</tbody>
+									</table>
+								</div>
+								
+								<div id="t4" name="t4" style="display:none">
+								<p><span class="red_bold">자격관리기관 정보</span></p>
+							
+								<div class="left1_all">
+										<div class="left1_list">
+											<ul>
+												<li><span class="red_bold">기관명</span><br/>삼일회계법인</li>
+												<li style="padding-top:20px;"><span class="red_bold">대표자</span><br/>윤훈수</li>
+												<li style="padding-top:15px;"><span class="red_bold">소재지</span><br/>서울특별시 용산구 한강대로 100</li>
+											</ul>
+										</div><!-- left1_list닫힘 -->
+										<div class="right2_list">
+											<ul>
+												<!--<li><span class="red_bold">연락처</span><br/>080-377-3131</li><br/>-->
+												<li><span class="red_bold">연락처</span><br/>070-4412-3131</li>
+												<li><span class="red_bold">이메일</span><br/><a href="mailto:kr_samilexam@pwc.com">kr_samilexam@pwc.com</a></li>												
+												<li style="padding-top:20px;"><span class="red_bold">홈페이지</span><br/><a href="https://www.samilexam.com">www.samilexam.com</a></li>
+											</ul>
+										</div><!-- right2_list닫힘 -->
+								</div><!-- left1_all닫힘 -->
+								
+								</div>
+
+							</div>
+							
+							<script type="text/JavaScript">
+								<!--
+								function MM_swapImgRestore() { //v3.0
+								  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+								}
+								
+								function MM_preloadImages() { //v3.0
+								  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+								    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+								    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+								}
+								
+								function MM_findObj(n, d) { //v4.01
+								  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+								    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+								  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+								  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+								  if(!x && d.getElementById) x=d.getElementById(n); return x;
+								}
+								
+								function MM_swapImage() { //v3.0
+								  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+								   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+								}
+								
+								var old_menu = '';var old_cell = '';
+								//교재상세보기클릭
+								function menuclick(submenu ,cellbar){
+									if( old_menu != submenu ) {if( old_menu !='' ){old_menu.style.display = 'none';}
+										submenu.bgcolor = '#999999'; submenu.style.display = 'block';old_menu = submenu;old_cell = cellbar;}
+									else {submenu.style.display = 'none';old_menu = '';old_cell = '';}
+									}
+								
+								function bartab(id) {
+								 menuImg = new Array("/common/examHome/image/sub/tab_menu2_off.gif","/common/examHome/image/sub/tab_menu3_off.gif","/common/examHome/image/sub/tab_menu4_off.gif","/common/examHome/image/sub/tab_menu5_off.gif","/common/examHome/image/sub/tab_menu0_off.gif");
+								 menuImg_Over = new Array("/common/examHome/image/sub/tab_menu2_on.gif","/common/examHome/image/sub/tab_menu3_on.gif","/common/examHome/image/sub/tab_menu4_on.gif","/common/examHome/image/sub/tab_menu5_on.gif","/common/examHome/image/sub/tab_menu0_on.gif");
+								
+								 for(var i = 0; i < menuImg.length; i++) {
+								  if(i == id) {
+								   eval("document.all.menu" + i + ".src='" + menuImg_Over[i] + "';");
+								   chgtable(i);
+								  } else {
+								   eval("document.all.menu" + i + ".src='" + menuImg[i] + "';");
+								  }
+								 }
+								}
+								
+								function chgtable(i){
+								
+									switch(String(i)){
+									case "0":  document.all.t0.style.display="block";
+												  document.all.t1.style.display="none";
+												  document.all.t2.style.display="none";
+												  document.all.t3.style.display="none";
+												  document.all.t4.style.display="none";
+												  break;
+												  
+									case "1":  document.all.t0.style.display="none";
+												  document.all.t1.style.display="block";
+												  document.all.t2.style.display="none";
+												  document.all.t3.style.display="none";
+												  document.all.t4.style.display="none";
+												  break;
+												  
+									case "2":  document.all.t0.style.display="none";
+												  document.all.t1.style.display="none";
+												  document.all.t2.style.display="block";
+												  document.all.t3.style.display="none";
+												  document.all.t4.style.display="none";
+												  break;
+												  
+									case "3":  document.all.t0.style.display="none";
+												  document.all.t1.style.display="none";
+												  document.all.t2.style.display="none";
+												  document.all.t3.style.display="block";
+												  document.all.t4.style.display="none";
+												  break;
+									
+									case "4":  document.all.t0.style.display="none";
+												  document.all.t1.style.display="none";
+												  document.all.t2.style.display="none";
+												  document.all.t3.style.display="none";
+												  document.all.t4.style.display="block";
+												  break;
+
+										
+									} 
+								}
+								
+								function regulation(){
+								
+										url = "https://www.samilexam.com/regulation.html";
+										win = window.open(url, "regulation", "menubar=no,toolbar=no,location=no,status=no,scrollbars=yes,resizable=no,left=0,top=0,width=850,height=800");
+										win.focus()
+								
+								}
+								
+								//-->
+								</script>
+						
+                        </div><!-- sub_tab닫힘 -->
+                        
+                    </div>
+
+                </div>
+ 
+ 
+
+</div>
+</div>
+
+<div id="footerWrap">
+     <div id="footer">
+
+            <div class="adr">
+
+               
+                 <div style="padding-bottom:5px;">
+                 	<ul class="footer_list">
+                   		<li><a href="/usr/guidepersionalinfomation.do"><p><img src="/common/examHome/image/common/footer_list_01.gif" alt="개인정보보호정책"/></p></a></li>
+                    	<li><a href="/usr/guideservice.do"><p><img src="/common/examHome/image/common/footer_list_02.gif" alt="이용약관"/></p></a></li>
+                    	<li><a href="/usr/emailextractionprevention.do"><p><img src="/common/examHome/image/common/footer_list_03.gif" alt="이메일수집거부"/></p></a></li>
+                    </ul>
+                    <select name="select" title="" onchange="window.open(value,'_blank');">
+                    	<option value="" style="color:#000000;" selected>관련사이트</option>
+						<!--<option value="http://www.samiledu.com" style="color:#004499;font-weight:bold;">삼일 이러닝센터</option>-->
+						<option value="http://www.samilacademy.com">삼일PwC아카데미</option>
+						<option value="http://www.samil.com">삼일회계법인</option>
+                    	<option value="http://www.samili.com">삼일PwC솔루션</option> 
+						<option value="http://www.accountingpeople.co.kr">취업포털사이트</option>                    	               	
+                    </select>
+                 </div>  
+                     
+	            <p class="address_copy"><img src="/common/examHome/image/bottom/address_copy.gif" alt="상호 : (유)삼일회계법인 |  사업자등록번호 : 106-81-19621  |  통신판매업 신고번호 : 제 용산 07108호
+				04386 서울시 용산구 한강대로92(한강로2가) LS용산타워 8층  | 대표 : 김영식   |  개인정보 책임관리자 : 홍사균
+				Copyright ⓒ 2015 (유)삼일회계법인. All Rights Reserved"/></p>
+          
+                <span class="under_info"><img src="/common/examHome/image/common/under_info.gif" alt="문의 070-4412-3131 평일 09:00~18:00 ( 점심 12:00~13:00 )주말, 공휴일 휴무"/></span>
+            </div>
+
+        </div> 
+    </div> 
+
+</body>
+</html>
+ 

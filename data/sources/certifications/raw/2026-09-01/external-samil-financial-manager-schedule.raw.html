@@ -1,0 +1,592 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<title>삼일회계법인</title>
+	
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<!-- taglib -->
+
+
+
+
+
+  
+  
+ <!-- 공용 클래스 -->
+
+
+
+
+ 
+<!-- js -->
+<script type="text/javascript" src="/common/js/jquery/jquery-1.9.1.min.js"></script>  
+<script type="text/javascript" src="/common/js/jquery/jquery-ui-1.10.3.custom.min.js"></script>  
+<script type="text/javascript" src="/common/js/jquery/jquery.pager.js"></script>
+<script type="text/javascript" src="/common/js/jquery/jquery.validate.js"></script>
+<script type="text/javascript" src="/common/js/jquery/common.js"></script> 
+<script type="text/javascript" src="/common/js/jquery/jquery.autocomplete.js"></script>
+<script type="text/javascript" src="/common/js/jquery/jquery.form.js"></script>
+<script type="text/javascript" src="/common/examHome/js/bxslider.js"></script> 
+<script type="text/javascript" src="/common/examHome/js/familly.js"></script>
+<script type="text/javascript" src="/common/examHome/js/main.js"></script>
+<script type="text/javascript" src="/common/examHome/js/listtab.js"></script> 
+<script type="text/javascript" src="/common/js/jquery/jquery.cookie.js"></script>
+<script type="text/javascript" src="/common/js/jquery/jquery.jqtransform.js"></script>
+
+
+<!-- 달력 --> 
+<script type="text/javascript" src="/common/js/jquery/jquery.ui.datepicker-ko.js"></script> 
+<link type="text/css" rel="stylesheet" href="/common/css/jquery-ui-1.10.3.custom.css" />
+<link type="text/css" rel="stylesheet" href="/common/css/common.css" charset="utf-8" />
+
+	<link rel="stylesheet" type="text/css" href="/common/examHome/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="/common/examHome/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="/common/examHome/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="/common/css/Pager.css" />
+	<link rel="stylesheet" type="text/css" href="/common/examHome/css/new2.css" />
+	<script type="text/javascript" src="/common/js/jquery/security.js"></script>
+	<script>
+
+			$(document).ready(function(){
+
+				$('#menu>li').on({
+							'mouseenter':function(){
+							 var changeUrl= $(this).find('img').attr('src')
+							 var changeSrc=changeUrl.replace(/_off/g,"_on");
+							 $(this).find('.m1_img').attr('src',changeSrc);
+							 $(this).children('ul').show();
+							 $(this).addClass('on');
+
+
+					 },
+							'mouseleave':function(){
+							var changeUrl= $(this).find('img').attr('src')
+							var changeSrc=changeUrl.replace(/_on/g,"_off");
+							$(this).find('.m1_img').attr('src',changeSrc);
+							$(this).children('ul').hide();
+							$(this).removeClass('on');
+					 }
+				 })
+
+				  $('.sub>ul>li').on({
+					 		'mouseenter':function(){
+								var changeUrl=$(this).find('img').attr('src')
+								var changeSrc=changeUrl.replace(/_off/g,"_on");
+								$(this).find('.subm_img').attr('src',changeSrc);
+							},
+							'mouseleave':function(){
+								var changeUrl=$(this).find('img').attr('src')
+								var changeSrc=changeUrl.replace(/_on/g,"_off");
+								$(this).find('.subm_img').attr('src',changeSrc);
+							}
+				 })
+
+			 })
+	</script>
+
+	<style>
+	.sub{display:none;}
+	#menu>li.on{border:1px solid #dc8f9a;
+				width:124px;}
+
+	</style>
+	 <script type="text/javascript">
+		 $(document).ready(function() {
+			/* $("#menu").hover(function(){
+		           $("#sub_menu_wrap").css("display", "block");
+		    })
+		    $("#sub_menu").mouseleave(function() {
+		    	$("#sub_menu_wrap").css("display", "none");
+		    })
+		    $(".title").hover(function() {
+		    	$("#sub_menu_wrap").css("display", "none");
+		    }) */
+		});
+		
+	</script>
+
+
+
+
+</head>
+
+
+<body>
+	<!--전체div-->
+	<div id="wrap">
+		<!--헤더전체div-->
+	    <div id="headerWrap">
+	    	<div id="loadingWrap" style="display:none;">
+				<div class="loading">
+
+				</div>
+			</div>
+			<div class="gnb_wrap">
+				<div class="gnb_zone">
+       			<ul id="gnbmenu">
+		                <li><a href="/usr/main.do"><img src="/common/examHome/image/top/usermenu_01.gif" alt="홈으로"
+		                onmouseover="this.src='/common/examHome/image/top/usermenu_01_on.gif'"
+						onmouseout="this.src='/common/examHome/image/top/usermenu_01.gif'"/></a></li>
+
+	                    
+		                	<li><a href="/usr/login.do"><img src="/common/examHome/image/top/usermenu_02.gif" alt="로그인"
+		                onmouseover="this.src='/common/examHome/image/top/usermenu_02_on.gif'"
+						onmouseout="this.src='/common/examHome/image/top/usermenu_02.gif'"/></a></li>
+		                
+
+		                
+		                <li><a href="/usr/loginfindidpwd.do"><img src="/common/examHome/image/top/usermenu_03.gif" alt="아이디/비밀번호 찾기"
+		                onmouseover="this.src='/common/examHome/image/top/usermenu_03_on.gif'"
+						onmouseout="this.src='/common/examHome/image/top/usermenu_03.gif'"/></a></li>
+		                
+
+		                
+		                  <li><a href="/usr/join.do"><img src="/common/examHome/image/top/usermenu_04.gif" alt="회원가입"
+		                  onmouseover="this.src='/common/examHome/image/top/usermenu_04_on.gif'"
+						  onmouseout="this.src='/common/examHome/image/top/usermenu_04.gif'"/></a></li>
+		                
+
+		                
+
+
+		                 <li><a href="/usr/my_usrexameditmyinfopwd.do"><img src="/common/examHome/image/top/usermenu_06.gif" alt="마이페이지"
+		                 onmouseover="this.src='/common/examHome/image/top/usermenu_06_on.gif'"
+						 onmouseout="this.src='/common/examHome/image/top/usermenu_06.gif'"/></a></li>
+
+						 						
+		                  <li><a href="/usr/sitemap.do"><img src="/common/examHome/image/top/usermenu_05.gif" alt="사이트맵"
+		                  onmouseover="this.src='/common/examHome/image/top/usermenu_05_on.gif'"
+						  onmouseout="this.src='/common/examHome/image/top/usermenu_05.gif'"/></a></li>
+		                
+
+		                
+
+		         </ul><!-- gnbmenu닫힘 -->
+
+
+				</div>
+		        </div>
+	        <!--헤더-->
+       		<div id="header">
+
+	       		<!--로고-->
+	       		<div class="title">
+	            <h1><a href="/usr/main.do"><img src="/common/examHome/image/top/main_logo.gif" alt="삼일회계법인" width="160px"/></a></h1>
+	      	 	
+
+		            </div>
+		            <!--//로고-->
+		            <!--메뉴-->
+		            <ul id="menu" class="menu clear">
+		                <li class="m1" id="menuLicense">
+		                    <a href="/usr/greeting.do" class="menu_navigation"><img class="m1_img" src="/common/examHome/image/top/m1_off.gif" alt="시험안내"/></a>
+		                    <!-- 시험안내 -->
+							<ul class="sub"><!--css position:absolute 삭제-->
+								<ul class="DB_sub s1">
+									<li class="first_01" style="text-indent:25px;"><a href="/usr/greeting.do"><img class="subm_img" src="/common/examHome/image/top/s01_1_off.png" alt="종목소개"/></a></li>
+									<li style="text-indent:25px;"><a href="/usr/groupguide.do"><img class="subm_img" src="/common/examHome/image/top/s01_2_off.png" alt="시험일정"/></a></li>
+									<li style="text-indent:25px;"><a href="/usr/direction.do"><img class="subm_img" src="/common/examHome/image/top/s01_3_off.png" alt="수험자 가이드"/></a></li>
+									<li style="text-indent:25px;"><a href="/usr/special.do"><img class="subm_img" src="/common/examHome/image/top/s01_4_off.png" alt="우대사항"/></a></li>
+									<li style="text-indent:25px;"><a href="/usr/regulation.do"><img class="subm_img" src="/common/examHome/image/top/s01_5_off.png" alt="응시규정"/></a></li>
+									<li style="text-indent:25px;"><a href="/usr/education.do"><img class="subm_img" src="/common/examHome/image/top/s01_6_off.png" alt="교육기관"/></a></li>
+									<li style="text-indent:25px;"><a href="/usr/textbook.do"><img class="subm_img" src="/common/examHome/image/top/s01_7_off.png" alt="교재안내"/></a></li>
+								</ul>
+							</ul>
+		                </li>
+		                <li class="m4 m1" id="menuApplication">
+		                    <a href="/usr/usraccept1.do" class="menu_navigation"><img class="m1_img" src="/common/examHome/image/top/m2_off.gif" alt="시험접수"/></a>
+		                    <ul class="sub">
+			                   <ul class="DB_sub s2">
+					                <li class="first_01" style="text-indent:30px;"><a href="/usr/usraccept1.do"><img class="subm_img" src="/common/examHome/image/top/s02_1_off.png" alt="접수하기"/></a></li>
+					                <li style="text-indent:30px;"><a href="/usr/usrconfirm.do"><img class="subm_img" src="/common/examHome/image/top/s02_3_off.png" alt="접수확인"/></a></li>
+					                <li style="text-indent:30px;"><a href="/usr/usracceptlist.do"><img class="subm_img" src="/common/examHome/image/top/s02_4_off.png" alt="취소/환불"/></a></li>
+					                <li style="text-indent:30px;"><a href="/usr/usrprint.do"><img class="subm_img" src="/common/examHome/image/top/s02_5_off.png" alt="수험표발급"/></a></li>
+					                <li style="text-indent:30px;"><a href="/usr/usrphoto.do"><img class="subm_img" src="/common/examHome/image/top/s02_6_off.png" alt="사진관리"/></a></li>
+				               </ul>
+			                </ul>
+		                </li>
+
+		                <li class="m3 m1" id="menuExamination">
+		                    <a href="/usr/usrsuccesscandidate.do" class="menu_navigation"><img class="m1_img" src="/common/examHome/image/top/m3_off.gif" alt="합격확인"/></a>
+		                    <ul class="sub">
+			                    <ul class="DB_sub s3">
+				                   <li class="first_01"><a href="/usr/usrsuccesscandidate.do"><img class="subm_img" src="/common/examHome/image/top/s03_1_off.png" alt="합격여부/점수확인"/></a></li>
+				                   <li><a href="/usr/usrapplylicense.do"><img class="subm_img" src="/common/examHome/image/top/s03_2_off.png" alt="자격증신청"/></a></li>
+				                   
+				                    
+				                     	   <li><a href="/usr/usrdepositlicenseperson.do"><img class="subm_img" src="/common/examHome/image/top/s03_2-1_off.png" alt="자격증 결제하기"/></a></li>
+				                    
+				                   <li><a href="/usr/usrapplylicenselist.do"><img class="subm_img" src="/common/examHome/image/top/s03_3_off.png" alt="자격증배송확인"/></a></li>
+				                   <li><a href="/usr/usrconfirmation.do"><img class="subm_img" src="/common/examHome/image/top/s03_4_off.png" alt="자격번호 확인"/></a></li>
+ 
+			                       <!--<li><a href="/usr/bosuedu.do"><img class="subm_img" src="/common/examHome/image/top/s03_6_off.png" alt="보수교육/자격갱신"/></a></li>-->
+			                    </ul>
+		                    </ul>
+		                </li>
+
+
+		                <li class="m7 m1" id="menuMypage">
+		                    <a href="/usr/noticelist.do" class="menu_navigation"><img class="m1_img" src="/common/examHome/image/top/m4_off.gif" alt="정보마당"/></a>
+		                   	<ul class="sub">
+			                    <ul>
+				                   <li class="first_01" style="text-indent:36px;"><a href="/usr/noticelist.do"><img class="subm_img" src="/common/examHome/image/top/s04_1_off.png" alt="공지사항"/></a></li>
+				                   <li style="text-indent:36px;"><a href="/usr/eventlist.do"><img class="subm_img" src="/common/examHome/image/top/s04_8_off.png" alt="이벤트"/></a></li>
+				                   <li style="text-indent:36px;"><a href="/usr/questionlist.do"><img class="subm_img" src="/common/examHome/image/top/s04_2_off.png" alt="FAQ"/></a></li>
+				                   <li style="text-indent:36px;"><a href="/usr/usrcounselingcenterlist.do"><img class="subm_img" src="/common/examHome/image/top/s04_3_off.png" alt="Q&A"/></a></li>
+				                   <li style="text-indent:36px;"><a href="/usr/guideform.do"><img class="subm_img" src="/common/examHome/image/top/s04_4_off.png" alt="자료실"/></a></li>
+				                   
+			                    </ul>
+		                    </ul>
+		                </li>
+		            </ul> 
+		        </div> 
+		    </div>
+		    </div>
+		    <div id="container">
+	        <div id="content">
+
+
+                <div id="subWrap" class="clear">              	
+                	
+<script type="text/javascript" src="/common/js/jquery/security.js"></script>
+<script type="text/javascript">
+/* $(document).ready(function(){
+	alert("U0120");
+}); */
+function mouseoverFunction(obj){
+	var src = obj.src.slice(0, -4);
+	src = src+"_on.gif";
+	obj.src = src;
+}
+function mouseoutFunction(obj){
+	var src = obj.src.slice(0, -7);
+	src = src+".gif";
+	obj.src = src;
+}
+
+
+</script>
+
+
+<!-- menuWrap -->
+<div id="menuWrap">
+	<div id="left">
+			
+				
+					<h2 class="side_title"><img src="/common/examHome/image/sub/sub1_1_name.gif" alt="시험안내" class="mt20" /></h2>
+					<ul>
+						
+							
+							
+								<li group="U01" id="U0110"><a href="/usr/greeting.do" class="sub01_m1"><span><img src="/common/examHome/image/leftmenu/leftmenu_01.gif" alt="종목소개" onmouseover="mouseoverFunction(this)" onmouseout="mouseoutFunction(this)"/></span></a></li>
+							
+						
+
+
+	                    
+	                    	
+	                    		<li group="U01" id="U0120"><a href="/usr/groupguide.do" class="sub01_m2"><span><img src="/common/examHome/image/leftmenu/leftmenu_02_on.gif" alt="시험일정"/></span></a></li>
+	                    	
+	                    	
+	                    
+
+	                    
+	                    	
+	                    	
+	                    		<li group="U01" id="U0130"><a href="/usr/direction.do" class="sub01_m3"><span><img src="/common/examHome/image/leftmenu/leftmenu_03.gif" alt="수험자 가이드" onmouseover="mouseoverFunction(this)" onmouseout="mouseoutFunction(this)"/></span></a></li>
+	                    	
+	                    
+	                    
+	                    	
+	                    	
+	                    		<li group="U01" id="U0140"><a href="/usr/special.do" class="sub01_m4"><span><img src="/common/examHome/image/leftmenu/leftmenu_04.gif" alt="우대사항" onmouseover="mouseoverFunction(this)" onmouseout="mouseoutFunction(this)"/></span></a></li>
+	                    	
+	                    
+	                    
+	                    	
+	                    	
+	                    		<li group="U01" id="U0150"><a href="/usr/regulation.do" class="sub01_m5"><span><img src="/common/examHome/image/leftmenu/leftmenu_05.gif" alt="응시규정" onmouseover="mouseoverFunction(this)" onmouseout="mouseoutFunction(this)"/></span></a></li>
+	                    	
+	                    
+	                    
+	                    	
+	                    	
+	                    		<li group="U01" id="U0160"><a href="/usr/education.do" class="sub01_m6"><span><img src="/common/examHome/image/leftmenu/leftmenu_06.gif" alt="교육기관" onmouseover="mouseoverFunction(this)" onmouseout="mouseoutFunction(this)"/></span></a></li>
+	                    	
+	                    
+	                    
+	                    	
+	                    	
+	                    		<li group="U01" id="U0170"><a href="/usr/textbook.do" class="sub01_m7"><span><img src="/common/examHome/image/leftmenu/leftmenu_07.gif" alt="교재안내" onmouseover="mouseoverFunction(this)" onmouseout="mouseoutFunction(this)"/></span></a></li>
+	                    	
+	                    
+						<!-- li group="U01" id="U0180"><a href="/usr/direction.do" class="sub01_m2"><span>우대사항</span></a></li -->
+
+                   </ul>
+                   <span class="qna_all"><img src="/common/examHome/image/leftmenu/qna.gif" alt="문의 070-4412-3131 업무시간 평일 09:00~18:00 점심시간 평일 12:00~13:00 주말, 공휴일 휴무"/></span>
+                
+
+
+
+
+				
+
+				
+
+				
+				
+
+				
+
+				
+
+
+				
+
+				
+
+				
+
+
+				
+
+
+
+
+
+				
+			
+
+
+
+
+       </div>
+</div>
+
+
+
+	
+                	<link rel="stylesheet" type="text/css" href="/common/examHome/css/sub_contents01.css" />                	
+                    <div id="subContent">
+                        <h3 class="sub-title"><img src="/common/examHome/image/leftmenu/content2_name.gif" alt="시험일정"/></h3> 
+                        <div id="sub_tab">
+							<!--div class="first">
+								<p>국가공인 회계관리자격시험은 연 8회, 회계전문가자격시험은 연 2회 시행되고 있으며 연간일정은 매년 말 사이트를 통해 공지되고 있습니다.<br/>(2023년 기준) </p>							
+							</div><!-- first닫힘 -->
+							<div class="middle">
+								<p class="red_bold">2026년 국가공인 회계관리자격시험</p>								
+								<p class="2026_1"></p>
+								<!--<p class="red_bold">정기회차</p>-->
+								<div style="text-align:right;"><div style="display:inline-block; text-align:left;">* 접수시작 : 접수시작일 오전 10시<br>* 접수마감 : 접수마지막일 자정<br>* 합격자발표 : 발표일 오후 1시</div></div>
+								<table summary="국가공인 회계관리자격시험" class="middle_tal">
+									<caption>국가공인 회계관리자격시험</caption>
+									<colgroup>
+										<col width="5%"/>
+										<col width="5%"/>
+										<col width="25%"/>
+										<col width="25%"/>
+										<col width="20%"/>
+										<col width="20%"/>
+									</colgroup>
+									<thead>
+										<tr>
+											<th colspan="3">회차</th>
+											<th>원서접수</th>
+											<th>시험일</th>
+											<th>합격자발표</th>
+										</tr>
+									</thead>									
+									<tbody>
+										<tr bgcolor="#FFFFFF">
+											<td rowspan="8">2026</td>
+											<td>1</td>
+											<td align="classfy">
+											재경관리사 &nbsp;&nbsp;122회<br/>
+											회계관리1급 127회<br/>
+											회계관리2급 128회
+											</td>											
+											<td>2026. 01. 06 (화) ~ 01. 13 (화)</td>
+											<td>01. 31 (토)</td>
+											<td>02. 06 (금)</td>
+										</tr>
+										
+										<tr bgcolor="#FFFFFF">
+											<td>2</td>
+											<td>
+											재경관리사 &nbsp;&nbsp;123회<br/>
+											회계관리1급 128회<br/>
+											회계관리2급 129회
+											</td>
+											<td>2026. 02. 26 (목) ~ 03. 05 (목)</td>
+											<td>03. 28 (토)</td>
+											<td>04. 03 (금)</td>
+										</tr>
+										
+										<tr bgcolor="#FFFFFF">
+											<td>3</td>
+											<td>
+											재경관리사 &nbsp;&nbsp;124회<br/>
+											회계관리1급 129회<br/>
+											회계관리2급 130회
+											</td>
+											<td>2026. 04. 16 (목) ~ 04. 23 (목)</td>
+											<td>05. 16 (토)</td>
+											<td>05. 22 (금)</td>
+										</tr>
+										
+										<tr bgcolor="#FFFFFF">
+											<td>4</td>
+											<td>
+											재경관리사 &nbsp;&nbsp;125회<br/>
+											회계관리1급 130회<br/>
+											회계관리2급 131회
+											</td>
+											<td>2026. 05. 26 (화) ~ 06. 02 (화)</td>
+											<td>06. 20 (토)</td>
+											<td>06. 26 (금)</td>
+										</tr>
+										
+										<tr bgcolor="#FFFFFF">
+											<td>5</td>
+											<td>
+											재경관리사 &nbsp;&nbsp;126회<br/>
+											회계관리1급 131회<br/>
+											회계관리2급 132회
+											</td>
+											<td>2026. 06. 30 (화) ~ 07. 07 (화)</td>
+											<td>07. 25 (토)</td>
+											<td>07. 31 (금)</td>
+										</tr>
+										
+										<tr bgcolor="#FFFFFF">
+											<td>6</td>
+											<td>
+											재경관리사 &nbsp;&nbsp;127회<br/>
+											회계관리1급 132회<br/>
+											회계관리2급 133회
+											</td>
+											<td>2026. 08. 20 (목) ~ 08. 27 (목)</td>
+											<td>09. 19 (토)</td>
+											<td>09. 29 (화)</td>
+										</tr>
+
+										<tr bgcolor="#FFFFFF">
+											<td>7</td>
+											<td>
+											재경관리사 &nbsp;&nbsp;128회<br/>
+											회계관리1급 133회<br/>
+											회계관리2급 134회
+											</td>
+											<td>2026. 10. 15 (목) ~ 10. 22 (목)</td>
+											<td>11. 14 (토)</td>
+											<td>11. 20 (금)</td>
+										</tr>
+										
+										<tr bgcolor="#FFFFFF">
+											<td>8</td>
+											<td>
+											재경관리사 &nbsp;&nbsp;129회<br/>
+											회계관리1급 134회<br/>
+											회계관리2급 135회
+											</td>
+											<td>2026. 11. 24 (화) ~ 12. 01 (화)</td>
+											<td>12. 19 (토)</td>
+											<td>12. 24 (목)</td>
+										</tr>
+
+									</tbody>
+								</table>
+								<p class="2026_1"></p><br/>
+								
+								</div>
+								<br/>
+								<div class="middle_2">
+									<p class="red_bold">2026년 국제회계전문가 / 공공회계전문가</p>
+									<p class="2026_1"></p>
+									<table summary="국제/공공회계전문가 2025,2026년 일정"  class="middle_tal">
+										<caption>회계전문가 일정</caption>
+										<colgroup>
+											<col width="5%"/>
+											<col width="5%"/>
+											<col width="25%"/>
+											<col width="25%"/>
+											<col width="20%"/>
+											<col width="20%"/>
+										</colgroup>
+										<thead>
+											<tr>
+												<th colspan="3">회차</th>
+												<th>원서접수</th>
+												<th>시험일</th>
+												<th>합격자발표일</th>
+											</tr>
+										</thead>
+										<tbody>							
+											<tr  bgcolor="#FFFFFF">
+												<td rowspan="2">2026</td>
+												<td>1</td>
+												<td>30회</td>
+												<td>2026. 04. 16 (목) ~ 04. 23 (목)</td>
+												<td>05. 16 (토)</td>
+												<td>05. 22 (금)</td>
+											</tr>
+											<tr  bgcolor="#FFFFFF">
+												<td>2</td>
+												<td>31회</td>
+												<td>2026. 10. 15 (목) ~ 10. 22 (목)</td>
+												<td>11. 14 (토)</td>
+												<td>11. 20 (금)</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							
+							</div>
+                        </div>
+                    </div>
+                 
+                </div>
+ 
+</div>
+</div>
+
+<div id="footerWrap">
+     <div id="footer">
+
+            <div class="adr">
+
+               
+                 <div style="padding-bottom:5px;">
+                 	<ul class="footer_list">
+                   		<li><a href="/usr/guidepersionalinfomation.do"><p><img src="/common/examHome/image/common/footer_list_01.gif" alt="개인정보보호정책"/></p></a></li>
+                    	<li><a href="/usr/guideservice.do"><p><img src="/common/examHome/image/common/footer_list_02.gif" alt="이용약관"/></p></a></li>
+                    	<li><a href="/usr/emailextractionprevention.do"><p><img src="/common/examHome/image/common/footer_list_03.gif" alt="이메일수집거부"/></p></a></li>
+                    </ul>
+                    <select name="select" title="" onchange="window.open(value,'_blank');">
+                    	<option value="" style="color:#000000;" selected>관련사이트</option>
+						<!--<option value="http://www.samiledu.com" style="color:#004499;font-weight:bold;">삼일 이러닝센터</option>-->
+						<option value="http://www.samilacademy.com">삼일PwC아카데미</option>
+						<option value="http://www.samil.com">삼일회계법인</option>
+                    	<option value="http://www.samili.com">삼일PwC솔루션</option> 
+						<option value="http://www.accountingpeople.co.kr">취업포털사이트</option>                    	               	
+                    </select>
+                 </div>  
+                     
+	            <p class="address_copy"><img src="/common/examHome/image/bottom/address_copy.gif" alt="상호 : (유)삼일회계법인 |  사업자등록번호 : 106-81-19621  |  통신판매업 신고번호 : 제 용산 07108호
+				04386 서울시 용산구 한강대로92(한강로2가) LS용산타워 8층  | 대표 : 김영식   |  개인정보 책임관리자 : 홍사균
+				Copyright ⓒ 2015 (유)삼일회계법인. All Rights Reserved"/></p>
+          
+                <span class="under_info"><img src="/common/examHome/image/common/under_info.gif" alt="문의 070-4412-3131 평일 09:00~18:00 ( 점심 12:00~13:00 )주말, 공휴일 휴무"/></span>
+            </div>
+
+        </div> 
+    </div> 
+
+</body>
+</html>
+            
