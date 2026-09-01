@@ -1,4 +1,6 @@
 export type CertificationDeepDive = {
+  seoTitle: string;
+  seoDescription: string;
   examSubjects: Array<{ stage: string; subjects: string[] }>;
   examFormat: string;
   passRule: string;
@@ -15,6 +17,8 @@ const qnetArticleEligibility = "기사 등급 응시자격이 적용됩니다. �
 
 const deepDives: Record<string, CertificationDeepDive> = {
   "컴퓨터활용능력 1급": {
+    seoTitle: "컴활 1급 시험일정·합격기준·실기 준비법 (2026)",
+    seoDescription: "2026 컴퓨터활용능력 1급 필기·실기 시험일정, 과목별 합격기준, 응시료와 시험장 확인 방법, 8~12주 준비 순서를 한 번에 확인하세요.",
     examSubjects: [
       { stage: "필기", subjects: ["컴퓨터 일반", "스프레드시트 일반", "데이터베이스 일반"] },
       { stage: "실기", subjects: ["스프레드시트 실무", "데이터베이스 실무"] },
@@ -37,6 +41,8 @@ const deepDives: Record<string, CertificationDeepDive> = {
     verifiedAt: "2026-09-02",
   },
   "정보처리기사": {
+    seoTitle: "정보처리기사 시험일정·응시자격·합격기준 (2026)",
+    seoDescription: "2026 정보처리기사 필기·실기 시험일정과 응시자격, 과목별 과락 기준, 비전공자 준비 순서와 공식 출제기준을 정리했습니다.",
     examSubjects: [
       { stage: "필기", subjects: ["소프트웨어 설계", "소프트웨어 개발", "데이터베이스 구축", "프로그래밍 언어 활용", "정보시스템 구축관리"] },
       { stage: "실기", subjects: ["정보처리 실무"] },
@@ -59,6 +65,8 @@ const deepDives: Record<string, CertificationDeepDive> = {
     verifiedAt: "2026-09-02",
   },
   "전기기사": {
+    seoTitle: "전기기사 시험일정·응시자격·합격기준 (2026)",
+    seoDescription: "2026 전기기사 필기·실기 접수일과 시험일, 기사 응시자격, 과목별 합격기준과 전기설비 실기 준비 순서를 확인하세요.",
     examSubjects: [
       { stage: "필기", subjects: ["전기자기학", "전력공학", "전기기기", "회로이론 및 제어공학", "전기설비기술기준"] },
       { stage: "실기", subjects: ["전기설비설계 및 관리"] },
@@ -81,6 +89,8 @@ const deepDives: Record<string, CertificationDeepDive> = {
     verifiedAt: "2026-09-02",
   },
   "산업안전기사": {
+    seoTitle: "산업안전기사 시험일정·응시자격·실기 준비 (2026)",
+    seoDescription: "2026 산업안전기사 필기·실기 일정, 기사 응시자격과 과락 기준, 필답형·작업형 준비 순서 및 최신 공식정보를 정리했습니다.",
     examSubjects: [
       { stage: "필기", subjects: ["산업재해 예방 및 안전보건교육", "인간공학 및 위험성 평가·관리", "기계·기구 및 설비 안전관리", "전기설비 안전관리", "화학설비 안전관리", "건설공사 안전관리"] },
       { stage: "실기", subjects: ["산업안전관리 실무"] },
@@ -103,6 +113,8 @@ const deepDives: Record<string, CertificationDeepDive> = {
     verifiedAt: "2026-09-02",
   },
   "공인중개사": {
+    seoTitle: "공인중개사 시험일정·과목·합격기준 총정리 (2026)",
+    seoDescription: "2026 공인중개사 원서접수와 시험일정, 1·2차 시험과목, 과목별 과락·평균 합격기준, 동차 준비 순서를 확인하세요.",
     examSubjects: [
       { stage: "1차", subjects: ["부동산학개론", "민법 및 민사특별법 중 부동산 중개 관련 규정"] },
       { stage: "2차", subjects: ["공인중개사법령 및 중개실무", "부동산공법 중 부동산 중개 관련 규정", "부동산공시법 및 부동산세법"] },
@@ -125,6 +137,8 @@ const deepDives: Record<string, CertificationDeepDive> = {
     verifiedAt: "2026-09-02",
   },
   "한국사능력검정시험": {
+    seoTitle: "한국사능력검정시험 일정·접수·1급 합격점수 (2026)",
+    seoDescription: "2026 한국사능력검정시험 회차별 일정과 접수 정보, 심화 1·2·3급 합격점수, 시험 구성과 기출 중심 준비 순서를 정리했습니다.",
     examSubjects: [{ stage: "심화", subjects: ["한국사 전 범위: 선사 시대부터 현대까지"] }],
     examFormat: "심화 시험은 50문항으로 역사 자료의 해석, 시대 흐름과 주요 사건의 이해를 평가합니다. 회차별 시험 종류와 시간은 공식 응시요강을 확인하세요.",
     passRule: "심화 기준 80점 이상은 1급, 70점 이상은 2급, 60점 이상은 3급으로 인증됩니다.",
@@ -144,6 +158,8 @@ const deepDives: Record<string, CertificationDeepDive> = {
     verifiedAt: "2026-09-02",
   },
   "SQLD": {
+    seoTitle: "SQLD 시험일정·과목·합격기준과 준비법 (2026)",
+    seoDescription: "2026 SQLD 시험일정과 접수, 데이터 모델링·SQL 과목 구성, 과락과 합격점수, 비전공자 4~8주 준비 순서를 확인하세요.",
     examSubjects: [{ stage: "필기", subjects: ["데이터 모델링의 이해", "SQL 기본 및 활용"] }],
     examFormat: "객관식 50문항을 90분 동안 치르는 필기시험입니다. 과목별 문항 비중은 공식 출제기준에서 확인하세요.",
     passRule: "총점 60점 이상이면서 각 과목에서 40% 이상 득점해야 합니다.",
@@ -163,6 +179,8 @@ const deepDives: Record<string, CertificationDeepDive> = {
     verifiedAt: "2026-09-02",
   },
   "ADsP": {
+    seoTitle: "ADsP 시험일정·과목·합격기준과 준비법 (2026)",
+    seoDescription: "2026 ADsP 시험일정과 접수, 세 과목 구성과 과락·합격점수, 비전공자 공부 순서 및 SQLD와의 차이를 정리했습니다.",
     examSubjects: [{ stage: "필기", subjects: ["데이터 이해", "데이터분석 기획", "데이터분석"] }],
     examFormat: "세 과목, 총 50문항을 90분 동안 치르는 객관식 필기시험입니다.",
     passRule: "총점 60점 이상이면서 각 과목에서 40% 이상 득점해야 합니다.",
@@ -182,6 +200,8 @@ const deepDives: Record<string, CertificationDeepDive> = {
     verifiedAt: "2026-09-02",
   },
   "소방설비기사(전기분야)": {
+    seoTitle: "소방설비기사 전기 시험일정·응시자격 (2026)",
+    seoDescription: "2026 소방설비기사 전기분야 필기·실기 일정, 기사 응시자격과 합격기준, 소방전기시설 필답형 준비 순서를 확인하세요.",
     examSubjects: [
       { stage: "필기", subjects: ["소방원론", "소방전기일반", "소방관계법규", "소방전기시설의 구조 및 원리"] },
       { stage: "실기", subjects: ["소방전기시설 설계 및 시공실무"] },
@@ -204,6 +224,8 @@ const deepDives: Record<string, CertificationDeepDive> = {
     verifiedAt: "2026-09-02",
   },
   "직업상담사2급": {
+    seoTitle: "직업상담사 2급 시험일정·과목·합격기준 (2026)",
+    seoDescription: "2026 직업상담사 2급 필기·실기 일정, 응시자격과 과목별 과락 기준, 필답형 실기 공부 순서와 공식정보를 정리했습니다.",
     examSubjects: [
       { stage: "필기", subjects: ["직업심리", "직업상담 및 취업지원", "직업정보", "노동시장", "고용노동관계법규(Ⅰ)"] },
       { stage: "실기", subjects: ["직업상담 실무"] },
