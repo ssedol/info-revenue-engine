@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { absoluteUrl, buildMetadata } from "./metadata";
-import { itemListJsonLd } from "./structured-data";
+import { faqJsonLd, itemListJsonLd } from "./structured-data";
 
 describe("seo helpers", () => {
   it("builds canonical absolute URLs", () => {
@@ -13,5 +13,17 @@ describe("seo helpers", () => {
 
     expect(value["@type"]).toBe("ItemList");
     expect(value.itemListElement).toHaveLength(1);
+  });
+
+  it("creates FAQ structured data from visible questions", () => {
+    const value = faqJsonLd([{ question: "합격 기준은?", answer: "공식 기준을 확인하세요." }]);
+    expect(value["@type"]).toBe("FAQPage");
+    expect(value.mainEntity).toEqual([
+      {
+        "@type": "Question",
+        name: "합격 기준은?",
+        acceptedAnswer: { "@type": "Answer", text: "공식 기준을 확인하세요." },
+      },
+    ]);
   });
 });
