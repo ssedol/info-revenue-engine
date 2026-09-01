@@ -12,9 +12,9 @@ function isoDate(value: string): string {
 }
 
 function monthDay(year: string, value: string): string {
-  const match = value.match(/(\d{1,2})\.(\d{1,2})/);
+  const match = value.match(/(?:(20\d{2})\s*\.\s*)?(\d{1,2})\s*\.\s*(\d{1,2})/);
   if (!match) throw new Error(`날짜 형식을 해석할 수 없습니다: ${value}`);
-  return `${year}-${match[1].padStart(2, "0")}-${match[2].padStart(2, "0")}`;
+  return `${match[1] ?? year}-${match[2].padStart(2, "0")}-${match[3].padStart(2, "0")}`;
 }
 
 function monthDayRange(year: string, value: string): [string, string] {
@@ -256,6 +256,85 @@ export function normalizeComputerLiteracyLevel1Html(
       { label: "실기", amount: practicalFee, currency: "KRW", source },
     ],
     eligibility: "제한 없음(실기시험은 필기 합격 후 2년 이내 응시 가능)",
+    passRate: [],
+    source,
+    updatedAt: fetchedAt,
+  };
+}
+
+export function normalizeFinancialManagerHtml(
+  scheduleHtml: string,
+  guideHtml: string,
+  fetchedAt: string,
+  scheduleUrl: string,
+): Certification {
+  const $ = load(scheduleHtml);
+  const headingText = pageText(scheduleHtml);
+  const year = headingText.match(/(20\d{2})년\s*국가공인 회계관리자격시험/)?.[1];
+  if (!year) throw new Error("재경관리사 공식 일정 연도를 찾지 못했습니다.");
+
+  const source = {
+    provider: "삼일회계법인",
+    endpoint: scheduleUrl,
+    officialPage: "https://www.samilexam.com/usr/greeting.do",
+    fetchedAt,
+  };
+  const schedules: ExamSchedule[] = [];
+
+  $("table").each((_, table) => {
+    const caption = $(table).find("caption").text().replace(/\s+/g, " ").trim();
+    if (caption !== "국가공인 회계관리자격시험") return;
+
+    $(table).find("tbody tr").each((__, row) => {
+      const cells = $(row).find("td").map((___, cell) => $(cell).text().replace(/\s+/g, " ").trim()).get();
+      const values = cells[0] === year ? cells.slice(1) : cells;
+      if (values.length < 5) return;
+      const roundNumber = values[1].match(/재경관리사\s*(\d+)회/)?.[1];
+      if (!roundNumber) return;
+      const application = monthDayRange(year, values[2]);
+      schedules.push({
+        round: `${year}년 제${roundNumber}회`,
+        examName: `재경관리사 제${roundNumber}회`,
+        applicationStart: application[0],
+        applicationEnd: application[1],
+        examStart: monthDay(year, values[3]),
+        resultDate: monthDay(year, values[4]),
+        source,
+      });
+    });
+  });
+
+  if (schedules.length === 0) throw new Error("재경관리사 공식 시험일정을 찾지 못했습니다.");
+
+  const guideText = pageText(guideHtml);
+  const requiredGuideText = [
+    "재경관리사",
+    "연령, 학력, 경력 제한 없음",
+    "응시료 70,000원",
+    "재무회계, 세무회계, 원가관리회계",
+    "과목별 40문항",
+    "과목별 70점",
+  ];
+  const missing = requiredGuideText.filter((value) => !guideText.includes(value));
+  if (missing.length > 0) {
+    throw new Error(`재경관리사 공식 안내의 필수 정보를 찾지 못했습니다: ${missing.join(", ")}`);
+  }
+
+  return {
+    id: "samil-financial-manager",
+    slug: "financial-manager",
+    name: "재경관리사",
+    officialName: "국가공인 재경관리사",
+    category: "회계·세무",
+    level: "국가공인 민간자격",
+    issuer: "삼일회계법인",
+    officialUrl: "https://www.samilexam.com/usr/greeting.do",
+    applicationUrl: "https://www.samilexam.com/usr/login.do",
+    description:
+      "재무회계·세무회계·원가관리회계 지식과 실무능력을 평가합니다. 세 과목을 150분 동안 객관식으로 치르며, 전 과목에서 과목별 70점 이상을 받아야 합격합니다.",
+    schedules,
+    fees: [{ label: "응시", amount: 70000, currency: "KRW", source }],
+    eligibility: "연령, 학력, 경력 제한 없음",
     passRate: [],
     source,
     updatedAt: fetchedAt,

@@ -10,6 +10,7 @@ import {
   normalizeDataqHtml,
   normalizeKoreanHistoryHtml,
   normalizeRealtorHtml,
+  normalizeFinancialManagerHtml,
 } from "./normalize-external-certifications";
 
 type RawMetadata = {
@@ -195,6 +196,26 @@ async function normalize(): Promise<void> {
         realtorHtml,
         metadata.fetchedAt,
         "https://www.q-net.or.kr/man001.do?gSite=L&gId=08",
+      ),
+    );
+  } catch (error) {
+    if (metadata.mode !== "fixture") throw error;
+  }
+  try {
+    const scheduleHtml = await readFile(
+      join(rawDirectory, "external-samil-financial-manager-schedule.raw.html"),
+      "utf8",
+    );
+    const guideHtml = await readFile(
+      join(rawDirectory, "external-samil-financial-manager-guide.raw.html"),
+      "utf8",
+    );
+    certifications.push(
+      normalizeFinancialManagerHtml(
+        scheduleHtml,
+        guideHtml,
+        metadata.fetchedAt,
+        "https://www.samilexam.com/usr/groupguide.do",
       ),
     );
   } catch (error) {

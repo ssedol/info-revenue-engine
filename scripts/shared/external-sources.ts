@@ -1,5 +1,11 @@
 export type ExternalSource = {
-  id: "korean-history" | "dataq" | "realtor" | "korcham-computer-level-1";
+  id:
+    | "korean-history"
+    | "dataq"
+    | "realtor"
+    | "korcham-computer-level-1"
+    | "samil-financial-manager-schedule"
+    | "samil-financial-manager-guide";
   provider: string;
   certificationNames: string[];
   url: string;
@@ -34,6 +40,20 @@ export const externalSources: ExternalSource[] = [
     certificationNames: ["컴퓨터활용능력 1급"],
     url: "https://license.korcham.net/co/examguide.do?cd=0103&mm=21",
     requiredText: ["컴퓨터활용능력", "응시자격", "시험과목", "수험료"],
+  },
+  {
+    id: "samil-financial-manager-schedule",
+    provider: "삼일회계법인",
+    certificationNames: ["재경관리사"],
+    url: "https://www.samilexam.com/usr/groupguide.do",
+    requiredText: ["국가공인 회계관리자격시험", "재경관리사", "원서접수", "합격자발표"],
+  },
+  {
+    id: "samil-financial-manager-guide",
+    provider: "삼일회계법인",
+    certificationNames: [],
+    url: "https://www.samilexam.com/usr/greeting.do",
+    requiredText: ["재경관리사", "응시자격", "총비용", "합격기준", "재무회계", "세무회계", "원가관리회계"],
   },
 ];
 

@@ -1,4 +1,4 @@
-export type CertificationProvider = "qnet" | "history" | "dataq" | "korcham";
+export type CertificationProvider = "qnet" | "history" | "dataq" | "korcham" | "samil";
 
 export type PopularCertification = {
   name: string;
@@ -56,6 +56,11 @@ export const popularCertifications: PopularCertification[] = [
     name: "컴퓨터활용능력 1급",
     provider: "korcham",
     officialUrl: "https://license.korcham.net/co/examguide.do?cd=0103&mm=21",
+  },
+  {
+    name: "재경관리사",
+    provider: "samil",
+    officialUrl: "https://www.samilexam.com/usr/greeting.do",
   },
 ];
 

@@ -1,9 +1,12 @@
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import {
   normalizeComputerLiteracyLevel1Html,
   normalizeDataqHtml,
   normalizeKoreanHistoryHtml,
   normalizeRealtorHtml,
+  normalizeFinancialManagerHtml,
 } from "./normalize-external-certifications";
 
 describe("normalize external certifications", () => {
@@ -77,5 +80,57 @@ describe("normalize external certifications", () => {
         { label: "실기", amount: 25000 },
       ],
     });
+  });
+
+  it("normalizes the Samil financial manager schedule and guide", () => {
+    const scheduleHtml = readFileSync(
+      join(process.cwd(), "scripts/fixtures/certifications/samil-financial-manager-schedule.fixture.html"),
+      "utf8",
+    );
+    const guideHtml = readFileSync(
+      join(process.cwd(), "scripts/fixtures/certifications/samil-financial-manager-guide.fixture.html"),
+      "utf8",
+    );
+    const certification = normalizeFinancialManagerHtml(
+      scheduleHtml,
+      guideHtml,
+      "2026-09-01T00:00:00.000Z",
+      "https://www.samilexam.com/usr/groupguide.do",
+    );
+
+    expect(certification).toMatchObject({
+      slug: "financial-manager",
+      name: "재경관리사",
+      issuer: "삼일회계법인",
+      eligibility: "연령, 학력, 경력 제한 없음",
+      fees: [{ label: "응시", amount: 70000 }],
+      schedules: [
+        {
+          round: "2026년 제122회",
+          applicationStart: "2026-01-06",
+          applicationEnd: "2026-01-13",
+          examStart: "2026-01-31",
+          resultDate: "2026-02-06",
+        },
+        {
+          round: "2026년 제123회",
+          applicationStart: "2026-02-26",
+          applicationEnd: "2026-03-05",
+          examStart: "2026-03-28",
+          resultDate: "2026-04-03",
+        },
+      ],
+    });
+  });
+
+  it("fails when the financial manager official schedule changes unexpectedly", () => {
+    expect(() =>
+      normalizeFinancialManagerHtml(
+        "<html><h1>2026년 국가공인 회계관리자격시험</h1></html>",
+        "<html>재경관리사</html>",
+        "2026-09-01T00:00:00.000Z",
+        "https://www.samilexam.com/usr/groupguide.do",
+      ),
+    ).toThrow("재경관리사 공식 시험일정을 찾지 못했습니다");
   });
 });

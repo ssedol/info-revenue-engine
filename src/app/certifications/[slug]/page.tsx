@@ -35,6 +35,9 @@ export default async function CertificationDetailPage({ params }: CertificationP
   const certification = getCertificationBySlug(slug);
   if (!certification) notFound();
   const providerName = certification.source.provider;
+  const hasPracticalSchedule = certification.schedules.some((schedule) =>
+    Boolean(schedule.practicalApplicationStart || schedule.practicalExamStart),
+  );
 
   return (
     <>
@@ -61,11 +64,11 @@ export default async function CertificationDetailPage({ params }: CertificationP
               <thead>
                 <tr>
                   <th scope="col">회차</th>
-                  <th scope="col">필기 접수</th>
-                  <th scope="col">필기시험</th>
-                  <th scope="col">실기 접수</th>
-                  <th scope="col">실기시험</th>
-                  <th scope="col">최종 발표</th>
+                  <th scope="col">{hasPracticalSchedule ? "필기 접수" : "원서접수"}</th>
+                  <th scope="col">{hasPracticalSchedule ? "필기시험" : "시험일"}</th>
+                  {hasPracticalSchedule && <th scope="col">실기 접수</th>}
+                  {hasPracticalSchedule && <th scope="col">실기시험</th>}
+                  <th scope="col">합격자 발표</th>
                 </tr>
               </thead>
               <tbody>
@@ -74,9 +77,9 @@ export default async function CertificationDetailPage({ params }: CertificationP
                     <th scope="row">{schedule.examName ?? schedule.round}</th>
                     <td>{formatDate(schedule.applicationStart)} ~ {formatDate(schedule.applicationEnd)}</td>
                     <td>{formatDate(schedule.examStart)}</td>
-                    <td>{formatDate(schedule.practicalApplicationStart)} ~ {formatDate(schedule.practicalApplicationEnd)}</td>
-                    <td>{formatDate(schedule.practicalExamStart)} ~ {formatDate(schedule.practicalExamEnd)}</td>
-                    <td>{formatDate(schedule.practicalResultDate)}</td>
+                    {hasPracticalSchedule && <td>{formatDate(schedule.practicalApplicationStart)} ~ {formatDate(schedule.practicalApplicationEnd)}</td>}
+                    {hasPracticalSchedule && <td>{formatDate(schedule.practicalExamStart)} ~ {formatDate(schedule.practicalExamEnd)}</td>}
+                    <td>{formatDate(schedule.practicalResultDate ?? schedule.resultDate)}</td>
                   </tr>
                 ))}
               </tbody>
