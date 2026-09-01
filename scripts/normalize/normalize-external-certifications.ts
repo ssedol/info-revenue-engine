@@ -1,5 +1,9 @@
 import { load } from "cheerio";
-import type { Certification, ExamSchedule } from "../../src/sites/certifications/types";
+import type {
+  Certification,
+  ExamSchedule,
+  RegionalScheduleNotice,
+} from "../../src/sites/certifications/types";
 
 function pageText(html: string): string {
   const $ = load(html);
@@ -260,6 +264,36 @@ export function normalizeComputerLiteracyLevel1Html(
     source,
     updatedAt: fetchedAt,
   };
+}
+
+export function normalizeKorchamRegionalNoticesHtml(
+  html: string,
+  fetchedAt: string,
+  sourceUrl: string,
+): RegionalScheduleNotice[] {
+  const $ = load(html);
+  const source = {
+    provider: "대한상공회의소",
+    endpoint: sourceUrl,
+    officialPage: sourceUrl,
+    fetchedAt,
+  };
+  const notices: RegionalScheduleNotice[] = [];
+
+  $("table tbody tr").each((_, row) => {
+    const cells = $(row)
+      .find("td")
+      .map((__, cell) => $(cell).text().replace(/\s+/g, " ").trim())
+      .get();
+    if (cells.length < 3 || !cells[0] || !cells[1] || !cells[2]) return;
+    notices.push({ region: cells[0], chamber: cells[1], notice: cells[2], source });
+  });
+
+  if (notices.length === 0) {
+    throw new Error("대한상공회의소 지역별 시험 개설 공지를 찾지 못했습니다.");
+  }
+
+  return notices;
 }
 
 export function normalizeFinancialManagerHtml(

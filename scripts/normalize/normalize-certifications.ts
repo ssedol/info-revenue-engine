@@ -1,14 +1,20 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
-import type { Certification, ExamSchedule } from "../../src/sites/certifications/types";
+import { z } from "zod";
+import {
+  manualVenueScheduleSchema,
+  type Certification,
+  type ExamSchedule,
+} from "../../src/sites/certifications/types";
 import { isCliEntry } from "../shared/cli";
-import { findLatestRawDirectory, normalizedRoot } from "../shared/paths";
+import { findLatestRawDirectory, manualRoot, normalizedRoot } from "../shared/paths";
 import { qnetQualificationListEndpoint, qnetScheduleOperations, qnetTestInformationEndpoint } from "../shared/qnet-api";
 import { asArray, asRecord, parseXml, readText } from "../shared/xml";
 import {
   normalizeComputerLiteracyLevel1Html,
   normalizeDataqHtml,
   normalizeKoreanHistoryHtml,
+  normalizeKorchamRegionalNoticesHtml,
   normalizeRealtorHtml,
   normalizeFinancialManagerHtml,
 } from "./normalize-external-certifications";
@@ -226,13 +232,31 @@ async function normalize(): Promise<void> {
       join(rawDirectory, "external-korcham-computer-level-1.raw.html"),
       "utf8",
     );
-    certifications.push(
-      normalizeComputerLiteracyLevel1Html(
-        korchamHtml,
-        metadata.fetchedAt,
-        "https://license.korcham.net/co/examguide.do?cd=0103&mm=21",
+    const computerLiteracy = normalizeComputerLiteracyLevel1Html(
+      korchamHtml,
+      metadata.fetchedAt,
+      "https://license.korcham.net/co/examguide.do?cd=0103&mm=21",
+    );
+    const regionalNoticesHtml = await readFile(
+      join(rawDirectory, "external-korcham-regional-schedule-notices.raw.html"),
+      "utf8",
+    );
+    computerLiteracy.regionalScheduleNotices = normalizeKorchamRegionalNoticesHtml(
+      regionalNoticesHtml,
+      metadata.fetchedAt,
+      "https://license.korcham.net/customer/sangwiGuide.do",
+    );
+    const manualFileSchema = z.object({ schedules: z.array(manualVenueScheduleSchema) });
+    const manualFile = manualFileSchema.parse(
+      JSON.parse(
+        await readFile(
+          join(manualRoot, "korcham-computer-level-1-schedules.json"),
+          "utf8",
+        ),
       ),
     );
+    computerLiteracy.manualVenueSchedules = manualFile.schedules;
+    certifications.push(computerLiteracy);
   } catch (error) {
     if (metadata.mode !== "fixture") throw error;
   }

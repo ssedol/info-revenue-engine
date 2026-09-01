@@ -93,6 +93,52 @@ export default async function CertificationDetailPage({ params }: CertificationP
         )}
       </section>
 
+      {certification.slug === "computer-literacy-level-1" && (
+        <section className="section" aria-labelledby="regional-schedule-title">
+          <h2 id="regional-schedule-title">지역·시험장별 상시검정 안내</h2>
+          <p className="schedule-notice">
+            대한상공회의소 공식 지역별 개설 공지와 직접 확인한 시험장 일정을 함께 제공합니다.
+            잔여석은 수시로 바뀌므로 원서접수 전 공식 시험장 조회에서 다시 확인하세요.
+          </p>
+
+          <h3>직접 확인한 시험장 일정 <span className="schedule-source-badge manual">수동 검증</span></h3>
+          {(certification.manualVenueSchedules?.length ?? 0) > 0 ? (
+            <div className="schedule-table-wrap">
+              <table className="schedule-table">
+                <thead><tr><th scope="col">지역</th><th scope="col">시험장</th><th scope="col">구분</th><th scope="col">시험일시</th><th scope="col">확인일</th></tr></thead>
+                <tbody>
+                  {certification.manualVenueSchedules?.map((schedule) => (
+                    <tr key={`${schedule.venue}-${schedule.examType}-${schedule.examDate}-${schedule.startTime ?? ""}`}>
+                      <td>{schedule.region} · {schedule.chamber}</td>
+                      <th scope="row"><a href={schedule.officialUrl} target="_blank" rel="noreferrer">{schedule.venue}</a></th>
+                      <td>{schedule.examType}</td>
+                      <td>{formatDate(schedule.examDate)} {schedule.startTime ?? ""}{schedule.note ? ` · ${schedule.note}` : ""}</td>
+                      <td>{formatDate(schedule.verifiedAt)}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          ) : (
+            <div className="search-empty"><p>현재 직접 확인해 등록한 시험장 일정은 없습니다.</p></div>
+          )}
+
+          <details className="regional-notice-details">
+            <summary>전국 상공회의소 개설 공지 보기 <span className="schedule-source-badge">공식 자동수집</span></summary>
+            <div className="regional-notice-list">
+              {certification.regionalScheduleNotices?.map((notice) => (
+                <article key={`${notice.region}-${notice.chamber}`}>
+                  <h3>{notice.region} · {notice.chamber}상공회의소</h3>
+                  <p>{notice.notice}</p>
+                </article>
+              ))}
+            </div>
+          </details>
+
+          <p><a href="https://license.korcham.net/ex/dailyExamPlaceConf.do" target="_blank" rel="noreferrer">공식 시험장별 날짜·시간·잔여석 확인</a></p>
+        </section>
+      )}
+
       <section className="section" aria-labelledby="basic-info-title">
         <h2 id="basic-info-title">기본정보</h2>
         <dl className="meta-list">

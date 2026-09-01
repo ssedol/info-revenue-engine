@@ -5,6 +5,7 @@ import {
   normalizeComputerLiteracyLevel1Html,
   normalizeDataqHtml,
   normalizeKoreanHistoryHtml,
+  normalizeKorchamRegionalNoticesHtml,
   normalizeRealtorHtml,
   normalizeFinancialManagerHtml,
 } from "./normalize-external-certifications";
@@ -80,6 +81,33 @@ describe("normalize external certifications", () => {
         { label: "실기", amount: 25000 },
       ],
     });
+  });
+
+  it("normalizes Korcham regional schedule opening notices", () => {
+    const html = readFileSync(
+      join(process.cwd(), "scripts/fixtures/certifications/korcham-regional-schedule-notices.fixture.html"),
+      "utf8",
+    );
+    const notices = normalizeKorchamRegionalNoticesHtml(
+      html,
+      "2026-09-01T00:00:00.000Z",
+      "https://license.korcham.net/customer/sangwiGuide.do",
+    );
+
+    expect(notices).toMatchObject([
+      { region: "특별광역시", chamber: "대구", notice: expect.stringContaining("매주 월요일") },
+      { region: "경기도", chamber: "고양", notice: expect.stringContaining("10월 상시검정") },
+    ]);
+  });
+
+  it("fails when Korcham regional notices disappear", () => {
+    expect(() =>
+      normalizeKorchamRegionalNoticesHtml(
+        "<html><h1>전국상의별 공지안내</h1></html>",
+        "2026-09-01T00:00:00.000Z",
+        "https://license.korcham.net/customer/sangwiGuide.do",
+      ),
+    ).toThrow("지역별 시험 개설 공지를 찾지 못했습니다");
   });
 
   it("normalizes the Samil financial manager schedule and guide", () => {
