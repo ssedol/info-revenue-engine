@@ -296,6 +296,106 @@ export function normalizeKorchamRegionalNoticesHtml(
   return notices;
 }
 
+function qnetDateRange(value: string): [string, string] {
+  const dates = value.match(/20\d{2}\.\d{2}\.\d{2}/g);
+  if (!dates || dates.length < 2) throw new Error(`Q-Net 기간을 해석할 수 없습니다: ${value}`);
+  return [isoDate(dates[0]), isoDate(dates[1])];
+}
+
+export function normalizeSocialWorkerLevel1Html(
+  mainHtml: string,
+  infoHtml: string,
+  fetchedAt: string,
+  sourceUrl: string,
+): Certification {
+  const $ = load(mainHtml);
+  const source = {
+    provider: "Q-Net",
+    endpoint: sourceUrl,
+    officialPage: "https://www.q-net.or.kr/site/welfare",
+    fetchedAt,
+  };
+  const schedules: ExamSchedule[] = [];
+
+  $(".contTab").each((index, tab) => {
+    const roundLabel = $(".mTab li").eq(index).text().replace(/\s+/g, " ").trim();
+    const roundNumber = roundLabel.match(/(\d+)회/)?.[1];
+    const labeledDate = (label: string): string | undefined => {
+      let result: string | undefined;
+      $(tab).find(".cont").each((_, cont) => {
+        if ($(cont).find(".cont_tit").text().replace(/\s+/g, " ").trim() === label) {
+          result = $(cont).find(".date").text().replace(/\s+/g, " ").trim();
+        }
+      });
+      return result;
+    };
+    const applicationValue = labeledDate("접수기간");
+    const examValue = labeledDate("시험일정");
+    const resultValue = labeledDate("합격자발표기간");
+    if (!roundNumber || !applicationValue || !examValue || !resultValue) return;
+    const application = qnetDateRange(applicationValue);
+    const exam = qnetDateRange(examValue);
+    const result = qnetDateRange(resultValue);
+    const year = exam[0].slice(0, 4);
+    schedules.push({
+      round: `${year}년 제${roundNumber}회`,
+      examName: `${year}년 제${roundNumber}회 사회복지사 1급`,
+      applicationStart: application[0],
+      applicationEnd: application[1],
+      examStart: exam[0],
+      examEnd: exam[1],
+      resultDate: result[0],
+      source,
+    });
+  });
+
+  if (schedules.length === 0) {
+    throw new Error("사회복지사 1급 공식 시험일정을 찾지 못했습니다.");
+  }
+
+  const infoPage = load(infoHtml);
+  const embeddedInfo = infoPage("textarea")
+    .map((_, textarea) => load(infoPage(textarea).text()).root().text())
+    .get()
+    .join(" ");
+  const infoText = `${pageText(infoHtml)} ${embeddedInfo}`;
+  const compactInfoText = infoText.replace(/\s+/g, "");
+  const requiredInfo = [
+    "사회복지사1급",
+    "응시자격",
+    "사회복지사2급",
+    "합격기준",
+    "매과목4할이상",
+    "전과목총점의6할이상",
+    "25,000원",
+  ];
+  const missing = requiredInfo.filter((value) => !compactInfoText.includes(value));
+  if (missing.length > 0) {
+    throw new Error(`사회복지사 1급 공식 안내의 필수 정보를 찾지 못했습니다: ${missing.join(", ")}`);
+  }
+
+  return {
+    id: "qnet-social-worker-level-1",
+    slug: "social-worker-level-1",
+    name: "사회복지사 1급",
+    officialName: "사회복지사 1급",
+    category: "사회복지",
+    level: "국가전문자격",
+    issuer: "한국산업인력공단",
+    officialUrl: "https://www.q-net.or.kr/crf005.do?gId=52&gSite=L&id=crf00503",
+    applicationUrl: "https://www.q-net.or.kr/rcv002.do?id=rcv00202&gSite=L&gId=52",
+    description:
+      "사회복지기초, 사회복지실천, 사회복지정책과 제도의 3과목 8영역을 평가합니다. 매 과목 40% 이상이면서 전 과목 총점 60% 이상을 득점한 뒤 응시자격 서류심사를 통과해야 최종 합격합니다.",
+    schedules,
+    fees: [{ label: "필기", amount: 25000, currency: "KRW", source }],
+    eligibility:
+      "사회복지학·사회사업학 학위 및 지정 교과목 이수 등 법정 요건 충족자, 또는 사회복지사 2급 취득 후 필요한 사회복지사업 실무경력을 갖춘 자(세부 요건은 공식 안내 확인)",
+    passRate: [],
+    source,
+    updatedAt: fetchedAt,
+  };
+}
+
 export function normalizeFinancialManagerHtml(
   scheduleHtml: string,
   guideHtml: string,
