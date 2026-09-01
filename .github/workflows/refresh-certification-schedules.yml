@@ -63,9 +63,10 @@ jobs:
           git push
           echo "changed=true" >> "$GITHUB_OUTPUT"
       - name: Notify Google discovery and Naver IndexNow
-        if: steps.data_commit.outputs.changed == 'true' || inputs.notify_all == true
+        if: steps.data_commit.outputs.changed == 'true' || inputs.notify_all == true || github.event_name == 'push'
         run: |
-          if [[ "${{ inputs.notify_all }}" == "true" ]]; then
+          if [[ "${{ inputs.notify_all }}" == "true" ]] || \
+             git diff-tree --no-commit-id --name-only -r "$GITHUB_SHA" | grep -q '^public/7f83157c808f500dec593857dc39b8fe.txt$'; then
             npm run search:notify -- --all
           else
             npm run search:notify -- --base-ref HEAD^
