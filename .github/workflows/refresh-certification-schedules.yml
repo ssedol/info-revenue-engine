@@ -66,7 +66,8 @@ jobs:
         if: steps.data_commit.outputs.changed == 'true' || inputs.notify_all == true || github.event_name == 'push'
         run: |
           if [[ "${{ inputs.notify_all }}" == "true" ]] || \
-             git diff-tree --no-commit-id --name-only -r "$GITHUB_SHA" | grep -q '^public/7f83157c808f500dec593857dc39b8fe.txt$'; then
+             git diff-tree --no-commit-id --name-only -r "$GITHUB_SHA" | \
+               grep -Eq '^(public/7f83157c808f500dec593857dc39b8fe.txt|.github/workflows/refresh-certification-schedules.yml)$'; then
             npm run search:notify -- --all
           else
             npm run search:notify -- --base-ref HEAD^
