@@ -7,6 +7,7 @@ import {
   normalizeKoreanHistoryHtml,
   normalizeKorchamRegionalNoticesHtml,
   normalizeRealtorHtml,
+  normalizeSocialWorkerLevel1Html,
   normalizeFinancialManagerHtml,
 } from "./normalize-external-certifications";
 
@@ -108,6 +109,48 @@ describe("normalize external certifications", () => {
         "https://license.korcham.net/customer/sangwiGuide.do",
       ),
     ).toThrow("지역별 시험 개설 공지를 찾지 못했습니다");
+  });
+
+  it("normalizes the Q-Net Social Worker Level 1 schedule and official information", () => {
+    const mainHtml = readFileSync(
+      join(process.cwd(), "scripts/fixtures/certifications/qnet-social-worker-level-1-main.fixture.html"),
+      "utf8",
+    );
+    const infoHtml = readFileSync(
+      join(process.cwd(), "scripts/fixtures/certifications/qnet-social-worker-level-1-info.fixture.html"),
+      "utf8",
+    );
+    const certification = normalizeSocialWorkerLevel1Html(
+      mainHtml,
+      infoHtml,
+      "2026-09-01T00:00:00.000Z",
+      "https://www.q-net.or.kr/man001.do?gSite=L&gId=52",
+    );
+
+    expect(certification).toMatchObject({
+      slug: "social-worker-level-1",
+      name: "사회복지사 1급",
+      issuer: "한국산업인력공단",
+      fees: [{ label: "필기", amount: 25000 }],
+      schedules: [{
+        round: "2026년 제24회",
+        applicationStart: "2025-12-08",
+        applicationEnd: "2025-12-12",
+        examStart: "2026-01-17",
+        resultDate: "2026-03-25",
+      }],
+    });
+  });
+
+  it("fails when the Social Worker Level 1 schedule changes unexpectedly", () => {
+    expect(() =>
+      normalizeSocialWorkerLevel1Html(
+        "<html><h1>사회복지사 1급</h1></html>",
+        "<html><h1>사회복지사 1급</h1></html>",
+        "2026-09-01T00:00:00.000Z",
+        "https://www.q-net.or.kr/man001.do?gSite=L&gId=52",
+      ),
+    ).toThrow("공식 시험일정을 찾지 못했습니다");
   });
 
   it("normalizes the Samil financial manager schedule and guide", () => {

@@ -6,7 +6,9 @@ export type ExternalSource = {
     | "korcham-computer-level-1"
     | "korcham-regional-schedule-notices"
     | "samil-financial-manager-schedule"
-    | "samil-financial-manager-guide";
+    | "samil-financial-manager-guide"
+    | "qnet-social-worker-level-1-main"
+    | "qnet-social-worker-level-1-info";
   provider: string;
   certificationNames: string[];
   url: string;
@@ -62,6 +64,20 @@ export const externalSources: ExternalSource[] = [
     certificationNames: [],
     url: "https://www.samilexam.com/usr/greeting.do",
     requiredText: ["재경관리사", "응시자격", "총비용", "합격기준", "재무회계", "세무회계", "원가관리회계"],
+  },
+  {
+    id: "qnet-social-worker-level-1-main",
+    provider: "Q-Net",
+    certificationNames: ["사회복지사 1급"],
+    url: "https://www.q-net.or.kr/man001.do?gSite=L&gId=52",
+    requiredText: ["사회복지사 1급", "시험일정 안내", "접수기간", "합격자발표"],
+  },
+  {
+    id: "qnet-social-worker-level-1-info",
+    provider: "Q-Net",
+    certificationNames: [],
+    url: "https://www.q-net.or.kr/crf005.do?id=crf00503s02&gSite=L&gId=52&jmCd=9738&jmInfoDivCcd=B0&jmNm=%EC%82%AC%ED%9A%8C%EB%B3%B5%EC%A7%80%EC%82%AC%201%EA%B8%89&seriesCd=52",
+    requiredText: ["사회복지사 1급", "응시자격", "합격기준", "응시수수료", "25,000원"],
   },
 ];
 

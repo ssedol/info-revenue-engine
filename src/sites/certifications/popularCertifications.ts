@@ -1,4 +1,10 @@
-export type CertificationProvider = "qnet" | "history" | "dataq" | "korcham" | "samil";
+export type CertificationProvider =
+  | "qnet"
+  | "qnet-professional"
+  | "history"
+  | "dataq"
+  | "korcham"
+  | "samil";
 
 export type PopularCertification = {
   name: string;
@@ -61,6 +67,11 @@ export const popularCertifications: PopularCertification[] = [
     name: "재경관리사",
     provider: "samil",
     officialUrl: "https://www.samilexam.com/usr/greeting.do",
+  },
+  {
+    name: "사회복지사 1급",
+    provider: "qnet-professional",
+    officialUrl: "https://www.q-net.or.kr/site/welfare",
   },
 ];
 

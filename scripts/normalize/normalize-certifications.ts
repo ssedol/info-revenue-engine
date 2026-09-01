@@ -17,6 +17,7 @@ import {
   normalizeKorchamRegionalNoticesHtml,
   normalizeRealtorHtml,
   normalizeFinancialManagerHtml,
+  normalizeSocialWorkerLevel1Html,
 } from "./normalize-external-certifications";
 
 type RawMetadata = {
@@ -257,6 +258,26 @@ async function normalize(): Promise<void> {
     );
     computerLiteracy.manualVenueSchedules = manualFile.schedules;
     certifications.push(computerLiteracy);
+  } catch (error) {
+    if (metadata.mode !== "fixture") throw error;
+  }
+  try {
+    const mainHtml = await readFile(
+      join(rawDirectory, "external-qnet-social-worker-level-1-main.raw.html"),
+      "utf8",
+    );
+    const infoHtml = await readFile(
+      join(rawDirectory, "external-qnet-social-worker-level-1-info.raw.html"),
+      "utf8",
+    );
+    certifications.push(
+      normalizeSocialWorkerLevel1Html(
+        mainHtml,
+        infoHtml,
+        metadata.fetchedAt,
+        "https://www.q-net.or.kr/man001.do?gSite=L&gId=52",
+      ),
+    );
   } catch (error) {
     if (metadata.mode !== "fixture") throw error;
   }
