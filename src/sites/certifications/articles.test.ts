@@ -43,4 +43,11 @@ describe("certification blog articles", () => {
     expect(searchArticles("존재하지않는검색어")).toEqual([]);
     expect(searchArticles("   ")).toEqual([]);
   });
+
+  it("matches the observed private certification search intent", () => {
+    const article = getArticleBySlug("public-vs-private-certifications");
+    expect(article?.title).toContain("민간 자격증 조회");
+    expect(article?.summary).toContain("PQI");
+    expect(article?.officialLinks[0]?.href).toBe("https://www.pqi.or.kr/");
+  });
 });
