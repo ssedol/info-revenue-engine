@@ -14,7 +14,7 @@ export function getSiteUrl(): string {
 
 export const siteConfig: SiteConfig = {
   name: "자격증 인사이트",
-  description: "자격증 선택, 공부 전략, 취업 활용법을 뉴스처럼 읽는 블로그형 정보사이트입니다.",
+  description: "2026 자격증 시험일정, 응시자격, 합격기준과 공부 순서를 공식정보 기준으로 정리합니다.",
   defaultUrl: getSiteUrl(),
   topic: "certifications",
   locale: "ko_KR",
