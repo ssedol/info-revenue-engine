@@ -23,10 +23,12 @@ export async function generateMetadata({ params }: CertificationPageProps): Prom
   const certification = getCertificationBySlug(slug);
   if (!certification) return {};
   const deepDive = getCertificationDeepDive(certification.name);
+  const guide = getCertificationGuide(certification.name);
   return buildMetadata({
     title: deepDive?.seoTitle ?? `${certification.name} 2026 시험일정`,
     description: deepDive?.seoDescription ?? `${certification.name}의 2026년 필기·실기 원서접수, 시험일정과 공식 정보를 확인합니다.`,
     path: certificationPath(certification),
+    indexable: Boolean(deepDive || guide),
   });
 }
 
