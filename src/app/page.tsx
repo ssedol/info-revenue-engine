@@ -15,8 +15,8 @@ import {
 } from "@/sites/certifications/articles";
 
 export const metadata: Metadata = buildMetadata({
-  title: "자격증 블로그",
-  description: "자격증 선택, 공부 전략, 취업 활용법을 뉴스처럼 읽는 블로그형 정보사이트입니다.",
+  title: "2026 자격증 시험일정·응시자격·합격기준",
+  description: "2026 국가자격증 시험일정과 원서접수, 응시자격, 과목별 합격기준을 확인하고 자격증별 공부 순서와 활용 방향을 비교하세요.",
   path: "/",
 });
 

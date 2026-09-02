@@ -8,6 +8,11 @@ describe("seo helpers", () => {
     expect(buildMetadata({ title: "A", description: "B", path: "/a" }).alternates?.canonical).toBe("https://cert-insight.online/a");
   });
 
+  it("marks thin pages as noindex while keeping links crawlable", () => {
+    const metadata = buildMetadata({ title: "A", description: "B", path: "/a", indexable: false });
+    expect(metadata.robots).toMatchObject({ index: false, follow: true });
+  });
+
   it("builds ItemList structured data", () => {
     const value = itemListJsonLd([{ name: "정보처리기사 준비 전 알아둘 것", path: "/articles/what-to-know-before-information-processing-engineer" }]);
 

@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { absoluteUrl } from "@/core/seo/metadata";
 import { getSeoIndexItems } from "@/core/seo/seo-index";
 import { getCertifications } from "@/sites/certifications/data";
+import { getCertificationDeepDive } from "@/sites/certifications/certificationDeepDives";
+import { getCertificationGuide } from "@/sites/certifications/certificationGuides";
 import { certificationPath } from "@/sites/certifications/routes";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -11,12 +13,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: item.changeFrequency,
     priority: item.priority,
   }));
-  const certifications = getCertifications().map((certification) => ({
+  const certifications = getCertifications()
+    .filter((certification) => getCertificationDeepDive(certification.name) || getCertificationGuide(certification.name))
+    .map((certification) => ({
     url: absoluteUrl(certificationPath(certification)),
     lastModified: new Date(certification.updatedAt),
     changeFrequency: "weekly" as const,
     priority: 0.8,
-  }));
+    }));
 
   return [
     ...items,
