@@ -5,6 +5,7 @@ import "./globals.css";
 import { Analytics as GoogleAnalytics, getGoogleSiteVerification } from "@/core/analytics/Analytics";
 import { siteConfig } from "@/core/config/site";
 import { JsonLd, websiteJsonLd } from "@/core/seo/structured-data";
+import { articleCategoryNavigation, primaryNavigation } from "@/sites/certifications/navigation";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.defaultUrl),
@@ -58,13 +59,16 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                 />
               </form>
               <nav className="site-nav" aria-label="주요 메뉴">
-                <Link href="/articles">최신글</Link>
-                <Link href="/#popular">인기글</Link>
-                <Link href="/schedules">시험일정</Link>
-                <Link href="/certifications">자격증 탐색</Link>
-                <Link href="/compare">비교</Link>
+                {primaryNavigation.map((item) => (
+                  <Link key={item.href} href={item.href}>{item.label}</Link>
+                ))}
               </nav>
             </div>
+            <nav className="site-topic-nav" aria-label="글 주제">
+              {articleCategoryNavigation.map((item) => (
+                <Link key={item.href} href={item.href}>{item.label}</Link>
+              ))}
+            </nav>
           </header>
           <main className="content">{children}</main>
           <footer className="site-footer">
