@@ -5,6 +5,7 @@ export type SeoMetadataInput = {
   title: string;
   description: string;
   path: string;
+  indexable?: boolean;
 };
 
 export function absoluteUrl(path: string): string {
@@ -14,6 +15,7 @@ export function absoluteUrl(path: string): string {
 
 export function buildMetadata(input: SeoMetadataInput): Metadata {
   const url = absoluteUrl(input.path);
+  const indexable = input.indexable ?? true;
 
   return {
     title: input.title,
@@ -30,8 +32,12 @@ export function buildMetadata(input: SeoMetadataInput): Metadata {
       type: "website",
     },
     robots: {
-      index: true,
+      index: indexable,
       follow: true,
+      googleBot: {
+        index: indexable,
+        follow: true,
+      },
     },
   };
 }
