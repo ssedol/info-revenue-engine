@@ -233,6 +233,10 @@ type ArticleSection = {
 };
 
 function buildArticleSections(article: Article, hasQnetInfo: boolean): ArticleSection[] {
+  if (article.slug === "public-vs-private-certifications") {
+    return buildPrivateCertificationSections();
+  }
+
   const mainKeyword = article.tags[0] ?? article.category.name;
   const paragraph = (index: number, fallback: string) => article.body[index] ?? fallback;
 
@@ -321,7 +325,68 @@ function buildArticleSections(article: Article, hasQnetInfo: boolean): ArticleSe
   ];
 }
 
+function buildPrivateCertificationSections(): ArticleSection[] {
+  return [
+    {
+      id: "summary",
+      title: "민간 자격증 핵심 요약",
+      kind: "summary",
+      paragraphs: [
+        "민간 자격증은 민간 기관이 만든 자격입니다. 등록 민간자격이라는 표시만으로 국가가 자격의 품질이나 취업 효과를 보증하는 것은 아닙니다.",
+        "신청 전에는 민간자격정보서비스(PQI)에서 자격명, 등록번호, 발급기관과 공인 여부를 조회하고 실제 채용공고에서 활용되는지도 따로 확인해야 합니다.",
+      ],
+    },
+    {
+      id: "qualification-types",
+      title: "국가자격·공인 민간자격·등록 민간자격 차이",
+      paragraphs: [
+        "국가자격은 법령에 따라 국가가 신설하고 관리하는 자격입니다. 국가기술자격과 국가전문자격처럼 운영 근거와 시행기관이 정해져 있습니다.",
+        "국가공인 민간자격은 등록 민간자격 가운데 일정 요건을 갖춰 주무부처의 공인을 받은 자격입니다. 등록 민간자격은 민간기관이 운영 정보를 등록한 것으로, 공인 여부와는 구분해야 합니다.",
+      ],
+    },
+    {
+      id: "lookup",
+      title: "민간 자격증 등록 여부 조회 방법",
+      kind: "checklist",
+      paragraphs: [
+        "PQI의 공인 민간자격 검색 또는 등록 민간자격 검색에서 자격명과 기관명을 조회합니다. 이름이 같거나 비슷한 자격이 여러 기관에 등록됐을 수 있으므로 기관명과 등록번호까지 비교해야 합니다.",
+        "검색 결과에서는 자격관리기관, 주무부처, 등록번호, 등급과 공인 여부를 확인하세요. 검색되지 않거나 홍보 페이지의 정보와 다르면 결제 전에 운영기관에 근거를 요청하는 편이 안전합니다.",
+      ],
+    },
+    {
+      id: "before-payment",
+      title: "결제 전에 확인할 6가지",
+      paragraphs: [
+        "등록번호와 발급기관, 총비용, 시험 또는 평가 방식, 자격증 발급비, 유효기간과 갱신비, 환불 규정을 확인하세요. 무료 수강을 강조해도 발급비나 갱신비가 별도로 붙을 수 있습니다.",
+        "취업이 목적이라면 광고의 취업 보장 표현보다 실제 채용공고에서 해당 자격명이 필수 또는 우대로 반복되는지를 확인해야 합니다.",
+      ],
+    },
+    {
+      id: "value",
+      title: "등록된 민간 자격증이면 취업에 도움이 될까",
+      paragraphs: [
+        "등록 사실과 취업 활용도는 별개의 문제입니다. 직무에서 널리 쓰이는 자격인지, 교육 내용이 실무와 연결되는지, 채용 담당자가 알아보는 명칭인지에 따라 가치가 달라집니다.",
+        "자기계발 목적이라면 교육 내용과 비용을 중심으로 판단할 수 있지만, 취업 목적이라면 채용공고와 현직자 요구 역량을 먼저 확인하는 편이 현실적입니다.",
+      ],
+    },
+    {
+      id: "official-resources",
+      title: "민간자격 공식 조회 사이트",
+      kind: "resources",
+      paragraphs: ["민간자격의 등록·공인 여부는 민간자격정보서비스(PQI), 국가기술자격과 국가전문자격 정보는 Q-Net에서 교차 확인하세요."],
+    },
+  ];
+}
+
 function buildFaqItems(article: Article) {
+  if (article.slug === "public-vs-private-certifications") {
+    return [
+      { question: "등록 민간자격은 국가가 인정한 자격증인가요?", answer: "등록은 민간기관이 자격을 관리·운영한다는 정보를 등록한 것입니다. 국가공인 여부와 품질 보증을 의미하지 않으므로 PQI에서 공인 여부를 별도로 확인해야 합니다." },
+      { question: "민간 자격증 등록번호는 어디에서 조회하나요?", answer: "민간자격정보서비스(PQI)의 등록 민간자격 검색에서 자격명이나 기관명으로 조회할 수 있습니다. 동일한 명칭이 있을 수 있으므로 발급기관과 등록번호를 함께 비교하세요." },
+      { question: "민간 자격증이 취업에 도움이 되는지 어떻게 확인하나요?", answer: "희망 직무의 채용공고에서 해당 자격명이 필수·우대 조건으로 반복되는지 확인하세요. 등록 여부만으로 취업 활용도를 판단하기는 어렵습니다." },
+    ];
+  }
+
   const keyword = article.tags[0] ?? article.title;
 
   return [
