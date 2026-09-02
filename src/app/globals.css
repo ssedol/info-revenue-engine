@@ -191,30 +191,37 @@ button:focus-visible {
   color: var(--color-primary-dark);
 }
 
-.site-topics {
+.site-topic-nav {
   width: min(1120px, calc(100% - 32px));
   margin: 0 auto;
   display: flex;
-  gap: 10px;
+  gap: 4px;
   overflow-x: auto;
   border-top: 1px solid rgba(23, 32, 42, 0.08);
-  justify-content: center;
+  scrollbar-width: none;
 }
 
-.site-topics a {
+.site-topic-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.site-topic-nav a {
   min-height: 44px;
   display: inline-flex;
   align-items: center;
-  padding: 0 10px;
-  color: #222;
-  font-size: 0.94rem;
+  flex: 1 0 auto;
+  justify-content: center;
+  padding: 0 14px;
+  color: var(--color-muted);
+  font-size: 0.9rem;
   font-weight: 800;
   text-decoration: none;
   white-space: nowrap;
 }
 
-.site-topics a:hover {
-  color: var(--color-accent);
+.site-topic-nav a:hover {
+  color: var(--color-primary-dark);
+  background: var(--color-surface);
 }
 
 .content {
@@ -1931,6 +1938,18 @@ button:focus-visible {
     padding: 0 8px;
     font-size: 0.88rem;
     white-space: nowrap;
+  }
+
+  .site-topic-nav {
+    width: 100%;
+    padding: 0 12px;
+  }
+
+  .site-topic-nav a {
+    flex: 0 0 auto;
+    min-height: 36px;
+    padding: 0 10px;
+    font-size: 0.84rem;
   }
 
   .meta-list div,
