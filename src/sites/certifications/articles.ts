@@ -69,6 +69,11 @@ const dataPortalLink = {
   href: "https://www.data.go.kr/",
 };
 
+const privateQualificationLink = {
+  label: "민간자격정보서비스(PQI)",
+  href: "https://www.pqi.or.kr/",
+};
+
 const categoryBySlug = new Map(articleCategories.map((category) => [category.slug, category]));
 
 function category(slug: string): ArticleCategory {
@@ -466,10 +471,10 @@ const baseArticles: Article[] = [
   },
   {
     slug: "public-vs-private-certifications",
-    title: "국가자격과 민간자격을 구분하는 방법",
-    summary: "자격증을 고를 때 국가자격과 민간자격을 구분해야 하는 이유입니다.",
+    title: "민간 자격증 조회 방법과 국가자격·등록민간자격 차이",
+    summary: "민간 자격증의 등록·공인 여부를 PQI에서 조회하는 방법과 국가자격, 국가공인 민간자격, 등록 민간자격의 차이를 정리했습니다.",
     category: category("exam-types"),
-    tags: ["국가자격", "민간자격", "선택기준"],
+    tags: ["민간자격증", "국가자격", "민간자격조회"],
     publishedAt: "2026-07-31",
     featured: false,
     popular: true,
@@ -481,7 +486,7 @@ const baseArticles: Article[] = [
       "정확한 자격 구분과 운영 정보는 공식 사이트와 관련 공공 안내를 기준으로 확인하세요.",
       "민간자격을 볼 때는 이름의 익숙함보다 실제 활용처를 먼저 확인하세요. 채용공고, 교육기관 안내, 발급기관 정보를 함께 보면 과장된 홍보를 피하기 쉽습니다.",
     ],
-    officialLinks: [qnetLink],
+    officialLinks: [privateQualificationLink, qnetLink],
   },
   {
     slug: "how-to-compare-certifications",
