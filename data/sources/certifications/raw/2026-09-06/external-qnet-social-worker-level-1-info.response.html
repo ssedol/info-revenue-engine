@@ -1,0 +1,480 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+<!-- https 아닐경우  -->
+
+
+
+
+
+<script type="text/javascript">
+
+$(window).resize(function(){
+
+
+			contResizeH("contents_frame_0");
+
+			contResizeH("contents_frame_1");
+
+			contResizeH("contents_frame_2");
+
+			contResizeH("contents_frame_3");
+
+
+});
+
+$(document).ready(function(){
+	setCont();
+});
+
+function setCont(){
+
+				
+			contSetH("contents_frame_0", "contents_text_0", "");//iframe에 컨텐츠 셋팅 및 높이조절
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/common.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnet.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+0).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnetB.css",
+				type: "text/css"
+			}));
+				
+			contSetH("contents_frame_1", "contents_text_1", "");//iframe에 컨텐츠 셋팅 및 높이조절
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/common.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnet.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+1).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnetB.css",
+				type: "text/css"
+			}));
+				
+			contSetH("contents_frame_2", "contents_text_2", "");//iframe에 컨텐츠 셋팅 및 높이조절
+			
+			$($("#contents_frame_"+2).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/common.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+2).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnet.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+2).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnetB.css",
+				type: "text/css"
+			}));
+				
+			contSetH("contents_frame_3", "contents_text_3", "");//iframe에 컨텐츠 셋팅 및 높이조절
+			
+			$($("#contents_frame_"+3).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/common.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+3).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnet.css",
+				type: "text/css"
+			}));
+			
+			$($("#contents_frame_"+3).contents().find("head")).append($("<link/>", {
+				rel: "stylesheet",
+				href: "/qnet/type/css/cont_qnetB.css",
+				type: "text/css"
+			}));
+
+
+}
+
+
+function cst006Report(jmCd, mcrtrNo){
+// 	if(mcrtrNo=="null" || mcrtrNo=="" || mcrtrNo==null){
+// 		alert("해당 종목의 출제기준이 존재하지 않습니다.");
+// 		return false;
+// 	}
+	var frm = document.crfFrm;
+// 	cstFrm.innerHTML = xmlHttp.responseText;
+	crfFrm.jmCd.value 		= jmCd;
+	crfFrm.mcrtrNo.value 	= mcrtrNo;
+	var target = "UBIWin";
+	var onbank_w = "1024";	//690
+	var onbank_h = "960";	//650
+	var LeftPosition = (screen.width) ? (screen.width-onbank_w)/2 : 0;
+	var TopPosition = (screen.height) ? (screen.height-onbank_h)/2 : 0;
+	var hWnd =  window.open('',target,'tollbar=no,locaion=no,directories=no,staus=no,menubar=no,scrollbars=no,resizable=no,top='+TopPosition+',left='+LeftPosition+',width='+onbank_w+',height='+onbank_h+'');
+	if(hWnd == null){
+		alert(" ※ 윈도우 XP SP2 또는 인터넷 익스플로러 7 사용자일 경우에는 \n    화면 상단에 있는 팝업 차단 알림줄을 클릭하여 팝업을 허용해 주시기 바랍니다. \n\n※ MSN,야후,구글 팝업 차단 툴바가 설치된 경우 팝업허용을 해주시기 바랍니다.");
+		return;
+	}	
+	hWnd.focus();
+	frm.action = "/pageLink.do?link=cst/cstReport";
+	frm.target = "UBIWin";		
+	frm.submit();
+}
+
+</script>
+
+		
+				<div class="division">
+					<b class="headLine3">시험일정</b>
+					
+					<p class="txtBody1">(원서접수시간은 원서접수 첫날 09:00부터 <span class="c_Red">마지막 날 18:00까지</span> 임)</p>
+					
+					<div class="contTable typeSm">
+						<table style="min-width: 900px;">
+							<caption class="scHdn">사회복지사 1급 구분,접수기간,서류제출기간,시험일정,의견제시기간,최종정답 합격자발표, 합격자발표기간 항목 순으로 시험일정 안내표</caption>
+							<colgroup>
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+								<col style="width:auto">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">구분</th>
+									<th scope="col">접수기간</th>
+									<th scope="col">서류제출기간</th>
+									<th scope="col">시험일정</th>
+									<th scope="col">의견제시기간</th>
+									<th scope="col">최종정답<br/>발표기간</th>
+									<th scope="col">합격자<br/>발표기간</th>
+								</tr>
+							</thead>
+							<tbody>
+
+								<tr>
+									<td>2026년 24회<br/>필기</td>
+									<!--  접수기간    -->
+									<td>
+
+						2025.12.08~2025.12.12
+<br/><span class='fc_b_nb'>빈자리 추가접수 기간<br/>
+2026.01.08~2026.01.09
+</span>
+
+									</td>
+									<!--  서류제출기간    -->
+									<td>
+
+									</td>
+									<!--  시험일정    -->
+									<td>
+
+						2026.01.17
+
+									</td>
+									<!--  의견제시기간 -->
+									<td>
+
+						2026.01.17<br/> ~ <br/>2026.01.23
+
+									</td>
+									<!--  최종정답발표기간 -->
+									<td>
+
+						2026.02.19<br/> ~ <br/>2026.04.19
+
+									</td>
+									<!--  합격자발표기간 -->
+									<td>
+
+						2026.03.25<br/> ~ <br/>2026.05.23
+
+									</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+				</div><!-- 검정기관-타기관 division -->
+
+
+					<b class="headLine3 mT35">시험정보</b>
+
+
+
+
+	
+
+					<b class="contTit1 mT30">응시자격</b> <!-- 웹접근성 0325 , 20250328 다시 반영 202606 -->
+							<iframe id="contents_frame_0" title="응시자격 내용" frameborder="0" scrolling="no" style="width:100%; height:0px; "></iframe>
+							<textarea id="contents_text_0" style="width:100%;display:none;" rows="10"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>사회복지사 1급 응시자격</title>
+<meta content="text/html; charset=euc-kr" http-equiv="Content-Type" />
+<style type="text/css">
+BODY {
+	FONT-SIZE: 10pt; FONT-FAMILY: 굴림; COLOR: #000000; MARGIN: 0px
+}
+P {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}
+LI {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}</style>
+</head>
+<body style="FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic">
+<p><!--StartFragment--><!--StartFragment--><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt"><span style="FONT-FAMILY: 맑은 고딕"></span>□</span>&nbsp;응시자격</p>
+<p>&nbsp;</p>
+<table style="HEIGHT: 598px; BORDER-RIGHT: medium none; WIDTH: 678px; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none">
+<tbody>
+<tr>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 33px; BORDER-RIGHT: #000000 2px solid; WIDTH: 674px; BACKGROUND: #eff6e7; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-SIZE: 12pt; FONT-WEIGHT: bold; LINE-HEIGHT: 140%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">&nbsp;</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">응시자격 요건 </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">(</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">다음 각 호의 어느 하나에 해당하는 자</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">)</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 563px; BORDER-RIGHT: #000000 2px solid; WIDTH: 674px; BORDER-BOTTOM: #000000 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 6px"><!--StartFragment-->
+<p class="1" style="LINE-HEIGHT: 160%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 12pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">1.</span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 맑은 고딕"> </span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">「</span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 맑은 고딕">고등교육법</span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">」</span><span style="FONT-SIZE: 12pt; FONT-FAMILY: 맑은 고딕">에 따른 대학원에서 사회복지학이나 사회사업학을 전공하고 석사학위나 박사학위를 취득한 자</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">&nbsp; ※ </span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">시행연도 2월 말일까지 </span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">학위를 취득한자 포함</span></p>
+<p class="0" style="LETTER-SPACING: 0pt; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">&nbsp; ※ </span><span style="FONT-FAMILY: 맑은 고딕">다만</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 맑은 고딕">대학에서 사회복지학 또는 사회사업학을 전공하지 아니하고 동 석사학위를 취득한 자는 보건복지부령이 정하는 </span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">사회복지학 전공교과목과 사회복지관련 교과목 </span><span style="FONT-FAMILY: 맑은 고딕">중 사회복지현장실습을 포함한</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">(2004. 07. 31 </span><span style="FONT-FAMILY: 맑은 고딕">이후 입학생부터 해당</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">)</span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; COLOR: #ffa500">&nbsp;</span><u style="text-underline: #000000 single"><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; COLOR: #ff0000">필수과목 </span></u><u style="text-underline: #000000 single"><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; COLOR: #ff0000; LETTER-SPACING: 0pt">6</span></u><u style="text-underline: #000000 single"><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; COLOR: #ff0000">과목 이상</span></u><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-FAMILY: 맑은 고딕">대학에서 이수한 교과목을 포함하되</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 맑은 고딕">대학원에서 </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">4</span><span style="FONT-FAMILY: 맑은 고딕">과목 이상을 이수하여야 한다</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">), </span><u style="text-underline: #000000 single"><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; COLOR: #ff0000">선택과목 </span></u><u style="text-underline: #000000 single"><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; COLOR: #ff0000; LETTER-SPACING: 0pt">2</span></u><u style="text-underline: #000000 single"><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; COLOR: #ff0000">과목</span></u><span><u>이상</u>을 각각 이수하여야 한다</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">.</span></p>
+<p class="0" style="LETTER-SPACING: 0pt; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt"></span>&nbsp;</p>
+<p class="1" style="LINE-HEIGHT: 160%; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">2.</span><span style="FONT-FAMILY: 맑은 고딕"> </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">「</span><span style="FONT-FAMILY: 맑은 고딕">고등교육법</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">」</span><span style="FONT-FAMILY: 맑은 고딕">에 따른 대학에서 보건복지부령이 정하는 사회복지학 전공교과목과 사회복지관련 교과목을 이수하고 학사</span><span style="FONT-FAMILY: 맑은 고딕">학위를 취득한 자</span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt"><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">&nbsp; ※ </span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">시행연도 2월 말일까지 </span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">학위를 취득한자 포함</span></span></p>
+<p class="0" style="TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt"><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold"></span></span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold"></span>&nbsp;</p>
+<p class="1" style="LINE-HEIGHT: 160%; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">3.</span><span style="FONT-FAMILY: 맑은 고딕"> </span><span style="FONT-FAMILY: 맑은 고딕">법령에서 </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">「</span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">고등교육법</span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">」</span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">에 따른 대학을 졸업한 자와 동등 이상 학력</span><span style="FONT-FAMILY: 맑은 고딕">이 있다고 인정하는 자로서, 보건복지부령으로 정하는 </span><span style="FONT-FAMILY: 맑은 고딕">사회복지학 전공교과목과 사회복지관련 교과목을 이수한 자</span></p>
+<p class="0" style="FONT-WEIGHT: bold; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">&nbsp; ※ </span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">시행연도 2월 말일까지 </span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">동등학력 취득자 포함</span></p>
+<p class="0" style="FONT-WEIGHT: bold; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold"></span>&nbsp;</p>
+<p class="1" style="LINE-HEIGHT: 160%; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">4.</span><span style="FONT-FAMILY: 맑은 고딕"> </span><span style="FONT-FAMILY: 맑은 고딕">외국의 대학 또는 대학원</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-FAMILY: 맑은 고딕">단</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-FAMILY: 맑은 고딕">보건복지부장관이 인정한 대학 또는 대학원</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">)</span><span style="FONT-FAMILY: 맑은 고딕">에서 사회복지학 또는 사회사업학을 전공하고</span><span style="FONT-FAMILY: 맑은 고딕">&nbsp;학사학위 이상을 취득한 자로서 </span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">&ldquo;</span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">제</span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">1</span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">호</span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">&rdquo;</span><span style="FONT-FAMILY: 맑은 고딕"> </span><span style="FONT-FAMILY: 맑은 고딕">및 </span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">&ldquo;</span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">제</span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">2</span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">호</span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">&rdquo;</span><span style="FONT-FAMILY: 맑은 고딕">의 자격과 동등하다고 보건복지부장관이 인정하는 자</span></p>
+<p class="1" style="LINE-HEIGHT: 160%; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 맑은 고딕"></span>&nbsp;</p>
+<p class="1" style="FONT-WEIGHT: bold; LINE-HEIGHT: 160%; TEXT-AUTOSPACE: "><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">5.</span><span style="FONT-FAMILY: 맑은 고딕"> </span><span style="FONT-FAMILY: 맑은 고딕">다음에 해당하는 자로서 </span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">사회복지사 </span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">2</span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">급 자격증을 취득한 자 중에서</span><span>, <u>그 자격증을 취득한 날부터 시험일까지의 기간동안</u></span><span><u> 1년 이상</u></span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold"> </span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">사회복지사업의 실무경험</span><span style="FONT-FAMILY: 맑은 고딕">이 있는 자 </span></p>
+<p class="0" style="TEXT-AUTOSPACE: ; tab-stops: left blank 16.1pt left blank 33.5pt left blank 49.6pt"><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">&nbsp; 1) </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">「</span><span style="FONT-FAMILY: 맑은 고딕">고등교육법</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">」</span><span style="FONT-FAMILY: 맑은 고딕">에 의한 전문대학에서 보건복지부령이 정하는 사회복지학 전공교과목과 사회복지관련 교과목을 이수하고</span><span style="FONT-FAMILY: 맑은 고딕"> 졸업한 자</span></p>
+<p class="0" style="TEXT-AUTOSPACE: ; tab-stops: left blank 16.1pt left blank 33.5pt left blank 49.6pt"><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">&nbsp; 2) </span><span style="FONT-FAMILY: 맑은 고딕">법령에서 </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">「</span><span style="FONT-FAMILY: 맑은 고딕">고등교육법</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">」</span><span style="FONT-FAMILY: 맑은 고딕">에 따른 전문대학을 졸업한 자와 동등 이상의 학력이 있다고 인정하는 자로서 보건복지부령이 </span><span style="FONT-FAMILY: 맑은 고딕">정하는 사회복지학 전공교과목과 사회복지관련 교과목을 이수한 자</span></p>
+<p class="0" style="TEXT-AUTOSPACE: ; tab-stops: left blank 16.1pt left blank 33.5pt left blank 49.6pt"><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">&nbsp; 3)&nbsp;</span><span style="FONT-FAMILY: 맑은 고딕">종전의 </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">「</span><span style="FONT-FAMILY: 맑은 고딕">사회복지사업법</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">」</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">(</span><span style="FONT-FAMILY: 맑은 고딕">법률 제</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">14923</span><span style="FONT-FAMILY: 맑은 고딕">호로 개정되기 전의 것을 말한다</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">)</span><span style="FONT-FAMILY: 맑은 고딕">에 따라서 사회복지사 </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">3</span><span style="FONT-FAMILY: 맑은 고딕">급 자격증을 취득한</span><span style="FONT-FAMILY: 맑은 고딕">&nbsp;이후 </span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">3</span><span style="FONT-FAMILY: 맑은 고딕">년 이상 사회복지사업의 실무경험이 있는 자</span></p>
+<p class="0" style="TEXT-AUTOSPACE: ; tab-stops: left blank 16.1pt left blank 33.5pt left blank 49.6pt"><span style="FONT-FAMILY: 맑은 고딕"></span>&nbsp;</p>
+<p class="0" style="FONT-SIZE: 13pt; MARGIN-LEFT: 6px; LINE-HEIGHT: 140%; MARGIN-RIGHT: 6px"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"><strong>※ 자세한 사항은 <u>반드시 해당연도 시행계획 공고 참고 </u>요망</strong></span></p></td>
+</tr>
+</tbody>
+</table>
+<p class="0" style="FONT-SIZE: 12pt; MARGIN-LEFT: 104px; LETTER-SPACING: 0pt; TEXT-INDENT: -39.5pt"><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt"><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt"><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt"></span></span></span>&nbsp;</p>
+<p class="0" style="FONT-SIZE: 12pt; MARGIN-LEFT: 104px; LETTER-SPACING: 0pt; TEXT-INDENT: -39.5pt">&nbsp;</p>
+<table style="FONT-SIZE: 10pt; BORDER-TOP: #000000 0px; FONT-FAMILY: 굴림; BORDER-RIGHT: #000000 0px; WIDTH: 655px; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: #000000 0px; COLOR: #3d3d3d; BORDER-LEFT: #000000 0px; BACKGROUND-COLOR: #ffffff" bordercolor="#6e6e6e" cellspacing="0" cellpadding="0" border="1">
+<tbody>
+<tr>
+<td style="BORDER-TOP: #000000 1px; BORDER-RIGHT: #000000 1px; WIDTH: 653px; BORDER-BOTTOM: #000000 1px; BORDER-LEFT: #000000 1px">
+<p tabindex="32768" class="HStyle0" style="FONT-SIZE: 10pt; MARGIN-BOTTOM: 0px; TEXT-DECORATION: none; MARGIN-TOP: 0px; COLOR: #000000; LINE-HEIGHT: 1.8"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">o </span>결격사유</span></p>
+<p tabindex="32768" class="HStyle0" style="FONT-SIZE: 10pt; MARGIN-BOTTOM: 0px; TEXT-DECORATION: none; MARGIN-TOP: 0px; COLOR: #000000; LINE-HEIGHT: 1.8"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"></span>&nbsp;</p>
+<p tabindex="32768" class="HStyle0" style="FONT-SIZE: 10pt; MARGIN-BOTTOM: 0px; TEXT-DECORATION: none; MARGIN-TOP: 0px; COLOR: #000000; LINE-HEIGHT: 1.8"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"><!--StartFragment--></span>
+<table style="HEIGHT: 181px; BORDER-RIGHT: medium none; WIDTH: 681px; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none">
+<tbody>
+<tr>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 19px; BORDER-RIGHT: #000000 2px solid; WIDTH: 677px; BACKGROUND: #eff6e7; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-SIZE: 12pt; LINE-HEIGHT: 140%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">&nbsp;</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">사회복지사</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">1</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">급 결격사유자(사회복지사업법 제11조의2)</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 151px; BORDER-RIGHT: #000000 2px solid; WIDTH: 677px; BORDER-BOTTOM: #000000 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-SIZE: 14pt; LAYOUT-GRID-MODE: none; TEXT-AUTOSPACE: ; tab-stops: left blank -0.9pt"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">1.</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"> </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">피성년후견인</span></p>
+<p class="0" style="FONT-SIZE: 14pt; LAYOUT-GRID-MODE: none; LINE-HEIGHT: 140%; TEXT-AUTOSPACE: ; tab-stops: left blank -0.9pt"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">2.</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"> </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">금고 이상의 형을 선고받고 그 집행이 끝나지 아니하였거나 그 집행을 받지 아니하기로 확정되지 아니한 자</span></p>
+<p class="0" style="FONT-SIZE: 14pt; LAYOUT-GRID-MODE: none; LINE-HEIGHT: 140%; TEXT-AUTOSPACE: ; tab-stops: left blank -0.9pt"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">3.</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"> </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">법원의 판결에 따라 자격이 상실되거나 정지된 자</span></p>
+<p class="0" style="FONT-SIZE: 14pt; LAYOUT-GRID-MODE: none; LINE-HEIGHT: 140%; TEXT-AUTOSPACE: ; tab-stops: left blank -0.9pt"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">4.</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"> </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">마약</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">ㆍ</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">대마 또는 향정신성의약품의 중독자</span></p>
+<p class="0" style="LAYOUT-GRID-MODE: none; LINE-HEIGHT: 140%; TEXT-AUTOSPACE: ; tab-stops: left blank -0.9pt"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">5.</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"> </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">「</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">정신건강증진 및 정신질환자 복지서비스 지원에 관한 법률</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">」 </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">제</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">3</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">조제</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">1</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">호에 따른 정신질환자</span></p>
+<p class="0" style="LAYOUT-GRID-MODE: none; LINE-HEIGHT: 140%; TEXT-AUTOSPACE: ; tab-stops: left blank -0.9pt"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&nbsp;&nbsp; 다만</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">전문의가 사회복지사로서 적합하다고 인정하는 사람은 그러하지 아니하다</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">.</span></p></td>
+</tr>
+</tbody>
+</table></p>
+<p tabindex="32768" class="HStyle0" style="FONT-SIZE: 10pt; MARGIN-BOTTOM: 0px; TEXT-DECORATION: none; MARGIN-TOP: 0px; COLOR: #000000; LINE-HEIGHT: 1.8"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&nbsp;&nbsp;&nbsp;&nbsp;</span></p><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"></span><span style="FONT-SIZE: 10pt"></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"></span>
+<p tabindex="32768" class="HStyle0" style="FONT-SIZE: 10pt; MARGIN-BOTTOM: 0px; TEXT-DECORATION: none; MARGIN-TOP: 0px; COLOR: #000000; LINE-HEIGHT: 1.8"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">o </span>자격취소 등</span></p>
+<p tabindex="32768" class="HStyle0" style="FONT-SIZE: 10pt; MARGIN-BOTTOM: 0px; TEXT-DECORATION: none; MARGIN-TOP: 0px; COLOR: #000000; LINE-HEIGHT: 1.8"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"></span>&nbsp;</p>
+<p tabindex="32768" class="HStyle0" style="FONT-SIZE: 10pt; MARGIN-BOTTOM: 0px; TEXT-DECORATION: none; MARGIN-TOP: 0px; COLOR: #000000; LINE-HEIGHT: 1.8"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"></span>
+<table style="FONT-SIZE: 10pt; BORDER-TOP: #000000 0px solid; HEIGHT: 288px; BORDER-RIGHT: #000000 0px solid; WIDTH: 679px; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: #000000 0px solid; BORDER-LEFT: #000000 0px solid; BACKGROUND-COLOR: #ffffff" cellspacing="0" cellpadding="0" border="2">
+<tbody>
+<tr style="HEIGHT: 27px">
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 27px; BORDER-RIGHT: #000000 2px solid; WIDTH: 675px; BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #000000 2px solid; BACKGROUND-COLOR: #c7eeff">
+<p><strong>&nbsp;사회복지사1급 자격취소 등(사</strong><strong>회복지사업법 제11조의3)</strong></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 30px; BORDER-RIGHT: #000000 2px solid; WIDTH: 675px; BORDER-BOTTOM: #000000 2px solid; BORDER-LEFT: #000000 2px solid">
+<p style="TEXT-ALIGN: justify"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">&#9312;</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"> </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">보건복지부장관은 사회복지사가 다음 각 호의 어느 하나에 해당하는 경우 그 자격을 취소하거나 </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">1</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">년 범위에서</span></p>
+<p style="TEXT-ALIGN: justify"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&nbsp; &nbsp;정지시킬 수 있다</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">. </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">다만</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">제</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">1</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">호부터 제</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">3</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">호까지에 해당하면 그 자격을 취소하여야 한다</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">.</span></p>
+<p class="0" style="FONT-SIZE: 14pt; LAYOUT-GRID-MODE: none; TEXT-ALIGN: justify; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">&nbsp; 1.</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"> </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">거짓이나 그 밖의 부정한 방법으로 자격을 취득한 경우</span></p>
+<p class="0" style="FONT-SIZE: 14pt; LAYOUT-GRID-MODE: none; TEXT-ALIGN: justify; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">&nbsp; 2.</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"> </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">제</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">11</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">조의</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">2 </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">각 호의 어느 하나에 해당하게 된 경우</span></p>
+<p class="0" style="FONT-SIZE: 14pt; LAYOUT-GRID-MODE: none; TEXT-ALIGN: justify; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">&nbsp; 3.</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"> </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">자격증을 대여</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">ㆍ</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">양도 또는 위조</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">ㆍ</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">변조한 경우</span></p>
+<p class="0" style="FONT-SIZE: 14pt; LAYOUT-GRID-MODE: none; TEXT-ALIGN: justify; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">&nbsp; 4.</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"> </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">사회복지사의 업무수행 중 그 자격과 관련하여 고의나 중대한 과실로 다른 사람에게 손해를 입힌 경우</span></p>
+<p class="0" style="FONT-SIZE: 14pt; LAYOUT-GRID-MODE: none; TEXT-ALIGN: justify; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">&nbsp; 5.</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"> </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">자격정지 처분을 </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">3</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">회 이상 받았거나</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">, </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">정지 기간 종료 후 </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">3</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">년 이내에 다시 자격정지 처분에 해당하는 행위를</span></p>
+<p class="0" style="FONT-SIZE: 14pt; LAYOUT-GRID-MODE: none; TEXT-ALIGN: justify; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&nbsp;&nbsp;&nbsp;&nbsp; 한</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">&nbsp;경우</span></p>
+<p class="0" style="FONT-SIZE: 14pt; LAYOUT-GRID-MODE: none; TEXT-ALIGN: justify; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">&nbsp; 6.</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"> </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">자격정지 처분 기간에 자격증을 사용하여 자격 관련 업무를 수행한 경우</span></p>
+<p class="0" style="FONT-SIZE: 14pt; MARGIN-TOP: 13px; LAYOUT-GRID-MODE: none; TEXT-ALIGN: justify; LETTER-SPACING: 0pt; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">&#9313;</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"> </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">제</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">1</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">항에 따라 자격이 취소된 사람은 취소된 날부터 </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">15</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">일 내에 자격증을 보건복지부장관에게 반납하여야 한다</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">.</span></p>
+<p class="0" style="MARGIN-TOP: 13px; LAYOUT-GRID-MODE: none; TEXT-ALIGN: justify; LINE-HEIGHT: 100%; TEXT-AUTOSPACE: "><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">&#9314;</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕"> </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">보건복지부장관은 제</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">1</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">항에 따라 자격이 취소된 자에게는 취소된 날부터 </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">2</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕">년 이내에 자격증 재교부 불가하다.</span></p></td>
+</tr>
+</tbody>
+</table>&nbsp;</p></td>
+</tr>
+</tbody>
+</table>
+<p class="HStyle0"><span style="FONT-SIZE: 10pt"><span style="FONT-SIZE: 10pt"><span style="FONT-FAMILY: 새굴림">&nbsp;&nbsp;</span></span></span></p>
+</body>
+</html></textarea>
+
+<!-- 				</div>//division -->
+
+					<b class="contTit1 mT30">합격기준</b> <!-- 웹접근성 0325 , 20250328 다시 반영 202606 -->
+							<iframe id="contents_frame_1" title="합격기준 내용" frameborder="0" scrolling="no" style="width:100%; height:0px; "></iframe>
+							<textarea id="contents_text_1" style="width:100%;display:none;" rows="10"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>사회복지사 1급 합격기준</title>
+<style type="text/css">
+BODY {
+	FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic; COLOR: #000000; MARGIN: 0px
+}
+P {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}
+LI {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}</style>
+<meta content="text/html; charset=euc-kr" http-equiv="Content-Type" />
+</head>
+<body style="FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic"><!--StartFragment--><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">□ </span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">합격기준</span> 
+<table style="BORDER-RIGHT: medium none; WIDTH: 704px; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: medium none; BORDER-LEFT: medium none">
+<tbody>
+<tr>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 1px solid; WIDTH: 47px; BACKGROUND: #eff6e7; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-SIZE: 13pt; FONT-WEIGHT: bold; TEXT-ALIGN: center; LETTER-SPACING: -1pt; LINE-HEIGHT: 140%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -1pt">구 분</span></p></td>
+<td style="BORDER-TOP: #000000 2px solid; HEIGHT: 21px; BORDER-RIGHT: #000000 2px solid; WIDTH: 640px; BACKGROUND: #eff6e7; BORDER-BOTTOM: #000000 1px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 6px">
+<p class="0" style="FONT-SIZE: 13pt; FONT-WEIGHT: bold; TEXT-ALIGN: center; LETTER-SPACING: -1pt; LINE-HEIGHT: 140%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: -1pt">합 격 결 정 기 준</span></p></td>
+</tr>
+<tr>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 124px; BORDER-RIGHT: #000000 1px solid; WIDTH: 47px; BORDER-BOTTOM: #000000 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 2px solid; PADDING-RIGHT: 6px">
+<p class="0" style="TEXT-ALIGN: center; LETTER-SPACING: -0.4pt; LINE-HEIGHT: 140%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.4pt">필기</span></p></td>
+<td style="BORDER-TOP: #000000 1px solid; HEIGHT: 124px; BORDER-RIGHT: #000000 2px solid; WIDTH: 640px; BORDER-BOTTOM: #000000 2px solid; PADDING-BOTTOM: 1px; PADDING-TOP: 1px; PADDING-LEFT: 6px; BORDER-LEFT: #000000 1px solid; PADDING-RIGHT: 6px">
+<p class="0" style="LETTER-SPACING: -0.2pt; LINE-HEIGHT: 160%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.2pt">※&nbsp;매 과목 </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.2pt">4</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.2pt">할 이상</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.2pt">, </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.2pt">전 과목 총점의 </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.2pt">6</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.2pt">할 이상을 득점한 자를 합격예정자로 결정</span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: left; LETTER-SPACING: -0.6pt; LINE-HEIGHT: 160%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.6pt">&nbsp;- 사회복지사 </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.6pt">1</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.6pt">급 합격예정자에 대해서는 한국사회복지사협회에서 응시자격 서류심사를 실시하며</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.6pt">,</span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: left; LETTER-SPACING: -0.6pt; LINE-HEIGHT: 160%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.6pt"></span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.6pt">&nbsp;&nbsp; 심사결과&nbsp;</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.6pt">부적격</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.6pt">&nbsp;사유에 해당되거나</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.6pt">, </span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.6pt">응시자격서류를 정해진 기한 내에 제출하지 않은 경우 합격예정을</span><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.6pt"> 취소함</span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: left; LETTER-SPACING: -0.6pt; LINE-HEIGHT: 160%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.6pt">&nbsp;- 최종합격자 발표 후라도 제출된 서류 등의 기재사항이 사실과 다르거나 응시자격 부적격사유가 발견될 때에는 </span></p>
+<p class="0" style="WORD-BREAK: keep-all; TEXT-ALIGN: left; LETTER-SPACING: -0.6pt; LINE-HEIGHT: 160%"><span style="FONT-SIZE: 10pt; FONT-FAMILY: 맑은 고딕; LETTER-SPACING: -0.6pt">&nbsp;&nbsp; 합격을 취소(신원조회 실시)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+</body>
+</html></textarea>
+
+<!-- 				</div>//division -->
+
+					<b class="contTit1 mT30">응시수수료</b> <!-- 웹접근성 0325 , 20250328 다시 반영 202606 -->
+							<iframe id="contents_frame_2" title="응시수수료 내용" frameborder="0" scrolling="no" style="width:100%; height:0px; "></iframe>
+							<textarea id="contents_text_2" style="width:100%;display:none;" rows="10"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>사회복지사 1급 응시수수료</title>
+<style type="text/css">
+BODY {
+	MARGIN: 0px; FONT-FAMILY: Malgun Gothic; COLOR: #000000; FONT-SIZE: 10pt
+}
+P {
+	LINE-HEIGHT: 1.2; MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px
+}
+LI {
+	LINE-HEIGHT: 1.2; MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px
+}</style>
+<meta content="text/html; charset=euc-kr" http-equiv="Content-Type" />
+</head>
+<body style="FONT-FAMILY: Malgun Gothic; FONT-SIZE: 10pt"><!--StartFragment-->
+<p style="TEXT-ALIGN: left; LETTER-SPACING: 0pt; FONT-WEIGHT: bold" class="0"><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt; FONT-WEIGHT: bold">□ </span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">응시수수료</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt; FONT-WEIGHT: bold">(</span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">사회복지사업법 제</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt; FONT-WEIGHT: bold">12</span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">조제</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt; FONT-WEIGHT: bold">3</span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">항</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt; FONT-WEIGHT: bold">)</span></p>
+<p style="TEXT-ALIGN: left" class="0"><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">25,000원</span></p>
+<p>&nbsp;</p>
+</body>
+</html></textarea>
+
+<!-- 				</div>//division -->
+
+					<b class="contTit1 mT30">취득방법</b> <!-- 웹접근성 0325 , 20250328 다시 반영 202606 -->
+							<iframe id="contents_frame_3" title="취득방법 내용" frameborder="0" scrolling="no" style="width:100%; height:0px; "></iframe>
+							<textarea id="contents_text_3" style="width:100%;display:none;" rows="10"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ko" xml:lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>사회복지사 1급 취득방법</title>
+<meta content="text/html; charset=euc-kr" http-equiv="Content-Type" />
+<style type="text/css">
+BODY {
+	FONT-SIZE: 10pt; FONT-FAMILY: 굴림; COLOR: #000000; MARGIN: 0px
+}
+P {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}
+LI {
+	MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIGHT: 1.2
+}</style>
+</head>
+<body style="FONT-SIZE: 10pt; FONT-FAMILY: Malgun Gothic">
+<p style="LINE-HEIGHT: 140%"><!--StartFragment--><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold; LETTER-SPACING: 0pt">□ </span><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold">취득방법</span></p>
+<p style="LINE-HEIGHT: 140%"><span style="FONT-FAMILY: 맑은 고딕; FONT-WEIGHT: bold"></span><span style="FONT-FAMILY: 맑은 고딕">필기시험에 합격하고 응시자격 서류심사(한국사회복지사협회에서 심사)에 통과한 자를 최종합격자로 발표하며</span><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt">,</span></p>
+<p style="LINE-HEIGHT: 140%"><span style="FONT-FAMILY: 맑은 고딕; LETTER-SPACING: 0pt"></span><span style="FONT-FAMILY: 맑은 고딕">최종합격자에 대해서는 한국사회복지사협회에서 신원조회 실시 후 자격증 교부</span></p>
+<p class="0"><span style="FONT-FAMILY: 한컴바탕">&nbsp; </span></p>
+<p><!--StartFragment--></p>
+</body>
+</html></textarea>
+
+<!-- 				</div>//division -->
+
+	
+
+
+
+<!-- 	</div>//시험정보 division	 -->
+	
+	
+			</div><!-- //division -->
+			</div><!-- //groupCont noLine -->
+		</div><!-- //contTab -->	
+
+	
+		</div>
+	
