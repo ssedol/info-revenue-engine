@@ -1,23 +1,15 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
-import { z } from "zod";
-import {
-  manualVenueScheduleSchema,
-  type Certification,
-  type ExamSchedule,
-} from "../../src/sites/certifications/types";
+import type { Certification, ExamSchedule } from "../../src/sites/certifications/types";
 import { isCliEntry } from "../shared/cli";
-import { findLatestRawDirectory, manualRoot, normalizedRoot } from "../shared/paths";
+import { findLatestRawDirectory, normalizedRoot } from "../shared/paths";
 import { qnetQualificationListEndpoint, qnetScheduleOperations, qnetTestInformationEndpoint } from "../shared/qnet-api";
 import { asArray, asRecord, parseXml, readText } from "../shared/xml";
 import {
   normalizeComputerLiteracyLevel1Html,
   normalizeDataqHtml,
   normalizeKoreanHistoryHtml,
-  normalizeKorchamRegionalNoticesHtml,
   normalizeRealtorHtml,
-  normalizeFinancialManagerHtml,
-  normalizeSocialWorkerLevel1Html,
 } from "./normalize-external-certifications";
 
 type RawMetadata = {
@@ -209,73 +201,15 @@ async function normalize(): Promise<void> {
     if (metadata.mode !== "fixture") throw error;
   }
   try {
-    const scheduleHtml = await readFile(
-      join(rawDirectory, "external-samil-financial-manager-schedule.raw.html"),
-      "utf8",
-    );
-    const guideHtml = await readFile(
-      join(rawDirectory, "external-samil-financial-manager-guide.raw.html"),
-      "utf8",
-    );
-    certifications.push(
-      normalizeFinancialManagerHtml(
-        scheduleHtml,
-        guideHtml,
-        metadata.fetchedAt,
-        "https://www.samilexam.com/usr/groupguide.do",
-      ),
-    );
-  } catch (error) {
-    if (metadata.mode !== "fixture") throw error;
-  }
-  try {
     const korchamHtml = await readFile(
       join(rawDirectory, "external-korcham-computer-level-1.raw.html"),
       "utf8",
     );
-    const computerLiteracy = normalizeComputerLiteracyLevel1Html(
-      korchamHtml,
-      metadata.fetchedAt,
-      "https://license.korcham.net/co/examguide.do?cd=0103&mm=21",
-    );
-    const regionalNoticesHtml = await readFile(
-      join(rawDirectory, "external-korcham-regional-schedule-notices.raw.html"),
-      "utf8",
-    );
-    computerLiteracy.regionalScheduleNotices = normalizeKorchamRegionalNoticesHtml(
-      regionalNoticesHtml,
-      metadata.fetchedAt,
-      "https://license.korcham.net/customer/sangwiGuide.do",
-    );
-    const manualFileSchema = z.object({ schedules: z.array(manualVenueScheduleSchema) });
-    const manualFile = manualFileSchema.parse(
-      JSON.parse(
-        await readFile(
-          join(manualRoot, "korcham-computer-level-1-schedules.json"),
-          "utf8",
-        ),
-      ),
-    );
-    computerLiteracy.manualVenueSchedules = manualFile.schedules;
-    certifications.push(computerLiteracy);
-  } catch (error) {
-    if (metadata.mode !== "fixture") throw error;
-  }
-  try {
-    const mainHtml = await readFile(
-      join(rawDirectory, "external-qnet-social-worker-level-1-main.raw.html"),
-      "utf8",
-    );
-    const infoHtml = await readFile(
-      join(rawDirectory, "external-qnet-social-worker-level-1-info.raw.html"),
-      "utf8",
-    );
     certifications.push(
-      normalizeSocialWorkerLevel1Html(
-        mainHtml,
-        infoHtml,
+      normalizeComputerLiteracyLevel1Html(
+        korchamHtml,
         metadata.fetchedAt,
-        "https://www.q-net.or.kr/man001.do?gSite=L&gId=52",
+        "https://license.korcham.net/co/examguide.do?cd=0103&mm=21",
       ),
     );
   } catch (error) {
