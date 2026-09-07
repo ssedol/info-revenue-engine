@@ -27,3 +27,4 @@ export function Analytics() {
 export function getGoogleSiteVerification(): string {
   return process.env.NEXT_PUBLIC_SITE_VERIFICATION_GOOGLE || GOOGLE_SITE_VERIFICATION;
 }
+
