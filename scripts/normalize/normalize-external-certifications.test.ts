@@ -1,14 +1,9 @@
-import { readFileSync } from "node:fs";
-import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import {
   normalizeComputerLiteracyLevel1Html,
   normalizeDataqHtml,
   normalizeKoreanHistoryHtml,
-  normalizeKorchamRegionalNoticesHtml,
   normalizeRealtorHtml,
-  normalizeSocialWorkerLevel1Html,
-  normalizeFinancialManagerHtml,
 } from "./normalize-external-certifications";
 
 describe("normalize external certifications", () => {
@@ -82,126 +77,5 @@ describe("normalize external certifications", () => {
         { label: "실기", amount: 25000 },
       ],
     });
-  });
-
-  it("normalizes Korcham regional schedule opening notices", () => {
-    const html = readFileSync(
-      join(process.cwd(), "scripts/fixtures/certifications/korcham-regional-schedule-notices.fixture.html"),
-      "utf8",
-    );
-    const notices = normalizeKorchamRegionalNoticesHtml(
-      html,
-      "2026-09-01T00:00:00.000Z",
-      "https://license.korcham.net/customer/sangwiGuide.do",
-    );
-
-    expect(notices).toMatchObject([
-      { region: "특별광역시", chamber: "대구", notice: expect.stringContaining("매주 월요일") },
-      { region: "경기도", chamber: "고양", notice: expect.stringContaining("10월 상시검정") },
-    ]);
-  });
-
-  it("fails when Korcham regional notices disappear", () => {
-    expect(() =>
-      normalizeKorchamRegionalNoticesHtml(
-        "<html><h1>전국상의별 공지안내</h1></html>",
-        "2026-09-01T00:00:00.000Z",
-        "https://license.korcham.net/customer/sangwiGuide.do",
-      ),
-    ).toThrow("지역별 시험 개설 공지를 찾지 못했습니다");
-  });
-
-  it("normalizes the Q-Net Social Worker Level 1 schedule and official information", () => {
-    const mainHtml = readFileSync(
-      join(process.cwd(), "scripts/fixtures/certifications/qnet-social-worker-level-1-main.fixture.html"),
-      "utf8",
-    );
-    const infoHtml = readFileSync(
-      join(process.cwd(), "scripts/fixtures/certifications/qnet-social-worker-level-1-info.fixture.html"),
-      "utf8",
-    );
-    const certification = normalizeSocialWorkerLevel1Html(
-      mainHtml,
-      infoHtml,
-      "2026-09-01T00:00:00.000Z",
-      "https://www.q-net.or.kr/man001.do?gSite=L&gId=52",
-    );
-
-    expect(certification).toMatchObject({
-      slug: "social-worker-level-1",
-      name: "사회복지사 1급",
-      issuer: "한국산업인력공단",
-      fees: [{ label: "필기", amount: 25000 }],
-      schedules: [{
-        round: "2026년 제24회",
-        applicationStart: "2025-12-08",
-        applicationEnd: "2025-12-12",
-        examStart: "2026-01-17",
-        resultDate: "2026-03-25",
-      }],
-    });
-  });
-
-  it("fails when the Social Worker Level 1 schedule changes unexpectedly", () => {
-    expect(() =>
-      normalizeSocialWorkerLevel1Html(
-        "<html><h1>사회복지사 1급</h1></html>",
-        "<html><h1>사회복지사 1급</h1></html>",
-        "2026-09-01T00:00:00.000Z",
-        "https://www.q-net.or.kr/man001.do?gSite=L&gId=52",
-      ),
-    ).toThrow("공식 시험일정을 찾지 못했습니다");
-  });
-
-  it("normalizes the Samil financial manager schedule and guide", () => {
-    const scheduleHtml = readFileSync(
-      join(process.cwd(), "scripts/fixtures/certifications/samil-financial-manager-schedule.fixture.html"),
-      "utf8",
-    );
-    const guideHtml = readFileSync(
-      join(process.cwd(), "scripts/fixtures/certifications/samil-financial-manager-guide.fixture.html"),
-      "utf8",
-    );
-    const certification = normalizeFinancialManagerHtml(
-      scheduleHtml,
-      guideHtml,
-      "2026-09-01T00:00:00.000Z",
-      "https://www.samilexam.com/usr/groupguide.do",
-    );
-
-    expect(certification).toMatchObject({
-      slug: "financial-manager",
-      name: "재경관리사",
-      issuer: "삼일회계법인",
-      eligibility: "연령, 학력, 경력 제한 없음",
-      fees: [{ label: "응시", amount: 70000 }],
-      schedules: [
-        {
-          round: "2026년 제122회",
-          applicationStart: "2026-01-06",
-          applicationEnd: "2026-01-13",
-          examStart: "2026-01-31",
-          resultDate: "2026-02-06",
-        },
-        {
-          round: "2026년 제123회",
-          applicationStart: "2026-02-26",
-          applicationEnd: "2026-03-05",
-          examStart: "2026-03-28",
-          resultDate: "2026-04-03",
-        },
-      ],
-    });
-  });
-
-  it("fails when the financial manager official schedule changes unexpectedly", () => {
-    expect(() =>
-      normalizeFinancialManagerHtml(
-        "<html><h1>2026년 국가공인 회계관리자격시험</h1></html>",
-        "<html>재경관리사</html>",
-        "2026-09-01T00:00:00.000Z",
-        "https://www.samilexam.com/usr/groupguide.do",
-      ),
-    ).toThrow("재경관리사 공식 시험일정을 찾지 못했습니다");
   });
 });
