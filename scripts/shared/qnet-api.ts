@@ -33,3 +33,4 @@ export const qnetScheduleOperations = {
   "산업기사": "getEList",
   "기능사": "getCList",
 } as const;
+
