@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import "./globals.css";
+import { getAdSenseClientId } from "@/core/ads/provider";
 import { Analytics as GoogleAnalytics, getGoogleSiteVerification } from "@/core/analytics/Analytics";
 import { siteConfig } from "@/core/config/site";
 import { JsonLd, websiteJsonLd } from "@/core/seo/structured-data";
@@ -33,11 +34,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="ko">
       <head>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4773298245322018"
-          crossOrigin="anonymous"
-        />
+        {process.env.NODE_ENV === "production" && (
+          <script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${getAdSenseClientId()}`}
+            crossOrigin="anonymous"
+          />
+        )}
       </head>
       <body>
         <div className="page-shell">
@@ -58,10 +61,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                 />
               </form>
               <nav className="site-nav" aria-label="주요 메뉴">
-                <Link href="/articles">최신글</Link>
-                <Link href="/#popular">인기글</Link>
                 <Link href="/schedules">시험일정</Link>
                 <Link href="/certifications">자격증 탐색</Link>
+                <Link href="/articles">공부 팁</Link>
                 <Link href="/compare">비교</Link>
               </nav>
             </div>

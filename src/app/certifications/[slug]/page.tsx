@@ -3,15 +3,18 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumb } from "@/core/ui/Breadcrumb";
 import { buildMetadata } from "@/core/seo/metadata";
-import { getCertificationGuide } from "@/sites/certifications/contentQuality";
-import { getCertificationBySlug, getCertifications } from "@/sites/certifications/data";
+import { getCertificationDeepDive } from "@/sites/certifications/certificationDeepDives";
+import { getCertificationGuide } from "@/sites/certifications/certificationGuides";
+import { getCertificationBySlug } from "@/sites/certifications/data";
+import { getDetailCertifications } from "@/sites/certifications/detailPages";
 import { certificationPath } from "@/sites/certifications/routes";
 
 export const dynamic = "error";
 export const dynamicParams = false;
+export const revalidate = 3600;
 
 export function generateStaticParams() {
-  return getCertifications().map(({ slug }) => ({ slug }));
+  return getDetailCertifications().map(({ slug }) => ({ slug }));
 }
 
 type CertificationPageProps = { params: Promise<{ slug: string }> };
@@ -20,9 +23,12 @@ export async function generateMetadata({ params }: CertificationPageProps): Prom
   const { slug } = await params;
   const certification = getCertificationBySlug(slug);
   if (!certification) return {};
+  const deepDive = getCertificationDeepDive(certification.name);
   return buildMetadata({
-    title: `${certification.name} 2026 시험일정`,
-    description: `${certification.name}의 2026년 필기·실기 원서접수, 시험일정과 공식 정보를 확인합니다.`,
+    title: deepDive?.seoTitle ?? `${certification.name} 2026 시험일정과 준비 방법`,
+    description:
+      deepDive?.seoDescription ??
+      `${certification.name}의 2026년 필기·실기 원서접수와 시험일정, 응시자격, 준비 순서를 정리했습니다.`,
     path: certificationPath(certification),
   });
 }
@@ -35,8 +41,12 @@ export default async function CertificationDetailPage({ params }: CertificationP
   const { slug } = await params;
   const certification = getCertificationBySlug(slug);
   if (!certification) notFound();
+
+  const deepDive = getCertificationDeepDive(certification.name);
+  const guide = getCertificationGuide(certification.name);
+  if (!deepDive && !guide) notFound();
+
   const providerName = certification.source.provider;
-  const guide = getCertificationGuide(certification);
 
   return (
     <>
@@ -92,36 +102,87 @@ export default async function CertificationDetailPage({ params }: CertificationP
         )}
       </section>
 
-      <section className="section certification-guide" aria-labelledby="guide-title">
-        <h2 id="guide-title">{certification.name} 준비 전 핵심 정리</h2>
-        <p className="guide-overview">{guide.overview}</p>
-        <div className="guide-grid">
-          <article className="card">
-            <h3>이런 사람에게 먼저 맞습니다</h3>
-            <ul className="check-list">
-              {guide.goodFor.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
-          <article className="card">
-            <h3>접수 전 확인할 것</h3>
-            <ul className="check-list">
-              {guide.beforeApply.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
-          <article className="card">
-            <h3>공부 방향</h3>
-            <ul className="check-list">
-              {guide.studyFocus.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </article>
-        </div>
-      </section>
+      {deepDive && (
+        <section className="section" aria-labelledby="exam-structure-title">
+          <h2 id="exam-structure-title">시험 구성과 합격기준</h2>
+          <div className="guide-grid">
+            {deepDive.examSubjects.map((stage) => (
+              <article className="card" key={stage.stage}>
+                <h3>{stage.stage} 과목</h3>
+                <ul className="check-list">
+                  {stage.subjects.map((subject) => (
+                    <li key={subject}>{subject}</li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+          <dl className="meta-list">
+            <div><dt>시험 방식</dt><dd>{deepDive.examFormat}</dd></div>
+            <div><dt>합격기준</dt><dd>{deepDive.passRule}</dd></div>
+            <div><dt>응시자격</dt><dd>{deepDive.eligibility}</dd></div>
+          </dl>
+        </section>
+      )}
+
+      {guide && (
+        <section className="section certification-guide" aria-labelledby="guide-title">
+          <h2 id="guide-title">{certification.name}은 어떤 자격증인가</h2>
+          <p className="guide-overview">{guide.overview}</p>
+          <div className="guide-grid">
+            <article className="card">
+              <h3>어디에 활용하나</h3>
+              <ul className="check-list">
+                {guide.useCases.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
+            <article className="card">
+              <h3>준비 방법</h3>
+              <ul className="check-list">
+                {guide.preparation.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
+            <article className="card">
+              <h3>함께 비교되는 자격증</h3>
+              <ul className="check-list">
+                {guide.comparisons.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
+          </div>
+        </section>
+      )}
+
+      {deepDive && (
+        <section className="section" aria-labelledby="study-plan-title">
+          <h2 id="study-plan-title">공부 순서</h2>
+          <p className="guide-overview">{deepDive.planNote}</p>
+          <ol className="article-checklist">
+            {deepDive.studyPlan.map((step) => (
+              <li key={step.title}>
+                <strong>{step.title}</strong> — {step.description}
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
+
+      {deepDive && (
+        <section className="section article-faq" aria-labelledby="faq-title">
+          <h2 id="faq-title">자주 묻는 질문</h2>
+          {deepDive.faqs.map((faq) => (
+            <details key={faq.question} open>
+              <summary>{faq.question}</summary>
+              <p>{faq.answer}</p>
+            </details>
+          ))}
+        </section>
+      )}
 
       <section className="section" aria-labelledby="basic-info-title">
         <h2 id="basic-info-title">기본정보</h2>
@@ -143,6 +204,11 @@ export default async function CertificationDetailPage({ params }: CertificationP
             시험일정과 접수 가능 여부는 시행기관 공지에 따라 바뀔 수 있습니다. 이 페이지는 공식 데이터와 공개 안내를 바탕으로
             준비 흐름을 정리하지만, 실제 원서접수 전에는 반드시 공식 상세정보에서 최종 조건을 확인하세요.
           </p>
+          {deepDive && (
+            <p>
+              시험 구성·합격기준 확인 출처: <a href={deepDive.officialSource} target="_blank" rel="noreferrer">{deepDive.officialSource}</a> (확인일 {deepDive.verifiedAt})
+            </p>
+          )}
         </div>
         <p><Link href="/certifications">자격증 목록으로 돌아가기</Link></p>
       </section>

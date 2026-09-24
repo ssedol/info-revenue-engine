@@ -36,4 +36,24 @@ describe("buildSeoIndex", () => {
     expect(index.map((item) => item.path)).not.toContain("/certifications/cert-1320/schedule");
     expect(index.every((item) => item.canonicalPath.startsWith("/"))).toBe(true);
   });
+
+  it("skips certifications that have no hand-written guide", () => {
+    const certification: Certification = {
+      id: "752",
+      slug: "cert-752",
+      name: "가스기술사",
+      officialName: "가스기술사",
+      category: "안전관리",
+      level: "기술사",
+      issuer: "한국산업인력공단",
+      schedules: [],
+      fees: [],
+      source,
+      updatedAt: "2026-08-21T00:00:00.000Z",
+    };
+
+    const index = buildSeoIndex([certification]);
+
+    expect(index.map((item) => item.path)).not.toContain("/certifications/cert-752");
+  });
 });

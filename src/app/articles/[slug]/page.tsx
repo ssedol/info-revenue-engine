@@ -46,11 +46,11 @@ export default async function ArticleDetailPage({ params }: { params: Promise<{ 
   const related = getRelatedArticles(article);
   const qnetInfo = getQnetOfficialInfo(article);
   const officialResources = getOfficialResources(article);
-  const articleSections = buildArticleSections(article, Boolean(qnetInfo));
+  const sections = getArticleSections(article);
+  const faqItems = getArticleFaqs(article);
   const latestNews = getArticles()
     .filter((candidate) => candidate.slug !== article.slug)
-    .slice(0, 10);
-  const faqItems = buildFaqItems(article);
+    .slice(0, 6);
 
   return (
     <>
@@ -92,99 +92,43 @@ export default async function ArticleDetailPage({ params }: { params: Promise<{ 
           <figure className="article-thumbnail">
             <Image src={getArticleImage(article)} alt="" width={1200} height={675} priority />
           </figure>
-          <aside className="article-takeaways" aria-labelledby="takeaways-title">
-            <h2 id="takeaways-title">핵심 요약</h2>
-            <ul>
-              <li>{article.summary}</li>
-              <li>{article.category.name} 관점에서 먼저 확인할 기준을 정리했습니다.</li>
-              <li>{qnetInfo ? "아래 Q-Net 공식 확인 정보에서 일정과 수수료를 바로 확인할 수 있습니다." : "시험일정, 응시료, 접수 기간은 실제 접수 전 공식 사이트에서 다시 확인하세요."}</li>
-            </ul>
-          </aside>
           <AdSlot name="article-top" />
-          <aside className="article-guide" aria-labelledby="article-guide-title">
-            <h2 id="article-guide-title">이 글의 핵심 목차</h2>
-            <ol>
-              {articleSections.map((section, index) => (
-                <li key={section.id}>
-                  <a href={`#${section.id}`}>
-                    <span>{formatSectionNumber(index)}</span>
-                    {section.title}
-                  </a>
-                </li>
-              ))}
-              <li>
-                <a href="#faq">
-                  <span>{formatSectionNumber(articleSections.length)}</span>
-                  자주 묻는 질문
-                </a>
-              </li>
-              <li>
-                <a href="#latest-news">
-                  <span>{formatSectionNumber(articleSections.length + 1)}</span>
-                  최신 자격증 글
-                </a>
-              </li>
-            </ol>
-          </aside>
-          <p className="article-intro">{article.summary} 아래에서는 핵심 요약, 공식 확인 방법, 준비 순서, 비용과 시간 관리, 주의사항을 한 번에 볼 수 있게 정리했습니다.</p>
-          <a className="article-source-cta official-link official-link--stacked" href={article.officialLinks[0]?.href ?? "https://www.q-net.or.kr/"} rel="noreferrer" target="_blank">
-            <span>공식 정보 확인하기</span>
-            <small>{article.officialLinks[0]?.href ?? "https://www.q-net.or.kr/"}</small>
-          </a>
           <div className="article-body article-body--sectioned">
-            {articleSections.map((section, index) => (
-              <section key={section.id} id={section.id} className="article-section">
-                <h2>
-                  <span>{formatSectionNumber(index)}</span>
-                  {section.title}
-                </h2>
-                {section.kind === "summary" ? (
-                  <div className="article-table" role="table" aria-label="핵심 요약 표">
-                    <div role="row">
-                      <strong role="cell">먼저 볼 것</strong>
-                      <span role="cell">{article.summary}</span>
-                    </div>
-                    <div role="row">
-                      <strong role="cell">분류</strong>
-                      <span role="cell">{article.category.name}</span>
-                    </div>
-                    <div role="row">
-                      <strong role="cell">읽는 시간</strong>
-                      <span role="cell">{article.readingMinutes}분</span>
-                    </div>
-                  </div>
-                ) : null}
-                {section.paragraphs.map((paragraph) => (
+            {sections ? (
+              sections.map((section) => (
+                <section key={section.id} id={section.id} className="article-section">
+                  <h2>{section.title}</h2>
+                  {section.paragraphs.map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </section>
+              ))
+            ) : (
+              <section className="article-section">
+                {article.body.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}
-                {section.kind === "checklist" ? (
-                  <ol className="article-checklist">
-                    <li>목표가 취업, 이직, 승진, 전공 보완 중 어디에 가까운지 먼저 정합니다.</li>
-                    <li>필기와 실기 중 현재 막히는 영역을 나눠서 공부 시간을 배분합니다.</li>
-                    <li>접수 전에는 Q-Net 종목 상세, 시행 공고, 접수 기간을 다시 확인합니다.</li>
-                  </ol>
-                ) : null}
-                {section.kind === "official" && qnetInfo ? <QnetOfficialPanel info={qnetInfo} /> : null}
-                {section.kind === "resources" ? <OfficialResourcePanel resources={officialResources} /> : null}
-                {index % 2 === 1 ? <AdSlot name="article-inline" /> : null}
               </section>
-            ))}
-            <section id="faq" className="article-section article-faq">
-              <h2>
-                <span>{formatSectionNumber(articleSections.length)}</span>
-                자주 묻는 질문
-              </h2>
-              {faqItems.map((item) => (
-                <details key={item.question} open>
-                  <summary>{item.question}</summary>
-                  <p>{item.answer}</p>
-                </details>
-              ))}
-            </section>
-            <AdSlot name="in-content" />
+            )}
+
+            {qnetInfo ? <QnetOfficialPanel info={qnetInfo} /> : null}
+
+            {faqItems.length > 0 ? (
+              <section id="faq" className="article-section article-faq">
+                <h2>자주 묻는 질문</h2>
+                {faqItems.map((item) => (
+                  <details key={item.question} open>
+                    <summary>{item.question}</summary>
+                    <p>{item.answer}</p>
+                  </details>
+                ))}
+              </section>
+            ) : null}
+
+            <OfficialResourcePanel resources={officialResources} />
+
             <aside className="official-note" aria-labelledby="official-note-title">
               <h2 id="official-note-title">원문 출처</h2>
-              <p>자격증 시행기관, 응시자격, 수수료, 시험일정처럼 바뀌는 정보는 Q-Net과 고용 관련 공식 자료를 기준으로 확인합니다.</p>
               <ul className="official-link-list">
                 {article.officialLinks.map((link) => (
                   <li key={link.href}>
@@ -200,13 +144,12 @@ export default async function ArticleDetailPage({ params }: { params: Promise<{ 
           </div>
         </article>
       </div>
-      <AdSlot name="list-inline" />
       <section id="latest-news" className="section latest-news-section" aria-labelledby="latest-news-title">
         <h2 id="latest-news-title">최신 자격증 글</h2>
         <ol className="latest-news-list">
           {latestNews.map((latestArticle, index) => (
             <li key={latestArticle.slug}>
-              <span>{formatSectionNumber(index)}</span>
+              <span>{String(index + 1).padStart(2, "0")}</span>
               <Link href={articlePath(latestArticle)}>{latestArticle.title}</Link>
               <small>{formatArticleDate(latestArticle.publishedAt)}</small>
             </li>
@@ -229,185 +172,86 @@ type ArticleSection = {
   id: string;
   title: string;
   paragraphs: string[];
-  kind?: "summary" | "official" | "checklist" | "resources";
 };
 
-function buildArticleSections(article: Article, hasQnetInfo: boolean): ArticleSection[] {
+/**
+ * 모든 글에 같은 목차·같은 문단을 붙이면 중복 콘텐츠가 됩니다.
+ * 소제목은 그 글에 맞게 직접 쓴 경우에만 사용하고, 나머지는 본문을 그대로 보여줍니다.
+ */
+function getArticleSections(article: Article): ArticleSection[] | undefined {
   if (article.slug === "public-vs-private-certifications") {
-    return buildPrivateCertificationSections();
+    return privateCertificationSections;
   }
-
-  const mainKeyword = article.tags[0] ?? article.category.name;
-  const paragraph = (index: number, fallback: string) => article.body[index] ?? fallback;
-
-  return [
-    {
-      id: "summary",
-      title: `${mainKeyword} 핵심 요약`,
-      kind: "summary",
-      paragraphs: [
-        paragraph(0, `${article.title}을 준비할 때는 먼저 목표와 현재 상황을 나눠서 판단해야 합니다.`),
-        paragraph(1, "시험 범위, 접수 방식, 공부 기간을 한 번에 보려고 하면 기준이 흐려지므로 핵심 항목부터 정리하는 편이 좋습니다."),
-      ],
-    },
-    {
-      id: "official-info",
-      title: hasQnetInfo ? "Q-Net 공식 정보 확인" : "공식 정보 확인",
-      kind: "official",
-      paragraphs: [
-        "자격증 글에서 가장 먼저 확인해야 하는 것은 시행기관, 응시 수수료, 접수 기간, 시험일정입니다. 아래 공식 정보 영역은 운영자가 수동으로 확인해 넣은 Q-Net 기준 정보입니다.",
-        "실제 접수 직전에는 세부 공고가 바뀔 수 있으므로 같은 항목을 다시 확인하는 방식으로 보는 것이 안전합니다.",
-      ],
-    },
-    {
-      id: "preparation-order",
-      title: "준비 전 체크 순서",
-      kind: "checklist",
-      paragraphs: [
-        paragraph(2, "처음 준비할 때는 시험 난이도보다 본인의 목적을 먼저 정리하는 것이 중요합니다."),
-        paragraph(3, "비전공자는 용어와 흐름을 먼저 익히고, 전공자는 기출 문제를 통해 약한 영역을 빠르게 찾는 방식이 효율적입니다."),
-      ],
-    },
-    {
-      id: "study-method",
-      title: "공부 방향과 선택 기준",
-      paragraphs: [
-        paragraph(4, "필기와 실기를 별개의 시험처럼 나눠 보면 준비 계획을 세우기 쉽습니다."),
-        paragraph(5, "합격만 목표로 할지, 직무 이해까지 같이 가져갈지에 따라 교재와 강의 선택 기준도 달라집니다."),
-      ],
-    },
-    {
-      id: "cost-time",
-      title: "비용과 시간 관리",
-      paragraphs: [
-        paragraph(6, "응시료 외에도 교재, 강의, 실습 환경, 재응시 가능성까지 고려하면 실제 준비 비용은 더 커질 수 있습니다."),
-        paragraph(7, "퇴근 후 준비하는 직장인은 매일 긴 시간을 확보하기보다 반복 가능한 최소 시간을 정해두는 편이 현실적입니다."),
-      ],
-    },
-    {
-      id: "career-point",
-      title: "취업과 커리어 활용 포인트",
-      paragraphs: [
-        paragraph(8, "자격증은 단독으로 모든 것을 해결해 주기보다 이력서에서 기본 역량을 설명하는 근거로 쓰이는 경우가 많습니다."),
-        paragraph(9, "직무와 연결되는 프로젝트, 실습 경험, 기존 경력을 함께 정리하면 자격증의 활용도가 올라갑니다."),
-      ],
-    },
-    {
-      id: "job-posting",
-      title: "채용공고에서 확인할 표현",
-      paragraphs: [
-        "채용공고에서는 같은 자격증도 필수, 우대, 관련 자격, 보유자 우대처럼 다른 표현으로 등장합니다. 이 표현을 구분해야 자격증 준비의 우선순위를 잘못 잡지 않습니다.",
-        "공고를 여러 개 모아 보면 반복되는 자격명이 보입니다. 한두 개 공고보다 반복적으로 등장하는 조건을 기준으로 판단하는 편이 더 현실적입니다.",
-      ],
-    },
-    {
-      id: "caution",
-      title: "주의해야 할 점",
-      paragraphs: [
-        "인터넷 글만 보고 접수 일정이나 응시자격을 확정하면 안 됩니다. 특히 정기 시험 회차, 원서접수 마감, 실기 방식은 해마다 바뀔 수 있습니다.",
-        "광고성 강의 추천이나 과장된 합격 후기를 볼 때는 본인의 배경, 공부 가능 시간, 실제 시험 범위를 따로 확인해야 합니다.",
-      ],
-    },
-    {
-      id: "before-apply",
-      title: "접수 전 마지막 확인",
-      paragraphs: [
-        "접수 전에는 자격명, 회차, 필기와 실기 구분, 시험장, 수수료, 결제 완료 여부를 다시 확인해야 합니다. 작은 착오가 접수 실패나 불필요한 재응시로 이어질 수 있습니다.",
-        "시험 당일 준비물과 입실 시간도 함께 확인하세요. 공부를 충분히 했더라도 신분증, 수험표, 시험장 위치 같은 기본 항목을 놓치면 실제 응시에 문제가 생길 수 있습니다.",
-      ],
-    },
-    {
-      id: "official-resources",
-      title: "함께 보면 좋은 공식 자료",
-      kind: "resources",
-      paragraphs: ["아래 링크는 자격증 선택과 접수 전에 같이 보면 좋은 공식 자료입니다. 시험 정보와 취업 정보를 분리해서 확인하면 판단이 더 쉬워집니다."],
-    },
-  ];
+  return undefined;
 }
 
-function buildPrivateCertificationSections(): ArticleSection[] {
-  return [
-    {
-      id: "summary",
-      title: "민간 자격증 핵심 요약",
-      kind: "summary",
-      paragraphs: [
-        "민간 자격증은 민간 기관이 만든 자격입니다. 등록 민간자격이라는 표시만으로 국가가 자격의 품질이나 취업 효과를 보증하는 것은 아닙니다.",
-        "신청 전에는 민간자격정보서비스(PQI)에서 자격명, 등록번호, 발급기관과 공인 여부를 조회하고 실제 채용공고에서 활용되는지도 따로 확인해야 합니다.",
-      ],
-    },
-    {
-      id: "qualification-types",
-      title: "국가자격·공인 민간자격·등록 민간자격 차이",
-      paragraphs: [
-        "국가자격은 법령에 따라 국가가 신설하고 관리하는 자격입니다. 국가기술자격과 국가전문자격처럼 운영 근거와 시행기관이 정해져 있습니다.",
-        "국가공인 민간자격은 등록 민간자격 가운데 일정 요건을 갖춰 주무부처의 공인을 받은 자격입니다. 등록 민간자격은 민간기관이 운영 정보를 등록한 것으로, 공인 여부와는 구분해야 합니다.",
-      ],
-    },
-    {
-      id: "lookup",
-      title: "민간 자격증 등록 여부 조회 방법",
-      kind: "checklist",
-      paragraphs: [
-        "PQI의 공인 민간자격 검색 또는 등록 민간자격 검색에서 자격명과 기관명을 조회합니다. 이름이 같거나 비슷한 자격이 여러 기관에 등록됐을 수 있으므로 기관명과 등록번호까지 비교해야 합니다.",
-        "검색 결과에서는 자격관리기관, 주무부처, 등록번호, 등급과 공인 여부를 확인하세요. 검색되지 않거나 홍보 페이지의 정보와 다르면 결제 전에 운영기관에 근거를 요청하는 편이 안전합니다.",
-      ],
-    },
-    {
-      id: "before-payment",
-      title: "결제 전에 확인할 6가지",
-      paragraphs: [
-        "등록번호와 발급기관, 총비용, 시험 또는 평가 방식, 자격증 발급비, 유효기간과 갱신비, 환불 규정을 확인하세요. 무료 수강을 강조해도 발급비나 갱신비가 별도로 붙을 수 있습니다.",
-        "취업이 목적이라면 광고의 취업 보장 표현보다 실제 채용공고에서 해당 자격명이 필수 또는 우대로 반복되는지를 확인해야 합니다.",
-      ],
-    },
-    {
-      id: "value",
-      title: "등록된 민간 자격증이면 취업에 도움이 될까",
-      paragraphs: [
-        "등록 사실과 취업 활용도는 별개의 문제입니다. 직무에서 널리 쓰이는 자격인지, 교육 내용이 실무와 연결되는지, 채용 담당자가 알아보는 명칭인지에 따라 가치가 달라집니다.",
-        "자기계발 목적이라면 교육 내용과 비용을 중심으로 판단할 수 있지만, 취업 목적이라면 채용공고와 현직자 요구 역량을 먼저 확인하는 편이 현실적입니다.",
-      ],
-    },
-    {
-      id: "official-resources",
-      title: "민간자격 공식 조회 사이트",
-      kind: "resources",
-      paragraphs: ["민간자격의 등록·공인 여부는 민간자격정보서비스(PQI), 국가기술자격과 국가전문자격 정보는 Q-Net에서 교차 확인하세요."],
-    },
-  ];
-}
-
-function buildFaqItems(article: Article) {
+function getArticleFaqs(article: Article): Array<{ question: string; answer: string }> {
   if (article.slug === "public-vs-private-certifications") {
-    return [
-      { question: "등록 민간자격은 국가가 인정한 자격증인가요?", answer: "등록은 민간기관이 자격을 관리·운영한다는 정보를 등록한 것입니다. 국가공인 여부와 품질 보증을 의미하지 않으므로 PQI에서 공인 여부를 별도로 확인해야 합니다." },
-      { question: "민간 자격증 등록번호는 어디에서 조회하나요?", answer: "민간자격정보서비스(PQI)의 등록 민간자격 검색에서 자격명이나 기관명으로 조회할 수 있습니다. 동일한 명칭이 있을 수 있으므로 발급기관과 등록번호를 함께 비교하세요." },
-      { question: "민간 자격증이 취업에 도움이 되는지 어떻게 확인하나요?", answer: "희망 직무의 채용공고에서 해당 자격명이 필수·우대 조건으로 반복되는지 확인하세요. 등록 여부만으로 취업 활용도를 판단하기는 어렵습니다." },
-    ];
+    return privateCertificationFaqs;
   }
-
-  const keyword = article.tags[0] ?? article.title;
-
-  return [
-    {
-      question: `${keyword} 준비는 언제 시작하는 게 좋나요?`,
-      answer: "시험 회차와 본인의 기초 수준에 따라 다릅니다. 처음 준비한다면 접수일을 기준으로 역산하지 말고, 필기 개념 정리와 기출 풀이 시간을 먼저 확보하는 방식이 좋습니다.",
-    },
-    {
-      question: "비전공자도 준비할 수 있나요?",
-      answer: "가능하지만 용어와 문제 표현에 익숙해지는 시간이 필요합니다. 처음에는 전체 범위를 빠르게 훑고, 이후 반복 출제되는 부분을 중심으로 좁혀 가는 편이 현실적입니다.",
-    },
-    {
-      question: "이 글의 일정과 수수료만 보고 접수해도 되나요?",
-      answer: "아닙니다. 이 글은 공식 정보를 보기 쉽게 정리한 안내 글입니다. 실제 접수 전에는 Q-Net의 종목 상세 페이지와 해당 회차 공고를 반드시 다시 확인해야 합니다.",
-    },
-  ];
+  return [];
 }
 
-function formatSectionNumber(index: number) {
-  return String(index + 1).padStart(2, "0");
-}
+const privateCertificationSections: ArticleSection[] = [
+  {
+    id: "summary",
+    title: "민간 자격증 핵심 요약",
+    paragraphs: [
+      "민간 자격증은 민간 기관이 만든 자격입니다. 등록 민간자격이라는 표시만으로 국가가 자격의 품질이나 취업 효과를 보증하는 것은 아닙니다.",
+      "신청 전에는 민간자격정보서비스(PQI)에서 자격명, 등록번호, 발급기관과 공인 여부를 조회하고 실제 채용공고에서 활용되는지도 따로 확인해야 합니다.",
+    ],
+  },
+  {
+    id: "qualification-types",
+    title: "국가자격·공인 민간자격·등록 민간자격 차이",
+    paragraphs: [
+      "국가자격은 법령에 따라 국가가 신설하고 관리하는 자격입니다. 국가기술자격과 국가전문자격처럼 운영 근거와 시행기관이 정해져 있습니다.",
+      "국가공인 민간자격은 등록 민간자격 가운데 일정 요건을 갖춰 주무부처의 공인을 받은 자격입니다. 등록 민간자격은 민간기관이 운영 정보를 등록한 것으로, 공인 여부와는 구분해야 합니다.",
+    ],
+  },
+  {
+    id: "lookup",
+    title: "민간 자격증 등록 여부 조회 방법",
+    paragraphs: [
+      "PQI의 공인 민간자격 검색 또는 등록 민간자격 검색에서 자격명과 기관명을 조회합니다. 이름이 같거나 비슷한 자격이 여러 기관에 등록됐을 수 있으므로 기관명과 등록번호까지 비교해야 합니다.",
+      "검색 결과에서는 자격관리기관, 주무부처, 등록번호, 등급과 공인 여부를 확인하세요. 검색되지 않거나 홍보 페이지의 정보와 다르면 결제 전에 운영기관에 근거를 요청하는 편이 안전합니다.",
+    ],
+  },
+  {
+    id: "before-payment",
+    title: "결제 전에 확인할 6가지",
+    paragraphs: [
+      "등록번호와 발급기관, 총비용, 시험 또는 평가 방식, 자격증 발급비, 유효기간과 갱신비, 환불 규정을 확인하세요. 무료 수강을 강조해도 발급비나 갱신비가 별도로 붙을 수 있습니다.",
+      "취업이 목적이라면 광고의 취업 보장 표현보다 실제 채용공고에서 해당 자격명이 필수 또는 우대로 반복되는지를 확인해야 합니다.",
+    ],
+  },
+  {
+    id: "value",
+    title: "등록된 민간 자격증이면 취업에 도움이 될까",
+    paragraphs: [
+      "등록 사실과 취업 활용도는 별개의 문제입니다. 직무에서 널리 쓰이는 자격인지, 교육 내용이 실무와 연결되는지, 채용 담당자가 알아보는 명칭인지에 따라 가치가 달라집니다.",
+      "자기계발 목적이라면 교육 내용과 비용을 중심으로 판단할 수 있지만, 취업 목적이라면 채용공고와 현직자 요구 역량을 먼저 확인하는 편이 현실적입니다.",
+    ],
+  },
+];
+
+const privateCertificationFaqs = [
+  {
+    question: "등록 민간자격은 국가가 인정한 자격증인가요?",
+    answer:
+      "등록은 민간기관이 자격을 관리·운영한다는 정보를 등록한 것입니다. 국가공인 여부와 품질 보증을 의미하지 않으므로 PQI에서 공인 여부를 별도로 확인해야 합니다.",
+  },
+  {
+    question: "민간 자격증 등록번호는 어디에서 조회하나요?",
+    answer:
+      "민간자격정보서비스(PQI)의 등록 민간자격 검색에서 자격명이나 기관명으로 조회할 수 있습니다. 동일한 명칭이 있을 수 있으므로 발급기관과 등록번호를 함께 비교하세요.",
+  },
+  {
+    question: "민간 자격증이 취업에 도움이 되는지 어떻게 확인하나요?",
+    answer:
+      "희망 직무의 채용공고에서 해당 자격명이 필수·우대 조건으로 반복되는지 확인하세요. 등록 여부만으로 취업 활용도를 판단하기는 어렵습니다.",
+  },
+];
 
 function getArticleImage(article: Article) {
   if (article.tags.includes("전기기사")) {

@@ -4,6 +4,7 @@ import { buildMetadata } from "@/core/seo/metadata";
 import { JsonLd, itemListJsonLd } from "@/core/seo/structured-data";
 import { formatArticleDate } from "@/sites/certifications/components/ArticleCard";
 import { getCertifications } from "@/sites/certifications/data";
+import { getDetailCertifications, hasCertificationDetail } from "@/sites/certifications/detailPages";
 import { certificationPath } from "@/sites/certifications/routes";
 import type { Certification, ExamSchedule } from "@/sites/certifications/types";
 import {
@@ -14,9 +15,11 @@ import {
   type Article,
 } from "@/sites/certifications/articles";
 
+export const revalidate = 3600;
+
 export const metadata: Metadata = buildMetadata({
-  title: "자격증 블로그",
-  description: "자격증 선택, 공부 전략, 취업 활용법을 뉴스처럼 읽는 블로그형 정보사이트입니다.",
+  title: "자격증 시험일정 D-day",
+  description: "Q-Net 공식 데이터로 520개 국가자격 종목의 접수일과 시험일을 가까운 순서대로 보여주고, 주요 자격증의 준비 방법을 함께 정리합니다.",
   path: "/",
 });
 
@@ -25,19 +28,24 @@ export default function HomePage() {
   const latestList = articles.slice(0, 8);
   const popularArticles = getPopularArticles();
   const popularList = popularArticles.slice(0, 8);
-  const upcomingSchedules = getUpcomingSchedules(getCertifications()).slice(0, 8);
+  const certifications = getCertifications();
+  const upcomingSchedules = getUpcomingSchedules(certifications).slice(0, 12);
+  const guidedCertifications = getDetailCertifications();
 
   return (
     <>
       <JsonLd value={itemListJsonLd(articles.slice(0, 12).map((article) => ({ name: article.title, path: articlePath(article) })))} />
       <section className="hero">
-        <h1>자격증 선택부터 공부 전략까지 읽기 쉽게 정리합니다</h1>
-        <p>자격증 준비 전에 읽어볼 만한 최신 기사, 인기 기사, 실전 가이드를 한곳에 모았습니다.</p>
+        <h1>다음 자격증 시험까지 며칠 남았는지 한눈에</h1>
+        <p>
+          Q-Net 공식 데이터로 {certifications.length.toLocaleString("ko-KR")}개 국가자격 종목의 원서접수일과 시험일을 모아
+          가까운 순서대로 보여줍니다. 주요 종목은 시험 구성·합격기준·준비 순서까지 정리했습니다.
+        </p>
       </section>
       <section className="section schedule-board" aria-labelledby="upcoming-schedules-title">
         <div className="home-section-header">
-          <h2 id="upcoming-schedules-title">다가오는 시험일정</h2>
-          <Link href="/certifications">전체 일정 보기</Link>
+          <h2 id="upcoming-schedules-title">가장 가까운 시험일정</h2>
+          <Link href="/schedules">전체 일정 보기</Link>
         </div>
         {upcomingSchedules.length > 0 ? (
           <ol className="upcoming-schedule-list">
@@ -56,7 +64,7 @@ export default function HomePage() {
                     <h3>{item.certificationName}</h3>
                     <p>{item.round}</p>
                   </div>
-                  <span className="schedule-detail-link">일정 자세히</span>
+                  <span className="schedule-detail-link">자세히</span>
                 </Link>
               </li>
             ))}
@@ -67,6 +75,19 @@ export default function HomePage() {
             <p>새로운 공식 시험일정이 게시되면 이 영역에 자동으로 표시됩니다.</p>
           </div>
         )}
+      </section>
+      <section className="section" aria-labelledby="guided-certifications-title">
+        <div className="home-section-header">
+          <h2 id="guided-certifications-title">준비 방법까지 정리한 자격증</h2>
+          <Link href="/certifications">전체 종목 검색</Link>
+        </div>
+        <ul className="tag-list">
+          {guidedCertifications.map((certification) => (
+            <li key={certification.slug}>
+              <Link href={certificationPath(certification)}>{certification.name}</Link>
+            </li>
+          ))}
+        </ul>
       </section>
       <section className="section news-board" aria-labelledby="latest-title">
         <div className="home-section-header">
@@ -95,17 +116,6 @@ type UpcomingSchedule = {
   href: string;
 };
 
-const featuredCertificationNames = [
-  "정보처리기사",
-  "전기기사",
-  "산업안전기사",
-  "건설안전기사",
-  "컴퓨터활용능력1급",
-  "한식조리기능사",
-  "전기기능사",
-  "지게차운전기능사",
-];
-
 const scheduleMilestones: Array<{ field: keyof ExamSchedule; label: string }> = [
   { field: "applicationStart", label: "필기 접수" },
   { field: "examStart", label: "필기시험" },
@@ -119,17 +129,9 @@ export function getUpcomingSchedules(
   certifications: Certification[],
   today = new Intl.DateTimeFormat("sv-SE", { timeZone: "Asia/Seoul" }).format(new Date()),
 ): UpcomingSchedule[] {
-  const featuredOrder = new Map(featuredCertificationNames.map((name, index) => [name, index]));
-  const candidates = certifications
-    .filter((certification) => featuredOrder.has(certification.name))
-    .sort(
-      (a, b) =>
-        (featuredOrder.get(a.name) ?? Number.MAX_SAFE_INTEGER) -
-        (featuredOrder.get(b.name) ?? Number.MAX_SAFE_INTEGER),
-    );
   const upcoming: UpcomingSchedule[] = [];
 
-  for (const certification of candidates) {
+  for (const certification of certifications) {
     const level = certification.level ?? "기타";
     let next: UpcomingSchedule | undefined;
 
@@ -146,7 +148,9 @@ export function getUpcomingSchedules(
           label: milestone.label,
           date,
           certificationName: certification.name,
-          href: certificationPath(certification),
+          href: hasCertificationDetail(certification.name)
+            ? certificationPath(certification)
+            : certification.officialUrl ?? "/schedules",
         };
         if (!next || item.date < next.date) {
           next = item;

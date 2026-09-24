@@ -747,16 +747,8 @@ function estimateReadingMinutes(body: string[]): number {
   return Math.max(4, Math.ceil(body.join("").length / 430));
 }
 
-function buildActionGuidance(article: Article): string[] {
-  const tagText = article.tags.slice(0, 2).join(", ");
-  return [
-    `이 글을 읽은 뒤에는 바로 하나의 행동으로 옮기는 것이 좋습니다. ${article.title}이라는 주제를 막연히 넘기지 말고, 내 상황에서 확인해야 할 항목을 3개만 적어 보세요. 목표 직무, 공부 가능 시간, 공식 정보 확인 여부처럼 작게 나누면 다음 선택이 훨씬 쉬워집니다.`,
-    `${article.category.name} 글을 읽을 때는 ${tagText} 같은 키워드를 내 상황과 연결해 보는 것이 중요합니다. 검색으로 얻은 정보는 출발점일 뿐이고, 실제 결정은 공식 안내, 채용공고, 내 일정, 준비 비용을 함께 놓고 판단해야 합니다. 그래야 자격증을 단순 스펙이 아니라 실행 가능한 계획으로 바꿀 수 있습니다.`,
-  ];
-}
-
 export const articles: Article[] = baseArticles.map((article) => {
-  const body = [...article.body, ...(articleBodyAdditions[article.slug] ?? []), ...buildActionGuidance(article)];
+  const body = [...article.body, ...(articleBodyAdditions[article.slug] ?? [])];
   return {
     ...article,
     body,

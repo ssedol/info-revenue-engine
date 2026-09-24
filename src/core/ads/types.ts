@@ -14,5 +14,8 @@ export type AdSlotConfig = {
   label: string;
   width: number;
   height: number;
+  /** Kakao AdFit 광고 단위 ID */
   unitId?: string;
+  /** Google AdSense data-ad-slot 값 */
+  adsenseSlotId?: string;
 };

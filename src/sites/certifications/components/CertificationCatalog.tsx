@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { certificationPath } from "../routes";
+
 export type CertificationSummary = {
   id: string;
   slug: string;
@@ -10,6 +10,10 @@ export type CertificationSummary = {
   category: string;
   level?: string;
   nextSchedule: string;
+  /** 직접 작성한 가이드가 있는 종목만 상세 페이지 링크를 가집니다. */
+  detailHref?: string;
+  /** 상세 페이지가 없는 종목은 공식 안내로 바로 보냅니다. */
+  officialUrl?: string;
 };
 
 const PAGE_SIZE = 48;
@@ -54,9 +58,18 @@ export function CertificationCatalog({ certifications }: { certifications: Certi
                 <span>{certification.category}</span>
               </div>
               <h2>
-                <Link href={certificationPath(certification)}>{certification.name}</Link>
+                {certification.detailHref ? (
+                  <Link href={certification.detailHref}>{certification.name}</Link>
+                ) : (
+                  certification.name
+                )}
               </h2>
               <p>{certification.nextSchedule}</p>
+              {!certification.detailHref && certification.officialUrl && (
+                <a className="official-link" href={certification.officialUrl} target="_blank" rel="noreferrer">
+                  공식 상세정보 보기
+                </a>
+              )}
             </article>
           ))}
         </div>

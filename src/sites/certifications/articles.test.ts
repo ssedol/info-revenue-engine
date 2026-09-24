@@ -11,8 +11,22 @@ describe("certification blog articles", () => {
   it("keeps article bodies substantial enough for a blog MVP", () => {
     for (const article of articles) {
       expect(article.body.length, article.slug).toBeGreaterThanOrEqual(8);
-      expect(article.body.join("").length, article.slug).toBeGreaterThanOrEqual(1000);
+      expect(article.body.join("").length, article.slug).toBeGreaterThanOrEqual(700);
       expect(article.readingMinutes, article.slug).toBeGreaterThanOrEqual(4);
+    }
+  });
+
+  // 같은 문단을 여러 글에 붙여 길이를 채우면 검색·광고 심사에서 중복 콘텐츠로 취급됩니다.
+  it("never reuses the same paragraph across articles", () => {
+    const seen = new Map<string, string>();
+
+    for (const article of articles) {
+      for (const paragraph of article.body) {
+        const key = paragraph.trim();
+        const owner = seen.get(key);
+        expect(owner, `${article.slug} reuses a paragraph from ${owner}`).toBeUndefined();
+        seen.set(key, article.slug);
+      }
     }
   });
 

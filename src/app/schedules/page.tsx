@@ -4,9 +4,11 @@ import { buildMetadata } from "@/core/seo/metadata";
 import { JsonLd, itemListJsonLd } from "@/core/seo/structured-data";
 import { CertificationCatalog } from "@/sites/certifications/components/CertificationCatalog";
 import { getCertifications } from "@/sites/certifications/data";
+import { getDetailCertifications, hasCertificationDetail } from "@/sites/certifications/detailPages";
 import { certificationPath } from "@/sites/certifications/routes";
 
 export const dynamic = "error";
+export const revalidate = 3600;
 export const metadata: Metadata = buildMetadata({
   title: "자격증별 2026 시험일정",
   description: "자격증 이름별로 가까운 원서접수일과 필기·실기 시험일정을 검색해 확인합니다.",
@@ -17,7 +19,7 @@ export default function SchedulesPage() {
   const today = new Intl.DateTimeFormat("sv-SE", { timeZone: "Asia/Seoul" }).format(new Date());
   const certifications = getCertifications();
   const catalogItems = certifications
-    .map(({ id, slug, name, category, level, schedules }) => {
+    .map(({ id, slug, name, category, level, schedules, officialUrl }) => {
       const nextSchedule = schedules
         .flatMap((schedule) => [
           schedule.applicationStart && { date: schedule.applicationStart, label: "필기 접수" },
@@ -37,6 +39,8 @@ export default function SchedulesPage() {
         name,
         category,
         level,
+        detailHref: hasCertificationDetail(name) ? certificationPath({ slug }) : undefined,
+        officialUrl,
         nextSchedule: nextSchedule ? `${formatDate(nextSchedule.date)} · ${nextSchedule.label}` : "공식 일정 확인",
         nextDate: nextSchedule?.date,
       };
@@ -52,7 +56,7 @@ export default function SchedulesPage() {
     <>
       <JsonLd
         value={itemListJsonLd(
-          certifications.slice(0, 100).map((certification) => ({
+          getDetailCertifications().map((certification) => ({
             name: `${certification.name} 시험일정`,
             path: certificationPath(certification),
           })),
