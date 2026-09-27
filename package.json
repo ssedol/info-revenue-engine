@@ -14,6 +14,7 @@
     "data:publish": "node --import tsx scripts/publish/publish-certifications.ts",
     "data:refresh": "npm run data:collect && npm run data:normalize && npm run data:validate && npm run data:publish",
     "data:build": "npm run data:refresh",
+    "search:notify": "node --import tsx scripts/notify/notify-search-engines.ts",
     "build": "next build"
   },
   "dependencies": {
